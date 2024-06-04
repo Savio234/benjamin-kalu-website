@@ -4,7 +4,7 @@
       <FullLogo />
       <div class="nav-content flex items-center rounded-full border border-borderMuted bg-white gap-12 px-8 py-3">
         <NuxtLink to="/" class="text-[16px] text-gray">Home</NuxtLink>
-        <NuxtLink to="/" class="text-[16px] text-gray">About</NuxtLink>
+        <NuxtLink to="/" class="text-[16px] text-gray" @mouseover="activateAbout = true">About</NuxtLink>
         <NuxtLink to="/" class="text-[16px] text-gray">Legislative Affairs</NuxtLink>
         <NuxtLink to="/" class="text-[16px] text-gray">Bills & Motions</NuxtLink>
         <NuxtLink to="/" class="text-[16px] text-gray">Projects</NuxtLink>
@@ -13,11 +13,17 @@
       <MainButton></MainButton>
     </div>
     <!-- dropdowns -->
-    <SectionsAboutDropDown class="absolute top-[100%]" />
+    <SectionsAboutDropDown
+      class="absolute top-[100%] shadow-lg"
+      v-show="activateAbout"
+      @mouseleave="activateAbout = false"
+    />
   </nav>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const activateAbout = ref(false);
+</script>
 
 <style lang="scss" scoped>
 nav {
