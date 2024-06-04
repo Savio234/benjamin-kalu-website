@@ -105,7 +105,7 @@
       </div>
     </section>
     <section class="partners w-full py-16 bg-light">
-      <div class="content flex ml-[5%] flex-col">
+      <div class="content flex ml-[5%] flex-col gap-16">
         <div class="w-8/12 flex flex-col gap-2">
           <h2 class="font-semibold">Development Partners</h2>
           <h4>
@@ -113,9 +113,32 @@
             economic, social and environmental fronts
           </h4>
         </div>
-        <div class="w-full flex gap-4"></div>
+        <div class="scroller w-full flex gap-8 relative overflow-x-scroll">
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
+            class="w-72 h-48 object-cover"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
+            class="w-72 h-48 object-cover"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
+            class="w-72 h-48 object-cover"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
+            class="w-72 h-48 object-cover"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
+            class="w-72 h-48 object-cover"
+          />
+        </div>
       </div>
     </section>
+    <SectionsFeaturedProject />
+    <SectionsLatestNews />
   </main>
 </template>
 
@@ -133,5 +156,10 @@
     url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+.scroller {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 </style>
