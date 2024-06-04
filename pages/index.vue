@@ -62,6 +62,25 @@
         </div>
       </div>
     </section>
+    <section class="bills py-16 w-full">
+      <div class="content flex flex-col w-[90%] mx-auto gap-4">
+        <div class="header w-6/12">
+          <h2 class="font-semibold">Bills & Motions</h2>
+          <h4 class="text-gray">
+            Want to educate yourself on the bills and motions from the office of the deputy speaker? find a curated list
+            here
+          </h4>
+        </div>
+        <div class="w-full flex flex-col">
+          <div class="img-holder w-full shadow-lg rounded-xl p-1">
+            <NuxtImg
+              src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717482257/benjamin_kalu/ben_gravel_uactm9.png"
+              class="w-full h-auto rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
