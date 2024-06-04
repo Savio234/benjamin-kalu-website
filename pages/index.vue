@@ -71,14 +71,49 @@
             here
           </h4>
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col gap-8">
           <div class="img-holder w-full shadow-lg rounded-xl p-1">
             <NuxtImg
               src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717482257/benjamin_kalu/ben_gravel_uactm9.png"
               class="w-full h-auto rounded-xl"
             />
           </div>
+          <div class="grid grid-cols-3 grid-row-2 w-full gap-4">
+            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
+              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
+              <p>You can find all the bills from the office of the deputy speaker here</p>
+            </div>
+            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
+              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
+              <p>You can find all the bills from the office of the deputy speaker here</p>
+            </div>
+            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
+              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
+              <p>You can find all the bills from the office of the deputy speaker here</p>
+            </div>
+            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 col-span-3 cursor-pointer">
+              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
+              <p>You can find all the bills from the office of the deputy speaker here</p>
+            </div>
+          </div>
+          <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2">See more</h5>
         </div>
+      </div>
+    </section>
+    <section class="partners w-full py-16 bg-light">
+      <div class="content flex ml-[5%] flex-col">
+        <div class="w-8/12 flex flex-col gap-2">
+          <h2 class="font-semibold">Development Partners</h2>
+          <h4>
+            Meet our development partners who have key roles in helping to achieve sustainable human development in
+            economic, social and environmental fronts
+          </h4>
+        </div>
+        <div class="w-full flex gap-4"></div>
       </div>
     </section>
   </main>
