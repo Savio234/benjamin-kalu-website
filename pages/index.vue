@@ -1,0 +1,83 @@
+<template>
+  <main class="flex flex-col w-full">
+    <section class="hero w-full h-[85dvh] bg-black flex justify-center">
+      <div class="content mx-auto w-[90%] flex h-full items-center">
+        <div class="text-box w-1/2 flex flex-col text-white gap-4">
+          <h1>The office of the deputy <span class="font-[800]">speaker</span></h1>
+          <h4>
+            A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
+            since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
+            national stage in his legislative role.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-16 text-center flex flex-col">
+      <div class="content mx-auto w-[90%] flex flex-col gap-2 items-center">
+        <h2 class="text-black font-semibold">About <span class="text-primaryGreen">Benjamin Kalu</span></h2>
+        <p class="w-9/12 mx-auto text-xl">
+          <span class="text-primaryGreen">Benjamin Kalu</span> is a prominent Nigerian politician, serving as the Deputy
+          Speaker of the House of Representatives of Nigeria since 2023. Kalu represents the Bende federal constituency,
+          bringing their issues and perspectives to the national stage in his legislative role.
+        </p>
+        <MainButton></MainButton>
+        <div class="mt-24 w-full h-screen">
+          <NuxtImg
+            class="w-full h-full object-cover rounded-xl"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="updates w-full py-16 bg-black text-white relative">
+      <div class="content flex flex-col mx-auto w-[90%] gap-8">
+        <div class="header flex flex-col gap-1">
+          <h2>Weekly <span class="text-primaryGreen">updates</span></h2>
+          <h4>Get first hand updates with your deputy speaker</h4>
+        </div>
+        <div class="relative w-full h-auto mt-4">
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433083/benjamin_kalu/weekly_updates_magazine_lnxzuy.png"
+            class="w-full h-full"
+          />
+        </div>
+        <MainButton class="self-end"></MainButton>
+      </div>
+    </section>
+    <section class="legistlative py-16 bg-light w-full">
+      <div class="content mx-auto w-[90%] flex flex-col gap-8">
+        <div class="header w-7/12 flex flex-col gap-1">
+          <h2 class="font-semibold">Legistlative Affairs</h2>
+          <h4 class="text-gray">
+            A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
+            since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
+            national stage in his legislative role.
+          </h4>
+        </div>
+        <div class="grid grid-cols-3 gap-8">
+          <!-- legistlative grid -->
+          <CardLegistlative />
+          <CardLegistlative />
+          <CardLegistlative />
+        </div>
+      </div>
+    </section>
+  </main>
+</template>
+
+<script lang="ts" setup></script>
+
+<style lang="scss" scoped>
+.hero {
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431105/benjamin_kalu/hero_image_npemqy.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431103/benjamin_kalu/noise_c6ebjt.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.updates {
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>

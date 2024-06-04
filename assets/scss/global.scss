@@ -1,0 +1,53 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: #022924;
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+h1 {
+  font-size: 64px;
+  line-height: 125%;
+}
+h2 {
+  font-size: 48px;
+  line-height: 120%;
+}
+h3 {
+  font-size: 36px;
+  line-height: 120%;
+}
+h4 {
+  font-size: 20px;
+  line-height: 120%;
+}
+h5 {
+  font-size: 16px;
+  line-height: 120%;
+}
+h6 {
+  font-size: 14px;
+  line-height: 120%;
+}
+p,
+a,
+button,
+div,
+input,
+select,
+textarea,
+label {
+  font-size: 14px;
+  line-height: 120%;
+  padding: 0px;
+  margin: 0px;
+}
