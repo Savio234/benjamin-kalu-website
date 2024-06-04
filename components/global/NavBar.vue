@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full py-4 bg-white">
+  <nav class="w-full py-4 bg-white relative">
     <div class="content mx-auto flex justify-between w-[95%] items-center">
       <FullLogo />
       <div class="nav-content flex items-center rounded-full border border-borderMuted bg-white gap-12 px-8 py-3">
@@ -12,6 +12,8 @@
       </div>
       <MainButton></MainButton>
     </div>
+    <!-- dropdowns -->
+    <SectionsAboutDropDown class="absolute top-[100%]" />
   </nav>
 </template>
 

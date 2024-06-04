@@ -4,6 +4,7 @@
     <NavBar class="sticky top-0 z-[100]" />
     <slot />
     <!-- footer -->
+    <Footer />
   </main>
 </template>
 

@@ -31,13 +31,13 @@
     </section>
     <section class="updates w-full py-16 bg-black text-white relative">
       <div class="content flex flex-col mx-auto w-[90%] gap-8">
-        <div class="header flex flex-col gap-1">
+        <div class="header flex flex-col gap-1 text-white">
           <h2>Weekly <span class="text-primaryGreen">updates</span></h2>
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>
         <div class="relative w-full h-auto mt-4">
           <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433083/benjamin_kalu/weekly_updates_magazine_lnxzuy.png"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717507316/benjamin_kalu/weekly_updates_magazine_gmmbl5.png"
             class="w-full h-full"
           />
         </div>
@@ -140,7 +140,6 @@
     <SectionsFeaturedProject />
     <SectionsLatestNews />
     <SectionsReview />
-    <Footer />
   </main>
 </template>
 
