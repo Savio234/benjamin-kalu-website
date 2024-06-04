@@ -1,7 +1,11 @@
 <template>
-  <div class="w-full rounded-xl flex flex-col cursor-pointer">
-    <NuxtImg src="https://placehold.co/400X400" class="w-full h-48 object-cover" />
-    <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]"></div>
+  <div class="w-full rounded-xl flex flex-col cursor-pointer bg-white border border-borderMuted">
+    <NuxtImg src="https://placehold.co/400X400" class="w-full h-40 object-cover rounded-t-xl" />
+    <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]">
+      <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ $props.category }}</p>
+      <h6 class="font-semibold">{{ $props.title }}</h6>
+      <small>{{ $props.description }}</small>
+    </div>
   </div>
 </template>
 

@@ -139,6 +139,8 @@
     </section>
     <SectionsFeaturedProject />
     <SectionsLatestNews />
+    <SectionsReview />
+    <Footer />
   </main>
 </template>
 
