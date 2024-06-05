@@ -14,7 +14,7 @@
     </div>
     <!-- dropdowns -->
     <SectionsAboutDropDown
-      class="absolute top-[100%] shadow-lg"
+      class="absolute top-[100%] shadow"
       v-show="activateAbout"
       @mouseleave="activateAbout = false"
     />

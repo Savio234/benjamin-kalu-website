@@ -10,26 +10,26 @@
           national stage in his legislative role.
         </h4>
       </div>
-      <div class="grid grid-cols-3 w-7/12 gap-8">
+      <div class="grid grid-cols-3 w-7/12 gap-4">
         <div class="rounded-lg drop-card border border-borderGreen flex items-end">
           <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center relative z-10 cursor-pointer"
+            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
             @click="$router.push('/about')"
           >
             The deputy Speaker
-            <SvgIcon name="arrow_right_white" width="1rem" height="1rem" />
+            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
         <div class="rounded-lg drop-card border border-borderGreen flex items-end">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center relative z-10">
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10">
             The Office
-            <SvgIcon name="arrow_right_white" width="1rem" height="1rem" />
+            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
         <div class="rounded-lg drop-card border border-borderGreen flex items-end">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center relative z-10">
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10">
             Development partner
-            <SvgIcon name="arrow_right_white" width="1rem" height="1rem" />
+            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
       </div>
