@@ -1,8 +1,8 @@
 <template>
   <!-- test dropdown -->
-  <div class="w-full h-fit bg-primaryGreen py-16">
+  <div class="w-full h-fit bg-primaryGreen">
     <div class="content mx-auto w-[90%] flex gap-8">
-      <div class="text-area w-5/12 flex flex-col gap-4">
+      <div class="text-area w-5/12 flex flex-col gap-4 py-16">
         <h3 class="font-semibold gap-4" style="font-family: 'Inter', sans-serif">About</h3>
         <h4 class="text-white font-medium" style="font-family: 'Inter', sans-serif">
           A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
@@ -10,8 +10,8 @@
           national stage in his legislative role.
         </h4>
       </div>
-      <div class="grid grid-cols-3 w-7/12 gap-4">
-        <div class="rounded-lg drop-card border border-borderGreen flex items-end">
+      <div class="grid grid-cols-3 w-7/12">
+        <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
             @click="$router.push('/about')"
@@ -20,14 +20,20 @@
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
-        <div class="rounded-lg drop-card border border-borderGreen flex items-end">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10">
+        <div class="drop-card border border-borderGreen flex items-end">
+          <p
+            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
+            @click="$router.push('/about/office')"
+          >
             The Office
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
-        <div class="rounded-lg drop-card border border-borderGreen flex items-end">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10">
+        <div class="drop-card border border-borderGreen flex items-end">
+          <p
+            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
+            @click="$router.push('/about/partners')"
+          >
             Development partner
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
