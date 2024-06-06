@@ -20,7 +20,7 @@
           Speaker of the House of Representatives of Nigeria since 2023. Kalu represents the Bende federal constituency,
           bringing their issues and perspectives to the national stage in his legislative role.
         </p>
-        <MainButton></MainButton>
+        <MainButton>Who is Benjamin Kalu?</MainButton>
         <div class="mt-24 w-full h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
@@ -49,7 +49,7 @@
             class="w-full h-full"
           />
         </div>
-        <MainButton class="self-end"></MainButton>
+        <MainButton class="self-end" append-icon="attachment-white">Download PDF</MainButton>
       </div>
     </section>
     <section class="legistlative py-16 bg-light w-full">

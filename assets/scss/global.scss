@@ -58,6 +58,8 @@ small {
   padding: 0px;
   margin: 0px;
 }
-.nuxt-link-active {
-  font-weight: bold;
+.router-link-active {
+  color: #00a991;
+  background-color: #fafffa;
+  border: 1px solid #cecfcf;
 }

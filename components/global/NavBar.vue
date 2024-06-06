@@ -2,12 +2,10 @@
   <nav class="w-full py-4 bg-white relative">
     <div class="content mx-auto flex justify-between w-[95%] items-center">
       <FullLogo />
-      <div
-        class="nav-content flex items-center rounded-full border border-borderMuted bg-white gap-12 px-8 py-3 shadow"
-      >
+      <div class="nav-content flex items-center rounded-full border border-borderMuted bg-white p-1 gap-6 shadow">
         <NuxtLink
           to="/"
-          class="text-[16px] text-gray"
+          class="text-gray py-2 px-4 rounded-full"
           @mouseover="
             activateAbout = false;
             activateLegistlative = false;
@@ -16,8 +14,8 @@
           >Home</NuxtLink
         >
         <NuxtLink
-          to="/"
-          class="text-[16px] text-gray"
+          to="/about"
+          class="text-gray py-2 px-4 rounded-full"
           @mouseover="
             activateAbout = true;
             activateLegistlative = false;
@@ -26,8 +24,8 @@
           >About</NuxtLink
         >
         <NuxtLink
-          to="/"
-          class="text-[16px] text-gray"
+          to="/legistlative"
+          class="text-gray py-2 px-4 rounded-full"
           @mouseover="
             activateLegistlative = true;
             activateAbout = false;
@@ -37,7 +35,7 @@
         >
         <NuxtLink
           to="/bills"
-          class="text-[16px] text-gray"
+          class="text-gray py-2 px-4 rounded-full"
           @mouseover="
             activateLegistlative = false;
             activateAbout = false;
@@ -45,10 +43,10 @@
           "
           >Bills & Motions</NuxtLink
         >
-        <NuxtLink to="/" class="text-[16px] text-gray">Projects</NuxtLink>
-        <NuxtLink to="/blog" class="text-[16px] text-gray">News & Update</NuxtLink>
+        <NuxtLink to="/" class="text-gray py-2 px-4 rounded-full">Projects</NuxtLink>
+        <NuxtLink to="/blog" class="text-gray py-2 px-4 rounded-full">News & Update</NuxtLink>
       </div>
-      <MainButton></MainButton>
+      <MainButton append-icon="sms">Contact Us</MainButton>
     </div>
     <!-- dropdowns -->
     <SectionsAboutDropDown
