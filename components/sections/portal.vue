@@ -1,0 +1,23 @@
+<template>
+  <section class="w-full py-16 bg-white">
+    <div class="content w-5/12 mx-auto text-center flex flex-col items-center">
+      <h2 class="font-semibold">Learn more</h2>
+      <h5 class="font-medium">
+        To participate in town hall meetings, public hearings <br />
+        across the nation and to get more information about <br />
+        Constitutional Review
+      </h5>
+      <div class="form w-full my-6 flex flex-col gap-4">
+        <button class="bg-white border-2 border-[#00A99133] w-full h-fit p-[1px] rounded-lg">
+          <div class="content bg-primaryGreen rounded-lg py-3 px-6 text-white" style="font-family: 'Inter', sans-serif">
+            Visit Portal
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang="ts" setup></script>
+
+<style></style>

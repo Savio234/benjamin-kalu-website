@@ -4,11 +4,11 @@
     <div class="content mx-auto w-[85%] flex gap-8">
       <div class="text-area w-5/12 flex flex-col gap-4 py-16">
         <h3 class="font-semibold gap-4" style="font-family: 'Inter', sans-serif">About</h3>
-        <h4 class="text-white font-medium" style="font-family: 'Inter', sans-serif">
+        <h5 class="text-white font-medium" style="font-family: 'Inter', sans-serif">
           A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
           since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
           national stage in his legislative role.
-        </h4>
+        </h5>
       </div>
       <div class="grid grid-cols-3 w-7/12">
         <div class="drop-card border border-borderGreen flex items-end">

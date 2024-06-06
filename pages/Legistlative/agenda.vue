@@ -21,8 +21,8 @@
         <h3 class="font-semibold">House's Legistlative Agenda</h3>
         <p class="text-lg">
           The Federal House of Representatives is one of the two Chambers that make up the Bicameral Legislature of the
-          Federal Republic of Nigeria.  It is made up of 360 Members representing each of the Federal Constituencies of
-          the country.  Members of the Green Chamber, as it is popularly referred to are duly elected for a term of four
+          Federal Republic of Nigeria. It is made up of 360 Members representing each of the Federal Constituencies of
+          the country. Members of the Green Chamber, as it is popularly referred to are duly elected for a term of four
           years.
         </p>
         <p class="text-lg">
@@ -86,7 +86,7 @@
         </p>
         <!--  -->
         <h3 class="font-semibold">Core Values</h3>
-        <ul class="list-disc flex flex-col gap-8">
+        <ul class="list-disc flex flex-col gap-8 pl-4">
           <li class="text-lg">
             <span class="font-semibold">Effectiveness:</span> Members that are knowledgeable, accessible and who perform
             their duties diligently
@@ -123,7 +123,7 @@
           The main objective of the Agenda is to make the 10th House of Representatives “The People’s House” and improve
           the lawmaking, oversight and representative functions of the legislature. Other specific objectives include:
         </p>
-        <ul class="list-disc flex flex-col gap-8">
+        <ul class="list-disc flex flex-col gap-8 pl-4">
           <li class="text-lg">
             Bring the House closer to the people and promote citizens’ engagement through the Open National Assembly
             project.
@@ -142,11 +142,11 @@
       </div>
     </section>
     <section class="py-16 w-full bg-[#048541] text-white">
-      <div class="content mx-auto w-[75%] grid grid-cols-3 grid-rows-5">
-        <!-- row one -->
-        <div class="flex flex-col items-center">
-          <NuxtImg src="https://placehold.co/400X400" class="h-60 w-60 rounded-full" />
-        </div>
+      <div class="content mx-auto w-[85%]">
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717656446/benjamin_kalu/legistlative_agenda_qbfc16.png"
+          class="w-full h-auto object-cover"
+        />
       </div>
     </section>
   </main>

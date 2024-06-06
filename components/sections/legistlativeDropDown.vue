@@ -4,10 +4,10 @@
     <div class="content mx-auto w-[85%] flex gap-8">
       <div class="text-area w-5/12 flex flex-col gap-4 py-24">
         <h3 class="font-semibold gap-4" style="font-family: 'Inter', sans-serif">Legistlative Agenda</h3>
-        <h4 class="text-white font-medium" style="font-family: 'Inter', sans-serif">
+        <h5 class="text-white font-medium" style="font-family: 'Inter', sans-serif">
           A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
           since 2023. Kalu represents the Bende
-        </h4>
+        </h5>
       </div>
       <div class="grid grid-cols-3 w-7/12">
         <div class="drop-card border border-borderGreen flex items-end">
@@ -31,7 +31,7 @@
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/about/partners')"
+            @click="$router.push('/legistlative/review')"
           >
             Constitutional Review
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
