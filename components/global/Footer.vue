@@ -1,6 +1,6 @@
 <template>
   <footer class="py-16 border-t border-borderMuted">
-    <div class="content mx-auto w-[90%] flex flex-col gap-8">
+    <div class="content mx-auto w-[85%] flex flex-col gap-8">
       <div class="top-row flex w-full items-start gap-16">
         <div class="ls w-4/12 flex items-center justify-between">
           <FullLogo />

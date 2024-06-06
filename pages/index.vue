@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col w-full">
     <section class="hero w-full h-[85dvh] bg-black flex justify-center">
-      <div class="content mx-auto w-[90%] flex h-full items-center">
+      <div class="content mx-auto w-[85%] flex h-full items-center">
         <div class="text-box w-1/2 flex flex-col text-white gap-4">
           <h1>The office of the deputy <span class="font-[800]">speaker</span></h1>
           <h4>
@@ -13,7 +13,7 @@
       </div>
     </section>
     <section class="w-full py-16 text-center flex flex-col">
-      <div class="content mx-auto w-[90%] flex flex-col gap-2 items-center">
+      <div class="content mx-auto w-[85%] flex flex-col gap-2 items-center">
         <h2 class="text-black font-semibold">About <span class="text-primaryGreen">Benjamin Kalu</span></h2>
         <p class="w-9/12 mx-auto text-xl">
           <span class="text-primaryGreen">Benjamin Kalu</span> is a prominent Nigerian politician, serving as the Deputy
@@ -30,7 +30,15 @@
       </div>
     </section>
     <section class="updates w-full py-16 bg-black text-white relative">
-      <div class="content flex flex-col mx-auto w-[90%] gap-8">
+      <NuxtImg
+        src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
+        class="img-one absolute top-1/2 left-0"
+      />
+      <NuxtImg
+        src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
+        class="img-one absolute top-1/2 right-0"
+      />
+      <div class="content flex flex-col mx-auto w-[85%] gap-8">
         <div class="header flex flex-col gap-1 text-white">
           <h2>Weekly <span class="text-primaryGreen">updates</span></h2>
           <h4>Get first hand updates with your deputy speaker</h4>
@@ -45,7 +53,7 @@
       </div>
     </section>
     <section class="legistlative py-16 bg-light w-full">
-      <div class="content mx-auto w-[90%] flex flex-col gap-8">
+      <div class="content mx-auto w-[85%] flex flex-col gap-8">
         <div class="header w-7/12 flex flex-col gap-1">
           <h2 class="font-semibold">Legistlative Affairs</h2>
           <h4 class="text-gray">
@@ -63,7 +71,7 @@
       </div>
     </section>
     <section class="bills py-16 w-full">
-      <div class="content flex flex-col w-[90%] mx-auto gap-4">
+      <div class="content flex flex-col w-[85%] mx-auto gap-4">
         <div class="header w-6/12">
           <h2 class="font-semibold">Bills & Motions</h2>
           <h4 class="text-gray">
@@ -105,7 +113,7 @@
       </div>
     </section>
     <section class="partners w-full py-16 bg-light">
-      <div class="content flex ml-[5%] flex-col gap-16">
+      <div class="content flex ml-[7.5%] flex-col gap-16">
         <div class="w-8/12 flex flex-col gap-2">
           <h2 class="font-semibold">Development Partners</h2>
           <h4>

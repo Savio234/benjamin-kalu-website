@@ -6,7 +6,7 @@
         our consistuencies
       </p>
       <MainButton></MainButton>
-      <div class="grid grid-cols-3 grid-rows-3 gap-8 text-left">
+      <div class="grid grid-cols-3 grid-rows-3 gap-8 text-left my-8">
         <CardNews description="" class="col-span-2 row-span-2" image-height="h-[80%]" />
         <CardNews description="" />
         <CardNews description="" />
