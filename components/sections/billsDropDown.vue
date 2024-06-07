@@ -13,7 +13,7 @@
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/bills/')"
+            @click="$router.push('/bills?type=speaker')"
           >
             Office of the Deputy Speaker's Bills
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
@@ -22,7 +22,7 @@
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/about/office')"
+            @click="$router.push('/bills/motions?type=speaker')"
           >
             Office of the deputy speaker's Motions
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
@@ -31,7 +31,7 @@
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/about/partners')"
+            @click="$router.push('/bills?type=house')"
           >
             House of Representatives Bills
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
@@ -40,7 +40,7 @@
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/about/partners')"
+            @click="$router.push('/bills/motions?type=house')"
           >
             House of Representatives Motions
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />

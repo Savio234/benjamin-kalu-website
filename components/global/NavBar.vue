@@ -43,7 +43,7 @@
           "
           >Bills & Motions</NuxtLink
         >
-        <NuxtLink to="/" class="text-gray py-2 px-4 rounded-full">Projects</NuxtLink>
+        <NuxtLink to="/projects" class="text-gray py-2 px-4 rounded-full">Projects</NuxtLink>
         <NuxtLink to="/blog" class="text-gray py-2 px-4 rounded-full">News & Update</NuxtLink>
       </div>
       <MainButton append-icon="sms">Contact Us</MainButton>

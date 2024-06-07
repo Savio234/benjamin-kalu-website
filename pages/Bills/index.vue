@@ -36,6 +36,83 @@
             House Bills
           </button>
         </div>
+        <!-- grid table -->
+        <div class="w-full flex flex-col gap-4 my-8">
+          <div class="grid table-grid w-full border border-borderMuted">
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>S/N</small>
+              <p class="font-medium">1</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>H/B Number</small>
+              <p class="font-medium">HB.06</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Title</small>
+              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Bill Sponsor</small>
+              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2">
+              <small>Status</small>
+              <p class="font-medium">Awaiting Committee Report</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-col gap-4 my-8">
+          <div class="grid table-grid w-full border border-borderMuted">
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>S/N</small>
+              <p class="font-medium">2</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>H/B Number</small>
+              <p class="font-medium">HB.06</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Title</small>
+              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Bill Sponsor</small>
+              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2">
+              <small>Status</small>
+              <p class="font-medium">Awaiting Committee Report</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-col gap-4 my-8">
+          <div class="grid table-grid w-full border border-borderMuted">
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>S/N</small>
+              <p class="font-medium">3</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>H/B Number</small>
+              <p class="font-medium">HB.06</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Title</small>
+              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2 border-r border-borderMuted">
+              <small>Bill Sponsor</small>
+              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+            </div>
+            <div class="flex flex-col gap-1 py-2 px-2">
+              <small>Status</small>
+              <p class="font-medium">Awaiting Committee Report</p>
+            </div>
+          </div>
+        </div>
+        <!-- pagination -->
+        <div class="w-full flex items-center justify-center">
+          <Pagination />
+        </div>
       </div>
     </section>
   </main>
@@ -52,5 +129,8 @@ const isHouseBills = ref(false);
   background-color: #007e9ae5;
   background-blend-mode: overlay;
   background-position: center center;
+}
+.table-grid {
+  grid-template-columns: 5% 10% 40% 1fr 1fr;
 }
 </style>
