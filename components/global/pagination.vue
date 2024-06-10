@@ -17,13 +17,12 @@
             stroke-linejoin="round"
           />
         </svg>
-
-        Showing 1 to 6 of 200 entries
+        {{ $props.prevText }}
       </span>
     </template>
     <template #next-button>
       <span class="text-primaryGreen flex gap-4 items-center">
-        Next Bills
+        {{ $props.nextText }}
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.57227 12.4347L6.87945 7.1275L1.57227 1.82031"
@@ -39,7 +38,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+defineProps({
+  prevText: {
+    type: String,
+    required: false,
+    default: 'Showing 1 to 6 of 200 entries',
+  },
+  nextText: {
+    type: String,
+    requird: false,
+    default: 'Next',
+  },
+});
 const onClickHandler = (page) => {
   console.log(page);
 };

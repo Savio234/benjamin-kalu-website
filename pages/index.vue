@@ -1,8 +1,8 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-[85dvh] bg-black flex justify-center">
-      <div class="content mx-auto w-[85%] flex h-full items-center">
-        <div class="text-box w-1/2 flex flex-col text-white gap-4">
+    <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
+      <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
+        <div class="text-box w-full lg:w-1/2 flex flex-col text-white gap-4">
           <h1>The office of the deputy <span class="font-[800]">speaker</span></h1>
           <h4>
             A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
@@ -15,7 +15,7 @@
     <section class="w-full py-16 text-center flex flex-col">
       <div class="content mx-auto w-[85%] flex flex-col gap-2 items-center">
         <h2 class="text-black font-semibold">About <span class="text-primaryGreen">Benjamin Kalu</span></h2>
-        <p class="w-9/12 mx-auto text-xl">
+        <p class="w-full sm:w-9/12 mx-auto text-xl">
           <span class="text-primaryGreen">Benjamin Kalu</span> is a prominent Nigerian politician, serving as the Deputy
           Speaker of the House of Representatives of Nigeria since 2023. Kalu represents the Bende federal constituency,
           bringing their issues and perspectives to the national stage in his legislative role.
@@ -54,7 +54,7 @@
     </section>
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
-        <div class="header w-7/12 flex flex-col gap-1">
+        <div class="header w-full sm:w-7/12 flex flex-col gap-1">
           <h2 class="font-semibold">Legistlative Affairs</h2>
           <h4 class="text-gray">
             A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
@@ -62,7 +62,7 @@
             national stage in his legislative role.
           </h4>
         </div>
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <!-- legistlative grid -->
           <CardLegistlative />
           <CardLegistlative />
@@ -72,7 +72,7 @@
     </section>
     <section class="bills py-16 w-full">
       <div class="content flex flex-col w-[85%] mx-auto gap-4">
-        <div class="header w-6/12">
+        <div class="header w-full sm:w-6/12">
           <h2 class="font-semibold">Bills & Motions</h2>
           <h4 class="text-gray">
             Want to educate yourself on the bills and motions from the office of the deputy speaker? find a curated list
@@ -86,7 +86,7 @@
               class="w-full h-auto rounded-xl"
             />
           </div>
-          <div class="grid grid-cols-3 grid-row-2 w-full gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-2 w-full gap-4">
             <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
               <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
               <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
@@ -102,7 +102,7 @@
               <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
               <p>You can find all the bills from the office of the deputy speaker here</p>
             </div>
-            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 col-span-3 cursor-pointer">
+            <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 sm:col-span-3 cursor-pointer">
               <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
               <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
               <p>You can find all the bills from the office of the deputy speaker here</p>
@@ -114,7 +114,7 @@
     </section>
     <section class="partners w-full py-16 bg-light">
       <div class="content flex ml-[7.5%] flex-col gap-16">
-        <div class="w-8/12 flex flex-col gap-2">
+        <div class="w-full sm:w-8/12 flex flex-col gap-2">
           <h2 class="font-semibold">Development Partners</h2>
           <h4>
             Meet our development partners who have key roles in helping to achieve sustainable human development in

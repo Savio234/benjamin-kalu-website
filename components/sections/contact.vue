@@ -1,12 +1,12 @@
 <template>
   <section class="w-full py-16 bg-white">
-    <div class="content w-5/12 mx-auto text-center flex flex-col items-center">
+    <div class="content w-4/12 mx-auto text-center flex flex-col items-center">
       <FullLogo class="shadow border border-borderMuted rounded-full pr-3" />
-      <h2 class="font-semibold">Stay in the loop</h2>
-      <h4 class="font-medium">
+      <h3 class="font-semibold mt-8">Stay in the loop</h3>
+      <h6 class="font-medium">
         Provide your email address so we can send you regular <br />
         updates of our projects as they come
-      </h4>
+      </h6>
       <div class="form w-full my-12 flex flex-col gap-4">
         <input
           type="email"

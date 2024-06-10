@@ -38,6 +38,28 @@ h6 {
   font-size: 16px;
   line-height: 120%;
 }
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px; /* Adjust as needed for h4-h6 on smaller screens */
+  }
+
+  /* Add similar adjustments for h5 and h6 if needed */
+}
+
 p,
 a,
 button,

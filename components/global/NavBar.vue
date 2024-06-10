@@ -2,7 +2,9 @@
   <nav class="w-full py-4 bg-white relative">
     <div class="content mx-auto flex justify-between w-[95%] items-center">
       <FullLogo />
-      <div class="nav-content flex items-center rounded-full border border-borderMuted bg-white p-1 gap-6 shadow">
+      <div
+        class="nav-content hidden lg:flex items-center rounded-full border border-borderMuted bg-white p-1 gap-6 shadow"
+      >
         <NuxtLink
           to="/"
           class="text-gray py-2 px-4 rounded-full"
@@ -10,6 +12,7 @@
             activateAbout = false;
             activateLegistlative = false;
             activateBills = false;
+            activateProjects = false;
           "
           >Home</NuxtLink
         >
@@ -20,6 +23,7 @@
             activateAbout = true;
             activateLegistlative = false;
             activateBills = false;
+            activateProjects = false;
           "
           >About</NuxtLink
         >
@@ -30,6 +34,7 @@
             activateLegistlative = true;
             activateAbout = false;
             activateBills = false;
+            activateProjects = false;
           "
           >Legislative Affairs</NuxtLink
         >
@@ -40,13 +45,34 @@
             activateLegistlative = false;
             activateAbout = false;
             activateBills = true;
+            activateProjects = false;
           "
           >Bills & Motions</NuxtLink
         >
-        <NuxtLink to="/projects" class="text-gray py-2 px-4 rounded-full">Projects</NuxtLink>
-        <NuxtLink to="/blog" class="text-gray py-2 px-4 rounded-full">News & Update</NuxtLink>
+        <NuxtLink
+          to="/projects"
+          class="text-gray py-2 px-4 rounded-full"
+          @mouseover="
+            activateLegistlative = false;
+            activateAbout = false;
+            activateBills = false;
+            activateProjects = true;
+          "
+          >Projects</NuxtLink
+        >
+        <NuxtLink
+          to="/blog"
+          class="text-gray py-2 px-4 rounded-full"
+          @mouseover="
+            activateLegistlative = false;
+            activateAbout = false;
+            activateBills = false;
+            activateProjects = false;
+          "
+          >News & Update</NuxtLink
+        >
       </div>
-      <MainButton append-icon="sms">Contact Us</MainButton>
+      <MainButton append-icon="sms" class="hidden lg:block">Contact Us</MainButton>
     </div>
     <!-- dropdowns -->
     <SectionsAboutDropDown
@@ -64,6 +90,11 @@
       v-show="activateBills"
       @mouseleave="activateBills = false"
     />
+    <SectionsProjectsDropDown
+      class="absolute top-[100%] shadow"
+      v-show="activateProjects"
+      @mouseleave="activateProjects = false"
+    />
   </nav>
 </template>
 
@@ -71,6 +102,7 @@
 const activateAbout = ref(false);
 const activateLegistlative = ref(false);
 const activateBills = ref(false);
+const activateProjects = ref(false);
 </script>
 
 <style lang="scss" scoped>

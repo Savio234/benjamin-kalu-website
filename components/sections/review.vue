@@ -1,14 +1,14 @@
 <template>
   <section class="w-full py-16 bg-white">
-    <div class="content w-5/12 mx-auto text-center flex flex-col items-center">
+    <div class="content w-[85%] sm:w-4/12 mx-auto text-center flex flex-col items-center">
       <FullLogo class="shadow border border-borderMuted rounded-full pr-3" />
-      <h2 class="font-semibold">
+      <h3 class="font-semibold mt-4">
         Let us <span class="text-primaryGreen">Know</span> <br />
         how we are doing
-      </h2>
-      <h4 class="font-medium">
+      </h3>
+      <h6 class="font-medium">
         Feel free to send us and Email and let us know how our ofice is performing and how best we can improve
-      </h4>
+      </h6>
       <div class="form w-full my-8">
         <textarea
           rows="10"
