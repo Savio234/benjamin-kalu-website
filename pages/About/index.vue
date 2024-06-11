@@ -1,10 +1,10 @@
 <template>
   <main class="flex flex-col w-full bg-light">
-    <section class="hero w-full h-[85vh] bg-primaryGreen flex items-center">
-      <div class="text-section w-7/12 py-16">
+    <section class="hero w-full h-auto sm:h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="text-section w-full sm:w-7/12 py-16">
         <div class="content mx-auto w-[80%] flex flex-col gap-2">
           <h2 class="text-white font-semibold">
-            Get to know the Gem, <br />
+            Get to know the Gem, <br class="hidden sm:block" />
             that is <span class="text-secondaryGreen">Benjamin Kalu</span>
           </h2>
           <h4 class="text-white">
@@ -13,7 +13,7 @@
           </h4>
         </div>
       </div>
-      <div class="image-sect w-5/12 h-full">
+      <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
           src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717536006/benjamin_kalu/about_home_hus4kr.png"
           class="w-full h-full object-cover"
@@ -21,12 +21,12 @@
       </div>
     </section>
     <section class="w-full py-16">
-      <div class="content flex flex-col w-[90%] gap-4 mx-auto">
+      <div class="content flex flex-col w-[85%] gap-4 mx-auto">
         <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
           <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
           <p class="text-primaryGreen font-medium">Who is Benjamin Kalu ?</p>
         </div>
-        <div class="w-8/12 flex items-stretch">
+        <div class="w-full sm:w-8/12 flex items-stretch">
           <p class="text-lg" style="font-family: 'Inter', sans-serif">
             RT. Hon Benjamin Okezie Kalu is a prominent Nigerian Politician, the oracle, Spokesperson for the 9th House
             of Representatives, and currently serving as the Deputy Speaker of the 10th Assembly, Federal Republic of
@@ -46,7 +46,7 @@
           <p class="text-primaryGreen font-medium">Education</p>
         </div>
         <div
-          class="w-8/12 flex flex-col gap-2 items-stretch text-lg"
+          class="w-full sm:w-8/12 flex flex-col gap-2 items-stretch text-lg"
           style="font-family: 'Inter', sans-serif !important"
         >
           <p class="text-lg">
@@ -75,8 +75,8 @@
             src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
           />
         </div>
-        <div class="w-full flex">
-          <div class="text-sect w-7/12">
+        <div class="w-full flex flex-col sm:flex-row">
+          <div class="text-sect w-full sm:w-7/12">
             <div class="mx-auto w-[90%] flex flex-col gap-4">
               <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
                 <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
@@ -104,15 +104,15 @@
               </div>
             </div>
           </div>
-          <div class="image-sect w-5/12">
+          <div class="image-sect w-5/12 hidden sm:block">
             <NuxtImg
               src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575954/benjamin_kalu/ben_speech_fjilfj.png"
               class="w-full h-[60vh] object-cover"
             />
           </div>
         </div>
-        <div class="w-full flex flex-row-reverse gap-8 items-center">
-          <div class="text-sect w-7/12">
+        <div class="w-full flex flex-col-reverse sm:flex-row-reverse gap-8 items-center">
+          <div class="text-sect w-full sm:w-7/12">
             <div class="mx-auto w-[90%] flex flex-col gap-4">
               <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
                 <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
@@ -131,7 +131,7 @@
               </div>
             </div>
           </div>
-          <div class="image-sect w-5/12">
+          <div class="image-sect w-full sm:w-5/12 hidden sm:block">
             <NuxtImg
               src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575954/benjamin_kalu/ben_speech_fjilfj.png"
               class="w-full h-[60vh] object-cover"
@@ -146,7 +146,7 @@
         <p class="text-lg text-gray font-medium">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <div class="grid grid-cols-3 gap-4 text-left">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
           <CardNews description="" category="Award" />
           <CardNews description="" />
           <CardNews description="" />

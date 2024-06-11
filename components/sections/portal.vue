@@ -1,10 +1,10 @@
 <template>
   <section class="w-full py-16 bg-white">
-    <div class="content w-5/12 mx-auto text-center flex flex-col items-center">
+    <div class="content w-[85%] sm:w-5/12 mx-auto text-center flex flex-col items-center">
       <h2 class="font-semibold">Learn more</h2>
       <h5 class="font-medium">
-        To participate in town hall meetings, public hearings <br />
-        across the nation and to get more information about <br />
+        To participate in town hall meetings, public hearings <br class="hidden sm:block" />
+        across the nation and to get more information about <br class="hidden sm:block" />
         Constitutional Review
       </h5>
       <div class="form w-full my-6 flex flex-col gap-4">

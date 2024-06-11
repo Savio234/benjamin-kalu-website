@@ -1,7 +1,7 @@
 <template>
   <main class="w-full flex flex-col bg-light">
-    <section class="hero w-full h-[85vh] bg-primaryGreen flex items-center">
-      <div class="text-section w-7/12 py-16">
+    <section class="hero w-full h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="text-section w-full sm:w-7/12 py-16">
         <div class="content mx-auto w-[80%] flex flex-col gap-2">
           <h2 class="text-white font-semibold">About the Office of the Deputy Speaker</h2>
           <h4 class="text-white">
@@ -10,7 +10,7 @@
           </h4>
         </div>
       </div>
-      <div class="image-sect w-5/12 h-full">
+      <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
           src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717587571/benjamin_kalu/office_logo_xiyct1.png"
           class="w-full h-full object-cover"
@@ -18,7 +18,7 @@
       </div>
     </section>
     <section class="w-full py-16">
-      <div class="content mx-auto w-[90%] flex flex-col gap-4">
+      <div class="content mx-auto w-[85%] flex flex-col gap-4">
         <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
           <svg-icon name="education" width="1.25rem" height="1.25rem" />
           <p class="text-primaryGreen font-medium">Know Your Office</p>
@@ -48,7 +48,7 @@
           Meet the experts, and strategic thinkers who work together to advance the <br />
           mission of the office
         </p>
-        <div class="grid grid-cols-5 grid-rows-2 gap-16 py-8">
+        <div class="grid grid-cols-2 sm:grid-cols-5 grid-rows-2 gap-16 py-8">
           <div class="flex flex-col gap-2 items-center">
             <NuxtImg src="https://placehold.co/400X400" class="h-32 w-32 rounded-full" />
             <p class="font-semibold">Rt. Hon. Abbas Tajudeen, Phd</p>

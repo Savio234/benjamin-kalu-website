@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-[85vh] bg-primaryGreen flex items-center">
-      <div class="text-section w-7/12 py-16">
+    <section class="hero w-full h-auto sm:h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="text-section w-full sm:w-7/12 py-16">
         <div class="content mx-auto w-[75%] flex flex-col gap-2">
           <h2 class="text-white font-semibold">The People's house⚡</h2>
           <h4 class="text-white">
@@ -9,7 +9,7 @@
           </h4>
         </div>
       </div>
-      <div class="image-sect w-5/12 h-full">
+      <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
           src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717607321/benjamin_kalu/assembly_coat_s7dzb8.png"
           class="w-full h-full object-cover"

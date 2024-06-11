@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-[85vh] bg-primaryGreen flex items-center">
-      <div class="text-section w-7/12 py-16">
+    <section class="hero w-full h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="text-section w-full sm:w-7/12 py-16">
         <div class="content mx-auto w-[80%] flex flex-col gap-2">
           <h2 class="text-white font-semibold">Get up to speed⚡</h2>
           <h4 class="text-white">
@@ -9,7 +9,7 @@
           </h4>
         </div>
       </div>
-      <div class="image-sect w-5/12 h-full">
+      <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
           src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717604743/benjamin_kalu/ben_native_geeiy8.png"
           class="w-full h-full object-cover"
@@ -34,8 +34,8 @@
           Government of Nigeria since 2019, he has played a vital role in shaping policies and implementing projects
           that contribute to national development. His agendas are as follows:
         </p>
-        <div class="holder flex gap-16 py-16">
-          <div class="col-one w-1/2 flex flex-col gap-16">
+        <div class="holder flex flex-col sm:flex-row gap-16 py-16">
+          <div class="col-one w-full sm:w-1/2 flex flex-col gap-16">
             <div class="flex flex-col gap-4 box">
               <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
               <h4 class="font-semibold">Education</h4>
@@ -45,7 +45,7 @@
               <h4 class="font-semibold">Commerce</h4>
             </div>
           </div>
-          <div class="col-one w-1/2 flex flex-col gap-16 mt-[10%]">
+          <div class="col-one w-full sm:w-1/2 flex flex-col gap-16 mt-0 sm:mt-[10%]">
             <div class="flex flex-col gap-4 box">
               <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
               <h4 class="font-semibold">Empowering Indigenous Entrepreneurs and Innovation</h4>

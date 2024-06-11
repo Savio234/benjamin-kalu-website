@@ -1,15 +1,15 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-[85vh] bg-primaryGreen flex items-center">
-      <div class="text-section w-7/12 py-16">
-        <div class="content mx-auto w-[75%] flex flex-col gap-2">
+    <section class="hero w-full h-auto sm:h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="text-section w-full sm:w-7/12 py-16">
+        <div class="content mx-auto w-[85%] flex flex-col gap-2">
           <h2 class="text-white font-semibold">Get up to speed⚡</h2>
           <h4 class="text-white">
             See the latest projects that we are up to and actively working on to better improve our consistuencies
           </h4>
         </div>
       </div>
-      <div class="image-sect w-5/12 h-full">
+      <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
           src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png"
           class="w-full h-full object-cover"
@@ -54,7 +54,7 @@
       <div class="content mx-auto w-[85%]">
         <h3 class="font-semibold">History Of The Nigerian Constitutional Development</h3>
         <div class="w-full flex flex-col gap-8 my-8">
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg">
@@ -67,7 +67,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1914</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> The Hugh Clifford Constitution</p>
@@ -82,7 +82,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1922</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> Arthur Richards Constitution</p>
@@ -97,7 +97,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1946</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> John Macpherson Constitution</p>
@@ -112,7 +112,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1951</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> Oliver Lyttelton Constitution</p>
@@ -128,7 +128,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1954</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> The Independence Constitution</p>
@@ -144,7 +144,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1960</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2">
               <p class="text-lg"><span class="font-semibold">Colonial -</span> The 1963 Republican Constitution</p>
@@ -161,7 +161,7 @@
             </div>
             <p class="text-lg text-primaryGreen">1963</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2 w-full">
               <p class="text-lg"><span class="font-semibold">Military -</span> The Presidential Constitution of 1979</p>
@@ -175,7 +175,7 @@
             </div>
             <p class="text-lg text-primaryGreen w-fit">1979</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2 w-full">
               <p class="text-lg">
@@ -188,7 +188,7 @@
             </div>
             <p class="text-lg text-primaryGreen w-fit">1989</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2 w-full">
               <p class="text-lg">
@@ -201,7 +201,7 @@
             </div>
             <p class="text-lg text-primaryGreen w-fit">1995</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2 w-full">
               <p class="text-lg">
@@ -211,7 +211,7 @@
             </div>
             <p class="text-lg text-primaryGreen w-fit">1999</p>
           </div>
-          <div class="item-list w-full flex gap-16 items-start">
+          <div class="item-list w-full flex flex-col sm:flex-row sm:gap-16 items-start">
             <div class="w-3 h-3 my-2 border-primaryGreen border-4 rounded-full"></div>
             <div class="flex flex-col gap-2 w-full">
               <p class="text-lg">
