@@ -15,6 +15,12 @@
               activateBills = false;
               activateProjects = false;
             "
+            @click="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
             >Home</NuxtLink
           >
           <NuxtLink
@@ -23,6 +29,12 @@
             @mouseover="
               activateAbout = true;
               activateLegistlative = false;
+              activateBills = false;
+              activateProjects = false;
+            "
+            @click="
+              activateLegistlative = false;
+              activateAbout = false;
               activateBills = false;
               activateProjects = false;
             "
@@ -37,9 +49,31 @@
               activateBills = false;
               activateProjects = false;
             "
+            @click="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
             >Legislative Affairs</NuxtLink
           >
-          <NuxtLink to="/bills" class="text-gray py-2 px-4 rounded-full">Bills & Motions</NuxtLink>
+          <NuxtLink
+            to="/bills"
+            class="text-gray py-2 px-4 rounded-full"
+            @mouseover="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
+            @click="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
+            >Bills & Motions</NuxtLink
+          >
           <NuxtLink
             to="/projects"
             class="text-gray py-2 px-4 rounded-full"
@@ -49,12 +83,24 @@
               activateBills = false;
               activateProjects = true;
             "
+            @click="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
             >Projects</NuxtLink
           >
           <NuxtLink
             to="/blog"
             class="text-gray py-2 px-4 rounded-full"
             @mouseover="
+              activateLegistlative = false;
+              activateAbout = false;
+              activateBills = false;
+              activateProjects = false;
+            "
+            @click="
               activateLegistlative = false;
               activateAbout = false;
               activateBills = false;
@@ -71,7 +117,7 @@
         </button>
       </div>
       <!-- dropdowns -->
-      <SectionsAboutDropDown
+      <!-- <SectionsAboutDropDown
         class="absolute top-[100%] shadow"
         v-show="activateAbout"
         @mouseleave="activateAbout = false"
@@ -81,7 +127,7 @@
           activateBills = false;
           activateProjects = false;
         "
-      />
+      /> -->
       <SectionsLegistlativeDropDown
         class="absolute top-[100%] shadow"
         v-show="activateLegistlative"
@@ -124,10 +170,16 @@
         <NuxtLink to="/legistlative" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
           >Legislative Affairs</NuxtLink
         >
+        <NuxtLink to="/legistlative/review" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+          >Constitutional Review</NuxtLink
+        >
         <NuxtLink to="/bills" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
           >Bills & Motions</NuxtLink
         >
         <NuxtLink to="/projects" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">Projects</NuxtLink>
+        <NuxtLink to="/projects/pisep" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+          >PISEP</NuxtLink
+        >
         <NuxtLink to="/blog" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
           >News & Update</NuxtLink
         >

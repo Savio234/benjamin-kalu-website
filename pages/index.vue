@@ -98,22 +98,22 @@
               <p>You can find all the bills from the office of the deputy speaker here</p>
             </div>
             <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
-              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
-              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
-              <p>You can find all the bills from the office of the deputy speaker here</p>
+              <NuxtImg src="/images/list_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Motions from the Deputy Speaker</h4>
+              <p>Find all motions from the office of the deputy Speaker</p>
             </div>
             <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 cursor-pointer">
-              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
-              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
-              <p>You can find all the bills from the office of the deputy speaker here</p>
+              <NuxtImg src="/images/shop_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">Bill Progression Chart</h4>
+              <p>Get real-time charts that help show the progression of the office of the deputy speaker</p>
             </div>
             <div class="rounded-xl border border-borderMuted p-4 flex flex-col gap-4 sm:col-span-3 cursor-pointer">
-              <NuxtImg src="/images/person_icon.png" class="h-8 w-8 rounded-full" />
-              <h4 class="font-semibold">Bills from the office of the deputy speaker</h4>
-              <p>You can find all the bills from the office of the deputy speaker here</p>
+              <NuxtImg src="/images/building_icon.png" class="h-8 w-8 rounded-full" />
+              <h4 class="font-semibold">House of Representative Bills</h4>
+              <p>Find all the bills from past to present that has been passed by the house of representatives</p>
             </div>
           </div>
-          <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2">See more</h5>
+          <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2 cursor-pointer" @click="$router.push('/bills')">See more</h5>
         </div>
       </div>
     </section>

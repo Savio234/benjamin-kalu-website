@@ -32,7 +32,7 @@
           </p>
         </div> -->
         <div
-          class="drop-card border border-borderGreen flex items-end"
+          class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
             background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1718127396/benjamin_kalu/house_gravel_nccldk.png);
           "
