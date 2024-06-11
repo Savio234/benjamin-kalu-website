@@ -44,10 +44,15 @@
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>
         <div class="relative w-full h-auto mt-4">
-          <NuxtImg
+          <!-- <NuxtImg
             src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717507316/benjamin_kalu/weekly_updates_magazine_gmmbl5.png"
             class="w-full h-full"
-          />
+          /> -->
+          <embed
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf"
+            class="w-full h-screen"
+            width="100%"
+          ></embed>
         </div>
         <MainButton class="self-end" append-icon="attachment-white">Download PDF</MainButton>
       </div>
