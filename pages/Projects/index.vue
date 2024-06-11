@@ -51,6 +51,13 @@
             </div>
           </div>
         </div>
+
+        <!-- Project Card -->
+        <div class="w-full flex flex-col gap-4">
+          <CardProject />
+          <CardProject />
+        </div>
+        <Pagination class="self-center" prev-text="Previous Projects" next-text="Next Projects" />
       </div>
     </section>
     <SectionsContact />
