@@ -49,7 +49,7 @@
             class="w-full h-full"
           /> -->
           <embed
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf#toolbar=0"
             class="w-full h-screen"
             width="100%"
           ></embed>
