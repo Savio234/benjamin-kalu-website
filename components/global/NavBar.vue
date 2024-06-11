@@ -39,17 +39,7 @@
             "
             >Legislative Affairs</NuxtLink
           >
-          <NuxtLink
-            to="/bills"
-            class="text-gray py-2 px-4 rounded-full"
-            @mouseover="
-              activateLegistlative = false;
-              activateAbout = false;
-              activateBills = true;
-              activateProjects = false;
-            "
-            >Bills & Motions</NuxtLink
-          >
+          <NuxtLink to="/bills" class="text-gray py-2 px-4 rounded-full">Bills & Motions</NuxtLink>
           <NuxtLink
             to="/projects"
             class="text-gray py-2 px-4 rounded-full"
@@ -85,21 +75,45 @@
         class="absolute top-[100%] shadow"
         v-show="activateAbout"
         @mouseleave="activateAbout = false"
+        @click="
+          activateLegistlative = false;
+          activateAbout = false;
+          activateBills = false;
+          activateProjects = false;
+        "
       />
       <SectionsLegistlativeDropDown
         class="absolute top-[100%] shadow"
         v-show="activateLegistlative"
         @mouseleave="activateLegistlative = false"
+        @click="
+          activateLegistlative = false;
+          activateAbout = false;
+          activateBills = false;
+          activateProjects = false;
+        "
       />
-      <SectionsBillsDropDown
+      <!-- <SectionsBillsDropDown
         class="absolute top-[100%] shadow"
         v-show="activateBills"
         @mouseleave="activateBills = false"
-      />
+        @click="
+          activateLegistlative = false;
+          activateAbout = false;
+          activateBills = false;
+          activateProjects = false;
+        "
+      /> -->
       <SectionsProjectsDropDown
         class="absolute top-[100%] shadow"
         v-show="activateProjects"
         @mouseleave="activateProjects = false"
+        @click="
+          activateLegistlative = false;
+          activateAbout = false;
+          activateBills = false;
+          activateProjects = false;
+        "
       />
     </nav>
     <div v-if="mobileNav" class="sm:hidden mobile-nav h-dvh w-full bg-white pt-8 fixed z-[1500]">

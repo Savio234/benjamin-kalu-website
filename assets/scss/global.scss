@@ -86,3 +86,18 @@ small {
   background-color: #fafffa;
   border: 1px solid #cecfcf;
 }
+// global animations
+.drop-card:hover {
+  animation: zoom 2s ease-in-out; /* Animation applied here */
+}
+@keyframes zoom {
+  0% {
+    background-size: 100%;
+  } /* Starting state (original size) */
+  50% {
+    background-size: 120%;
+  } /* Zoom in state (midpoint) */
+  100% {
+    background-size: 100%;
+  }
+}

@@ -7,13 +7,21 @@
         >
           <FullLogo />
           <div class="icon-row flex items-center gap-6">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/HonBenKalu?mibextid=JRoKGi" target="_blank" rel="noopener noreferrer">
               <SvgIcon name="facebook_icon" width="1.5rem" height="1.5rem" />
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/officialbenkalu?igsh=c3Q5emg4cDRpMHd2&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg-icon name="instagram_icon" width="1.5rem" height="1.5rem" />
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com/OfficialBenKalu?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg-icon name="twitter_icon" width="1.5rem" height="1.5rem" />
             </a>
           </div>

@@ -10,20 +10,26 @@
         </h5>
       </div>
       <div class="grid grid-cols-2 w-7/12">
-        <div class="drop-card border border-borderGreen flex items-end">
-          <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/projects')"
-          >
+        <div
+          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          style="
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png);
+          "
+          @click="$router.push('/projects')"
+        >
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
             All Projects
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
-        <div class="drop-card border border-borderGreen flex items-end">
-          <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/projects/pisep')"
-          >
+        <div
+          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          style="
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1718125712/benjamin_kalu/happy_child_smxkrn.png);
+          "
+          @click="$router.push('/projects/pisep')"
+        >
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
             PISEP
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
@@ -48,7 +54,9 @@
 .drop-card {
   position: relative;
   background-image: url('https://placehold.co/400X400');
-  background-size: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   &::after {
     content: '';

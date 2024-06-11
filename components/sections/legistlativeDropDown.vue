@@ -10,11 +10,14 @@
         </h5>
       </div>
       <div class="grid grid-cols-2 w-7/12">
-        <div class="drop-card border border-borderGreen flex items-end">
-          <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/legistlative')"
-          >
+        <div
+          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          style="
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1717604743/benjamin_kalu/ben_native_geeiy8.png);
+          "
+          @click="$router.push('/legistlative')"
+        >
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
             Deputy Speaker's Agenda
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
@@ -28,11 +31,14 @@
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div> -->
-        <div class="drop-card border border-borderGreen flex items-end">
-          <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/legistlative/review')"
-          >
+        <div
+          class="drop-card border border-borderGreen flex items-end"
+          style="
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1718127396/benjamin_kalu/house_gravel_nccldk.png);
+          "
+          @click="$router.push('/legistlative/review')"
+        >
+          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
             Constitutional Review
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
