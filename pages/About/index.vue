@@ -147,11 +147,27 @@
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-          <CardNews description="" category="Award" />
-          <CardNews description="" />
-          <CardNews description="" />
-          <CardNews description="" />
-          <CardNews description="" />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/gown_address_tdycbo.png"
+            description=""
+            category="Award"
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/native_address_hgfuaj.png"
+            description=""
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
+            description=""
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_speaker_sitting_xucsh8.png"
+            description=""
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            description=""
+          />
         </div>
       </div>
     </section>

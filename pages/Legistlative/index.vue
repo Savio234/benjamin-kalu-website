@@ -37,21 +37,33 @@
         <div class="holder flex flex-col sm:flex-row gap-16 py-16">
           <div class="col-one w-full sm:w-1/2 flex flex-col gap-16">
             <div class="flex flex-col gap-4 box">
-              <NuxtImg src="" class="w-full h-60 rounded-xl object-cover" />
+              <NuxtImg
+                src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718142312/benjamin_kalu/education_sj8rks.png"
+                class="w-full h-60 rounded-xl object-cover"
+              />
               <h4 class="font-semibold">Education</h4>
             </div>
             <div class="flex flex-col gap-4 box">
-              <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
+              <NuxtImg
+                src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png"
+                class="w-full h-60 rounded-xl object-cover"
+              />
               <h4 class="font-semibold">Commerce</h4>
             </div>
           </div>
           <div class="col-one w-full sm:w-1/2 flex flex-col gap-16 mt-0 sm:mt-[10%]">
             <div class="flex flex-col gap-4 box">
-              <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
+              <NuxtImg
+                src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718142305/benjamin_kalu/innovation_mj7xir.png"
+                class="w-full h-60 rounded-xl object-cover"
+              />
               <h4 class="font-semibold">Empowering Indigenous Entrepreneurs and Innovation</h4>
             </div>
             <div class="flex flex-col gap-4 box">
-              <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
+              <NuxtImg
+                src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_sitting_c0fqxj.png"
+                class="w-full h-60 rounded-xl object-cover"
+              />
               <h4 class="font-semibold">Prison reforms</h4>
             </div>
           </div>

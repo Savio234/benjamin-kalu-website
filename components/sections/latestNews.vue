@@ -13,13 +13,23 @@
               <p class="bg-bgGreen text-primaryGreen rounded w-fit py-1 px-2">Details</p>
             </div>
           </div>
-          <CardNews />
-          <CardNews />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_sitting_c0fqxj.png"
+          />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <CardNews />
-          <CardNews />
-          <CardNews />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_speaker_sitting_xucsh8.png"
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+          />
+          <CardNews
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
+          />
         </div>
       </div>
       <a class="text-primaryGreen underline underline-offset-2 cursor-pointer">See All Articles</a>
@@ -31,7 +41,7 @@
 
 <style lang="scss" scoped>
 .featuredPost {
-  background-image: url('https://placehold.co/');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png');
   background-color: #35390775;
   background-blend-mode: multiply;
   background-size: cover;

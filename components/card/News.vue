@@ -1,6 +1,6 @@
 <template>
   <div class="w-full rounded-xl flex flex-col cursor-pointer bg-white border border-borderMuted">
-    <NuxtImg src="https://placehold.co/400X400" class="w-full object-cover rounded-t-xl" :class="$props.imageHeight" />
+    <NuxtImg :src="$props.imageUrl" class="w-full object-cover rounded-t-xl" :class="$props.imageHeight" />
     <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]">
       <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ $props.category }}</p>
       <h6 class="font-semibold">{{ $props.title }}</h6>
@@ -30,6 +30,11 @@ defineProps({
     type: String,
     required: false,
     default: 'h-60',
+  },
+  imageUrl: {
+    type: String,
+    required: false,
+    default: 'https://placehold.co/400X400',
   },
 });
 </script>
