@@ -1,12 +1,15 @@
 <template>
   <div class="w-full flex flex-col border border-borderMuted rounded-xl shadow">
     <div class="image w-full h-[15rem] relative">
-      <NuxtImg src="https://placehold.co/400" class="w-full h-full object-cover rounded-t-xl" />
+      <NuxtImg :src="$props.image" class="w-full h-full object-cover rounded-t-xl" />
     </div>
     <div class="content my-8 mx-auto w-[90%] flex flex-col gap-2">
-      <h4 class="font-semibold">{{ $props.title }}</h4>
+      <h5 class="font-semibold">{{ $props.title }}</h5>
       <p class="text-lg">{{ $props.description }}</p>
-      <a class="text-primaryGreen text-lg flex items-center gap-1 cursor-pointer"
+      <a
+        class="text-primaryGreen text-lg flex items-center gap-1 cursor-pointer"
+        v-if="$props.route"
+        @click="$router.push(`${$props.route}`)"
         >Learn More <svg-icon name="carat_green_right" width="2rem" height="2rem"
       /></a>
     </div>
@@ -25,6 +28,15 @@ defineProps({
     required: false,
     default:
       'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+  },
+  image: {
+    type: String,
+    required: false,
+    default: 'https://placehold.co/400',
+  },
+  route: {
+    type: String,
+    required: false,
   },
 });
 </script>

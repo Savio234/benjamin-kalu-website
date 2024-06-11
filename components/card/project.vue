@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full grid grid-cols-3 divide-x divide-borderMuted border border-borderMuted rounded-xl">
+  <div class="w-full grid sm:grid-cols-3 divide-x divide-borderMuted border border-borderMuted rounded-xl">
     <div class="image-box">
       <NuxtImg
         src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718104787/benjamin_kalu/umuoba_road_mng2w2.png"
-        class="w-full h-[17.5rem] object-cover rounded-l-xl"
+        class="w-full h-[17.5rem] object-cover sm:rounded-l-xl"
       />
     </div>
     <div class="desc flex flex-col justify-between p-4">

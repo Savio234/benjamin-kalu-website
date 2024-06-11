@@ -69,9 +69,7 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <!-- legistlative grid -->
-          <CardLegistlative />
-          <CardLegistlative />
-          <CardLegistlative />
+          <CardLegistlative v-for="(item, index) in legistlativeItems" :key="index" :title="item.title" :description="item.descripton" :image="item.image_url" :route="item.route" />
         </div>
       </div>
     </section>
@@ -113,7 +111,7 @@
               <p>Find all the bills from past to present that has been passed by the house of representatives</p>
             </div>
           </div>
-          <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2 cursor-pointer" @click="$router.push('/bills')">See more</h5>
+          <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2" @click="$router.push('/bills')">See more</h5>
         </div>
       </div>
     </section>
@@ -156,7 +154,29 @@
   </main>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+const legistlativeItems = ref([
+  {
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
+    title: 'Kalu’s Legislative Mission',
+    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    route: '/legistlative'
+  },
+  {
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
+    title: 'House Legistlative Agenda',
+    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    route: '/legistlative'
+  },
+  {
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
+    title: 'Constitutional Review',
+    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    route: '/legistlative/review'
+
+  }
+])
+</script>
 
 <style lang="scss" scoped>
 .hero {

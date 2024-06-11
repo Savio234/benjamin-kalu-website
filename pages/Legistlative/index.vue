@@ -37,7 +37,7 @@
         <div class="holder flex flex-col sm:flex-row gap-16 py-16">
           <div class="col-one w-full sm:w-1/2 flex flex-col gap-16">
             <div class="flex flex-col gap-4 box">
-              <NuxtImg src="https://placehold.co/400X400" class="w-full h-60 rounded-xl object-cover" />
+              <NuxtImg src="" class="w-full h-60 rounded-xl object-cover" />
               <h4 class="font-semibold">Education</h4>
             </div>
             <div class="flex flex-col gap-4 box">
