@@ -127,7 +127,7 @@ const activateAbout = ref(false);
 const activateLegistlative = ref(false);
 const activateBills = ref(false);
 const activateProjects = ref(false);
-const mobileNav = ref(true);
+const mobileNav = ref(false);
 </script>
 
 <style lang="scss" scoped>

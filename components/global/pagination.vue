@@ -2,7 +2,7 @@
   <vue-awesome-paginate
     v-model="currentPage"
     :total-items="50"
-    :items-per-page="4"
+    :items-per-page="5"
     :max-pages-shown="2"
     :on-click="onClickHandler"
   >
@@ -17,7 +17,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        {{ $props.prevText }}
+        <span class="hidden sm:block">{{ $props.prevText }}</span>
       </span>
     </template>
     <template #next-button>
