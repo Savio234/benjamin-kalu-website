@@ -23,109 +23,185 @@
         <div class="toggler w-full flex items-center rounded-full h-fit p-1 border border-borderMuted">
           <button
             class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
-            :class="!isHouseBills ? 'bg-primaryGreen text-white' : ''"
-            @click="isHouseBills = false"
+            :class="isBills ? 'bg-primaryGreen text-white' : ''"
+            @click="isBills = true"
           >
-            Benjamin Kalu's <span class="hidden sm:block w-fit"> Bills</span>
+            <span class="hidden sm:block w-fit">Benjamin Kalu's </span>Bills
           </button>
           <button
-            class="w-1/2 h-fit py-4 rounded-full"
-            :class="isHouseBills ? 'bg-primaryGreen text-white' : ''"
-            @click="isHouseBills = true"
+            class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
+            :class="!isBills ? 'bg-primaryGreen text-white' : ''"
+            @click="isBills = false"
           >
-            House Bills
+            <span class="hidden sm:block w-fit"> Benjamin Kalu's </span> Motions
           </button>
         </div>
         <!-- grid table -->
-        <div class="w-full flex flex-col gap-4 my-8">
-          <div
-            class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
-          >
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>S/N</small>
-              <p class="font-medium">1</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>H/B Number</small>
-              <p class="font-medium">HB.06</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Title</small>
-              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Bill Sponsor</small>
-              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Status</small>
-              <p class="font-medium">Awaiting Committee Report</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full flex flex-col gap-4 my-8">
-          <div
-            class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
-          >
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>S/N</small>
-              <p class="font-medium">2</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>H/B Number</small>
-              <p class="font-medium">HB.06</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Title</small>
-              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Bill Sponsor</small>
-              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Status</small>
-              <p class="font-medium">Awaiting Committee Report</p>
+        <template v-if="isBills">
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">1</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>H/B Number</small>
+                <p class="font-medium">HB.06</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="w-full flex flex-col gap-4 my-8">
-          <div
-            class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
-          >
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>S/N</small>
-              <p class="font-medium">3</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>H/B Number</small>
-              <p class="font-medium">HB.06</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Title</small>
-              <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Bill Sponsor</small>
-              <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-            </div>
-            <div class="flex flex-col gap-1 py-2 px-2">
-              <small>Status</small>
-              <p class="font-medium">Awaiting Committee Report</p>
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">2</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>H/B Number</small>
+                <p class="font-medium">HB.06</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- pagination -->
-        <div class="w-full flex items-center justify-center">
-          <Pagination />
-        </div>
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">3</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>H/B Number</small>
+                <p class="font-medium">HB.06</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="w-full flex items-center justify-center">
+            <Pagination />
+          </div>
+        </template>
+        <template v-else>
+          <!-- grid table -->
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">1</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">1</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-4 my-8">
+            <div
+              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
+            >
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>S/N</small>
+                <p class="font-medium">1</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Title</small>
+                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Bill Sponsor</small>
+                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+              </div>
+              <div class="flex flex-col gap-1 py-2 px-2">
+                <small>Status</small>
+                <p class="font-medium">Awaiting Committee Report</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagination -->
+          <div class="w-full flex items-center justify-center">
+            <Pagination />
+          </div>
+        </template>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-const isHouseBills = ref(false);
+const isBills = ref(true);
 </script>
 
 <style lang="scss" scoped>

@@ -9,7 +9,7 @@
           since 2023. Kalu represents the Bende
         </h5>
       </div>
-      <div class="grid grid-cols-3 w-7/12">
+      <div class="grid grid-cols-2 w-7/12">
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
@@ -19,7 +19,7 @@
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
-        <div class="drop-card border border-borderGreen flex items-end">
+        <!-- <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
             @click="$router.push('/legistlative/agenda')"
@@ -27,7 +27,7 @@
             The House of Representatives
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
-        </div>
+        </div> -->
         <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"

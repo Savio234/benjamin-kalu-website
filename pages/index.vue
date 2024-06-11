@@ -50,7 +50,7 @@
           /> -->
           <embed
             src="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf#toolbar=0&view=FitH"
-            class="w-full h-screen rounded-xl"
+            class="w-full h-[80vh] sm:h-screen rounded-xl"
             width="100%"
           ></embed>
         </div>
