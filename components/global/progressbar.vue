@@ -23,7 +23,7 @@ defineProps({
 .progress-bar {
   position: relative;
   background-color: #dee5f2;
-  width: 95%;
+  width: 100%;
   height: 0.75rem;
   .progress {
     width: v-bind(percentageFill);

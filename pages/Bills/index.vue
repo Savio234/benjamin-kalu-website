@@ -54,10 +54,11 @@
         <template v-if="isBills">
           <div class="w-full flex flex-col gap-4 my-8">
             <div
-              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
+              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted cursor-pointer"
               v-for="(items, index) in displayedBills"
               :key="index"
               v-if="displayedBills.length > 0"
+              @click="$router.push(`/bills/${items.title}`)"
             >
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
@@ -91,10 +92,11 @@
           <!-- grid table -->
           <div class="w-full flex flex-col gap-4 my-8">
             <div
-              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
+              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted cursor-pointer"
               v-for="(items, index) in motions"
               :key="index"
               v-if="displayedMotions.length > 0"
+              @click="$router.push(`/bills/motions/${items.title}`)"
             >
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
@@ -113,7 +115,7 @@
                 <small class="font-semibold">{{ items.date }}</small>
               </div>
             </div>
-            <div class="self-center">No Results for search</div>
+            <div v-else class="self-center">No Results for search</div>
           </div>
           <!-- pagination -->
           <div class="w-full flex items-center justify-center">
@@ -141,48 +143,152 @@ const bills = ref([
     title: 'Acts Authentication Act (Amendment) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'Awaiting Committee Report',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.07',
     title: 'Armed Forces Act (Amendment) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'Awaiting Committee Report',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.27',
     title: 'Interpretation Act (Amendment) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.126',
     title: 'Legal Aid Act (Amendment) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.129',
     title: 'Statutory Bodies (Annual Reports) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.211',
     title: 'Federal Fire and Rescue Service Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.215',
     title: 'Federal College of Agriculture, Ishiagu (Est) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
   {
     hb_number: 'HB.216',
     title: 'Federal Cooperative College, Ibadan (Est) Bill, 2023',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'First Reading',
+    details: {
+      sponsors: [],
+      description: '',
+      about: '',
+      functionsOfMembers: [],
+      briefUrl: '',
+      progress: [
+        {
+          stage: '',
+          date: '',
+        },
+      ],
+    },
   },
 ]);
 const displayedBills = ref([]);
@@ -193,6 +299,12 @@ const motions = ref([
     title: 'Need for the Rehabilitation of Orlu - Ihiala Road',
     motion_sponsor: 'Hon. Canice Moore Nwachukwu',
     date: ' Oct 21, 2022',
+    details: {
+      sponsors: [''],
+      resolutions: [''],
+      // the house is meant to be rich-text
+      house: null,
+    },
   },
 ]);
 
