@@ -24,18 +24,18 @@
         <div class="mt-24 w-full h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
           />
         </div>
       </div>
     </section>
     <section class="updates w-full py-16 bg-black text-white relative">
       <NuxtImg
-        src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
+        src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
         class="img-one absolute top-1/2 left-0"
       />
       <NuxtImg
-        src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
+        src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
         class="img-one absolute top-1/2 right-0"
       />
       <div class="content flex flex-col mx-auto w-[85%] gap-8">
@@ -49,12 +49,12 @@
             class="w-full h-full"
           /> -->
           <embed
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf#toolbar=0&view=FitH"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf#toolbar=0&view=FitH"
             class="w-full h-[80vh] sm:h-screen rounded-xl"
             width="100%"
           ></embed>
         </div>
-        <NuxtLink to="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
+        <NuxtLink to="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
      Download PDF
     </div></NuxtLink>
       </div>

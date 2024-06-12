@@ -11,9 +11,9 @@
       </div>
       <div class="grid grid-cols-2 w-7/12">
         <div
-          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          class="drop-card-pro border border-borderGreen flex items-end cursor-pointer"
           style="
-            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png);
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai,f_auto/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png);
           "
           @click="$router.push('/projects')"
         >
@@ -23,9 +23,9 @@
           </p>
         </div>
         <div
-          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          class="drop-card-pro border border-borderGreen flex items-end cursor-pointer"
           style="
-            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1718125712/benjamin_kalu/happy_child_smxkrn.png);
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai,f_auto/v1718125712/benjamin_kalu/happy_child_smxkrn.png);
           "
           @click="$router.push('/projects/pisep')"
         >
@@ -50,4 +50,34 @@
 
 <script lang="ts" setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.drop-card-pro {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #00a991 100%);
+  }
+}
+.drop-card-pro:hover {
+  animation: zoom 2s ease-in-out; /* Animation applied here */
+}
+@keyframes zoom {
+  0% {
+    background-size: 100%;
+  } /* Starting state (original size) */
+  50% {
+    background-size: 120%;
+  } /* Zoom in state (midpoint) */
+  100% {
+    background-size: 100%;
+  }
+}
+</style>

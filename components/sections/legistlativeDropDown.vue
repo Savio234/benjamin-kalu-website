@@ -13,7 +13,7 @@
         <div
           class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
-            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1717604743/benjamin_kalu/ben_native_geeiy8.png);
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717604743/benjamin_kalu/ben_native_geeiy8.png);
           "
           @click="$router.push('/legistlative')"
         >
@@ -25,7 +25,7 @@
         <div
           class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
-            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/gown_address_tdycbo.png);
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718144898/benjamin_kalu/gown_address_tdycbo.png);
           "
         >
           <p
@@ -39,7 +39,7 @@
         <div
           class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
-            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1718127396/benjamin_kalu/house_gravel_nccldk.png);
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png);
           "
           @click="$router.push('/legistlative/review')"
         >
