@@ -202,6 +202,21 @@
 
 <script setup>
 const isBills = ref(true);
+const bills = ref([
+  {
+    hb_number: '',
+    title: '',
+    bill_sponsor: '',
+    status: '',
+  },
+]);
+const motions = ref([
+  {
+    title: '',
+    bill_sponsor: '',
+    status: '',
+  },
+]);
 </script>
 
 <style lang="scss" scoped>
