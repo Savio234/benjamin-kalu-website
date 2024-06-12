@@ -11,11 +11,11 @@
             class="bg-white p-4 w-full rounded-l-lg outline-none"
             placeholder="Enter Keyword here"
           />
-          <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
+          <!-- <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
             <select name="" id="" class="p-0 m-0 outline-none">
               <option value="" selected>Filter by State</option>
             </select>
-          </div>
+          </div> -->
           <button
             class="bg-primaryGreen py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center text-white gap-2"
             @click="searchTable"
@@ -122,6 +122,14 @@
         </template>
       </div>
     </section>
+    <section class="py-16 w-full border-t border-borderMuted">
+      <div class="content w-[85%] mx-auto">
+        <h3 class="font-semibold">Bills Chart</h3>
+        <div class="w-full flex flex-col items-center h-auto">
+          <PieChart />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -131,12 +139,6 @@ const bills = ref([
   {
     hb_number: 'HB.06',
     title: 'Acts Authentication Act (Amendment) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'Awaiting Committee Report',
-  },
-  {
-    hb_number: 'HB.06',
-    title: 'test',
     bill_sponsor: 'Hon. Benjamin Okezie Kalu',
     status: 'Awaiting Committee Report',
   },
