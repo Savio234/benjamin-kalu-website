@@ -3,7 +3,7 @@
     <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
         <div class="text-box w-full lg:w-1/2 flex flex-col text-white gap-4">
-          <h1 class="font-semibold">Rt. Hon Benjamin Kalu</h1>
+          <h1>Rt. Hon <span class="font-semibold">Benjamin Kalu</span></h1>
           <h4>
             A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
             since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
