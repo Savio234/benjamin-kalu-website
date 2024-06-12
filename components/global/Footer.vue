@@ -30,7 +30,7 @@
           <div class="footer-list flex flex-col w-fit gap-8">
             <h5 class="font-semibold">Explore</h5>
             <ul class="flex flex-col gap-4 font-medium">
-              <NuxtLink to="/external">Constitutional Review</NuxtLink>
+              <NuxtLink to="">Constitutional Review</NuxtLink>
               <NuxtLink to="/projects">PISEP-P</NuxtLink>
               <NuxtLink to="/blog">News & Update</NuxtLink>
             </ul>
@@ -38,11 +38,11 @@
           <div class="footer-list flex flex-col w-fit gap-8">
             <h5 class="font-semibold">Resources</h5>
             <ul class="flex flex-col gap-4 font-medium">
-              <NuxtLink to="/external">House Order Paper</NuxtLink>
-              <NuxtLink to="/external">Votes & Proceedings</NuxtLink>
-              <NuxtLink to="/external">House Journals</NuxtLink>
-              <NuxtLink to="/external">House Directory</NuxtLink>
-              <NuxtLink to="/external">Senate Directory</NuxtLink>
+              <NuxtLink to="">House Order Paper</NuxtLink>
+              <NuxtLink to="">Votes & Proceedings</NuxtLink>
+              <NuxtLink to="">House Journals</NuxtLink>
+              <NuxtLink to="">House Directory</NuxtLink>
+              <NuxtLink to="">Senate Directory</NuxtLink>
             </ul>
           </div>
         </div>

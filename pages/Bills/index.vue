@@ -5,13 +5,21 @@
         <h2 class="font-semibold text-white">Bills & Motions</h2>
         <h4 class="font-semibold text-white">Benjamin Kalu’s Bills</h4>
         <div class="form-holder w-full flex items-center my-8">
-          <input type="text" class="bg-white p-4 w-full rounded-l-lg outline-none" placeholder="Enter Keyword here" />
+          <input
+            type="text"
+            v-model="searchTerm"
+            class="bg-white p-4 w-full rounded-l-lg outline-none"
+            placeholder="Enter Keyword here"
+          />
           <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
             <select name="" id="" class="p-0 m-0 outline-none">
               <option value="" selected>Filter by State</option>
             </select>
           </div>
-          <button class="bg-primaryGreen py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center text-white gap-2">
+          <button
+            class="bg-primaryGreen py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center text-white gap-2"
+            @click="searchTable"
+          >
             <span class="hidden sm:block">Find</span>
             <svg-icon name="search" width="1rem" height="1rem" />
           </button>
@@ -24,14 +32,20 @@
           <button
             class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
             :class="isBills ? 'bg-primaryGreen text-white' : ''"
-            @click="isBills = true"
+            @click="
+              isBills = true;
+              searchTable();
+            "
           >
             <span class="hidden sm:block w-fit">Benjamin Kalu's </span>Bills
           </button>
           <button
             class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
             :class="!isBills ? 'bg-primaryGreen text-white' : ''"
-            @click="isBills = false"
+            @click="
+              isBills = false;
+              searchTable();
+            "
           >
             <span class="hidden sm:block w-fit"> Benjamin Kalu's </span> Motions
           </button>
@@ -41,84 +55,36 @@
           <div class="w-full flex flex-col gap-4 my-8">
             <div
               class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
+              v-for="(items, index) in displayedBills"
+              :key="index"
+              v-if="displayedBills.length > 0"
             >
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
-                <p class="font-medium">1</p>
+                <small class="font-semibold">{{ index + 1 }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>H/B Number</small>
-                <p class="font-medium">HB.06</p>
+                <small class="font-semibold">{{ items.hb_number }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+                <small class="font-semibold">{{ items.title }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+                <small class="font-semibold">{{ items.bill_sponsor }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
+                <small class="font-semibold">{{ items.status }}</small>
               </div>
             </div>
-          </div>
-          <div class="w-full flex flex-col gap-4 my-8">
-            <div
-              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
-            >
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>S/N</small>
-                <p class="font-medium">2</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>H/B Number</small>
-                <p class="font-medium">HB.06</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full flex flex-col gap-4 my-8">
-            <div
-              class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted"
-            >
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>S/N</small>
-                <p class="font-medium">3</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>H/B Number</small>
-                <p class="font-medium">HB.06</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
-              </div>
-            </div>
+            <div class="self-center" v-else>No Results for search</div>
           </div>
           <!-- pagination -->
           <div class="w-full flex items-center justify-center">
-            <Pagination />
+            <Pagination :total="bills.length" :items-per-page="8" :max-pages="2" prev-text="Previous" />
           </div>
         </template>
         <template v-else>
@@ -126,73 +92,32 @@
           <div class="w-full flex flex-col gap-4 my-8">
             <div
               class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
+              v-for="(items, index) in motions"
+              :key="index"
+              v-if="displayedMotions.length > 0"
             >
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
-                <p class="font-medium">1</p>
+                <small class="font-semibold">{{ index + 1 }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
+                <small class="font-semibold">{{ items.title }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
+                <small class="font-semibold">{{ items.motion_sponsor }}</small>
               </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
+              <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
+                <small class="font-semibold">{{ items.date }}</small>
               </div>
             </div>
+            <div class="self-center">No Results for search</div>
           </div>
-          <div class="w-full flex flex-col gap-4 my-8">
-            <div
-              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
-            >
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>S/N</small>
-                <p class="font-medium">1</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full flex flex-col gap-4 my-8">
-            <div
-              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted"
-            >
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>S/N</small>
-                <p class="font-medium">1</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Title</small>
-                <p class="font-medium">Acts Authentication Act (Amendment) Bill, 2023</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Bill Sponsor</small>
-                <p class="font-medium">Hon. Benjamin Okezie Kalu</p>
-              </div>
-              <div class="flex flex-col gap-1 py-2 px-2">
-                <small>Status</small>
-                <p class="font-medium">Awaiting Committee Report</p>
-              </div>
-            </div>
-          </div>
-
           <!-- pagination -->
           <div class="w-full flex items-center justify-center">
-            <Pagination />
+            <Pagination :total="motions.length" :items-per-page="8" :max-pages="2" prev-text="Previous" />
           </div>
         </template>
       </div>
@@ -204,19 +129,92 @@
 const isBills = ref(true);
 const bills = ref([
   {
-    hb_number: '',
-    title: '',
-    bill_sponsor: '',
-    status: '',
+    hb_number: 'HB.06',
+    title: 'Acts Authentication Act (Amendment) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'Awaiting Committee Report',
+  },
+  {
+    hb_number: 'HB.06',
+    title: 'test',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'Awaiting Committee Report',
+  },
+  {
+    hb_number: 'HB.07',
+    title: 'Armed Forces Act (Amendment) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'Awaiting Committee Report',
+  },
+  {
+    hb_number: 'HB.27',
+    title: 'Interpretation Act (Amendment) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
+  },
+  {
+    hb_number: 'HB.126',
+    title: 'Legal Aid Act (Amendment) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
+  },
+  {
+    hb_number: 'HB.129',
+    title: 'Statutory Bodies (Annual Reports) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
+  },
+  {
+    hb_number: 'HB.211',
+    title: 'Federal Fire and Rescue Service Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
+  },
+  {
+    hb_number: 'HB.215',
+    title: 'Federal College of Agriculture, Ishiagu (Est) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
+  },
+  {
+    hb_number: 'HB.216',
+    title: 'Federal Cooperative College, Ibadan (Est) Bill, 2023',
+    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
+    status: 'First Reading',
   },
 ]);
+const displayedBills = ref([]);
+const displayedMotions = ref([]);
+const searchTerm = ref('');
 const motions = ref([
   {
-    title: '',
-    bill_sponsor: '',
-    status: '',
+    title: 'Need for the Rehabilitation of Orlu - Ihiala Road',
+    motion_sponsor: 'Hon. Canice Moore Nwachukwu',
+    date: ' Oct 21, 2022',
   },
 ]);
+
+// search functionality
+const filteredBills = computed(() => {
+  return bills.value.filter((item) => item.title.toLowerCase().includes(searchTerm.value.toLowerCase()));
+});
+
+const filteredMotions = computed(() => {
+  return motions.value.filter((item) => item.title.toLowerCase().includes(searchTerm.value.toLowerCase()));
+});
+
+function searchTable() {
+  if (isBills.value) {
+    displayedBills.value = filteredBills.value;
+  } else {
+    displayedMotions.value = filteredMotions.value;
+  }
+}
+// onMounte
+onMounted(() => {
+  displayedBills.value = bills.value;
+  displayedMotions.value = motions.value;
+});
 </script>
 
 <style lang="scss" scoped>

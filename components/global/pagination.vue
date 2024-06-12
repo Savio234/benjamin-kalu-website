@@ -1,40 +1,42 @@
 <template>
-  <vue-awesome-paginate
-    v-model="currentPage"
-    :total-items="50"
-    :items-per-page="5"
-    :max-pages-shown="2"
-    :on-click="onClickHandler"
-  >
-    <template #prev-button>
-      <span class="flex items-center gap-4">
-        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7.05572 12.4347L1.74854 7.1275L7.05572 1.82031"
-            stroke="#131316"
-            stroke-width="1.70588"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <span class="hidden sm:block">{{ $props.prevText }}</span>
-      </span>
-    </template>
-    <template #next-button>
-      <span class="text-primaryGreen flex gap-4 items-center">
-        {{ $props.nextText }}
-        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M1.57227 12.4347L6.87945 7.1275L1.57227 1.82031"
-            stroke="#00A991"
-            stroke-width="1.70588"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-    </template>
-  </vue-awesome-paginate>
+  <div>
+    <vue-awesome-paginate
+      v-model="currentPage"
+      :total-items="$props.total"
+      :items-per-page="$props.itemsPerPage"
+      :max-pages-shown="$props.maxPages"
+      :on-click="onClickHandler"
+    >
+      <template #prev-button>
+        <span class="flex items-center gap-4">
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.05572 12.4347L1.74854 7.1275L7.05572 1.82031"
+              stroke="#131316"
+              stroke-width="1.70588"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="hidden sm:block">{{ $props.prevText }}</span>
+        </span>
+      </template>
+      <template #next-button>
+        <span class="text-primaryGreen flex gap-4 items-center">
+          {{ $props.nextText }}
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.57227 12.4347L6.87945 7.1275L1.57227 1.82031"
+              stroke="#00A991"
+              stroke-width="1.70588"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+      </template>
+    </vue-awesome-paginate>
+  </div>
 </template>
 
 <script setup>
@@ -48,6 +50,21 @@ defineProps({
     type: String,
     requird: false,
     default: 'Next',
+  },
+  total: {
+    type: Number,
+    required: false,
+    default: 50,
+  },
+  itemsPerPage: {
+    type: Number,
+    required: false,
+    default: 2,
+  },
+  maxPages: {
+    type: Number,
+    required: false,
+    default: 3,
   },
 });
 const onClickHandler = (page) => {
