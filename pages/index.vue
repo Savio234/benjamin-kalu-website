@@ -62,7 +62,7 @@
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
         <div class="header w-full sm:w-7/12 flex flex-col gap-1">
-          <h2 class="font-semibold">Legistlative Affairs</h2>
+          <h2 class="font-semibold">Legislative Affairs</h2>
           <h4 class="text-gray">
             A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
             since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
@@ -162,11 +162,11 @@ const legistlativeItems = ref([
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
     title: 'Kalu’s Legislative Mission',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
-    route: '/legistlative'
+    route: '/legislative'
   },
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
-    title: 'House Legistlative Agenda',
+    title: 'House Legislative Agenda',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
     route: '/legistlative'
   },
@@ -174,7 +174,7 @@ const legistlativeItems = ref([
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
     title: 'Constitutional Review',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
-    route: '/legistlative/review'
+    route: '/legislative/review'
 
   }
 ])

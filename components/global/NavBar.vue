@@ -41,7 +41,7 @@
             >About</NuxtLink
           >
           <NuxtLink
-            to="/legistlative"
+            to="/legislative"
             class="text-gray py-2 px-4 rounded-full"
             @mouseover="
               activateLegistlative = true;
@@ -167,10 +167,10 @@
       <div class="flex flex-col gap-4 mx-auto w-[90%]">
         <NuxtLink to="/" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">Home</NuxtLink>
         <NuxtLink to="/about" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">About</NuxtLink>
-        <NuxtLink to="/legistlative" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/legislative" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
           >Legislative Affairs</NuxtLink
         >
-        <NuxtLink to="/legistlative/review" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/legislative/review" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
           >Constitutional Review</NuxtLink
         >
         <NuxtLink to="/bills" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"

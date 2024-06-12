@@ -18,7 +18,7 @@
     </section>
     <section class="py-16 w-full">
       <div class="content mx-auto flex flex-col w-[85%] gap-4">
-        <h3 class="font-semibold">House's Legistlative Agenda</h3>
+        <h3 class="font-semibold">House's Legislative Agenda</h3>
         <p class="text-lg">
           The Federal House of Representatives is one of the two Chambers that make up the Bicameral Legislature of the
           Federal Republic of Nigeria. It is made up of 360 Members representing each of the Federal Constituencies of
