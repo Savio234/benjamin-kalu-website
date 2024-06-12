@@ -3,7 +3,7 @@
     <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
         <div class="text-box w-full lg:w-1/2 flex flex-col text-white gap-4">
-          <h1>The office of the deputy <span class="font-[800]">speaker</span></h1>
+          <h1 class="font-semibold">Rt. Hon Benjamin Kalu</h1>
           <h4>
             A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
             since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
@@ -20,7 +20,7 @@
           Speaker of the House of Representatives of Nigeria since 2023. Kalu represents the Bende federal constituency,
           bringing their issues and perspectives to the national stage in his legislative role.
         </p>
-        <MainButton>Who is Benjamin Kalu?</MainButton>
+        <MainButton @click="$router.push('/about')">Who is Benjamin Kalu?</MainButton>
         <div class="mt-24 w-full h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
@@ -54,7 +54,9 @@
             width="100%"
           ></embed>
         </div>
-        <MainButton class="self-end" append-icon="attachment-white">Download PDF</MainButton>
+        <NuxtLink to="https://res.cloudinary.com/damkhdi7d/image/upload/benjamin_kalu/review_ben_compressed_rvrarv.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
+     Download PDF
+    </div></NuxtLink>
       </div>
     </section>
     <section class="legistlative py-16 bg-light w-full">

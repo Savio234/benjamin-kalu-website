@@ -50,21 +50,4 @@
 
 <script lang="ts" setup></script>
 
-<style lang="scss" scoped>
-.drop-card {
-  position: relative;
-  background-image: url('https://placehold.co/400X400');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  &::after {
-    content: '';
-    width: 100%;
-    height: 40%;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #00a991 100%);
-  }
-}
-</style>
+<style lang="scss" scoped></style>

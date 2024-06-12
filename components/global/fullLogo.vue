@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2 items-center font-[600] sticky top-0">
+  <div class="flex gap-2 items-center font-[600] sticky top-0 cursor-pointer" @click="$router.push('/')">
     <NuxtImg
       src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143069/benjamin_kalu/HonBenKaluLogo_qf7ylv.png"
       width="180px"

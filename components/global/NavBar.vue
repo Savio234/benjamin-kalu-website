@@ -57,7 +57,7 @@
             "
             >Legislative Affairs</NuxtLink
           >
-          <NuxtLink
+          <!-- <NuxtLink
             to="/bills"
             class="text-gray py-2 px-4 rounded-full"
             @mouseover="
@@ -73,7 +73,7 @@
               activateProjects = false;
             "
             >Bills & Motions</NuxtLink
-          >
+          > -->
           <NuxtLink
             to="/projects"
             class="text-gray py-2 px-4 rounded-full"

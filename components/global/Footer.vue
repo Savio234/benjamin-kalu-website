@@ -50,8 +50,13 @@
       <div class="bottom-row border-t border-borderMuted pt-8">
         <p class="w-full sm:w-4/12 text-[#5c3d44]">
           Do you have Enquiries? Chat with the office of the Deputy speaker. Alternatively, you can
-          <span class="text-primaryGreen cursor-pointer">email</span> or
-          <span class="text-primaryGreen cursor-pointer">call ↗️ </span>us.
+          <a
+            href="mailto:info@benjaminkalu.com
+"
+            class="text-primaryGreen cursor-pointer"
+            >email</a
+          >
+          or <a href="tell:+234 807 406 1960" class="text-primaryGreen cursor-pointer">call ↗ </a>us.
         </p>
       </div>
     </div>

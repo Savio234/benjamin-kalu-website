@@ -9,7 +9,7 @@
           since 2023. Kalu represents the Bende
         </h5>
       </div>
-      <div class="grid grid-cols-2 w-7/12">
+      <div class="grid grid-cols-3 w-7/12">
         <div
           class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
@@ -22,15 +22,20 @@
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
-        <!-- <div class="drop-card border border-borderGreen flex items-end">
+        <div
+          class="drop-card border border-borderGreen flex items-end cursor-pointer"
+          style="
+            background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/gown_address_tdycbo.png);
+          "
+        >
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/legistlative/agenda')"
+            @click="$router.push('/bills')"
           >
-            The House of Representatives
+            Bills and Motion
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
-        </div> -->
+        </div>
         <div
           class="drop-card border border-borderGreen flex items-end cursor-pointer"
           style="
@@ -50,19 +55,4 @@
 
 <script lang="ts" setup></script>
 
-<style lang="scss" scoped>
-.drop-card {
-  position: relative;
-  background-image: url('https://placehold.co/400X400');
-  background-size: 100%;
-  background-position: center;
-  &::after {
-    content: '';
-    width: 100%;
-    height: 40%;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #00a991 100%);
-  }
-}
-</style>
+<style lang="scss" scoped></style>
