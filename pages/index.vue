@@ -159,19 +159,19 @@
 <script setup>
 const legistlativeItems = ref([
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
     title: 'Kalu’s Legislative Mission',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
     route: '/legistlative'
   },
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
     title: 'House Legistlative Agenda',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
     route: '/legistlative'
   },
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
     title: 'Constitutional Review',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
     route: '/legistlative/review'
@@ -182,14 +182,14 @@ const legistlativeItems = ref([
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431105/benjamin_kalu/hero_image_npemqy.png'),
-    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431103/benjamin_kalu/noise_c6ebjt.png');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431105/benjamin_kalu/hero_image_npemqy.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .updates {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),
-    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/f_auto/benjamin_kalu/weekly_updates_background_q95czt.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
   background-size: cover;
   background-repeat: no-repeat;
 }

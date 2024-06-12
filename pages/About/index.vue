@@ -15,7 +15,7 @@
       </div>
       <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717536006/benjamin_kalu/about_home_hus4kr.png"
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717536006/benjamin_kalu/about_home_hus4kr.png"
           class="w-full h-full object-cover"
         />
       </div>
@@ -72,7 +72,7 @@
         <div class="w-full my-8 h-screen">
           <NuxtImg
             class="w-full h-full object-cover"
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
           />
         </div>
         <div class="w-full flex flex-col sm:flex-row">
@@ -148,24 +148,24 @@
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
           <CardNews
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/gown_address_tdycbo.png"
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718144898/benjamin_kalu/gown_address_tdycbo.png"
             description=""
             category="Award"
           />
           <CardNews
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718144898/benjamin_kalu/native_address_hgfuaj.png"
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718144898/benjamin_kalu/native_address_hgfuaj.png"
             description=""
           />
           <CardNews
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
             description=""
           />
           <CardNews
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_speaker_sitting_xucsh8.png"
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_speaker_sitting_xucsh8.png"
             description=""
           />
           <CardNews
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
             description=""
           />
         </div>
@@ -178,7 +178,7 @@
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431103/benjamin_kalu/noise_c6ebjt.png');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-size: cover;
 }
 </style>

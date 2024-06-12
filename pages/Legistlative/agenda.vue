@@ -11,7 +11,7 @@
       </div>
       <div class="image-sect w-full sm:w-5/12 h-full">
         <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717607321/benjamin_kalu/assembly_coat_s7dzb8.png"
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717607321/benjamin_kalu/assembly_coat_s7dzb8.png"
           class="w-full h-full object-cover"
         />
       </div>
@@ -144,7 +144,7 @@
     <section class="py-16 w-full bg-[#048541] text-white">
       <div class="content mx-auto w-[85%]">
         <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717656446/benjamin_kalu/legistlative_agenda_qbfc16.png"
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717656446/benjamin_kalu/legistlative_agenda_qbfc16.png"
           class="w-full h-auto object-cover"
         />
       </div>
@@ -156,7 +156,7 @@
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717431103/benjamin_kalu/noise_c6ebjt.png');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-size: cover;
 }
 </style>

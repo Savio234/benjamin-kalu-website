@@ -12,7 +12,7 @@
         <p class="date">24th March, 2023</p>
         <div class="content flex flex-col w-full">
           <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718125712/benjamin_kalu/happy_child_smxkrn.png"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718125712/benjamin_kalu/happy_child_smxkrn.png"
             class="w-full h-auto"
           />
         </div>

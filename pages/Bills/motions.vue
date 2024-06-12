@@ -119,8 +119,8 @@ const isHouseBills = ref(false);
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png'),
-    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
   background-color: #007e9ae5;
   background-blend-mode: overlay;
   background-position: center center;

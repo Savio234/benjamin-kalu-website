@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-const isFiltering = ref(true);
+const isFiltering = ref(false);
 </script>
 
 <style></style>
