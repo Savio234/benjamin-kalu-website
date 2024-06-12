@@ -32,7 +32,7 @@
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
             @click="$router.push('/bills')"
           >
-            Bills and Motion
+            Bills and Motions
             <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
           </p>
         </div>
