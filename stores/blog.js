@@ -12,7 +12,7 @@ export const useMyBlogStore = defineStore({
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
       const storeBlogs = await $fetch(
-        `${envVars.strapiURL}/blogs/sort[0]=id:asc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
+        `${envVars.strapiURL}/Blogs?sort[0]=id:asc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
         {
           method: 'get',
           headers: baseHeader,

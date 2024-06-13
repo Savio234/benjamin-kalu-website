@@ -37,7 +37,13 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+const latest = ref(null);
+onMounted(async () => {
+  const { data } = await useMyBlogStore().getAllBlogs(1, 6);
+  console.log(data);
+});
+</script>
 
 <style lang="scss" scoped>
 .featuredPost {

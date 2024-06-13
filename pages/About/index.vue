@@ -35,7 +35,7 @@
             national development through legislative processes, project implementation, and manpower development.
           </p>
         </div>
-        <div class="w-full my-8 h-screen">
+        <div class="w-full my-8 h-auto sm:h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717431106/benjamin_kalu/home_image_c8fyfy.png"

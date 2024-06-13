@@ -21,7 +21,7 @@
           bringing their issues and perspectives to the national stage in his legislative role.
         </p>
         <MainButton @click="$router.push('/about')">Who is Benjamin Kalu?</MainButton>
-        <div class="mt-24 w-full h-screen">
+        <div class="mt-24 w-full h-auto sm:h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
@@ -184,6 +184,8 @@ const legistlativeItems = ref([
 .hero {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431105/benjamin_kalu/hero_image_npemqy.png'),
     url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
+  background-color: #00000069;
+  background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
