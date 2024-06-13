@@ -50,7 +50,7 @@
           /> -->
           <embed
             src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf#toolbar=0&view=FitH"
-            class="w-full h-[80vh] sm:h-screen rounded-xl"
+            class="w-full h-auto sm:h-screen rounded-xl"
             width="100%"
           ></embed>
         </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <!-- legistlative grid -->
-          <CardLegistlative v-for="(item, index) in legistlativeItems" :key="index" :title="item.title" :description="item.descripton" :image="item.image_url" :route="item.route" />
+          <CardLegistlative v-for="(item, index) in legistlativeItems" :key="index" :title="item.title" :description="item.description" :image="item.image_url" :route="item.route" />
         </div>
       </div>
     </section>
@@ -166,9 +166,9 @@ const legistlativeItems = ref([
   },
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
-    title: 'House Legislative Agenda',
+    title: 'Legislative Agenda',
     description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
-    route: '/legistlative'
+    route: '/bills'
   },
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
@@ -186,6 +186,7 @@ const legistlativeItems = ref([
     url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .updates {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/f_auto/benjamin_kalu/weekly_updates_background_q95czt.png'),
