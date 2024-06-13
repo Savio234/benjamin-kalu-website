@@ -328,6 +328,8 @@ function searchTable() {
 onMounted(() => {
   displayedBills.value = bills.value;
   displayedMotions.value = motions.value;
+  // api call
+  useMyBillsStore().getAllBills();
 });
 </script>
 

@@ -36,4 +36,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    public: {
+      strapiURL: process.env.STRAPI_API,
+      strapiAPI: process.env.API_KEY,
+    },
+  },
 });
