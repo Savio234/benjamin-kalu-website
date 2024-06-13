@@ -55,37 +55,43 @@
           <div class="w-full flex flex-col gap-4 my-8">
             <div
               class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted cursor-pointer"
-              v-for="(items, index) in displayedBills"
+              v-for="(items, index) in bills"
               :key="index"
-              v-if="displayedBills.length > 0"
-              @click="$router.push(`/bills/${items.title}`)"
+              v-if="bills.length > 0"
+              @click="$router.push(`/bills/${items.id}`)"
             >
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
-                <small class="font-semibold">{{ index + 1 }}</small>
+                <small class="font-semibold">{{ items.id }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>H/B Number</small>
-                <small class="font-semibold">{{ items.hb_number }}</small>
+                <small class="font-semibold">{{ items.attributes.hb_number }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Title</small>
-                <small class="font-semibold">{{ items.title }}</small>
+                <small class="font-semibold">{{ items.attributes.title }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Bill Sponsor</small>
-                <small class="font-semibold">{{ items.bill_sponsor }}</small>
+                <small class="font-semibold">{{ items.attributes.bill_sponsor }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Status</small>
-                <small class="font-semibold">{{ items.status }}</small>
+                <small class="font-semibold">{{ items.attributes.status }}</small>
               </div>
             </div>
             <div class="self-center" v-else>No Results for search</div>
           </div>
           <!-- pagination -->
           <div class="w-full flex items-center justify-center">
-            <Pagination :total="bills.length" :items-per-page="8" :max-pages="2" prev-text="Previous" />
+            <Pagination
+              :total="totalBills"
+              :items-per-page="pageSizeBills"
+              :max-pages="2"
+              prev-text="Previous"
+              @page="loadData"
+            />
           </div>
         </template>
         <template v-else>
@@ -137,160 +143,11 @@
 
 <script setup>
 const isBills = ref(true);
-const bills = ref([
-  {
-    hb_number: 'HB.06',
-    title: 'Acts Authentication Act (Amendment) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'Awaiting Committee Report',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.07',
-    title: 'Armed Forces Act (Amendment) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'Awaiting Committee Report',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.27',
-    title: 'Interpretation Act (Amendment) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.126',
-    title: 'Legal Aid Act (Amendment) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.129',
-    title: 'Statutory Bodies (Annual Reports) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.211',
-    title: 'Federal Fire and Rescue Service Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.215',
-    title: 'Federal College of Agriculture, Ishiagu (Est) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-  {
-    hb_number: 'HB.216',
-    title: 'Federal Cooperative College, Ibadan (Est) Bill, 2023',
-    bill_sponsor: 'Hon. Benjamin Okezie Kalu',
-    status: 'First Reading',
-    details: {
-      sponsors: [],
-      description: '',
-      about: '',
-      functionsOfMembers: [],
-      briefUrl: '',
-      progress: [
-        {
-          stage: '',
-          date: '',
-        },
-      ],
-    },
-  },
-]);
+const bills = ref([]);
+const pageBills = ref(0);
+const pageCountBills = ref(0);
+const pageSizeBills = ref(1);
+const TotalBills = ref(0);
 const displayedBills = ref([]);
 const displayedMotions = ref([]);
 const searchTerm = ref('');
@@ -324,12 +181,22 @@ function searchTable() {
     displayedMotions.value = filteredMotions.value;
   }
 }
+async function loadData(newPage = 1) {
+  const { meta, data } = await useMyBillsStore().getAllBills(newPage);
+  console.log(meta);
+  console.log(data);
+  pageBills.value = meta.pagination.page;
+  pageCountBills.value = meta.pagination.pageCount;
+  pageSizeBills.value = meta.pagination.pageSize;
+  TotalBills.value = meta.pagination.total;
+  bills.value = data;
+}
 // onMounte
-onMounted(() => {
+onMounted(async () => {
   displayedBills.value = bills.value;
   displayedMotions.value = motions.value;
   // api call
-  useMyBillsStore().getAllBills();
+  await loadData();
 });
 </script>
 

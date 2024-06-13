@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['page']);
 defineProps({
   prevText: {
     type: String,
@@ -67,8 +68,8 @@ defineProps({
     default: 3,
   },
 });
-const onClickHandler = (page) => {
-  console.log(page);
+const onClickHandler = (newPage) => {
+  emit('page', newPage);
 };
 
 const currentPage = ref(1);
