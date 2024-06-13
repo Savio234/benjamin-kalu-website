@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full rounded-xl flex flex-col cursor-pointer bg-white border border-borderMuted">
+  <div
+    class="w-full rounded-xl flex flex-col cursor-pointer bg-white border border-borderMuted"
+    @click="$router.push(`/blog/${$props.title}`)"
+  >
     <NuxtImg :src="$props.imageUrl" class="w-full object-cover rounded-t-xl" :class="$props.imageHeight" />
     <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]">
       <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ $props.category }}</p>

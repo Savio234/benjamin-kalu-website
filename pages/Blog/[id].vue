@@ -3,7 +3,7 @@
     <section class="w-full py-16">
       <div class="flex flex-col mx-auto w-[85%]">
         <!-- content from strapi -->
-        <p>Rich content</p>
+        <p>Rich Content</p>
         <Pagination />
       </div>
     </section>

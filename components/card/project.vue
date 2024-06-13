@@ -15,7 +15,7 @@
           <small>Ministry: Special Duties</small>
         </div>
       </div>
-      <MainButton>Read Blog</MainButton>
+      <MainButton @click="$router.push(`/projects/${props.name}`)">Read Blog</MainButton>
     </div>
     <div class="w-full grid grid-cols-1 grid-rows-3 divide-y divide-borderMuted">
       <div class="p-2 flex flex-col w-full h-full">
@@ -48,7 +48,15 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+const props = defineProps({
+  name: {
+    type: String,
+    required: false,
+    default: 'post',
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .ongoing {
