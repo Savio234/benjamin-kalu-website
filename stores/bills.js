@@ -20,5 +20,16 @@ export const useMyBillsStore = defineStore({
       );
       return storeBills;
     },
+    async getBill(id) {
+      const envVars = useRuntimeConfig().public;
+      const baseHeader = {
+        Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
+      };
+      const bill = await $fetch(`${envVars.strapiURL}/bills/${id}`, {
+        method: 'get',
+        headers: baseHeader,
+      });
+      return bill;
+    },
   },
 });
