@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-16 bg-light">
+  <section class="w-full py-16 bg-light" v-if="latest">
     <div class="content mx-auto flex flex-col gap-8 w-[85%]">
       <div class="header flex flex-col gap-2">
         <h2 class="font-semibold">Follow our <span class="text-primaryGreen">office</span> closely</h2>
