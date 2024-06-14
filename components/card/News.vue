@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full rounded-xl flex flex-col cursor-pointer bg-white border border-borderMuted"
-    @click="$router.push(`/blog/${$props.title}`)"
+    @click="$router.push(`/blog/${$props.id}`)"
   >
     <NuxtImg :src="$props.imageUrl" class="w-full object-cover rounded-t-xl" :class="$props.imageHeight" />
     <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]">
@@ -14,6 +14,11 @@
 
 <script lang="ts" setup>
 defineProps({
+  id: {
+    type: Number,
+    required: false,
+    default: 1,
+  },
   category: {
     type: String,
     required: false,

@@ -12,7 +12,7 @@ export const useMyBlogStore = defineStore({
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
       const storeBlogs = await $fetch(
-        `${envVars.strapiURL}/Blogs?sort[0]=id:asc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
+        `${envVars.strapiURL}/Blogs?populate=*&sort[0]=id:asc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
         {
           method: 'get',
           headers: baseHeader,
@@ -20,6 +20,17 @@ export const useMyBlogStore = defineStore({
       );
       console.log(storeBlogs);
       return storeBlogs;
+    },
+    async getBlog(id) {
+      const envVars = useRuntimeConfig().public;
+      const baseHeader = {
+        Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
+      };
+      const blog = await $fetch(`${envVars.strapiURL}/Blogs/${id}`, {
+        method: 'get',
+        headers: baseHeader,
+      });
+      return blog;
     },
   },
 });
