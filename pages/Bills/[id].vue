@@ -1,6 +1,6 @@
 <template>
-  <main class="flex flex-col w-full" v-if="bill">
-    <section class="py-12 w-full bg-[#FAFFFA]">
+  <main class="flex flex-col w-full">
+    <section class="py-12 w-full bg-[#FAFFFA]" v-if="bill">
       <div class="content flex flex-col gap-8 mx-auto w-[85%]">
         <button
           @click="$router.push('/bills')"
@@ -61,6 +61,14 @@
         </div>
       </div>
     </section>
+    <div class="flex flex-col items-center justify-center mb-12" v-else>
+      <iframe
+        src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
+        height="200px"
+        width="200px"
+      ></iframe>
+      <p class="w-fit">Loading...</p>
+    </div>
   </main>
 </template>
 

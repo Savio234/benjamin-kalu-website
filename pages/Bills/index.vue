@@ -52,7 +52,15 @@
         </div>
         <!-- grid table -->
         <template v-if="isBills">
-          <div class="w-full flex flex-col gap-4 my-8">
+          <div class="flex flex-col items-center justify-center mb-12" v-show="loading">
+            <iframe
+              src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
+              height="200px"
+              width="200px"
+            ></iframe>
+            <p class="w-fit">Loading...</p>
+          </div>
+          <div class="w-full flex flex-col gap-4 my-8" v-show="!loading">
             <div
               class="grid sm:grid-cols-[5%_10%_40%_1fr_1fr] w-full max-sm:divide-y sm:divide-x divide-borderMuted border border-borderMuted cursor-pointer"
               v-for="(items, index) in bills"
@@ -151,6 +159,7 @@ const TotalBills = ref(0);
 const displayedBills = ref([]);
 const displayedMotions = ref([]);
 const searchTerm = ref('');
+const loading = ref(false);
 const motions = ref([
   {
     title: 'Need for the Rehabilitation of Orlu - Ihiala Road',
@@ -182,14 +191,19 @@ function searchTable() {
   }
 }
 async function loadData(newPage = 1) {
-  const { meta, data } = await useMyBillsStore().getAllBills(newPage);
-  console.log(meta);
-  console.log(data);
-  pageBills.value = meta.pagination.page;
-  pageCountBills.value = meta.pagination.pageCount;
-  pageSizeBills.value = meta.pagination.pageSize;
-  TotalBills.value = meta.pagination.total;
-  bills.value = data;
+  loading.value = true;
+  try {
+    const { meta, data } = await useMyBillsStore().getAllBills(newPage);
+    pageBills.value = meta.pagination.page;
+    pageCountBills.value = meta.pagination.pageCount;
+    pageSizeBills.value = meta.pagination.pageSize;
+    TotalBills.value = meta.pagination.total;
+    bills.value = data;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+  }
 }
 // onMounte
 onMounted(async () => {

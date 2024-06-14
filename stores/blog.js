@@ -26,7 +26,7 @@ export const useMyBlogStore = defineStore({
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      const blog = await $fetch(`${envVars.strapiURL}/Blogs/${id}`, {
+      const blog = await $fetch(`${envVars.strapiURL}/Blogs/${id}?populate=*`, {
         method: 'get',
         headers: baseHeader,
       });

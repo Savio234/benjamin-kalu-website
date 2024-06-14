@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full py-16 bg-light" v-if="latest">
-    <div class="content mx-auto flex flex-col gap-8 w-[85%]">
+  <section class="w-full py-16 bg-light">
+    <div class="content mx-auto flex flex-col gap-8 w-[85%]" v-if="latest">
       <div class="header flex flex-col gap-2">
         <h2 class="font-semibold">Follow our <span class="text-primaryGreen">office</span> closely</h2>
         <h4 class="text-gray font-medium">Latest news on how office has performed lately</h4>
@@ -28,6 +28,14 @@
         </div>
       </div>
       <a class="text-primaryGreen underline underline-offset-2 cursor-pointer">See All Articles</a>
+    </div>
+    <div class="flex flex-col items-center justify-center" v-else>
+      <iframe
+        src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
+        height="200px"
+        width="200px"
+      ></iframe>
+      <p class="w-fit">Loading...</p>
     </div>
   </section>
 </template>
