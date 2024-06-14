@@ -12,9 +12,11 @@
           </div>
         </button>
         <!-- content from strapi -->
+        <p class="underline underline-offset-4 text-gray">Date: &nbsp; {{ blog.date }}</p>
         <h3>{{ blog.title }}</h3>
         <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ blog.category }}</p>
         <h5>{{ blog.description }}</h5>
+
         <div class="flex flex-col gap-4 p-4 border border-borderMuted bg-white rounded-xl" v-html="blog.content"></div>
 
         <!-- {{ blog }} -->
