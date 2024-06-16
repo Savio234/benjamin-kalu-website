@@ -17,7 +17,7 @@
           />
           <div class="w-full p-4 flex flex-col gap-4 bg-light">
             <h4 class="font-semibold">PISE-P</h4>
-            <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
+            <p class="text-[14px] leading-[1.6] tracking-[0.4px]">
               Beyond the legislative chambers, Kalu launched the Peace in the South East Project (PISE-P) in an effort
               to restore the region to its once illustrious past and illuminating glory,, The project champions a
               non-kinetic approach to resolving the region's insecurity issues.
