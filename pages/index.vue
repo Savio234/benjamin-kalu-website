@@ -176,6 +176,7 @@
     <SectionsFeaturedProject />
     <SectionsLatestNews />
     <SectionsReview />
+    <SectionsFaq/>
   </main>
 </template>
 
