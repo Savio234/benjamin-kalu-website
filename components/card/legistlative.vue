@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col border border-borderMuted rounded-xl shadow">
     <div class="image w-full h-[15rem] relative">
-      <NuxtImg :src="$props.image" class="w-full h-full object-cover rounded-t-xl" />
+      <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
     </div>
     <div class="content my-8 mx-auto w-[90%] flex flex-col gap-2">
       <h5 class="font-semibold">{{ $props.title }}</h5>

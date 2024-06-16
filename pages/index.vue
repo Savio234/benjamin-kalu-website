@@ -181,7 +181,7 @@
 <script setup>
 const legistlativeItems = ref([
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1718564832/benjamin_kalu/ben_walkup_oqxlhe.jpg',
     title: 'Kalu’s Legislative Mission',
     description: 'Emboldened by his unrelenting quest for societal impact, BOK as he is fondly called, takes his “value” mantra all the way to national parliament.',
     route: '/legislative'
