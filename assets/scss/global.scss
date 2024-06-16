@@ -85,6 +85,9 @@ small {
   color: #022924;
 }
 // global animations
+.swiper-pagination-bullet-active {
+  background-color: green;
+}
 .drop-card {
   width: 100%;
   height: 100%;
@@ -92,9 +95,10 @@ small {
   background: #00635d;
   background-position: center center;
 }
-// .drop-card:hover {
-//   // animation: zoom 2s ease-in-out;
-// }
+.drop-card:hover {
+  // animation: zoom 2s ease-in-out;
+  background: #013a36;
+}
 // @keyframes zoom {
 //   0% {
 //     background-size: 200% 100%;

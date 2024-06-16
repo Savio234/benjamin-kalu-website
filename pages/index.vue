@@ -4,7 +4,7 @@
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
         <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
           <p class="text-white">Welcome to the Official website of</p>
-          <h1 class="font-semibold text-[48px] sm:text-[64px]">Rt. Hon Benjamin Kalu</h1>
+          <h1 class="font-semibold text-[48px] sm:text-[64px]">Rt. Hon. Benjamin Kalu</h1>
           <p class="text-white">
             Deputy Speaker, 10th House Of Representatives, <br/>Federal Republic of Nigeria
           </p>
@@ -13,23 +13,49 @@
     </section>
     <section class="w-full py-16 text-center flex flex-col">
       <div class="content mx-auto w-[85%] flex flex-col gap-2 items-center">
-        <h2 class="text-black font-semibold">About <span class="text-primaryGreen">Benjamin Kalu</span></h2>
-        <p class="w-full sm:w-8/12 mx-auto text-xl">
+        <h2 class="text-black font-semibold">About <span class="text-secondaryGreen">Benjamin Kalu</span></h2>
+        <p class="w-full sm:w-8/12 mx-auto text-xl mb-4">
           A refined legislator, Rep. Benjamin Okezie Kalu embodies the Nigerian spirit. With a sterling career 
           as an international businessman and legal practitioner, Kalu's journey in Nigerian politics propelled 
           him to the 6th highest political office in the nation, emerging as the Deputy Speaker of the 10th House 
           of Representatives in June 2023. He has continued to serve the people of Bende Federal Constituency and the nation at large.
         </p>
         <MainButton @click="$router.push('/about')">Learn more about Rep. Benjamin Kalu</MainButton>
-        <div class="mt-24 w-full h-auto sm:h-screen">
-          <NuxtImg
+        <div class="mt-12 w-full h-auto">
+          <!-- <NuxtImg
             class="w-full h-full object-cover rounded-xl"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
             format="webp"
-          />
+          /> -->
+          <Swiper
+            class="w-full rounded-xl"
+            :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination]"
+            :slides-per-view="1"
+            :loop="true"
+            :effect="'creative'"
+            :autoplay="{
+              delay: 1500,
+              disableOnInteraction: true,
+            }"
+            :pagination="true"
+            :creative-effect="{
+              prev: {
+                shadow: false,
+                translate: ['-20%', 0, -1],
+              },
+              next: {
+                translate: ['100%', 0, 0],
+              },
+            }"
+          >
+            <SwiperSlide v-for="image in images" :key="image.id">
+              <NuxtImg :src="image.url" class="w-full h-auto" format="webp" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>
+    <!-- !111111111111111111111111 -->
     <section class="updates w-full py-16 bg-black text-white relative">
       <NuxtImg
         src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
@@ -178,7 +204,33 @@ const legistlativeItems = ref([
     route: '/legislative/review'
 
   }
-])
+]);
+const images = ref([
+  {
+    id: 0,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544619/benjamin_kalu/new_image_gravel_rlg38t.png',
+  },
+  {
+    id: 1,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544617/benjamin_kalu/new_image_touring_two_kea4nk.png',
+  },
+  {
+    id: 2,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544624/benjamin_kalu/new_image_sitting_cyjh0x.png',
+  },
+  {
+    id: 3,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544599/benjamin_kalu/new_image_pisep_cmjxlb.png',
+  },
+  {
+    id: 4,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544611/benjamin_kalu/new_image_address_ygrinn.png',
+  },
+  {
+    id: 5,
+    url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544629/benjamin_kalu/new_image_office_jh5wtv.png',
+  },
+]);
 </script>
 
 <style lang="scss" scoped>

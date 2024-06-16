@@ -13,7 +13,7 @@
           <NuxtImg
             class="h-[15rem] rounded-t-xl object-cover"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png"
-            format="webP"
+            format="webp"
           />
           <div class="w-full p-4 flex flex-col gap-4 bg-light">
             <h4 class="font-semibold">PISEP</h4>
@@ -28,7 +28,7 @@
           <NuxtImg
             class="h-[15rem] rounded-t-xl object-cover"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718125712/benjamin_kalu/happy_child_smxkrn.png"
-            format="webP"
+            format="webp"
           />
           <div class="w-full p-4 flex flex-col gap-4 bg-light">
             <h4 class="font-semibold">Constituency Projects</h4>
