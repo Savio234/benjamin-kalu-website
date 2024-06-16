@@ -2,12 +2,11 @@
   <main class="flex flex-col w-full">
     <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
-        <div class="text-box w-full lg:w-1/2 flex flex-col text-white gap-4">
-          <h1>Rt. Hon <span class="font-semibold">Benjamin Kalu</span></h1>
+        <div class="text-box w-full lg:w-7/12 flex flex-col text-white gap-2">
+          <p class="text-white">Welcome to the Official website of</p>
+          <h1 class="font-semibold text-[48px] sm:text-[64px]"> Hon Benjamin Kalu</h1>
           <h4>
-            A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
-            since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
-            national stage in his legislative role.
+            Deputy Speaker, 10th House Of Representatives, <br/>Federal Republic of Nigeria
           </h4>
         </div>
       </div>
@@ -25,6 +24,7 @@
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431106/benjamin_kalu/home_image_c8fyfy.png"
+            format="webp"
           />
         </div>
       </div>
@@ -182,13 +182,13 @@ const legistlativeItems = ref([
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431105/benjamin_kalu/hero_image_npemqy.png'),
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png'),
     url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-color: #00000069;
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom center;
 }
 .updates {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/f_auto/benjamin_kalu/weekly_updates_background_q95czt.png'),

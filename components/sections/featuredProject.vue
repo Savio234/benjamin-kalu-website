@@ -1,14 +1,45 @@
 <template>
-  <section class="w-full py-16 bg-bgGreen">
-    <div class="content flex ml-[7.5%] flex-col gap-16">
+  <section class="w-full py-16 bg-white">
+    <div class="content flex mx-auto w-[85%] flex-col gap-16">
       <div class="w-full sm:w-8/12 flex flex-col gap-2">
         <h2 class="font-semibold">Featured <span class="text-primaryGreen">Projects</span></h2>
-        <h4>
-          A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
-          since 2
-        </h4>
+        <h6>
+          Learn about the impactful projects of the two time Rep. who has been forthright in his mission to bring the
+          dividends of democracy to Bende Federal Constituency, Abia State and the larger South East region of Nigeria.
+        </h6>
       </div>
-      <!-- <div class="scroller w-full flex gap-8 relative overflow-x-scroll"></div> -->
+      <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="w-full flex flex-col cursor-pointer" @click="$router.push('/projects')">
+          <NuxtImg
+            class="h-[15rem] rounded-t-xl object-cover"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png"
+            format="webP"
+          />
+          <div class="w-full p-4 flex flex-col gap-4 bg-bgGreen">
+            <h4>PISEP</h4>
+            <p>
+              Beyond the legislative chambers, Kalu launched the Peace in the South East Project (PISE-P) in an effort
+              to restore the region to its once illustrious past and illuminating glory,, The project champions a
+              non-kinetic approach to resolving the region's insecurity issues.
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex flex-col cursor-pointer" @click="$router.push('/projects/pisep')">
+          <NuxtImg
+            class="h-[15rem] rounded-t-xl object-cover"
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718125712/benjamin_kalu/happy_child_smxkrn.png"
+            format="webP"
+          />
+          <div class="w-full p-4 flex flex-col gap-4 bg-bgGreen">
+            <h4>Constituency Projects</h4>
+            <p>
+              The impact of Rt. Hon. Kalu’s exemplary leadership and quality representation has been felt across the 13
+              communities of Bende Federal Constituency and beyond, with several projects spanning various sectors of
+              community development.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
