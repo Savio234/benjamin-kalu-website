@@ -178,7 +178,7 @@
         <NuxtLink to="/projects" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >Projects</NuxtLink
         >
-        <NuxtLink to="/projects/pisep" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/projects/10" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >PISEP</NuxtLink
         >
         <NuxtLink to="/blog" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
