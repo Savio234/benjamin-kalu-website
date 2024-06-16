@@ -55,7 +55,6 @@
         </div>
       </div>
     </section>
-    <!-- !111111111111111111111111 -->
     <section class="updates w-full py-16 bg-black text-white relative">
       <NuxtImg
         src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
@@ -184,19 +183,19 @@ const legistlativeItems = ref([
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717604743/benjamin_kalu/ben_native_geeiy8.png',
     title: 'Kalu’s Legislative Mission',
-    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    description: 'Emboldened by his unrelenting quest for societal impact, BOK as he is fondly called, takes his “value” mantra all the way to national parliament.',
     route: '/legislative'
   },
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
-    title: 'Legislative Agenda',
-    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    title: 'Bills and Motions',
+    description: 'With over 100 legislative instruments in bills and motions, kalu’s commitment to inclusive growth through legislative interventions remains unparalleled',
     route: '/bills'
   },
   {
     image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
     title: 'Constitutional Review',
-    description: 'The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria, 1999 (As Amended)',
+    description: 'As Deputy Speaker, Kalu assumes the role of Chairman, House Committee on the Review of the Nigerian Constitution. Follow the activities of the Committee.',
     route: '/legislative/review'
 
   }
