@@ -6,16 +6,43 @@
         <h4 class="text-gray font-medium">Latest news on how office has performed lately</h4>
       </div>
       <div class="flex flex-col gap-4">
-        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div
-            class="featuredPost sm:col-span-2 rounded-xl flex flex-col justify-end py-4"
-            :style="{ backgroundImage: latest[0].attributes.main_image.data?.attributes.url }"
+            class="featuredPost rounded-xl flex flex-col justify-end py-4"
+            :style="{
+              'background-image':
+                'url(' +
+                'https://benjamin-kalu-cms.onrender.com' +
+                latest[0].attributes.main_image.data?.attributes.url +
+                ')',
+            }"
           >
             <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
               <h3>{{ latest[0].attributes.title }}</h3>
-              <p class="bg-bgGreen text-primaryGreen rounded w-fit py-1 px-2">{{ latest[0].attributes.category }}</p>
+              <p class="bg-bgGreen text-primaryGreen rounded-full w-fit py-2 px-4">
+                {{ latest[0].attributes.category }}
+              </p>
             </div>
           </div>
+          <div
+            class="featuredPost rounded-xl flex flex-col justify-end py-4"
+            :style="{
+              'background-image':
+                'url(' +
+                'https://benjamin-kalu-cms.onrender.com' +
+                latest[1].attributes.main_image.data?.attributes.url +
+                ')',
+            }"
+          >
+            <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
+              <h3>{{ latest[1].attributes.title }}</h3>
+              <p class="bg-bgGreen text-primaryGreen rounded-full w-fit py-2 px-4">
+                {{ latest[1].attributes.category }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <CardNews
             v-for="(item, index) in latest"
             :key="index"
@@ -56,5 +83,6 @@ onMounted(async () => {
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
+  height: 20rem;
 }
 </style>
