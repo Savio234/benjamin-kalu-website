@@ -21,7 +21,7 @@
             <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
           </div>
         </div>
-        <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/projects/pisep')">
+        <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/projects/10')">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center">
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
               <svg-icon name="list" width="1.5rem" height="1.5rem" />
