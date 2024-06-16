@@ -56,12 +56,12 @@
       </div>
       <div class="bottom-row border-t border-[#FFFFFF0F] pt-8">
         <p class="w-full sm:w-4/12 text-white">
-          Want to stay updated with the activities of the deputy speaker, Join out
+          Want to stay updated with the activities of the deputy speaker, Join our
           <a
             href="mailto:info@benjaminkalu.com
 "
-            class="text-primaryGreen cursor-pointer"
-            >Mailing</a
+            class="text-secondaryGreen cursor-pointer"
+            >mailing</a
           >
           list.
         </p>

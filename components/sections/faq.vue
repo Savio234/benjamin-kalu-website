@@ -39,7 +39,7 @@
     { question: "How can I find out about upcoming events or town hall meetings?", answer: "To stay informed about upcoming events, including town hall meetings, community gatherings, and public appearances, you can follow the Deputy Speaker on social media channels for frequent announcements and reminders. For any specific inquiries or details about an event, contacting the Deputy Speaker’s office directly is always an option. The Deputy Speaker remains committed to keeping his constituents well-informed and actively involved in his activities and encourages your participation." },
   ]);
   
-  const activeIndex = ref(null);
+  const activeIndex = ref(0);
   
   function toggle(index) {
     activeIndex.value = activeIndex.value === index ? null : index;
