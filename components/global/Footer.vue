@@ -39,7 +39,7 @@
             <h5 class="font-semibold text-white">Explore</h5>
             <ul class="flex flex-col gap-4 font-medium">
               <NuxtLink class="text-white" to="">Constitutional Review</NuxtLink>
-              <NuxtLink class="text-white" to="/projects">PISEP-P</NuxtLink>
+              <NuxtLink class="text-white" to="/projects">PISE-P</NuxtLink>
               <NuxtLink class="text-white" to="/blog">News & Update</NuxtLink>
             </ul>
           </div>
