@@ -12,9 +12,11 @@ export default {
     colors: {
       white: '#ffffff',
       light: '#FAFFFA',
+      lightGreen: 'F5FFF6',
       black: '#022924',
       primaryGreen: '#00A991',
       secondaryGreen: '#29C775',
+      footerGreen: "#022923",
       bgGreen: '#EBFFEE',
       darkGreen: '#022924',
       mutedBlack: '#646E87',

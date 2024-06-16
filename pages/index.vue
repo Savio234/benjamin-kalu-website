@@ -84,13 +84,11 @@
     </section>
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
-        <div class="header w-full sm:w-7/12 flex flex-col gap-1">
+        <div class="header w-full sm:w-8/12 flex flex-col gap-1">
           <h2 class="font-semibold">Legislative Affairs</h2>
-          <h4 class="text-gray">
-            A prominent Nigerian politician, serving as the Deputy Speaker of the House of Representatives of Nigeria
-            since 2023. Kalu represents the Bende federal constituency, bringing their issues and perspectives to the
-            national stage in his legislative role.
-          </h4>
+          <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
+            As one of the leaders of the 10th House of Representatives (the Peoples’ House), Kalu wears the dual hats of Chairman, House Committees of the Whole and on Constitution Review. Keep track of Rep. Kalu’s Legislative Agenda, bills and motions as well as the Constitutional Review activities of the 10th House..
+          </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <!-- legistlative grid -->
@@ -98,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section class="bills py-16 w-full">
+    <!-- <section class="bills py-16 w-full">
       <div class="content flex flex-col w-[85%] mx-auto gap-4">
         <div class="header w-full sm:w-6/12">
           <h2 class="font-semibold">Bills & Motions</h2>
@@ -139,15 +137,18 @@
           <h5 class="text-primaryGreen flex underline cursor-pointer underline-offset-2" @click="$router.push('/bills')">See more</h5>
         </div>
       </div>
-    </section>
+    </section> -->
+    
+    <SectionsFeaturedProject />
+    <SectionsLatestNews />
     <section class="partners w-full py-16 bg-light">
       <div class="content flex ml-[7.5%] flex-col gap-16">
         <div class="w-full sm:w-8/12 flex flex-col gap-2">
           <h2 class="font-semibold">Development Partners</h2>
-          <h4>
+          <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
             Meet our development partners who have key roles in helping to achieve sustainable human development in
             economic, social and environmental fronts
-          </h4>
+          </p>
         </div>
         <div class="w-[80vw] flex justify-between gap-6 overflow-x-auto">
         <NuxtImg
@@ -173,8 +174,6 @@
       </div>
       </div>
     </section>
-    <SectionsFeaturedProject />
-    <SectionsLatestNews />
     <SectionsReview />
     <SectionsFaq/>
   </main>

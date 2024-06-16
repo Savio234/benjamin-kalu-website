@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-16 border-t border-borderMuted bg-black text-white">
+  <footer class="py-16 border-t border-borderMuted bg-footerGreen text-white">
     <div class="content mx-auto w-[85%] flex flex-col gap-8 sm:gap-32">
       <div class="top-row flex flex-col sm:flex-row w-full items-start gap-16">
         <div
@@ -13,7 +13,6 @@
               width="150px"
               height="45px"
             />
-            <!-- <p class="text-[#007867]">The office of the <br />Deputy <span class="text-[#29C775]">speaker</span></p> -->
           </div>
           <div class="icon-row flex items-center gap-6">
             <a href="https://www.facebook.com/HonBenKalu?mibextid=JRoKGi" target="_blank" rel="noopener noreferrer">

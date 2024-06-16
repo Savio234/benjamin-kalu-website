@@ -2,8 +2,8 @@
   <section class="w-full py-16 bg-light">
     <div class="content mx-auto flex flex-col gap-8 w-[85%]" v-if="latest">
       <div class="header flex flex-col gap-2">
-        <h2 class="font-semibold">Follow our <span class="text-primaryGreen">office</span> closely</h2>
-        <h4 class="text-gray font-medium">Latest news on how office has performed lately</h4>
+        <h2 class="font-semibold">follow Rep. Kalu's activities closely</h2>
+        <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">Latest news on the activities of the Deputy Speaker in service to his constituents and the nation at large</p>
       </div>
       <div class="flex flex-col gap-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -50,7 +50,6 @@
           />
         </div>
       </div>
-      <a class="text-primaryGreen underline underline-offset-2 cursor-pointer">See All Articles</a>
     </div>
     <div class="flex flex-col items-center justify-center" v-else>
       <iframe
