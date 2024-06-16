@@ -149,28 +149,28 @@
             economic, social and environmental fronts
           </h4>
         </div>
-        <div class="scroller w-full flex gap-8 relative overflow-x-scroll">
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
-            class="w-72 h-48 object-cover"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
-            class="w-72 h-48 object-cover"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
-            class="w-72 h-48 object-cover"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
-            class="w-72 h-48 object-cover"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
-            class="w-72 h-48 object-cover"
-          />
-        </div>
+        <div class="w-[80vw] flex justify-between gap-6 overflow-x-auto">
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
+          class="w-48 h-24 object-cover flex-shrink-0"
+        />
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
+          class="w-48 h-24 object-cover flex-shrink-0"
+        />
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
+          class="w-48 h-24 object-cover flex-shrink-0"
+        />
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
+          class="w-48 h-24 object-cover flex-shrink-0"
+        />
+        <NuxtImg
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
+          class="w-48 h-24 object-cover flex-shrink-0"
+        />
+      </div>
       </div>
     </section>
     <SectionsFeaturedProject />
