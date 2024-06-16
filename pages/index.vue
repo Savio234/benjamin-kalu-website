@@ -193,7 +193,7 @@ const legistlativeItems = ref([
     route: '/bills'
   },
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718127396/benjamin_kalu/house_gravel_nccldk.png',
+    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544619/benjamin_kalu/new_image_gravel_rlg38t.png',
     title: 'Constitutional Review',
     description: 'As Deputy Speaker, Kalu assumes the role of Chairman, House Committee on the Review of the Nigerian Constitution. Follow the activities of the Committee.',
     route: '/legislative/review'
