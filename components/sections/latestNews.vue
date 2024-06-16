@@ -19,7 +19,7 @@
           >
             <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
               <h3 class="font-semibold">{{ latest[0].attributes.title }}</h3>
-              <p class="bg-[#FFFFFF99] font-semibold rounded-full w-fit py-2 px-4">Details</p>
+              <p class="bg-[#FFFFFF99] font-semibold rounded-full w-fit py-2 px-4 cursor-pointer"  @click="$router.push(`/blog/${latest[0].id}`)">Details</p>
             </div>
           </div>
           <div
@@ -34,7 +34,7 @@
           >
             <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
               <h3 class="font-semibold">{{ latest[1].attributes.title }}</h3>
-              <p class="bg-[#FFFFFF99] font-semibold rounded-full w-fit py-2 px-4">Details</p>
+              <p class="bg-[#FFFFFF99] cursor-pointer font-semibold rounded-full w-fit py-2 px-4" @click="$router.push(`/blog/${latest[1].id}`)" >Details</p>
             </div>
           </div>
         </div>
