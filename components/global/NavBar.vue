@@ -39,7 +39,7 @@
             >About</NuxtLink
           >
           <NuxtLink
-            to="/legislative"
+            to="#"
             class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black"
             @mouseover="
               activateLegistlative = true;
@@ -74,7 +74,7 @@
             >Bills & Motions</NuxtLink
           > -->
           <NuxtLink
-            to="/projects"
+            to="#"
             class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black"
             @mouseover="
               activateLegistlative = false;
