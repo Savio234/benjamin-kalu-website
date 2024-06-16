@@ -65,6 +65,7 @@
           <CardProject
             v-for="(items, index) in projects"
             :key="index"
+            :id="items.id"
             :name="items.attributes.name"
             :location="items.attributes.location"
             :budget="Number(items.attributes.naira_budget)"

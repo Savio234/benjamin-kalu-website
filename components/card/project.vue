@@ -16,7 +16,7 @@
           <small>Ministry: {{ $props.ministry || 'N/A' }}</small>
         </div>
       </div>
-      <MainButton class="mt-4 sm:mt-0" @click="$router.push(`/projects/${props.name}`)">Read Blog</MainButton>
+      <MainButton class="mt-4 sm:mt-0" @click="$router.push(`/projects/${props.id}`)">Read Blog</MainButton>
     </div>
     <div class="w-full grid grid-cols-1 grid-rows-3 divide-y divide-borderMuted">
       <div class="p-2 flex flex-col w-full h-full">
@@ -51,6 +51,10 @@
 
 <script setup>
 const props = defineProps({
+  id: {
+    type: String || Number,
+    required: true,
+  },
   name: {
     type: String,
     required: false,
