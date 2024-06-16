@@ -11,27 +11,46 @@
           </h5>
         </div>
       </div>
-      <div class="grid grid-cols-3 w-7/12 bg-light gap-[0.5px]">
-        <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/legislative')">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
-            Deputy Speaker's Agenda
-            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
+      <div class="grid grid-cols-3 w-7/12 gap-[1px] bg-[#cccccc9a]">
+        <div
+          class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center"
+          @click="$router.push('/legislative')"
+        >
+          <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
+            <svg-icon name="hill_flag" width="1.5rem" height="1.5rem" />
+          </div>
+          <p class="text-white text-lg text-medium mt-6">
+            Kalu's <br />
+            Missions
           </p>
+          <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
         </div>
         <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/bills')">
-          <p
-            class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
-            @click="$router.push('/bills')"
-          >
-            Bills and Motions
-            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
-          </p>
+          <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center" @click="$router.push('/bills')">
+            <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
+              <svg-icon name="list" width="1.5rem" height="1.5rem" />
+            </div>
+            <p class="text-white text-lg text-medium mt-6">
+              Bills and <br />
+              Motions
+            </p>
+            <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
+          </div>
         </div>
         <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/legislative/review')">
-          <p class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer">
-            Constitutional Review
-            <svg-icon name="arrow_right_white" width="1rem" height="1rem" />
-          </p>
+          <div
+            class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center"
+            @click="$router.push('/legislative/review')"
+          >
+            <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
+              <svg-icon name="gravel_white" width="1.5rem" height="1.5rem" />
+            </div>
+            <p class="text-white text-lg text-medium mt-6">
+              Constitution<br />
+              Review
+            </p>
+            <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
+          </div>
         </div>
       </div>
     </div>
