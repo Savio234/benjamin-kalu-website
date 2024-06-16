@@ -32,5 +32,31 @@ export const useMyBlogStore = defineStore({
       });
       return blog;
     },
+    async getAllProjects(page = 1, pageSize = 5) {
+      const envVars = useRuntimeConfig().public;
+      const baseHeader = {
+        Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
+      };
+      const storeProjects = await $fetch(
+        `${envVars.strapiURL}/Projects?populate=*&sort[0]=id:asc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
+        {
+          method: 'get',
+          headers: baseHeader,
+        },
+      );
+      console.log(storeProjects);
+      return storeProjects;
+    },
+    async getProject(id) {
+      const envVars = useRuntimeConfig().public;
+      const baseHeader = {
+        Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
+      };
+      const project = await $fetch(`${envVars.strapiURL}/Projects/${id}?populate=*`, {
+        method: 'get',
+        headers: baseHeader,
+      });
+      return project;
+    },
   },
 });

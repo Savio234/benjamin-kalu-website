@@ -53,11 +53,37 @@
         </div>
 
         <!-- Project Card -->
-        <div class="w-full flex flex-col gap-4">
-          <CardProject />
-          <CardProject />
+        <div class="flex flex-col items-center justify-center mb-12" v-show="loading">
+          <iframe
+            src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
+            height="200px"
+            width="200px"
+          ></iframe>
+          <p class="w-fit">Loading...</p>
         </div>
-        <Pagination class="self-center" prev-text="Previous Projects" next-text="Next Projects" />
+        <div class="w-full flex flex-col gap-4" v-show="!loading">
+          <CardProject
+            v-for="(items, index) in projects"
+            :key="index"
+            :name="items.attributes.name"
+            :location="items.attributes.location"
+            :budget="Number(items.attributes.naira_budget)"
+            :agency="items.attributes.agency"
+            :ministry="items.attributes.ministry"
+            :status="items.attributes.status"
+            :start_date="items.attributes.start_date"
+            :end_date="items.attributes.end_date"
+          />
+        </div>
+        <Pagination
+          class="self-center"
+          prev-text="Previous Projects"
+          next-text="Next Projects"
+          :total="TotalProjects"
+          :items-per-page="pageSizeProjects"
+          :max-pages="2"
+          @page="loadData"
+        />
       </div>
     </section>
     <SectionsContact />
@@ -66,6 +92,32 @@
 
 <script setup>
 const isFiltering = ref(false);
+const projects = ref([]);
+const pageProjects = ref(0);
+const pageCountProjects = ref(0);
+const pageSizeProjects = ref(1);
+const TotalProjects = ref(0);
+const loading = ref(false);
+
+async function loadData(newPage = 1) {
+  loading.value = true;
+  try {
+    const { meta, data } = await useMyBlogStore().getAllProjects(newPage);
+    pageProjects.value = meta.pagination.page;
+    pageCountProjects.value = meta.pagination.pageCount;
+    pageSizeProjects.value = meta.pagination.pageSize;
+    TotalProjects.value = meta.pagination.total;
+    projects.value = data;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+  }
+}
+
+onMounted(async () => {
+  await loadData();
+});
 </script>
 
 <style></style>
