@@ -1,7 +1,7 @@
 <template>
   <section class="w-full py-16 bg-white">
     <div class="content w-[85%] sm:w-4/12 mx-auto text-center flex flex-col items-center">
-      <Sublogo class="shadow border border-borderMuted rounded-full pr-3" />
+      <Sublogo class="" />
       <h3 class="font-semibold mt-4">
         We will love to <br />
         hear from you!
