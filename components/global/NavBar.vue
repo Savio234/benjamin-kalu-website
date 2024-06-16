@@ -3,12 +3,10 @@
     <nav class="w-full py-4 bg-white relative">
       <div class="content mx-auto flex justify-between w-[95%] items-center">
         <FullLogo />
-        <div
-          class="nav-content hidden lg:flex items-center rounded-full border border-borderMuted bg-white p-1 gap-6 shadow"
-        >
+        <div class="nav-content hidden lg:flex items-center p-1 gap-6">
           <NuxtLink
             to="/"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full"
             @mouseover="
               activateAbout = false;
               activateLegistlative = false;
@@ -25,7 +23,7 @@
           >
           <NuxtLink
             to="/about"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full"
             @mouseover="
               activateAbout = true;
               activateLegistlative = false;
@@ -42,7 +40,7 @@
           >
           <NuxtLink
             to="/legislative"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2"
             @mouseover="
               activateLegistlative = true;
               activateAbout = false;
@@ -55,11 +53,12 @@
               activateBills = false;
               activateProjects = false;
             "
-            >Legislative Affairs</NuxtLink
-          >
+            >Legislative Affairs
+            <SvgIcon name="carat_down" width="1rem" height="1rem" />
+          </NuxtLink>
           <!-- <NuxtLink
             to="/bills"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full"
             @mouseover="
               activateLegistlative = false;
               activateAbout = false;
@@ -76,7 +75,7 @@
           > -->
           <NuxtLink
             to="/projects"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full"
             @mouseover="
               activateLegistlative = false;
               activateAbout = false;
@@ -93,7 +92,7 @@
           >
           <NuxtLink
             to="/blog"
-            class="text-gray py-2 px-4 rounded-full"
+            class="text-[#959897] py-2 px-4 rounded-full"
             @mouseover="
               activateLegistlative = false;
               activateAbout = false;
@@ -165,22 +164,24 @@
     <div v-if="mobileNav" class="sm:hidden mobile-nav h-dvh w-full bg-white pt-8 fixed z-[1500]">
       <!-- content -->
       <div class="flex flex-col gap-4 mx-auto w-[90%]">
-        <NuxtLink to="/" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">About</NuxtLink>
-        <NuxtLink to="/legislative" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false">Home</NuxtLink>
+        <NuxtLink to="/about" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false">About</NuxtLink>
+        <NuxtLink to="/legislative" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >Legislative Affairs</NuxtLink
         >
-        <NuxtLink to="/legislative/review" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/legislative/review" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >Constitutional Review</NuxtLink
         >
-        <NuxtLink to="/bills" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/bills" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >Bills & Motions</NuxtLink
         >
-        <NuxtLink to="/projects" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false">Projects</NuxtLink>
-        <NuxtLink to="/projects/pisep" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/projects" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
+          >Projects</NuxtLink
+        >
+        <NuxtLink to="/projects/pisep" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >PISEP</NuxtLink
         >
-        <NuxtLink to="/blog" class="text-gray py-2 px-4 rounded-full" @click="mobileNav = false"
+        <NuxtLink to="/blog" class="text-[#959897] py-2 px-4 rounded-full" @click="mobileNav = false"
           >News & Update</NuxtLink
         >
       </div>

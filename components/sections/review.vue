@@ -11,7 +11,7 @@
       </h6>
       <div class="form w-full my-8">
         <textarea
-          rows="10"
+          rows="5"
           class="w-full rounded-lg bg-bgInput border border-borderMuted p-2 outline-bgGreen"
           placeholder="Enter a review"
         ></textarea>

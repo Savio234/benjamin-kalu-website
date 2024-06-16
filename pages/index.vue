@@ -2,24 +2,25 @@
   <main class="flex flex-col w-full">
     <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
-        <div class="text-box w-full lg:w-7/12 flex flex-col text-white gap-2">
+        <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
           <p class="text-white">Welcome to the Official website of</p>
-          <h1 class="font-semibold text-[48px] sm:text-[64px]"> Hon Benjamin Kalu</h1>
-          <h4>
+          <h1 class="font-semibold text-[48px] sm:text-[64px]">Rt. Hon Benjamin Kalu</h1>
+          <p class="text-white">
             Deputy Speaker, 10th House Of Representatives, <br/>Federal Republic of Nigeria
-          </h4>
+          </p>
         </div>
       </div>
     </section>
     <section class="w-full py-16 text-center flex flex-col">
       <div class="content mx-auto w-[85%] flex flex-col gap-2 items-center">
         <h2 class="text-black font-semibold">About <span class="text-primaryGreen">Benjamin Kalu</span></h2>
-        <p class="w-full sm:w-9/12 mx-auto text-xl">
-          <span class="text-primaryGreen">Benjamin Kalu</span> is a prominent Nigerian politician, serving as the Deputy
-          Speaker of the House of Representatives of Nigeria since 2023. Kalu represents the Bende federal constituency,
-          bringing their issues and perspectives to the national stage in his legislative role.
+        <p class="w-full sm:w-8/12 mx-auto text-xl">
+          A refined legislator, Rep. Benjamin Okezie Kalu embodies the Nigerian spirit. With a sterling career 
+          as an international businessman and legal practitioner, Kalu's journey in Nigerian politics propelled 
+          him to the 6th highest political office in the nation, emerging as the Deputy Speaker of the 10th House 
+          of Representatives in June 2023. He has continued to serve the people of Bende Federal Constituency and the nation at large.
         </p>
-        <MainButton @click="$router.push('/about')">Who is Benjamin Kalu?</MainButton>
+        <MainButton @click="$router.push('/about')">Learn more about Rep. Benjamin Kalu</MainButton>
         <div class="mt-24 w-full h-auto sm:h-screen">
           <NuxtImg
             class="w-full h-full object-cover rounded-xl"
