@@ -3,11 +3,11 @@
     <div class="content w-[85%] sm:w-4/12 mx-auto text-center flex flex-col items-center">
       <Sublogo class="shadow border border-borderMuted rounded-full pr-3" />
       <h3 class="font-semibold mt-4">
-        Let us <span class="text-primaryGreen">Know</span> <br />
-        how we are doing
+        We will love to <br />
+        hear from you!
       </h3>
-      <h6 class="font-medium">
-        Feel free to send us and Email and let us know how our ofice is performing and how best we can improve
+      <h6 class="font-medium mt-2">
+        Let us know how we are performing and share your concerns on topical issues
       </h6>
 
       <form ref="form" class="form w-full my-8" @submit.prevent="sendEmail">
