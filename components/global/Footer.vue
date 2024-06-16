@@ -1,6 +1,6 @@
 <template>
   <footer class="py-16 border-t border-borderMuted bg-black text-white">
-    <div class="content mx-auto w-[85%] flex flex-col gap-8">
+    <div class="content mx-auto w-[85%] flex flex-col gap-8 sm:gap-32">
       <div class="top-row flex flex-col sm:flex-row w-full items-start gap-16">
         <div
           class="ls w-full sm:w-4/12 flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-0 justify-between"
@@ -54,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="bottom-row border-t border-borderMuted pt-8">
+      <div class="bottom-row border-t border-[#FFFFFF0F] pt-8">
         <p class="w-full sm:w-4/12 text-white">
           Want to stay updated with the activities of the deputy speaker, Join out
           <a

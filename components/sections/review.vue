@@ -9,23 +9,58 @@
       <h6 class="font-medium">
         Feel free to send us and Email and let us know how our ofice is performing and how best we can improve
       </h6>
-      <div class="form w-full my-8">
+
+      <form ref="form" class="form w-full my-8" @submit.prevent="sendEmail">
+        <p class="text-primaryGreen" v-if="success">Your Message has been sent</p>
         <textarea
           rows="5"
           class="w-full rounded-lg bg-bgInput border border-borderMuted p-2 outline-bgGreen"
           placeholder="Enter a review"
+          name="message"
+          v-model="message_content"
         ></textarea>
-        <button class="bg-white border-2 border-[#00A99133] w-full h-fit p-[1px] rounded-lg">
+
+        <button type="submit" class="bg-white border-2 border-[#00A99133] w-full h-fit p-[1px] rounded-lg">
           <div class="bg-primaryGreen rounded-lg py-3 px-6 text-white" style="font-family: 'Inter', sans-serif">
-            Send
+            {{ isLoading ? '....' : 'Send' }}
           </div>
         </button>
-      </div>
+      </form>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+import emailjs from '@emailjs/browser';
+const success = ref(false);
+const isLoading = ref(false);
+const form = ref(null);
+const message_content = ref('');
+function sendEmail() {
+  isLoading.value = true;
+  try {
+    emailjs
+      .sendForm('service_gn5wzva', 'template_ggvh3ab', form.value, {
+        publicKey: 'dCyHceo03iP6yJR6v',
+      })
+      .then(
+        () => {
+          console.log('Success');
+          success.value = true;
+          message_content.value = '';
+        },
+        (error) => {
+          console.log(error);
+        },
+      );
+  } catch (error) {
+    console.log(error);
+  } finally {
+    isLoading.value = false;
+    success.value = false;
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .content {
