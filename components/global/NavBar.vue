@@ -108,7 +108,7 @@
             >News & Update</NuxtLink
           >
         </div>
-        <MainButton append-icon="sms" class="hidden lg:block">Contact Us</MainButton>
+        <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">Contact Us</MainButton>
 
         <!-- hamburger -->
         <button class="block sm:hidden" @click="mobileNav = !mobileNav">

@@ -5,7 +5,7 @@
   >
     <NuxtImg :src="$props.imageUrl" class="w-full object-cover rounded-t-xl" :class="$props.imageHeight" />
     <div class="content mx-auto my-4 flex flex-col gap-4 w-[90%]">
-      <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ $props.category }}</p>
+      <p class="bg-[#51128126] text-[#511281] rounded-lg w-fit py-1 px-2">news</p>
       <h6 class="font-semibold">{{ $props.title }}</h6>
       <small>{{ $props.description }}</small>
     </div>

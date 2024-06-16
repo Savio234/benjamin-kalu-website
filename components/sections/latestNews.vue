@@ -18,10 +18,8 @@
             }"
           >
             <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
-              <h3>{{ latest[0].attributes.title }}</h3>
-              <p class="bg-bgGreen text-primaryGreen rounded-full w-fit py-2 px-4">
-                {{ latest[0].attributes.category }}
-              </p>
+              <h3 class="font-semibold">{{ latest[0].attributes.title }}</h3>
+              <p class="bg-[#FFFFFF99] font-semibold rounded-full w-fit py-2 px-4">Details</p>
             </div>
           </div>
           <div
@@ -35,10 +33,8 @@
             }"
           >
             <div class="content mx-auto text-white w-[90%] h-[20rem] sm:h-auto flex flex-col gap-4">
-              <h3>{{ latest[1].attributes.title }}</h3>
-              <p class="bg-bgGreen text-primaryGreen rounded-full w-fit py-2 px-4">
-                {{ latest[1].attributes.category }}
-              </p>
+              <h3 class="font-semibold">{{ latest[1].attributes.title }}</h3>
+              <p class="bg-[#FFFFFF99] font-semibold rounded-full w-fit py-2 px-4">Details</p>
             </div>
           </div>
         </div>
@@ -79,7 +75,7 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .featuredPost {
   // background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png');
-  background-color: #35390775;
+  background: #3539074d;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;

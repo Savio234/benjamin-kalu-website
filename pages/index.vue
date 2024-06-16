@@ -28,13 +28,13 @@
             format="webp"
           /> -->
           <Swiper
-            class="w-full rounded-xl"
+            class="w-full rounded-3xl"
             :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination]"
             :slides-per-view="1"
             :loop="true"
             :effect="'creative'"
             :autoplay="{
-              delay: 1500,
+              delay: 5000,
               disableOnInteraction: true,
             }"
             :pagination="true"
@@ -49,7 +49,7 @@
             }"
           >
             <SwiperSlide v-for="image in images" :key="image.id">
-              <NuxtImg :src="image.url" class="w-full h-auto" format="webp" />
+              <NuxtImg :src="image.url" class="w-full rounded-3xl h-auto" format="webp" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -71,13 +71,9 @@
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>
         <div class="relative w-full h-auto mt-4">
-          <!-- <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717507316/benjamin_kalu/weekly_updates_magazine_gmmbl5.png"
-            class="w-full h-full"
-          /> -->
           <embed
             src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf#toolbar=0&view=FitH"
-            class="w-full h-auto sm:h-screen rounded-xl"
+            class="w-full h-auto sm:h-[200vh] rounded-xl"
             width="100%"
           ></embed>
         </div>
@@ -244,7 +240,7 @@ const images = ref([
   background-position: bottom center;
 }
 .updates {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/f_auto/benjamin_kalu/weekly_updates_background_q95czt.png'),
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),
     url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
   background-size: cover;
   background-repeat: no-repeat;
