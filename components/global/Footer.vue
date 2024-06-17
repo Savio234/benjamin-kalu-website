@@ -38,8 +38,8 @@
           <div class="footer-list flex flex-col w-fit gap-8">
             <h5 class="font-semibold text-white">Explore</h5>
             <ul class="flex flex-col gap-4 font-medium">
-              <NuxtLink class="text-white" to="">Constitutional Review</NuxtLink>
-              <NuxtLink class="text-white" to="/projects">PISE-P</NuxtLink>
+              <NuxtLink class="text-white" to="/legislative/review">Constitutional Review</NuxtLink>
+              <NuxtLink class="text-white" to="/projects/pisep">PISE-P</NuxtLink>
               <NuxtLink class="text-white" to="/blog">News & Update</NuxtLink>
             </ul>
           </div>
@@ -47,8 +47,8 @@
             <h5 class="font-semibold text-white">Resources</h5>
             <ul class="flex flex-col gap-4 font-medium">
               <NuxtLink class="text-white" to="/bills">Kalu's Bills and Motions</NuxtLink>
-              <NuxtLink class="text-white" to="">House Directory</NuxtLink>
-              <NuxtLink class="text-white" to="">House Agenda</NuxtLink>
+              <NuxtLink class="text-white" to="#">House Directory</NuxtLink>
+              <NuxtLink class="text-white" to="#">House Agenda</NuxtLink>
             </ul>
           </div>
         </div>
