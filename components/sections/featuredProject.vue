@@ -9,7 +9,7 @@
         </h6>
       </div>
       <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div class="w-full flex rounded-xl flex-col cursor-pointer" @click="$router.push('/projects')">
+        <div class="w-full flex rounded-xl flex-col cursor-pointer" @click="$router.push('/projects/10')">
           <NuxtImg
             class="h-[15rem] rounded-t-xl object-cover"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544599/benjamin_kalu/new_image_pisep_cmjxlb.png"
@@ -24,7 +24,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full flex rounded-xl flex-col cursor-pointer" @click="$router.push('/projects/pisep')">
+        <div class="w-full flex rounded-xl flex-col cursor-pointer" @click="$router.push('/projects')">
           <NuxtImg
             class="h-[15rem] rounded-t-xl object-cover"
             src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718125712/benjamin_kalu/happy_child_smxkrn.png"
