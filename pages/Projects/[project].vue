@@ -32,7 +32,7 @@
         ></div>
         <NuxtLink
           v-if="pisep == 10"
-          to="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf"
+          to="https://res.cloudinary.com/damkhdi7d/image/upload/v1718566151/benjamin_kalu/brochure_PISE_EDIT_01_compressed_phecr1.pdf"
           target="_blank"
           class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end"
           append-icon="attachment-white"
