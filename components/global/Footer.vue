@@ -56,9 +56,7 @@
       <div class="bottom-row border-t border-[#FFFFFF0F] pt-8">
         <p class="w-full sm:w-4/12 text-white">
           Want to stay updated with the activities of the deputy speaker, Join our
-          <a
-            href="mailto:info@benjaminkalu.com
-"
+          <a href="/projects#mailing-list"
             class="text-secondaryGreen cursor-pointer"
             >mailing</a
           >

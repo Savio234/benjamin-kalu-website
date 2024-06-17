@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-16 bg-white">
+  <section class="w-full py-16 bg-white" id="mailing-list">
     <div class="content w-[85%] sm:w-4/12 mx-auto text-center flex flex-col items-center">
       <Sublogo />
       <h3 class="font-semibold mt-8">Stay in the loop</h3>
