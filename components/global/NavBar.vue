@@ -60,8 +60,7 @@
         @click="resetActivations"
       />
     </nav>
-    <div v-if="mobileNav" class="mobile-nav h-[100vh] w-full bg-black pt-8 fixed z-[100] text-white">
-      <!-- content -->
+    <div v-if="mobileNav" class="sm:hidden mobile-nav h-[100vh] w-full bg-black pt-8  z-[100] text-white">
       <div class="flex flex-col h-screen gap-6 mx-auto w-[90%]">
         <NuxtLink to="/" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">Home</NuxtLink>
         <NuxtLink to="/about" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">About</NuxtLink>
