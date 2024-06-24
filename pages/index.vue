@@ -20,7 +20,8 @@
           him to the 6th highest political office in the nation, emerging as the Deputy Speaker of the 10th House 
           of Representatives in June 2023. He has continued to serve the people of Bende Federal Constituency and the nation at large.
         </p>
-        <MainButton @click="$router.push('/about')">Learn more about Rep. Benjamin Kalu</MainButton>
+        <!-- <MainButton @click="$router.push('/about')">Learn more about Rep. Benjamin Kalu</MainButton> -->
+        <MainButton> Learn more about Rep. Benjamin Kalu</MainButton>
         <div class="mt-12 w-full h-auto">
           <!-- <NuxtImg
             class="w-full h-full object-cover rounded-xl"
