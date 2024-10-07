@@ -72,12 +72,12 @@
         </div>
         <div class="relative w-full h-auto mt-4">
           <embed
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf#toolbar=0&view=FitH"
+            src="https://res.cloudinary.com/dokuicrun/image/upload/v1728314201/benjaminkalu/xwn1pmifgrt27hodobxc.pdf#toolbar=0&view=FitH"
             class="w-full h-auto sm:h-[200vh] rounded-xl"
             width="100%"
           ></embed>
         </div>
-        <NuxtLink to="https://res.cloudinary.com/damkhdi7d/image/upload/v1718185420/benjamin_kalu/Rep_Ben_Kalu_Weekly_Review_compressed_jsmppq.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
+        <NuxtLink to="https://res.cloudinary.com/dokuicrun/image/upload/v1728314201/benjaminkalu/xwn1pmifgrt27hodobxc.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
      Download PDF
     </div></NuxtLink>
       </div>
