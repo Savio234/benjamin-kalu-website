@@ -13,7 +13,13 @@
           />
           <!-- <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
             <select name="" id="" class="p-0 m-0 outline-none">
-              <option value="" selected>Filter by State</option>
+              <option value="" selected disabled>Filter by Status</option>
+              <option value="first_time_read">First Time Read, Awaiting Second Reading</option>
+              <option value="second_time_read">Second Time Read, Referred to Committees</option>
+              <option value="committee_of_whole">Referred to Committee of the Whole (Order 12 Rule 16)</option>
+              <option value="passed_by_house">Passed by House of Representatives</option>
+              <option value="passed_by_house_senate">Passed by House of Representatives and Senate</option>
+              <option value="accented_by_the_president">Assented to by the President</option>
             </select>
           </div> -->
           <button
@@ -50,7 +56,6 @@
             <span class="hidden sm:block w-fit"> Benjamin Kalu's </span> Motions
           </button>
         </div>
-        <!-- grid table -->
         <template v-if="isBills">
           <div class="flex flex-col items-center justify-center mb-12" v-show="loading">
             <iframe
@@ -70,7 +75,7 @@
             >
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
-                <small class="font-semibold">{{ items.id }}</small>
+                <small class="font-semibold">{{ TotalBills - (pageBills - 1) * pageSizeBills - index }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>H/B Number</small>
@@ -94,7 +99,7 @@
           <!-- pagination -->
           <div class="w-full flex items-center justify-center">
             <Pagination
-              :total="totalBills"
+              :total="TotalBills"
               :items-per-page="pageSizeBills"
               :max-pages="2"
               prev-text="Previous"
@@ -114,19 +119,25 @@
             >
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>S/N</small>
-                <small class="font-semibold">{{ index + 1 }}</small>
+                <small class="font-semibold">{{ items.id }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Title</small>
-                <small class="font-semibold">{{ items.title }}</small>
+                <small class="font-semibold">{{ items.attributes.title }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
                 <small>Bill Sponsor</small>
-                <small class="font-semibold">{{ items.motion_sponsor }}</small>
+                <small class="font-semibold">{{ items.attributes.motion_sponsor }}</small>
               </div>
               <div class="flex flex-col gap-2 py-2 px-2">
-                <small>Status</small>
-                <small class="font-semibold">{{ items.date }}</small>
+                <small>Date</small>
+                <small class="font-semibold">{{
+                  new Date(items.attributes.motion_date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })
+                }}</small>
               </div>
             </div>
             <div v-else class="self-center">No Results for search</div>
@@ -160,21 +171,8 @@ const displayedBills = ref([]);
 const displayedMotions = ref([]);
 const searchTerm = ref('');
 const loading = ref(false);
-const motions = ref([
-  {
-    title: 'Need for the Rehabilitation of Orlu - Ihiala Road',
-    motion_sponsor: 'Hon. Canice Moore Nwachukwu',
-    date: ' Oct 21, 2022',
-    details: {
-      sponsors: [''],
-      resolutions: [''],
-      // the house is meant to be rich-text
-      house: null,
-    },
-  },
-]);
+const motions = ref([]);
 
-// search functionality
 const filteredBills = computed(() => {
   return bills.value.filter((item) => item.title.toLowerCase().includes(searchTerm.value.toLowerCase()));
 });
@@ -199,18 +197,20 @@ async function loadData(newPage = 1) {
     pageSizeBills.value = meta.pagination.pageSize;
     TotalBills.value = meta.pagination.total;
     bills.value = data;
+
+    const { meta: motionsMeta, data: motionsData } = await useMyBillsStore().getMotions();
+    motions.value = motionsData;
   } catch (error) {
     console.log(error);
   } finally {
     loading.value = false;
   }
 }
-// onMounte
+
 onMounted(async () => {
+  await loadData();
   displayedBills.value = bills.value;
   displayedMotions.value = motions.value;
-  // api call
-  await loadData();
 });
 </script>
 

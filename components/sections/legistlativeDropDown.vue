@@ -2,7 +2,7 @@
   <!-- test dropdown -->
   <div class="w-full h-fit bg-black">
     <div class="content mx-auto w-full flex gap-8">
-      <div class="text-area w-5/12 py-24">
+      <div class="text-area w-3/5 py-24">
         <div class="w-10/12 flex flex-col gap-4 mx-auto">
           <h3 class="font-semibold gap-4 text-white">Legislative Agenda</h3>
           <h5 class="text-white font-medium">
@@ -11,20 +11,7 @@
           </h5>
         </div>
       </div>
-      <div class="grid grid-cols-3 w-7/12 gap-[1px] bg-[#cccccc9a]">
-        <div
-          class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center"
-          @click="$router.push('/legislative')"
-        >
-          <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
-            <svg-icon name="hill_flag" width="1.5rem" height="1.5rem" />
-          </div>
-          <p class="text-white text-lg text-medium mt-6">
-            Kalu's <br />
-            Missions
-          </p>
-          <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
-        </div>
+      <div class="grid grid-cols-2 w-2/5 gap-[1px] bg-[#cccccc9a]">
         <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/bills')">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center" @click="$router.push('/bills')">
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">

@@ -18,14 +18,16 @@
 </template>
 
 <script setup>
-const series = reactive([41, 7, 20, 5, 0]);
+const series = reactive([58, 11, 14, 20, 2, 2]);
+
 const chartOptions = reactive({
   labels: [
-    'Number of Bills Read First Time and Awaiting Second Reading',
-    'Number of Bills Read Second Time and Referred to Committees',
-    'Number of Bills Referred to Committee of the Whole (Order 12 Rule 16)',
-    'Number of Bills Passed by the House of Representatives',
-    'Number of Bills Passed by the House of Representatives and the Senate',
+    'Bills Read First Time and Awaiting Second Reading',
+    'Bills Read Second Time and Referred to Committees',
+    'Bills Referred to Committee of the Whole (Order 12 Rule 16)',
+    'Bills Passed by the House of Representatives',
+    'Bills Passed by the House of Representatives and the Senate',
+    'Bills Assented to by the President',
   ],
   chart: {
     type: 'donut',
@@ -42,7 +44,7 @@ const chartOptions = reactive({
     },
   },
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   legend: {
     show: false,
@@ -52,7 +54,7 @@ const chartOptions = reactive({
     fontSize: '14px',
   },
   tooltip: {
-    enabled: false,
+    enabled: true,
   },
 });
 // Combine labels and colors into a single array of objects

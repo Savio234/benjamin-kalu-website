@@ -12,7 +12,6 @@
             >Home</NuxtLink
           >
           <NuxtLink
-            
             class="text-[#959897] py-2 px-4 rounded-full hover:text-black"
             @mouseover="activateSection('about')"
             @click="resetActivations"
@@ -60,33 +59,50 @@
         @click="resetActivations"
       />
     </nav>
-    <div v-if="mobileNav" class="sm:hidden mobile-nav h-[100vh] w-full bg-black pt-8  z-[100] text-white">
+    <div v-if="mobileNav" class="sm:hidden mobile-nav h-[100vh] w-full bg-black pt-8 z-[100] text-white">
       <div class="flex flex-col h-screen gap-6 mx-auto w-[90%]">
-        <NuxtLink to="/" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">Home</NuxtLink>
-        <NuxtLink  class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">About</NuxtLink>
-        
+        <NuxtLink to="/" class="text-white py-3 px-4 rounded-full" @click="closeMobileNav">Home</NuxtLink>
+        <NuxtLink class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">About</NuxtLink>
+
         <div>
-          <button @click="toggleSection('legislative')" class="w-full text-left text-white py-2 px-4 rounded-full focus:outline-none flex justify-between items-center">
+          <button
+            @click="toggleSection('legislative')"
+            class="w-full text-left text-white py-2 px-4 rounded-full focus:outline-none flex justify-between items-center"
+          >
             Legislative Affairs
-            <font-awesome-icon :icon="['fas', 'chevron-down']" :class="chevronClass('legislative')" class="transform transition-transform duration-300"></font-awesome-icon>
+            <font-awesome-icon
+              :icon="['fas', 'chevron-down']"
+              :class="chevronClass('legislative')"
+              class="transform transition-transform duration-300"
+            ></font-awesome-icon>
           </button>
           <transition name="accordion">
             <div v-show="openSection === 'legislative'" class="pl-4 overflow-hidden">
-              <NuxtLink to="/legislative" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Kalu's Missions</NuxtLink>
-              <NuxtLink to="/bills" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Bills & Motions</NuxtLink>
-              <NuxtLink to="/legislative/review" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Constitutional Review</NuxtLink>
+              <NuxtLink to="/bills" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav"
+                >Bills & Motions</NuxtLink
+              >
+              <NuxtLink to="/legislative/review" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav"
+                >Constitutional Review</NuxtLink
+              >
             </div>
           </transition>
         </div>
-        
+
         <div>
-          <button @click="toggleSection('projects')" class="w-full text-left text-white py-2 px-4 rounded-full focus:outline-none flex justify-between items-center">
+          <button
+            @click="toggleSection('projects')"
+            class="w-full text-left text-white py-2 px-4 rounded-full focus:outline-none flex justify-between items-center"
+          >
             Projects
-            <font-awesome-icon :icon="['fas', 'chevron-down']" :class="chevronClass('projects')" class="transform transition-transform duration-300"></font-awesome-icon>
+            <font-awesome-icon
+              :icon="['fas', 'chevron-down']"
+              :class="chevronClass('projects')"
+              class="transform transition-transform duration-300"
+            ></font-awesome-icon>
           </button>
           <transition name="accordion">
             <div v-show="openSection === 'projects'" class="pl-4 overflow-hidden">
-              <NuxtLink  class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Projects</NuxtLink>
+              <NuxtLink class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Projects</NuxtLink>
               <NuxtLink class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">PISEP</NuxtLink>
             </div>
           </transition>
@@ -147,10 +163,12 @@ nav {
   overflow: hidden;
 }
 
-.accordion-enter-active, .accordion-leave-active {
+.accordion-enter-active,
+.accordion-leave-active {
   transition: max-height 0.5s ease-in-out;
 }
-.accordion-enter-from, .accordion-leave-to {
+.accordion-enter-from,
+.accordion-leave-to {
   max-height: 0;
 }
 
