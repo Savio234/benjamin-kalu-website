@@ -1,23 +1,32 @@
 <template>
   <main class="flex flex-col w-full bg-light">
-    <section class="hero w-full h-auto sm:h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
-      <div class="text-section w-full sm:w-7/12 py-16">
-        <div class="content mx-auto w-[80%] flex flex-col gap-2">
-          <h2 class="text-white font-semibold">
-            Get to know the Gem, <br class="hidden sm:block" />
-            that is <span class="text-secondaryGreen">Benjamin Kalu</span>
-          </h2>
-          <h4 class="text-white">
-            The Federal House of Speakers is one of the two Chambers that make up the Bicameral Legislature of the
-            Federal Republic of Nigeria.
-          </h4>
-        </div>
-      </div>
-      <div class="image-sect w-full sm:w-5/12 h-full">
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717536006/benjamin_kalu/about_home_hus4kr.png"
-          class="w-full h-full object-cover"
-        />
+    <section class="w-full bg-primaryGreen flex flex-col sm:flex-row items-center">
+      <div class="w-full relative">
+        <Swiper
+          class="w-full"
+          :modules="[SwiperAutoplay, SwiperEffectFade, SwiperPagination]"
+          :slides-per-view="1"
+          :loop="true"
+          :effect="'fade'"
+          :fade-effect="{
+            crossFade: true,
+          }"
+          :autoplay="{
+            delay: 4000,
+            disableOnInteraction: true,
+          }"
+          :pagination="{
+            clickable: true,
+          }"
+        >
+          <div class="absolute z-10 left-8 sm:left-24 top-1/2 -translate-y-1/2 text-white">
+            <h1 class="text-3xl sm:text-6xl font-bold drop-shadow-md">About Benjamin Kalu</h1>
+          </div>
+          <SwiperSlide v-for="image in images" :key="image.id">
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+            <NuxtImg :src="image.url" class="w-full h-auto" format="webp" />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
     <section class="w-full py-16">
@@ -174,7 +183,35 @@
   </main>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+
+const images = ref([
+  {
+    id: 0,
+    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444071/benjaminkalu/km5ubmxqna8sxz0sheme.png',
+  },
+  {
+    id: 1,
+    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+  },
+  {
+    id: 2,
+    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444053/benjaminkalu/qdprrztr0ptvdgjjdrw7.png',
+  },
+  {
+    id: 3,
+    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444092/benjaminkalu/ywwwtly9476xbhdhkawd.png',
+  },
+  {
+    id: 4,
+    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444186/benjaminkalu/zrdehjtzgk2se2dohdoa.png',
+  },
+]);
+</script>
 
 <style lang="scss" scoped>
 .hero {

@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxt/eslint',
-    'nuxt-swiper',
   ],
   googleFonts: {
     families: {

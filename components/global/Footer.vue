@@ -48,8 +48,8 @@
             <h5 class="font-semibold text-white">Resources</h5>
             <ul class="flex flex-col gap-4 font-medium">
               <NuxtLink class="text-white" to="/bills">Kalu's Bills and Motions</NuxtLink>
-              <!-- <NuxtLink class="text-white" to="#">House Directory</NuxtLink> -->
-              <!-- <NuxtLink class="text-white" to="#">House Agenda</NuxtLink> -->
+              <NuxtLink class="text-white" to="/">House Directory</NuxtLink>
+              <NuxtLink class="text-white" to="#">House Agenda</NuxtLink>
             </ul>
           </div>
         </div>
