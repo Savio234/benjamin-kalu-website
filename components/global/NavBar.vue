@@ -3,37 +3,37 @@
     <nav class="w-full py-4 bg-white relative">
       <div class="content mx-auto flex justify-between w-[95%] items-center">
         <FullLogo />
-        <div class="nav-content hidden lg:flex items-center p-1 gap-6">
+        <div class="nav-content hidden lg:flex items-center p-1 gap-6 font-extralight">
           <NuxtLink
             to="/"
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black"
+            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
             >Home</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black"
+            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
             to="/about"
             @mouseover="resetActivations"
             @click="resetActivations"
             >About</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black"
+            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('legislative')"
             @click="resetActivations"
             >Legislative Affairs
             <SvgIcon name="carat_down" width="1rem" height="1rem" />
           </NuxtLink>
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black"
+            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('projects')"
             @click="resetActivations"
             >Projects <SvgIcon name="carat_down" width="1rem" height="1rem"
           /></NuxtLink>
           <NuxtLink
             to="/blog"
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black"
+            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
             >News & Update</NuxtLink
