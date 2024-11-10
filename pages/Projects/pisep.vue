@@ -26,12 +26,14 @@
       alt="eight thematic areas"
       class="w-full h-auto object-contain"
     />
+    <section>
+      <ListEvents />
+    </section>
     <NuxtImg src="/images/pisep/partnerships.webp" alt="Pise-p partnerships" class="w-full h-auto object-contain" />
     <p class="text-lg font-montserrat text-center mb-4">
       To learn more and be a part of us, visit the official PISE-P website at:
       <NuxtLink to="https://pise-p.org/" class="text-footerGreen underline">https://pise-p.org/</NuxtLink>
     </p>
-    <!-- <SectionsContact /> -->
   </main>
 </template>
 
