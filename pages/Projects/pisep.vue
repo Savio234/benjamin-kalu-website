@@ -6,7 +6,7 @@
           PISE-P - Peace in the South East <br />
           project
         </h3>
-        <div class="flex">
+        <div class="flex flex-wrap md:flex-nowrap gap-4 md:gap-8">
           <p class="text-justify leading-[34.8px] w-full md:w-1/2 flex justify-center items-center">
             The Peace in South East Project (PISE-P), an initiative of the Deputy Speaker, is a peace-building and
             development program designed to address the complex socio-economic challenges and security issues facing the
@@ -15,7 +15,11 @@
             approach.
           </p>
           <div class="w-full md:w-1/2 flex justify-center items-center">
-            <NuxtImg src="/images/pisep/pisep-logo.png" alt="pisep logo" class="w-[360px] h-[360px] object-contain" />
+            <NuxtImg
+              src="/images/pisep/pisep-logo.png"
+              alt="pisep logo"
+              class="w-[280px] md:w-[360px] h-auto object-contain"
+            />
           </div>
         </div>
       </div>
