@@ -1,8 +1,10 @@
 <template>
   <div class="w-full rounded-xl flex flex-col cursor-pointer bg-white">
-    <NuxtImg :src="$props.imageUrl" class="w-full object-cover rounded-lg my-2" :class="$props.imageHeight" />
+    <NuxtImg :src="$props.imageUrl" class="w-full h-[263px] object-cover rounded-lg my-2" />
     <div class="content my-4 flex flex-col gap-4 w-[90%]">
-      <h6 class="font-semibold">{{ $props.title }}</h6>
+      <h6 class="text-[16px] font-bold">
+        {{ $props.title }}
+      </h6>
     </div>
   </div>
 </template>
@@ -28,11 +30,6 @@ defineProps({
     type: String,
     required: false,
     default: 'Benjamin Kalu is a man of vast knowledge and wisdom. He hails from...',
-  },
-  imageHeight: {
-    type: String,
-    required: false,
-    default: 'h-60',
   },
   imageUrl: {
     type: String,

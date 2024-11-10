@@ -50,7 +50,7 @@ const chartOptions = reactive({
     show: false,
     position: 'bottom',
     horizontalAlign: 'left',
-    fontFamily: 'Montserrat, sans-serif',
+    fontFamily: 'Montserrat Alternates, sans-serif',
     fontSize: '14px',
   },
   tooltip: {

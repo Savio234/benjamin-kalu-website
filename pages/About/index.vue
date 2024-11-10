@@ -22,7 +22,7 @@
           </div>
           <SwiperSlide v-for="image in images" :key="image.id">
             <div class="absolute inset-0 bg-black opacity-10"></div>
-            <NuxtImg :src="image.url" class="w-full h-[70vh]" format="webp" />
+            <NuxtImg :src="image.url" class="w-full h-[70vh] object-cover" format="webp" />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -175,35 +175,35 @@
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-left">
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718144898/benjamin_kalu/gown_address_tdycbo.png"
+            image-url="/images/awards_and_recognition/legislative_contributions.png"
             title="Award for Outstanding Legislative Contribution towards Improved TB policy and Funding"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718144898/benjamin_kalu/native_address_hgfuaj.png"
+            image-url="/images/awards_and_recognition/excellence_on_civic_engagement.png"
             title="Zik’s Award of Excellence on Civic Engagement"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143861/benjamin_kalu/ben_native_sitting_olqmvq.png"
+            image-url="/images/awards_and_recognition/independent_newspapers.png"
             title="Independent Newspapers’ South East and Abia State Federal Lawmaker of the year Award"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_speaker_sitting_xucsh8.png"
+            image-url="/images/awards_and_recognition/abia_most_outstanding_federal_legislator.png"
             title="Abia State Most Outstanding Federal Legislator"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            image-url="/images/awards_and_recognition/democracy_heroes.png"
             title="Democracy Heroes Award Africa As The Most Outstanding Rep. Member of the Year"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            image-url="/images/awards_and_recognition/top_performer_in_bill_sponsorship.png"
             title="Nomination as Top Performer in Bills Sponsorship on MVP Hall of Fame"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            image-url="/images/awards_and_recognition/flo_icons_awards.png"
             title="Flo Icons Award for the Most Impactful Lawmaker of the Year"
           />
           <CardAward
-            image-url="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718143860/benjamin_kalu/ben_closeup_bnxiha.png"
+            image-url="/images/awards_and_recognition/nuj_model_of_media.png"
             title="National Union of Journalists ‘Model of Media and Public Relation Matters’ Award"
           />
         </div>

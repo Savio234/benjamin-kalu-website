@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full flex items-center text-center py-16 h-fit sm:h-[85vh]">
+    <section class="hero_bill w-full flex items-center text-center py-16 h-fit sm:h-[85vh]">
       <div class="content py-16 mx-auto w-[85%]">
         <h2 class="font-semibold text-white">Bills & Motions</h2>
         <h4 class="font-semibold text-white">Benjamin Kalu’s Bills</h4>
@@ -11,7 +11,7 @@
             class="bg-white p-4 w-full rounded-l-lg outline-none"
             placeholder="Enter Keyword here"
           />
-          <!-- <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
+          <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
             <select name="" id="" class="p-0 m-0 outline-none">
               <option value="" selected disabled>Filter by Status</option>
               <option value="first_time_read">First Time Read, Awaiting Second Reading</option>
@@ -21,7 +21,7 @@
               <option value="passed_by_house_senate">Passed by House of Representatives and Senate</option>
               <option value="accented_by_the_president">Assented to by the President</option>
             </select>
-          </div> -->
+          </div>
           <button
             class="bg-primaryGreen py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center text-white gap-2"
             @click="searchTable"
@@ -215,12 +215,12 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-.hero {
-  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717709501/benjamin_kalu/ben_speech_suit_kwik61.png'),
-    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
+.hero_bill {
+  background-image: url('/assets/images/bill_hero.png'), url('/assets/images/bill_hero.png');
   background-color: #007e9ae5;
-  background-blend-mode: overlay;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .table-grid {
   grid-template-columns: 5% 10% 40% 1fr 1fr;
