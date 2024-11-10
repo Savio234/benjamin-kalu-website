@@ -50,14 +50,13 @@ const chartOptions = reactive({
     show: false,
     position: 'bottom',
     horizontalAlign: 'left',
-    fontFamily: 'Montserrat Alternates, sans-serif',
+    fontFamily: 'Montserrat, sans-serif',
     fontSize: '14px',
   },
   tooltip: {
     enabled: true,
   },
 });
-// Combine labels and colors into a single array of objects
 const chartData = computed(() => {
   return chartOptions.labels.map((label, index) => ({
     label,

@@ -18,7 +18,7 @@
           :pagination="false"
         >
           <div class="absolute z-10 left-8 sm:left-24 top-1/2 -translate-y-1/2 text-white">
-            <h1 class="text-3xl sm:text-6xl font-extrabold drop-shadow-md">About Benjamin Kalu</h1>
+            <h1 class="text-3xl md:text-6xl font-semibold drop-shadow-md font-montserrat">About Benjamin Kalu</h1>
           </div>
           <SwiperSlide v-for="image in images" :key="image.id">
             <div class="absolute inset-0 bg-black opacity-10"></div>
@@ -31,10 +31,10 @@
       <div class="content flex flex-col w-[85%] gap-4 mx-auto">
         <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
           <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
-          <p class="text-primaryGreen font-bold">Who is Benjamin Kalu ?</p>
+          <p class="text-primaryGreen font-semibold text-lg">Who is Benjamin Kalu ?</p>
         </div>
         <div class="w-full flex items-stretch">
-          <p class="text-lg" style="font-family: 'Inter', sans-serif">
+          <p class="text-lg">
             ‘The oracle' as he is fondly called, Rt. Hon. Benjamin Okezie Kalu is a prominent Nigerian Legislator
             currently serving as the Deputy Speaker of the 10th Federal House of Representatives, National Assembly of
             Nigeria. A former Spokesperson and Chairman, House Committee on Media and Public Affairs for the 9th House,
@@ -43,7 +43,7 @@
           </p>
         </div>
         <div class="w-full flex items-stretch">
-          <p class="text-lg" style="font-family: 'Inter', sans-serif">
+          <p class="text-lg">
             An astute lawyer and accomplished businessman, Kalu’s current stint at the National Parliament is on account
             of the constituents he so dutifully represents—the Bende Federal Constituency of Abia State. In this regard,
             his commitment to contributing to the development of the people of Bende through legislative processes,
@@ -59,118 +59,70 @@
         </div>
         <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
           <svg-icon name="education" width="1.25rem" height="1.25rem" />
-          <p class="text-primaryGreen font-bold">Education</p>
+          <p class="text-primaryGreen font-semibold text-lg">Education</p>
         </div>
-        <div
-          class="content w-full sm:w-8/12 flex flex-col gap-2 items-stretch text-lg"
-          style="font-family: 'Inter', sans-serif !important"
-        >
+        <div class="content w-full flex flex-col gap-8 text-justify text-lg">
           <p class="text-lg">
-            Rt. Hon Kalu boasts an impressive academic and professional trajectory. He holds a Master of Business
-            Administration from Oxford Brookes University and a Bachelor of Law LL.B (Hons) from the University of
-            Calabar. Called to the Nigerian Bar after his studies at the Nigeria Law School in Enugu, he has
-            continuously enhanced his expertise through various certifications:
+            Rt. Hon. Kalu boasts an impressive academic and professional trajectory. Amongst his many qualifications, he
+            holds Bachelor of Laws (LL.B) and Master of Laws (LL.M) degrees from the University of Calabar, Nigeria; a
+            Master of Business Administration (MBA) from Oxford Brookes University; a diploma in International
+            Commercial Arbitration from the University of Oxford, UK; as well as an LL.M in Petroleum Taxation and
+            Finance from the University of Dundee, Scotland.
           </p>
-          <ul class="list-disc pl-12">
-            <li>Certificate in Migration and Human Rights from John Cabot University, Italy</li>
-            <li>Certificate in Illicit Trade from the University of Groningen, Netherlands</li>
-            <li>Certificate in Governance & Development from Miami Herbert Business School, USA</li>
-            <li>Certificate in Environmental Crimes from UNICRI, Italy</li>
-            <li>Diploma in International Commercial Arbitration from CIARB, UK</li>
-          </ul>
           <p class="text-lg">
-            His fellowships with prestigious organizations like OSHAssociation UK, CIARB UK, Nigeria Bar Association,
-            and the Institute of Administrative Managers highlight his dedication to professional excellence.
+            He also holds several certifications from reputable and globally acclaimed institutions such as John Cabot
+            University, Italy (Migration and Human Rights); the University of Groningen, Netherlands (Illicit Trade);
+            the Miami Herbert Business School, USA (Governance & Development); and the UNICRI, Italy (Environmental
+            Crimes).
+          </p>
+          <p class="text-lg">
+            His fellowships with prestigious organisations like OSHAssociation UK, Chartered Institute of Arbitration,
+            UK, Nigerian Bar Association, and the Institute of Administrative Managers highlight his sheer dedication to
+            professional excellence.
           </p>
         </div>
       </div>
-      <div class="w-full flex flex-col gap-8">
-        <div class="w-full my-8 h-[60vh]">
-          <NuxtImg
-            class="w-full h-full object-cover"
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
-          />
-        </div>
-        <div class="w-full flex flex-col sm:flex-row">
-          <div class="text-sect w-full sm:w-7/12">
-            <div class="mx-auto w-[90%] flex flex-col gap-4">
-              <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
-                <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
-                <p class="text-primaryGreen font-medium">Legistlative Contribution</p>
-              </div>
-              <div
-                class="flex flex-col gap-2 items-stretch text-lg"
-                style="font-family: 'Inter', sans-serif !important"
-              >
-                <p class="text-lg">
-                  Since 2019, Rt. Hon Kalu has been a dynamic member of the National Assembly. He has actively
-                  participated in over 22 crucial motions, contributing to national development and public well-being.
-                  Key areas of his legislative focus include:
-                </p>
-                <ul class="list-disc pl-12">
-                  <li>Enviromental Protection</li>
-                  <li>Investigating governmental agency failures</li>
-                  <li>Promoting the welfare of Nigerians globally</li>
-                </ul>
-                <p class="text-lg">
-                  With over 100 bills to his name, he has been instrumental to much needed amendments to national laws
-                  principal of which include the Acts Authentication Act and the Nigerian Communications Act, to mention
-                  a few. He has also, through legislative interventions, pioneered the creation of critical public
-                  institutions such as the Federal Capital Territory Education Resource Centre.
-                </p>
-                <p class="text-lg">
-                  Having sponsored the bill for the establishment of the South-East Development Commission in the 10th
-                  House (a bill which has now been signed into law by the President of the Federal Republic of Nigeria),
-                  Kalu has remained committed to addressing the socio-economic and infrastructural deficits in the
-                  South-East.
-                </p>
-                <p class="text-lg">
-                  As Deputy Speaker of the 10th House of Representatives, Rt. Hon. Benjamin Kalu currently Chairs the
-                  House Committee on the review of the 1999 Constitution, as well as the House Committee of the Whole.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-sect w-5/12 hidden sm:block">
-            <NuxtImg
-              src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575954/benjamin_kalu/ben_speech_fjilfj.png"
-              class="w-full h-[60vh] object-cover"
-            />
-          </div>
-        </div>
-        <div class="w-full flex flex-col-reverse sm:flex-row-reverse gap-8 items-center">
-          <div class="text-sect w-full sm:w-7/12">
-            <div class="mx-auto w-[90%] flex flex-col gap-4">
-              <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
-                <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
-                <p class="text-primaryGreen font-medium">Humanitarian & Community engagement</p>
-              </div>
-              <div
-                class="flex flex-col gap-2 items-stretch text-lg"
-                style="font-family: 'Inter', sans-serif !important"
-              >
-                <p class="text-lg">
-                  Rt. Hon Kalu’s commitment to society extends beyond politics. He founded the Benjamin Kalu Foundation,
-                  focusing on empowering youth, women, and people with disabilities. His role in the Sudan Darfur
-                  Project with the UNHCR and the Peace in the South East Project showcases his dedication to
-                  humanitarian and peace initiatives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-sect w-full sm:w-5/12 hidden sm:block">
-            <NuxtImg
-              src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717575954/benjamin_kalu/ben_speech_fjilfj.png"
-              class="w-full h-[60vh] object-cover"
-            />
-          </div>
-        </div>
+      <div class="w-full my-8 md:my-20 h-[60vh]">
+        <NuxtImg
+          class="w-full h-full object-cover"
+          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
+        />
       </div>
+      <SectionsAbout
+        primaryText="Legislative Contributions"
+        :textContent="legislativeContributions"
+        imageSrc="/images/about/legislative_contributions.png"
+        imagePosition="right"
+      />
+      <SectionsAbout
+        primaryText="Foreign Parliament Engagement"
+        :textContent="foreignParliamentEngagement"
+        imageSrc="/images/about/foreign_parliament_engagement.png"
+        imagePosition="left"
+        imageHeight="50vh"
+        textJustify="justify-center"
+      />
+      <SectionsAbout
+        primaryText="Civic & Social Responsibility"
+        :textContent="csr"
+        imageSrc="/images/about/csr.png"
+        imagePosition="right"
+        imageHeight="50vh"
+        textJustify="justify-center"
+      />
+      <SectionsAbout
+        primaryText="Constituency Engagements"
+        :textContent="constituencyEngagements"
+        imageSrc="/images/about/constituency_engagements.webp"
+        imagePosition="left"
+        imageHeight="100vh"
+        textJustify="justify-start"
+      />
     </section>
-    <section class="full py-16 border-t border-borderMuted">
+    <section class="full py-16 border-borderMuted">
       <div class="flex flex-col text-center gap-4 mx-auto w-[90%]">
         <h3 class="font-semibold">Awards & Recognition</h3>
-        <p class="text-lg text-gray font-medium">
+        <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-left">
@@ -217,6 +169,68 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+
+const legislativeContributions = `
+      <p class="text-lg">
+        Since 2019, Rt. Hon Kalu has been a dynamic member of the National Assembly. He has actively
+        participated in over 22 crucial motions, contributing to national development and public well-being. Key
+        areas of his legislative focus include:
+      </p>
+      <ul class="list-disc pl-12">
+        <li>Environmental Protection</li>
+        <li>Investigating governmental agency failures</li>
+        <li>Promoting the welfare of Nigerians globally</li>
+      </ul>
+      <p class="text-lg">
+        With over 100 bills to his name, he has been instrumental to much needed amendments to national laws
+        principal of which include the Acts Authentication Act and the Nigerian Communications Act, to mention a
+        few. He has also, through legislative interventions, pioneered the creation of critical public
+        institutions such as the Federal Capital Territory Education Resource Centre.
+      </p>
+      <p class="text-lg">
+        Having sponsored the bill for the establishment of the South-East Development Commission in the 10th
+        House (a bill which has now been signed into law by the President of the Federal Republic of Nigeria),
+        Kalu has remained committed to addressing the socio-economic and infrastructural deficits in the
+        South-East.
+      </p>
+      <p class="text-lg">
+        As Deputy Speaker of the 10th House of Representatives, Rt. Hon. Benjamin Kalu currently Chairs the
+        House Committee on the review of the 1999 Constitution, as well as the House Committee of the Whole.
+      </p>
+`;
+
+const foreignParliamentEngagement = `
+  <p class="text-lg">
+    Notable amongst his foreign parliamentary engagements is his membership of the African Union’s Pan African Parliament where he contributes his two cents serving under the specialised Committee on Finance and Administration.
+  </p>
+  <p class="text-lg">
+    He is also a prominent member of the 6th ECOWAS Parliament where he co-leads the Nigerian delegation to the Parliament, while also serving as Chair of the Finance, Administration and Budget Committee.
+  </p>
+`;
+
+const csr = `
+ <p class="text-lg">
+  Rt. Hon. Kalu's commitment to society extends beyond politics. For the past 20 years, he has been actively empowering his constituents through various initiatives. He founded the Benjamin Kalu Foundation, focusing on empowering youth, women, and people with disabilities.
+  </p>
+  <p class="text-lg">
+  His role in the Sudan Darfur Project with the UNHCR and the Peace in the South East Project showcases his dedication to humanitarian and peace initiatives.
+  </p>
+`;
+
+const constituencyEngagements = `
+  <p class="text-lg">
+    Communication has proven to be an effective way to sustain accountability in leadership. To achieve this, Kalu launched a weekly TV and Radio program tagged <b>‘BEN KALU’S MANDATE’</b>. 
+  </p>
+  <p class="text-lg">
+  The program affords the people of Bende and Abia State the opportunity to follow the notable and impactful activities of Hon. Kalu that happened in the preceding week. Valuable information around his legislative activities, oversight functions and constituency projects are shared and discussed at length in line with his commitment to carrying his constituents along every step of the way. 
+  </p>
+  <p class="text-lg">
+  <b>BEN KALU’S MANDATE</b> has served and continues to serve as a feedback tool, providing the opportunity to feel the pulse of Bende people through calls and text messages on issues concerning the Constituency.
+  </p>
+  <p class="text-lg">
+  The programme is held every Monday on Flo FM, Real FM, Vision Africa and ABN TV from 11:00am to 12:00pm, and has in the last one year garnered over 1 million listeners from Abia State and beyond, with over 20 calls and 24 text messages coming in on the show every single week.
+  </p>
+`;
 
 const images = ref([
   {

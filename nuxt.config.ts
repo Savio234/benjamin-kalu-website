@@ -16,8 +16,15 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      Inter: true,
-      'Montserrat Alternates': true,
+      Inter: {
+        wght: [400, 500, 600, 700],
+      },
+      'Montserrat Alternates': {
+        wght: [400, 500, 600, 700],
+      },
+      Montserrat: {
+        wght: [400, 500, 600, 700],
+      },
     },
   },
   css: ['@/assets/scss/global.scss'],

@@ -1,10 +1,9 @@
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: #022924;
+  font-family: 'Montserrat', sans-serif;
+  // color: #585C5B;
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
-  font-weight: 500 !important;
 }
 h1,
 h2,
@@ -57,10 +56,9 @@ h6 {
   }
 
   h4 {
-    font-size: 18px; /* Adjust as needed for h4-h6 on smaller screens */
+    font-size: 18px; 
   }
 
-  /* Add similar adjustments for h5 and h6 if needed */
 }
 
 p,
