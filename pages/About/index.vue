@@ -119,6 +119,9 @@
         textJustify="justify-start"
       />
     </section>
+    <section>
+      <SectionsTestimonial />
+    </section>
     <section class="full py-16 border-borderMuted">
       <div class="flex flex-col text-center gap-4 mx-auto w-[90%]">
         <h3 class="font-semibold">Awards & Recognition</h3>
