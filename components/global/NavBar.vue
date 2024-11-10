@@ -104,7 +104,9 @@
           <transition name="accordion">
             <div v-show="openSection === 'projects'" class="pl-4 overflow-hidden">
               <NuxtLink class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">Projects</NuxtLink>
-              <NuxtLink class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav">PISEP</NuxtLink>
+              <NuxtLink to="/projects/pisep" class="block text-white py-2 px-4 rounded-full" @click="closeMobileNav"
+                >PISE-P</NuxtLink
+              >
             </div>
           </transition>
         </div>

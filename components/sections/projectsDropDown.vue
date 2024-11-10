@@ -21,15 +21,16 @@
             <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
           </div>
         </div>
-        <div class="drop-card flex items-end cursor-pointer" >
+        <NuxtLink class="drop-card flex items-end cursor-pointer" to="/projects/pisep">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center">
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
               <svg-icon name="list" width="1.5rem" height="1.5rem" />
             </div>
-            <p class="text-white text-lg text-medium mt-4">PISE-P</p>
+            <p class="text-white text-lg font-medium mt-4">PISE-P</p>
             <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
           </div>
-        </div>
+        </NuxtLink>
+
         <!-- <div class="drop-card border border-borderGreen flex items-end">
           <p
             class="mx-auto w-11/12 mb-4 text-white flex items-center gap-1 relative z-10 cursor-pointer"
