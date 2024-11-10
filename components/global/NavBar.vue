@@ -32,7 +32,7 @@
             >Projects <SvgIcon name="carat_down" width="1rem" height="1rem"
           /></NuxtLink>
           <NuxtLink
-            to="/blog"
+            to="/news"
             class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
@@ -109,7 +109,7 @@
           </transition>
         </div>
 
-        <NuxtLink to="/blog" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">News & Update</NuxtLink>
+        <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">News & Update</NuxtLink>
       </div>
     </div>
   </div>

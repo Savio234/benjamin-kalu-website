@@ -30,6 +30,8 @@ export default {
       borderMuted: '#CECFCF',
       borderGreen: '#009A84',
       bgInput: '#727DA11A',
+      blackMain: '#121212',
+      textGray: '#808080',
     },
   },
   plugins: [],
