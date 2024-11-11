@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="grid grid-cols-2 w-7/12 gap-[1px] bg-[#cccccc9a]">
-        <div class="drop-card flex items-end cursor-pointer">
+        <NuxtLink class="drop-card flex items-end cursor-pointer" to="/projects">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center">
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
               <svg-icon name="list" width="1.5rem" height="1.5rem" />
@@ -20,7 +20,7 @@
             <p class="text-white text-lg text-medium mt-4">All Projects</p>
             <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
           </div>
-        </div>
+        </NuxtLink>
         <NuxtLink class="drop-card flex items-end cursor-pointer" to="/projects/pisep">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center">
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">

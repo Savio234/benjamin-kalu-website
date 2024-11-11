@@ -6,47 +6,4 @@
   </div>
 </template>
 
-<script lang="ts">
-interface Event {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  date: string;
-}
-
-export const events: Event[] = [
-  {
-    id: 1,
-    title: 'Unveiling of the Peace in South East Project',
-    description:
-      'Peace in South East Project (PSEP) in an initiative of the Orashi Regional Development Project in collaboration with Peace Response (ORP), in partnership with unveiled in the ancient town of Mbaise, Imo State, on 29 December 2023. The unveiling, which was also used as a grand sensitization ceremony by the UNDSS attracted traditional policy stakeholders from four South East and Beyond, including President Bola Tinubu, who was represented by the Vice President.',
-    image: '/api/placeholder/600/400',
-    date: '2023-12-29',
-  },
-  {
-    id: 2,
-    title: 'Food For Peace Initiative',
-    description:
-      "Dr. Hon. Benjamin Okezie Kalu has launched the 'Food For Peace' initiative as part of wider peace-building and reconciliation plans at PSEP. Dr at the event mentioned 'In Hungry Man is an Angry Man' recognizes the importance of food in the drive for peace in the region hence its quick implementation.",
-    image: '/api/placeholder/600/400',
-    date: '2024-01-15',
-  },
-  {
-    id: 3,
-    title: 'Road Walk',
-    description:
-      "Fitness Walk on End of November tagged 'RoadWalk For Peace & Unity'. PSEP inaugurated the Walking Exercise which saw the Speaker, House of Representatives, Rt. Hon. Benjamin Okezie Kalu as guest, was organized by Extreme Fitness with De Larrick in collaboration with Peace in South East Project.",
-    image: '/api/placeholder/600/400',
-    date: '2023-11-30',
-  },
-  {
-    id: 4,
-    title: 'Peace Fund for Victims of Insecurity',
-    description:
-      'Rt. Hon. Benjamin Okezie Kalu has inaugurated a 7-man Peace Fund Committee to raise financial assistance for victims of insecurity in the South East region. This follows the killing of soldiers in Imo, Abia State which has been widely condemned.',
-    image: '/api/placeholder/600/400',
-    date: '2024-02-01',
-  },
-];
-</script>
+<script lang="ts" setup></script>
