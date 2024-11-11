@@ -1,14 +1,12 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <h2 class="text-2xl font-bold mb-6">Past Events</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-      <EventCard v-for="event in sortedEvents" :key="event.id" :event="event" />
-    </div>
+    <section>
+      <ListEvents />
+    </section>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 interface Event {
   id: number;
   title: string;
@@ -51,12 +49,4 @@ export const events: Event[] = [
     date: '2024-02-01',
   },
 ];
-
-export default defineComponent({
-  computed: {
-    sortedEvents(): Event[] {
-      return [...events].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    },
-  },
-});
 </script>
