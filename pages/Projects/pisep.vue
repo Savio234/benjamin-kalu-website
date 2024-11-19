@@ -32,8 +32,11 @@
     />
     <section>
       <ListEvents />
+      <div class="hidden lg:flex justify-end max-w-[90%]">
+        <MainButton class="block" @click="$router.push('/projects/events')"> See More </MainButton>
+      </div>
     </section>
-    <NuxtImg src="/images/pisep/partnerships.webp" alt="Pise-p partnerships" class="w-full h-auto object-contain" />
+    <NuxtImg src="/images/pisep/partnerships.png" alt="Pise-p partnerships" class="w-full h-auto object-contain" />
     <p class="text-lg font-montserrat text-center mb-4">
       To learn more and be a part of us, visit the official PISE-P website at:
       <NuxtLink to="https://pise-p.org/" class="text-footerGreen underline">https://pise-p.org/</NuxtLink>

@@ -4,9 +4,6 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
       <CardEvent v-for="event in sortedEvents" :key="event.id" :event="event" />
     </div>
-    <div class="hidden lg:flex justify-end">
-      <MainButton class="block" @click="$router.push('/projects/events')"> See More </MainButton>
-    </div>
   </div>
 </template>
 
