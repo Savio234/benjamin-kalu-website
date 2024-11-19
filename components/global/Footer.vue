@@ -49,6 +49,13 @@
               <NuxtLink class="text-white" to="/bills">Kalu's Bills and Motions</NuxtLink>
               <NuxtLink class="text-white" to="#">House Directory</NuxtLink>
               <NuxtLink class="text-white" to="#">House Agenda</NuxtLink>
+              <a
+                class="text-white"
+                target="_blank"
+                href="/books/THREE_YEARS_OF_IMPACTFUL_LEGACIES_REPRESENTING_BENDE.pdf"
+              >
+                Three Years of Impactful Legacies Representing Bende
+              </a>
             </ul>
           </div>
         </div>
