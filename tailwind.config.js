@@ -18,6 +18,7 @@ export default {
     colors: {
       white: '#ffffff',
       light: '#FAFFFA',
+      borderGray: '#B6B8B8',
       lightGreen: '#F5FFF6',
       black: '#022924',
       primaryGreen: '#00A991',
