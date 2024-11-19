@@ -1,54 +1,72 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-auto sm:h-[85vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
-      <div class="text-section w-full sm:w-7/12 py-16">
+    <section
+      class="hero w-full h-auto sm:h-[85vh] bg-[#005D50] flex flex-col sm:flex-row items-center"
+      style="background-image: url('/images/constitution_review/noise.png')"
+    >
+      <div class="text-section w-full sm:w-1/2 py-16">
         <div class="content mx-auto w-[85%] flex flex-col gap-2">
-          <h2 class="text-white font-semibold">Get up to speed⚡</h2>
-          <h4 class="text-white">
-            See the latest projects that we are up to and actively working on to better improve our consistuencies
+          <h3 class="text-white font-semibold font-inter mb-4">
+            Follow the Constitution Review Process of the 10th House of Representatives
+          </h3>
+          <h4 class="text-[#E1EA66] font-inter text-md">
+            Amid calls for restructuring, and sitting as Chair of the House Committee on Constitution Review, Rep. Kalu
+            leads the way for the 10th House of Reps as it charts the course for Nigeria’s next constitutional
+            amendment.
           </h4>
         </div>
       </div>
-      <div class="image-sect w-full sm:w-5/12 h-full">
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png"
-          class="w-full h-full object-cover"
-        />
+      <div class="image-sect w-full sm:w-1/2 h-full">
+        <NuxtImg src="/images/constitution_review/hero.png" class="w-full h-full object-cover" />
       </div>
     </section>
     <section class="w-full py-16">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
-        <h3 class="font-semibold">Constitution Review</h3>
+        <h3 class="font-semibold font-montserrat">Constitution Review</h3>
         <p class="text-lg">
           The House of Representatives Committee on the Review of the Constitution of the Federal Republic of Nigeria,
           1999 (As Amended) was established pursuant to Section 62 of the Constitution of the Federal Republic of
           Nigeria, 1999 (As Amended) and Order 18 (9) of the Standing Orders of the House of Representatives. It is a
           special committee charged with the following responsibilities:
         </p>
-        <ul class="text-lg flex flex-col pl-4 gap-8 list-disc">
-          <li>
-            Recommending the alteration of the Constitution of the Federal Republic of Nigeria 1999 and other Acts that
-            require alteration in accordance with sections 8 and 9 of the Constitution;
-          </li>
-          <li>
-            Receiving and considering proposals (bills) for alteration of the 1999 Constitution (As Amended) referred to
-            it by the House;
-          </li>
-          <li>
-            Creating a forum for relevant stakeholders and members of the public to make inputs to the Constitution
-            review process with a view to enacting laws that address the needs and aspirations of the Nigerian people;
-          </li>
-          <li>
-            Building a robust collaborative synergy with the Senate of the Federal Republic of Nigeria and with the 36
-            States Houses of Assembly whose resolutions are part of the legislative journey of the constitution review
-            process;
-          </li>
-          <li>
-            Liaising with relevant government agencies, civil society organisations, multi-lateral and supranational
-            agencies and bodies to achieve a wholesome amendment to the Nigerian constitution.
-          </li>
-        </ul>
+        <div class="flex flex-col md:flex-row gap-2">
+          <ul class="text-lg flex flex-col pl-4 gap-8 list-disc">
+            <li>
+              Recommending the alteration of the Constitution of the Federal Republic of Nigeria 1999 and other Acts
+              that require alteration in accordance with sections 8 and 9 of the Constitution;
+            </li>
+            <li>
+              Receiving and considering proposals (bills) for alteration of the 1999 Constitution (As Amended) referred
+              to it by the House;
+            </li>
+            <li>
+              Creating a forum for relevant stakeholders and members of the public to make inputs to the Constitution
+              review process with a view to enacting laws that address the needs and aspirations of the Nigerian people;
+            </li>
+            <li>
+              Building a robust collaborative synergy with the Senate of the Federal Republic of Nigeria and with the 36
+              States Houses of Assembly whose resolutions are part of the legislative journey of the constitution review
+              process;
+            </li>
+            <li>
+              Liaising with relevant government agencies, civil society organisations, multi-lateral and supranational
+              agencies and bodies to achieve a wholesome amendment to the Nigerian constitution.
+            </li>
+          </ul>
+          <NuxtImg src="/images/constitution_review/coat-of-arms.png" alt="coat of arms" />
+        </div>
       </div>
+    </section>
+    <section class="bg-footerGreen m-0 p-8 md:p-12 lg:p-24">
+      <p class="text-white text-lg font-montserrat lg:max-w-[80%] mb-8">
+        Following parliamentary tradition, the Deputy Speaker of the House heads the Committee on Constitution Review,
+        overseeing the critical reforms and amendments to the existing constitution. 
+      </p>
+      <p class="text-white text-lg font-montserrat lg:max-w-[80%]">
+        Since 1999, the Nigerian Constitution has been altered five times and is currently undergoing its sixth
+        alteration process by the 10th House of Representatives. The Committee has thus set a 24 month timeline for this
+        review assuring Nigerians of a new constitution that will reflect the yearnings of every citizen.
+      </p>
     </section>
     <section class="w-full py-16">
       <div class="content mx-auto w-[85%]">
