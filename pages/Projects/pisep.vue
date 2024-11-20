@@ -30,12 +30,13 @@
       alt="eight thematic areas"
       class="w-full h-auto object-contain"
     />
-    <section>
+    <section class="mb-10 md:mb-24">
       <ListEvents />
-      <div class="hidden lg:flex justify-end max-w-[90%]">
+      <div class="flex justify-end max-w-[90%]">
         <MainButton class="block" @click="$router.push('/projects/events')"> See More </MainButton>
       </div>
     </section>
+    <hr />
     <NuxtImg src="/images/pisep/partnerships.png" alt="Pise-p partnerships" class="w-full h-auto object-contain" />
     <p class="text-lg font-montserrat text-center mb-4">
       To learn more and be a part of us, visit the official PISE-P website at:
