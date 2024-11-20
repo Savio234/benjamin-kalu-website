@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col w-full">
+  <main class="flex flex-col w-full text-justify">
     <section
       class="hero w-full h-auto sm:h-[85vh] bg-[#005D50] flex flex-col sm:flex-row items-center"
       style="background-image: url('/images/constitution_review/noise.png')"
