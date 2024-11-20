@@ -83,14 +83,13 @@
     </section>
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
-        <div class="header w-full sm:w-8/12 flex flex-col gap-1">
-          <h2 class="font-semibold">Legislative Affairs</h2>
+        <div class="header w-full flex flex-col gap-1">
+          <h2 class="font-semibold font-montserrat">Legislative Affairs</h2>
           <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
             As one of the leaders of the 10th House of Representatives (the Peoples’ House), Kalu wears the dual hats of Chairman, House Committees of the Whole and on Constitution Review. Keep track of Rep. Kalu’s Legislative Agenda, bills and motions as well as the Constitutional Review activities of the 10th House..
           </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <!-- legistlative grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <CardLegistlative v-for="(item, index) in legistlativeItems" :key="index" :title="item.title" :description="item.description" :image="item.image_url" :route="item.route" />
         </div>
       </div>
@@ -181,24 +180,17 @@
 <script setup>
 const legistlativeItems = ref([
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/v1718564832/benjamin_kalu/ben_walkup_oqxlhe.jpg',
-    title: 'Kalu’s Legislative Mission',
-    description: 'Emboldened by his unrelenting quest for societal impact, BOK as he is fondly called, takes his “value” mantra all the way to national parliament.',
-    route: '/legislative'
-  },
-  {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717588237/benjamin_kalu/house_meeting_ucqa7o.png',
+    image_url: '/images/home/bills_and_motions.png',
     title: 'Bills and Motions',
-    description: 'With over 100 legislative instruments in bills and motions, kalu’s commitment to inclusive growth through legislative interventions remains unparalleled',
+    description: 'With over 100 legislative instruments in bills and motions, kalu’s commitment to inclusive growth through legislative interventions remains unparalleled ',
     route: '/bills'
   },
   {
-    image_url: 'https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544619/benjamin_kalu/new_image_gravel_rlg38t.png',
-    title: 'Constitutional Review',
+    image_url: '/images/home/constitution_review.png',
+    title: 'Constitutional review',
     description: 'As Deputy Speaker, Kalu assumes the role of Chairman, House Committee on the Review of the Nigerian Constitution. Follow the activities of the Committee.',
     route: '/legislative/review'
-
-  }
+  },
 ]);
 const images = ref([
   {

@@ -4,8 +4,8 @@
       <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
     </div>
     <div class="content my-8 mx-auto w-[90%] flex flex-col gap-2">
-      <h5 class="font-semibold">{{ $props.title }}</h5>
-      <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">{{ $props.description }}</p>
+      <h5 class="font-semibold font-montserrat">{{ $props.title }}</h5>
+      <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px] font-montserrat">{{ $props.description }}</p>
       <a
         class="text-primaryGreen text-md font-semibold flex items-center gap-1 cursor-pointer"
         v-if="$props.route"

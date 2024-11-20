@@ -6,10 +6,10 @@
     >
       <div class="text-section w-full sm:w-1/2 py-16">
         <div class="content mx-auto w-[85%] flex flex-col gap-2">
-          <h3 class="text-white font-semibold font-inter mb-4">
+          <h3 class="text-white font-semibold font-inter mb-4 text-left">
             Follow the Constitution Review Process of the 10th House of Representatives
           </h3>
-          <h4 class="text-[#E1EA66] font-inter text-md">
+          <h4 class="text-[#E1EA66] font-inter text-md text-left">
             Amid calls for restructuring, and sitting as Chair of the House Committee on Constitution Review, Rep. Kalu
             leads the way for the 10th House of Reps as it charts the course for Nigeria’s next constitutional
             amendment.
