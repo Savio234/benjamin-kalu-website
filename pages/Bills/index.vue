@@ -73,25 +73,25 @@
               v-if="bills.length > 0"
               @click="$router.push(`/bills/${items.id}`)"
             >
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>S/N</small>
-                <small class="font-semibold">{{ TotalBills - (pageBills - 1) * pageSizeBills - index }}</small>
+                <small class="">{{ TotalBills - (pageBills - 1) * pageSizeBills - index }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>H/B Number</small>
-                <small class="font-semibold">{{ items.attributes.hb_number }}</small>
+                <small class="">{{ items.attributes.hb_number }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Title</small>
-                <small class="font-semibold">{{ items.attributes.title }}</small>
+                <small class="">{{ items.attributes.title }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Bill Sponsor</small>
-                <small class="font-semibold">{{ items.attributes.bill_sponsor }}</small>
+                <small class="">{{ items.attributes.bill_sponsor }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Status</small>
-                <small class="font-semibold">{{ items.attributes.status }}</small>
+                <small class="">{{ items.attributes.status }}</small>
               </div>
             </div>
             <div class="self-center" v-else>No Results for search</div>
@@ -117,21 +117,21 @@
               v-if="displayedMotions.length > 0"
               @click="$router.push(`/bills/motions/${items.title}`)"
             >
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>S/N</small>
-                <small class="font-semibold">{{ items.id }}</small>
+                <small class="">{{ items.id }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Title</small>
-                <small class="font-semibold">{{ items.attributes.title }}</small>
+                <small class="">{{ items.attributes.title }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Bill Sponsor</small>
-                <small class="font-semibold">{{ items.attributes.motion_sponsor }}</small>
+                <small class="">{{ items.attributes.motion_sponsor }}</small>
               </div>
-              <div class="flex flex-col gap-2 py-2 px-2">
+              <div class="flex flex-col gap-2 p-4">
                 <small>Date</small>
-                <small class="font-semibold">{{
+                <small class="">{{
                   new Date(items.attributes.motion_date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
@@ -224,5 +224,10 @@ onMounted(async () => {
 }
 .table-grid {
   grid-template-columns: 5% 10% 40% 1fr 1fr;
+}
+
+small {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 </style>

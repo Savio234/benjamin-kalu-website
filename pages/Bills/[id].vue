@@ -41,7 +41,7 @@
               </ul>
             </div>
           </div>
-          <!-- <Progressbar percentage-fill="20%" /> -->
+          <Progressbar percentage-fill="20%" />
           <div class="stage flex flex-col w-fit gap-4">
             <h5 class="font-semibold">Bill Status</h5>
             <ul class="flex flex-col gap-2">
