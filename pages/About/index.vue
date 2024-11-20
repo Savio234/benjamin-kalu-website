@@ -35,11 +35,10 @@
         </div>
         <div class="w-full flex items-stretch">
           <p class="text-lg">
-            ‘The oracle' as he is fondly called, Rt. Hon. Benjamin Okezie Kalu is a prominent Nigerian Legislator
-            currently serving as the Deputy Speaker of the 10th Federal House of Representatives, National Assembly of
-            Nigeria. A former Spokesperson and Chairman, House Committee on Media and Public Affairs for the 9th House,
-            Kalu brings several years of cognate experience as an accomplished leader and member of parliament in
-            helping nurture the Nigerian Dream. 
+            Rt. Hon. Benjamin Okezie Kalu is a prominent Nigerian Legislator currently serving as the Deputy Speaker of
+            the 10th Federal House of Representatives, National Assembly of Nigeria. A former Spokesperson and Chairman,
+            House Committee on Media and Public Affairs for the 9th House, Kalu brings several years of cognate
+            experience as an accomplished leader and member of parliament in helping nurture the Nigerian Dream. 
           </p>
         </div>
         <div class="w-full flex items-stretch">
@@ -244,18 +243,18 @@ const images = ref([
     id: 1,
     url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
   },
-  {
-    id: 2,
-    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444053/benjaminkalu/qdprrztr0ptvdgjjdrw7.png',
-  },
+  // {
+  //   id: 2,
+  //   url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444053/benjaminkalu/qdprrztr0ptvdgjjdrw7.png',
+  // },
   {
     id: 3,
     url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444092/benjaminkalu/ywwwtly9476xbhdhkawd.png',
   },
-  {
-    id: 4,
-    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444186/benjaminkalu/zrdehjtzgk2se2dohdoa.png',
-  },
+  // {
+  //   id: 4,
+  //   url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444186/benjaminkalu/zrdehjtzgk2se2dohdoa.png',
+  // },
 ]);
 </script>
 
