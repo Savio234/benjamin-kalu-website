@@ -16,7 +16,7 @@
       </div>
 
       <div class="relative">
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden overflow-x-auto">
           <div
             class="flex transition-all duration-700 ease-in-out"
             :style="{ transform: `translateX(-${currentOffset}px)` }"
