@@ -107,7 +107,9 @@
       />
       <div class="my-4">
         Click the link to learn more about the Impactful legacies of Benjamin Kalu:
-        <a href="https://benjaminkalu.com/book" class="text-primaryGreen">https://benjaminkalu.com/book</a>
+        <a href="https://benjaminkalu.com/impactfullegaciesofbenkalu" class="text-primaryGreen"
+          >https://benjaminkalu.com/impactfullegaciesofbenkalu</a
+        >
       </div>
     </section>
   </main>
