@@ -17,7 +17,7 @@
             <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
               <svg-icon name="list" width="1.5rem" height="1.5rem" />
             </div>
-            <p class="text-white text-lg text-medium mt-4">All Projects</p>
+            <p class="text-white text-lg text-medium mt-4">Constituency Projects</p>
             <svg-icon name="arrow_yellow" width="1.5rem" height="1.5rem" />
           </div>
         </NuxtLink>
