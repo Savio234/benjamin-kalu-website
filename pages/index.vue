@@ -140,9 +140,9 @@
     <SectionsFeaturedProject />
     <div class="w-[85%] mx-auto">
       <div class="header flex flex-col gap-2">
-        <h2 class="font-semibold text-5xl">News & Updates</h2>
+        <h2 class="font-semibold text-5xl">Follow Rep. Kalu’s activities closely</h2>
         <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
-          Latest news on how our office has performed lately
+          Latest news on the activities of the Deputy Speaker in service to his constituents and the nation at large
         </p>
       </div>
       <section class=" py-4 flex flex-col sm:flex-row gap-4">

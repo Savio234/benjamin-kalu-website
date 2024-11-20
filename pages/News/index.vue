@@ -7,12 +7,27 @@
           <h2 class="font-montserrat">Weekly <span class="text-secondaryGreen">updates</span></h2>
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>
-        <div class="scroller w-full my-8 flex gap-8 relative overflow-x-scroll">
-          <img src="/images/weekly_review/weekly_review_23_march.webp" alt="weekly review" class="w-80" />
-          <img src="/images/weekly_review/weekly_review_23_march.webp" alt="weekly review" class="w-80" />
-          <img src="/images/weekly_review/weekly_review_23_march.webp" alt="weekly review" class="w-80" />
-          <img src="/images/weekly_review/weekly_review_23_march.webp" alt="weekly review" class="w-80" />
-          <img src="/images/weekly_review/weekly_review_23_march.webp" alt="weekly review" class="w-80" />
+        <div class="scroller w-full my-8 flex gap-8 overflow-x-auto">
+          <img
+            src="/images/weekly_review/weekly_review_23_march.webp"
+            alt="weekly review"
+            class="w-full md:w-1/3 object-contain flex-shrink-0"
+          />
+          <img
+            src="/images/weekly_review/weekly_review_23_march.webp"
+            alt="weekly review"
+            class="w-full md:w-1/3 object-contain flex-shrink-0"
+          />
+          <img
+            src="/images/weekly_review/weekly_review_23_march.webp"
+            alt="weekly review"
+            class="w-full md:w-1/3 object-contain flex-shrink-0"
+          />
+          <img
+            src="/images/weekly_review/weekly_review_23_march.webp"
+            alt="weekly review"
+            class="w-full md:w-1/3 object-contain flex-shrink-0"
+          />
         </div>
       </div>
     </section>
