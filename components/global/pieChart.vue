@@ -32,7 +32,7 @@ const chartOptions = reactive({
   chart: {
     type: 'donut',
   },
-  colors: ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#B3B3B3'],
+  colors: ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#FF9655', '#6AF9C4'],
   plotOptions: {
     pie: {
       dataLabels: {
