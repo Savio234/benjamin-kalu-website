@@ -48,14 +48,10 @@
             <ul class="flex flex-col gap-4 font-medium">
               <NuxtLink class="text-white" to="/bills">Kalu's Bills and Motions</NuxtLink>
               <NuxtLink class="text-white" to="#">House Directory</NuxtLink>
-              <NuxtLink class="text-white" to="#">House Agenda</NuxtLink>
-              <a
-                class="text-white"
-                target="_blank"
-                href="/books/THREE_YEARS_OF_IMPACTFUL_LEGACIES_REPRESENTING_BENDE.pdf"
+              <a class="text-white" target="_blank" href="/books/Legislative_Agenda_2.0.pdf"> House Agenda </a>
+              <a class="text-white" target="_blank" href="https://books.projaro.com/bok1st/">
+                A Year of Service as Deputy Speaker</a
               >
-                Three Years of Impactful Legacies Representing Bende
-              </a>
             </ul>
           </div>
         </div>
