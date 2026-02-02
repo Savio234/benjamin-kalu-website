@@ -44,10 +44,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      strapiURL: process.env.STRAPI_API || 'https://benjamin-kalu-cms.onrender.com/api',
+      strapiURL: process.env.STRAPI_API || 'http://95.216.143.122:1337/api',
       strapiAPI:
         process.env.API_KEY ||
-        '40c5026243247daf24bd4561fbfc7efa64182b56bf1528c33aa704792dee746cef4dca364fc7923393ec2eb035aefa1ee85e66549202550a6d299255fa9b7d98ad862eb22ae71ccf3796c8e745d290a3fc6022844e3785308258fc96434b40524c5fba18643bdb97ffde43de62abfde87a12a7bea909f279f9d6c64129b931b9',
+        'cc29d7c1b2ab6f7dc1c60fb7201c0177c754317802360b4e5ea46e65b5e9b2c0aa7144262e29ace5296cebdaeb4842626f8b65f61aab086bde92424b209186d7998e3ccb48cb6539c98302b9bd05acdfba2cfc1aeac58bbe609b5da1a9982d3ece057922952b9db3a21c0491a941277e18f4ae158d9750a12958d349e86f4e45',
     },
   },
 });

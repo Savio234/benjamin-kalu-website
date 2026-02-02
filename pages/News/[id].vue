@@ -17,7 +17,7 @@
         <p class="bg-bgGreen text-primaryGreen rounded-lg w-fit py-1 px-2">{{ blog.category }}</p>
         <h5>{{ blog.description }}</h5>
         <NuxtImg
-          :src="'https://benjamin-kalu-cms.onrender.com' + blog?.main_image.data?.attributes.url"
+          :src="'http://95.216.143.122:1337' + blog?.main_image.data?.attributes.url"
           class="w-full h-auto sm:h-[50dvh] object-cover shadow rounded-xl"
         />
 
