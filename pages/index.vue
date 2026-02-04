@@ -5,9 +5,7 @@
         <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
           <p class="text-white">Welcome to the Official website of</p>
           <h1 class="font-semibold text-[48px] sm:text-[64px]">Rt. Hon. Benjamin Kalu</h1>
-          <p class="text-white">
-            Deputy Speaker, 10th House Of Representatives, <br/>Federal Republic of Nigeria
-          </p>
+          <p class="text-white">Deputy Speaker, 10th House Of Representatives, <br />Federal Republic of Nigeria</p>
         </div>
       </div>
     </section>
@@ -15,10 +13,10 @@
       <div class="content mx-auto w-[85%] flex flex-col gap-2 items-center">
         <h2 class="text-black font-semibold">About <span class="text-secondaryGreen">Benjamin Kalu</span></h2>
         <p class="w-full sm:w-8/12 mx-auto text-xl mb-4">
-          A refined legislator, Rep. Benjamin Okezie Kalu embodies the Nigerian spirit. With a sterling career 
-          as an international businessman and legal practitioner, Kalu's journey in Nigerian politics propelled 
-          him to the 6th highest political office in the nation, emerging as the Deputy Speaker of the 10th House 
-          of Representatives in June 2023. He has continued to serve the people of Bende Federal Constituency and the nation at large.
+          A refined legislator, Rep. Benjamin Okezie Kalu embodies the Nigerian spirit. With a sterling career as an
+          international businessman and legal practitioner, Kalu's journey in Nigerian politics propelled him to the 6th
+          highest political office in the nation, emerging as the Deputy Speaker of the 10th House of Representatives in
+          June 2023. He has continued to serve the people of Bende Federal Constituency and the nation at large.
         </p>
         <MainButton @click="$router.push('/about')">Learn more about Rep. Benjamin Kalu</MainButton>
         <div class="mt-12 w-full h-auto">
@@ -55,42 +53,26 @@
         </div>
       </div>
     </section>
-    <section class="updates w-full py-16 bg-black text-white relative">
-      <NuxtImg
-        src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
-        class="img-one absolute top-1/2 left-0"
-      />
-      <NuxtImg
-        src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
-        class="img-one absolute top-1/2 right-0"
-      />
-      <div class="content flex flex-col mx-auto w-[85%] gap-8">
-        <div class="header flex flex-col gap-1 text-white">
-          <h2>Weekly <span class="text-primaryGreen">updates</span></h2>
-          <h4>Get first hand updates with your deputy speaker</h4>
-        </div>
-        <div class="relative w-full h-auto mt-4">
-          <embed
-            src="https://res.cloudinary.com/dokuicrun/image/upload/v1728314201/benjaminkalu/xwn1pmifgrt27hodobxc.pdf#toolbar=0&view=FitH"
-            class="w-full h-auto sm:h-[200vh] rounded-xl"
-            width="100%"
-          ></embed>
-        </div>
-        <NuxtLink to="https://res.cloudinary.com/dokuicrun/image/upload/v1728314201/benjaminkalu/xwn1pmifgrt27hodobxc.pdf" target="_blank" class="bg-white border-2 border-[#00A99133] w-fit h-fit p-[1px] rounded-full self-end" append-icon="attachment-white"><div class="content bg-primaryGreen rounded-full py-3 px-6 text-white text-[16px] flex items-center gap-2">
-     Download PDF
-    </div></NuxtLink>
-      </div>
-    </section>
+    <SectionsStatesman />
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
         <div class="header w-full flex flex-col gap-1">
           <h2 class="font-semibold font-montserrat">Legislative Affairs</h2>
           <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px]">
-            As one of the leaders of the 10th House of Representatives (the Peoples’ House), Kalu wears the dual hats of Chairman, House Committees of the Whole and on Constitution Review. Keep track of Rep. Kalu’s Legislative Agenda, bills and motions as well as the Constitutional Review activities of the 10th House..
+            As one of the leaders of the 10th House of Representatives (the Peoples’ House), Kalu wears the dual hats of
+            Chairman, House Committees of the Whole and on Constitution Review. Keep track of Rep. Kalu’s Legislative
+            Agenda, bills and motions as well as the Constitutional Review activities of the 10th House..
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <CardLegistlative v-for="(item, index) in legistlativeItems" :key="index" :title="item.title" :description="item.description" :image="item.image_url" :route="item.route" />
+          <CardLegistlative
+            v-for="(item, index) in legistlativeItems"
+            :key="index"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image_url"
+            :route="item.route"
+          />
         </div>
       </div>
     </section>
@@ -136,7 +118,7 @@
         </div>
       </div>
     </section> -->
-    
+
     <SectionsFeaturedProject />
     <div class="w-[85%] mx-auto">
       <div class="header flex flex-col gap-2">
@@ -145,7 +127,7 @@
           Latest news on the activities of the Deputy Speaker in service to his constituents and the nation at large
         </p>
       </div>
-      <section class=" py-4 flex flex-col sm:flex-row gap-4">
+      <section class="py-4 flex flex-col sm:flex-row gap-4">
         <NuxtImg src="/images/home/new_constitution.png" class="w-full sm:w-1/2 h-auto object-cover" />
         <NuxtImg src="/images/home/25_years.png" class="w-full sm:w-1/2 h-auto object-cover" />
       </section>
@@ -161,31 +143,31 @@
           </p>
         </div>
         <div class="w-[80vw] flex justify-between gap-6 overflow-x-auto">
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
-          class="w-48 h-24 object-cover flex-shrink-0"
-        />
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
-          class="w-48 h-24 object-cover flex-shrink-0"
-        />
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
-          class="w-48 h-24 object-cover flex-shrink-0"
-        />
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
-          class="w-48 h-24 object-cover flex-shrink-0"
-        />
-        <NuxtImg
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
-          class="w-48 h-24 object-cover flex-shrink-0"
-        />
-      </div>
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
+            class="w-48 h-24 object-cover flex-shrink-0"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
+            class="w-48 h-24 object-cover flex-shrink-0"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
+            class="w-48 h-24 object-cover flex-shrink-0"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
+            class="w-48 h-24 object-cover flex-shrink-0"
+          />
+          <NuxtImg
+            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
+            class="w-48 h-24 object-cover flex-shrink-0"
+          />
+        </div>
       </div>
     </section>
     <SectionsReview />
-    <SectionsFaq/>
+    <SectionsFaq />
   </main>
 </template>
 
@@ -194,70 +176,69 @@ const legistlativeItems = ref([
   {
     image_url: '/images/home/bills_and_motions.png',
     title: 'Bills and Motions',
-    description: 'With over 100 legislative instruments in bills and motions, kalu’s commitment to inclusive growth through legislative interventions remains unparalleled ',
-    route: '/bills'
+    description:
+      'With over 100 legislative instruments in bills and motions, kalu’s commitment to inclusive growth through legislative interventions remains unparalleled ',
+    route: '/bills',
   },
   {
     image_url: '/images/home/constitution_review.png',
     title: 'Constitutional review',
-    description: 'As Deputy Speaker, Kalu assumes the role of Chairman, House Committee on the Review of the Nigerian Constitution. Follow the activities of the Committee.',
-    route: '/legislative/review'
+    description:
+      'As Deputy Speaker, Kalu assumes the role of Chairman, House Committee on the Review of the Nigerian Constitution. Follow the activities of the Committee.',
+    route: '/legislative/review',
   },
 ]);
 
-const newsData = [ 
+const newsData = [
   {
-        id: 1,
-        attributes: {
-          title: 'Flood: Pan-African Parliament declares support for Nigerian Victims, Others',
-          description: 'Conference of Speakers at Pan-African Parliament (PAP) under the African Union (AU) has...',
-          date: '2024-09-21',
-          image_url:
-            'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
-          main_image: {
-            data: {
-              attributes: {
-                url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
-              },
-            },
+    id: 1,
+    attributes: {
+      title: 'Flood: Pan-African Parliament declares support for Nigerian Victims, Others',
+      description: 'Conference of Speakers at Pan-African Parliament (PAP) under the African Union (AU) has...',
+      date: '2024-09-21',
+      image_url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
           },
         },
       },
-      {
-        id: 2,
-        attributes: {
-          title: 'Kalu calls for $200m aid to tackle flood crisis in Borno, Yobe, Adamawa',
-          description: 'Deputy Speaker, House of Representatives, Hon. Benjamin Kalu disclosed a $200 million...',
-          date: '2024-09-20',
-          image_url:
-            '/images/home/peace_fund.png',
-          main_image: {
-            data: {
-              attributes: {
-                url: '/images/home/peace_fund.png',
-              },
-            },
+    },
+  },
+  {
+    id: 2,
+    attributes: {
+      title: 'Kalu calls for $200m aid to tackle flood crisis in Borno, Yobe, Adamawa',
+      description: 'Deputy Speaker, House of Representatives, Hon. Benjamin Kalu disclosed a $200 million...',
+      date: '2024-09-20',
+      image_url: '/images/home/peace_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/peace_fund.png',
           },
         },
       },
-      {
-        id: 3,
-        attributes: {
-          title: 'Kalu Calls For Urgent Global Aid To Address Devastating Floods In Borno, Yobe, Adamawa',
-          description: 'Addressing the special session of the ongoing...',
-          date: '2024-09-20',
-          image_url:
-            '/images/home/north_fund.png',
-          main_image: {
-            data: {
-              attributes: {
-                url: '/images/home/north_fund.png',
-              },
-            },
+    },
+  },
+  {
+    id: 3,
+    attributes: {
+      title: 'Kalu Calls For Urgent Global Aid To Address Devastating Floods In Borno, Yobe, Adamawa',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2024-09-20',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
           },
         },
-      }
-    ]
+      },
+    },
+  },
+];
 
 const images = ref([
   {
