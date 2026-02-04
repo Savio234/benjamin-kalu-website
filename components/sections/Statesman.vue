@@ -30,12 +30,11 @@
 
         <!-- Right Side - Publication Info -->
         <div class="flex flex-col justify-center gap-6 items-start">
-          <div class="rounded-3xl py-6 px-0">
-            <h3 class="text-white text-4xl md:text-5xl font-bold">THE STATESMAN</h3>
-          </div>
-          
-          <div class="rounded-3xl py-4 px-0">
-            <p class="text-white text-xl md:text-2xl font-semibold">A Legislative & Policy Review</p>
+          <div class="flex flex-col gap-2">
+            <div class="rounded-3xl py-6 px-0">
+              <h3 class="text-white text-4xl md:text-5xl font-bold">THE STATESMAN</h3>
+              <p class="text-white text-xl md:text-2xl font-semibold py-3">A Legislative & Policy Review</p>
+            </div>
           </div>
 
           <NuxtLink 
