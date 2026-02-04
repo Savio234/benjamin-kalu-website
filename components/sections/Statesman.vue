@@ -2,15 +2,15 @@
   <section class="updates w-full h-[300px] py-2 bg-black text-white relative flex flex-col justify-center overflow-hidden">
     <NuxtImg
       src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
-      class="img-one absolute top-1/2 left-0"
+      class="img-one absolute top-1/2 left-0 pointer-events-none"
       alt="Decorative vector left"
     />
     <NuxtImg
       src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
-      class="img-one absolute top-1/2 right-0"
+      class="img-one absolute top-1/2 right-0 pointer-events-none"
       alt="Decorative vector right"
     />
-    <div class="content flex flex-col mx-auto w-[85%] gap-8">
+    <div class="content flex flex-col mx-auto w-[85%] gap-8 relative z-10">
       <!-- Header -->
       <!-- Main Content Grid -->
       <div class="flex flex-row gap-8 items-center h-full">
