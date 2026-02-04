@@ -33,7 +33,7 @@
           </div>
 
           <NuxtLink 
-            to="https://res.cloudinary.com/dokuicrun/image/upload/v1770202565/benjaminkalu/THE_STATESMAN_-_ISSUE_001-compressed_bzytr0.pdf" 
+            to="/books/THE-STATESMAN-ISSUE-001.pdf" 
             target="_blank" 
             class="bg-white rounded-2xl py-2 px-6 hover:bg-primaryGreen transition-colors duration-300"
           >

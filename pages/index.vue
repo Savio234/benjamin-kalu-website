@@ -53,7 +53,7 @@
         </div>
       </div>
     </section>
-    <SectionsStatesman />
+    <SectionsStatesman id="statesman" />
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto w-[85%] flex flex-col gap-8">
         <div class="header w-full flex flex-col gap-1">
