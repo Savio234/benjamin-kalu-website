@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         montserratAlt: ['Montserrat Alternates', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        adamina: ['Adamina', 'serif'],
         inter: ['Inter', 'sans-serif'],
       },
     },

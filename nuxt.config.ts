@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       'Montserrat Alternates': {
         wght: [400, 500, 600, 700],
       },
+      Adamina: {
+        wght: [400],
+      },
       Montserrat: {
         wght: [400, 500, 600, 700],
       },
