@@ -1,20 +1,40 @@
 <template>
-  <section class="updates w-full h-[300px] py-2 bg-black text-white relative flex flex-col justify-center overflow-hidden">
-    <NuxtImg
+  <section class="updates w-full md:h-[26rem] lg:h-[31.25rem] py-2 bg-black text-white relative 
+    flex flex-col justify-center overflow-hidden"
+  >
+    <!-- <NuxtImg
       src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_left_lfn7hu.png"
       class="img-one absolute top-1/2 left-0 pointer-events-none"
       alt="Decorative vector left"
-    />
-    <NuxtImg
+    /> -->
+    <!-- <NuxtImg
       src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717433017/benjamin_kalu/vector_right_rjtxb2.png"
       class="img-one absolute top-1/2 right-0 pointer-events-none"
       alt="Decorative vector right"
+    /> -->
+    <NuxtImg
+      src="/images/statesman.png"
+      class="w-full h-full hidden md:block object-contain pointer-events-none"
+      alt="Decorative vector right"
     />
-    <div class="content flex flex-col mx-auto w-[85%] gap-8 relative z-10">
-      <!-- Header -->
-      <!-- Main Content Grid -->
+    <div class="w-full h-full md:hidden">
+      <div class="w-full relative h-[20.625rem]">
+        <NuxtImg
+          src="/images/statesman_mob_1.png"
+          class="w-full h-full object-cover pointer-events-none"
+          alt="Decorative vector right"
+        />
+      </div>
+      <div class="relative w-full h-[18rem]">
+        <NuxtImg
+          src="/images/statesman_mob_2.png"
+          class="w-full h-full object-cover pointer-events-none"
+          alt="Decorative vector right"
+        />
+      </div>
+    </div>
+    <!-- <div class="content flex flex-col mx-auto w-[85%] gap-8 relative z-10">
       <div class="flex flex-row gap-8 items-center h-full">
-        <!-- Left Side - PDF Embed -->
         <div class="relative h-[85%] w-auto rounded-xl border-2 border-primaryGreen shadow-2xl overflow-hidden">
           <NuxtImg
             src="https://res.cloudinary.com/dokuicrun/image/upload/v1770220412/Screenshot_2026-02-04_at_4.52.29_PM_v0zqhs.png"
@@ -23,7 +43,6 @@
           />
         </div>
 
-        <!-- Right Side - Publication Info -->
         <div class="flex flex-col justify-center gap-3 items-start flex-1">
           <div class="flex flex-col gap-1">
             <div class="rounded-3xl p-0">
@@ -41,7 +60,7 @@
           </NuxtLink>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 

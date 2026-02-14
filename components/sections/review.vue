@@ -1,12 +1,11 @@
 <template>
-  <section class="w-full py-16 bg-white">
-    <div class="content w-[85%] sm:w-4/12 mx-auto text-center flex flex-col items-center">
+  <section class="w-full bg-white">
+    <div class="content w-full mx-auto text-center flex flex-col items-center">
       <Sublogo class="" />
-      <h3 class="font-semibold mt-4">
-        We will love to <br />
-        hear from you!
+      <h3 class="font-normal mt-4">
+        We will love to hear from you!
       </h3>
-      <h6 class="font-medium mt-2">
+      <h6 class="font-medium text-center font-montserrat mt-2">
         Let us know how we are performing and share your concerns on topical issues
       </h6>
 
@@ -14,14 +13,14 @@
         <p class="text-primaryGreen my-2" v-if="success">Your Message has been sent</p>
         <textarea
           rows="5"
-          class="w-full rounded-lg bg-bgInput border border-borderMuted p-2 outline-bgGreen"
+          class="w-full h-44 rounded-lg bg-bgInput border border-borderMuted p-4 outline-bgGreen"
           placeholder="Enter a review"
           name="message"
           v-model="message_content"
         ></textarea>
 
-        <button type="submit" class="bg-white border-2 border-[#00A99133] w-full h-fit p-[1px] rounded-lg">
-          <div class="bg-primaryGreen rounded-lg py-3 px-6 text-white flex justify-center items-center" style="font-family: 'Inter', sans-serif">
+        <button type="submit" class="bg-[#146634] mt-2 w-full h-14 p-[1px] rounded-lg">
+          <div class="bg-[#146634] rounded-lg py-3 px-6 text-white flex justify-center items-center" style="font-family: 'Inter', sans-serif">
             <span v-if="isLoading" class="flex items-center">
               <svg class="animate-spin h-5 w-5 text-white mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

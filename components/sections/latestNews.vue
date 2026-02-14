@@ -1,33 +1,36 @@
 <template>
   <section class="w-full py-16 bg-light">
-    <div class="content mx-auto flex flex-col gap-8 w-[85%]" v-if="latest">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer">
+    <div class="content mx-auto flex flex-col gap-8 w-[90%]" v-if="latest">
+      <h1 class="text-[#022924] mb-8 md:mb-16 font-adamina text-[2rem] md:text-4xl lg:text-5xl">
+        News
+      </h1>
+      <div class="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 cursor-pointer">
         <div
           v-for="(item, index) in latest"
           :key="index"
-          class="news-card bg-white rounded-xl border border-borderMuted overflow-hidden"
+          class="news-card bg-white relative shrink-0 rounded-xl border border-borderMuted
+          overflow-hidden w-full min-h-[24.75rem]"
         >
-          <div class="h-52">
-            <img
-              :src="item.attributes.main_image.data?.attributes.url"
-              alt="News Image"
-              class="object-cover w-full h-full"
-            />
+          <div class="dark-bg absolute top-0 left-0">
+            <div class="w-full relative h-[24.75rem]">
+              <NuxtImg
+                :src="item.attributes.main_image.data?.attributes.url"
+                alt="News Image"
+                class="object-cover w-full h-full"
+              />
+            </div>
           </div>
 
-          <div class="px-6 py-8 flex flex-col gap-2">
-            <div>
-              <span class="bg-[#51128126] text-[#511281] p-2 rounded-md text-sm font-montserratAlt">News</span>
-            </div>
-            <p class="font-inter font-light text-sm text-blackMain">
-              {{ formatDate(item.attributes.date) }}
+          <div class="card_content px-6 py-8 z-[2] top-1/2 relative flex flex-col gap-2">
+            <p class="font-inter font-light text-sm text-white">
+              {{ formatDate(item.attributes.date)}}
             </p>
 
-            <h3 class="font-semibold text-lg text-gray-800 font-montserratAlternates">
+            <h3 class="font-semibold text-lg text-white font-montserratAlternates">
               {{ item.attributes.title }}
             </h3>
 
-            <p class="text-textGray text-sm">
+            <p class="text-white text-sm">
               {{ item.attributes.description }}
             </p>
           </div>
@@ -279,11 +282,7 @@ function formatDate(date) {
 
 <style lang="scss" scoped>
 .news-card {
-  transition: transform 0.2s ease-in-out;
-}
-
-.news-card:hover {
-  transform: translateY(-5px);
+  transition: transform 0.4s ease-in-out;
 }
 
 .line-clamp-3 {

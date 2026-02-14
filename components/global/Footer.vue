@@ -32,26 +32,35 @@
             >
               <svg-icon name="twitter_icon" width="1.5rem" height="1.5rem" />
             </a>
+            <a class="w-6 h-6 relative"
+              href="https://www.linkedin.com/company/officialbenkalu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <NuxtImg alt="linkedin_icon" src="/svgs/home/linkedin_icon.svg" class="w-full h-full" />
+            </a>
           </div>
         </div>
         <div class="rs w-full sm:w-8/12 grid grid-cols-2">
-          <div class="footer-list flex flex-col w-fit gap-8">
-            <h5 class="font-semibold text-white">Explore</h5>
-            <ul class="flex flex-col gap-4 font-medium">
-              <NuxtLink class="text-white" to="/legislative/review">Constitutional Review</NuxtLink>
-              <NuxtLink class="text-white" to="/projects/pisep">PISE-P</NuxtLink>
-              <NuxtLink class="text-white" to="/blog">News & Update</NuxtLink>
+          <div class="footer-list flex flex-col w-fit gap-4 md:gap-6">
+            <h5 class="font-normal font-adamina text-sm md:text-base text-white">Explore</h5>
+            <ul class="flex flex-col gap-4 md:gap-6 font-normal font-adamina">
+              <NuxtLink class="text-white text-sm md:text-base font-normal" to="/legislative/review">Constitutional Review</NuxtLink>
+              <NuxtLink class="text-white text-sm md:text-base font-normal" to="/projects/pisep">PISE-P</NuxtLink>
+              <NuxtLink class="text-white text-sm md:text-base font-normal" to="/blog">News & Update</NuxtLink>
             </ul>
           </div>
-          <div class="footer-list flex flex-col w-fit gap-8">
-            <h5 class="font-semibold text-white">Resources</h5>
-            <ul class="flex flex-col gap-4 font-medium">
-              <NuxtLink class="text-white" to="/bills">Kalu's Bills and Motions</NuxtLink>
-              <NuxtLink class="text-white" to="#">House Directory</NuxtLink>
-              <a class="text-white" target="_blank" href="/books/Legislative_Agenda_2.0.pdf"> House Agenda </a>
-              <a class="text-white" target="_blank" href="https://books.projaro.com/bok1st/">
+          <div class="footer-list flex flex-col w-fit gap-4 md:gap-6">
+            <h5 class="font-normal font-adamina text-sm md:text-base text-white">Resources</h5>
+            <ul class="flex flex-col gap-4 md:gap-6 font-normal font-adamina">
+              <NuxtLink class="text-white text-sm md:text-base font-normal" to="/bills">Kalu's Bills and Motions</NuxtLink>
+              <NuxtLink class="text-white text-sm md:text-base font-normal" to="#">House Directory</NuxtLink>
+              <a class="text-white text-sm md:text-base font-normal" target="_blank" href="/books/Legislative_Agenda_2.0.pdf">
+                House Agenda
+              </a>
+              <!-- <a class="text-white" target="_blank" href="https://books.projaro.com/bok1st/">
                 A Year of Service as Deputy Speaker</a
-              >
+              > -->
             </ul>
           </div>
         </div>

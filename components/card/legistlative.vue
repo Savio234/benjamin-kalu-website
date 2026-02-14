@@ -1,17 +1,19 @@
 <template>
-  <div class="w-full flex flex-col border border-borderMuted rounded-xl shadow">
-    <div class="image w-full h-[15rem] relative">
+  <div class="w-4/5 md:w-full flex flex-col bg-white border shrink-0 border-borderMuted rounded-xl">
+    <div class="image w-full h-[17rem] relative">
       <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
     </div>
     <div class="content my-8 mx-auto w-[90%] flex flex-col gap-2">
       <h5 class="font-semibold font-montserrat">{{ $props.title }}</h5>
-      <p class="text-gray my-2 text-[16px] leading-[1.2] tracking-[0.4px] font-montserrat">{{ $props.description }}</p>
       <a
-        class="text-primaryGreen text-md font-semibold flex items-center gap-1 cursor-pointer"
-        v-if="$props.route"
-        @click="$router.push(`${$props.route}`)"
-        >Learn More <svg-icon name="carat_green_right" width="2rem" height="2rem"
+      class="text-primaryGreen text-md font-semibold flex items-center gap-1 cursor-pointer"
+      v-if="$props.route"
+      @click="$router.push(`${$props.route}`)"
+      >Learn More <svg-icon name="carat_green_right" width="2rem" height="2rem"
       /></a>
+      <p class="text-gray my-2 hidden md:block text-[16px] leading-[1.2] tracking-[0.4px] font-montserrat">
+        {{ $props.description.slice(0, 103)}}...
+      </p>
     </div>
   </div>
 </template>

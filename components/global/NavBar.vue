@@ -32,12 +32,20 @@
             >Projects <SvgIcon name="carat_down" width="1rem" height="1rem"
           /></NuxtLink>
           <NuxtLink
+            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            @mouseover="activateSection('pise-p')"
+            @click="resetActivations"
+          >
+            PISE-P
+          </NuxtLink>
+          <NuxtLink
             to="/news"
             class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
-            >News & Update</NuxtLink
           >
+            Resources
+          </NuxtLink>
         </div>
         <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">Contact Us</MainButton>
 
@@ -111,7 +119,7 @@
           </transition>
         </div>
 
-        <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">News & Update</NuxtLink>
+        <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">Resources</NuxtLink>
       </div>
     </div>
   </div>

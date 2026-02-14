@@ -1,19 +1,21 @@
 <template>
-    <section class="w-full py-16 bg-white">
-      <div class="content w-[85%] sm:w-3/5 mx-auto text-left flex flex-col items-center">
-        <h3 class="font-semibold mt-4 text-center">
-          Frequently Asked <br /> Questions
+    <section class="w-full bg-white">
+      <div class="content w-full mx-auto text-left flex flex-col items-center">
+        <h3 class="font-normal font-adamina mt-4 text-center">
+          Frequently Asked Questions
         </h3>
         <div class="faq w-full mt-8">
           <div class="border-b mx-4 border-gray-200 opacity-10 mb-4"></div>
           <div
             v-for="(item, index) in faqs"
             :key="index"
-            class="faq-item my-4 p-4 border-b mx-4"
+            class="faq-item md:my-4 p-2 border-b md:mx-4"
             style="border-color: rgba(0, 0, 0, 0.1)"
           >
             <div class="faq-question flex justify-between items-center cursor-pointer" @click="toggle(index)">
-              <h4 :class="['font-semibold text-sm', { 'text-primaryGreen': activeIndex === index }]" >{{ item.question }}</h4>
+              <h4 :class="['font-normal font-adamina text-sm', { 'text-[#146634]': activeIndex === index }]" >
+                {{ item.question }}
+              </h4>
               <svg v-if="activeIndex === index" class="h-5 w-5 text-primaryGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
               </svg>
