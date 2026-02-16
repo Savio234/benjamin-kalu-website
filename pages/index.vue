@@ -181,6 +181,22 @@ const newsData = [
       },
     },
   },
+  {
+    id: 4,
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-12-14',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
 ];
 
 const images = ref([

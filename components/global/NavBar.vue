@@ -3,36 +3,36 @@
     <nav class="w-full py-4 bg-white relative">
       <div class="content mx-auto flex justify-between w-[95%] items-center">
         <FullLogo />
-        <div class="nav-content hidden lg:flex items-center p-1 gap-6 font-extralight">
+        <div class="nav-content hidden lg:flex items-center p-1 gap-4 lg:gap-6 font-extralight">
           <NuxtLink
             to="/"
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
             >Home</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
             to="/about"
             @mouseover="resetActivations"
             @click="resetActivations"
             >About</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('legislative')"
             @click="resetActivations"
             >Legislative Affairs
             <SvgIcon name="carat_down" width="1rem" height="1rem" />
           </NuxtLink>
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('projects')"
             @click="resetActivations"
             >Projects <SvgIcon name="carat_down" width="1rem" height="1rem"
           /></NuxtLink>
           <NuxtLink
-            class="text-[#959897] py-2 px-4 rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('pise-p')"
             @click="resetActivations"
           >
@@ -40,14 +40,16 @@
           </NuxtLink>
           <NuxtLink
             to="/news"
-            class="text-[#959897] py-2 px-4 rounded-full hover:text-black hover:underline"
+            class="text-[#959897] py-2 md:px-2 lg:px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
           >
             Resources
           </NuxtLink>
         </div>
-        <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">Contact Us</MainButton>
+        <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">
+          Contact Us
+        </MainButton>
 
         <!-- hamburger -->
         <button class="block sm:hidden" @click="toggleMobileNav">

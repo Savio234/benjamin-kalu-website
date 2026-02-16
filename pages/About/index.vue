@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col w-full bg-light">
-    <section class="w-full h-[70vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
+    <!-- <section class="w-full h-[70vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
       <div class="w-full relative">
         <Swiper
           class="w-full"
@@ -18,7 +18,9 @@
           :pagination="false"
         >
           <div class="absolute z-10 left-8 sm:left-24 top-1/2 -translate-y-1/2 text-white">
-            <h1 class="text-3xl md:text-6xl font-semibold drop-shadow-md font-montserrat">About Benjamin Kalu</h1>
+            <h1 class="text-3xl md:text-6xl font-semibold drop-shadow-md font-montserrat">
+              About Benjamin Kalu
+            </h1>
           </div>
           <SwiperSlide v-for="image in images" :key="image.id">
             <div class="absolute inset-0 bg-black opacity-10"></div>
@@ -26,8 +28,48 @@
           </SwiperSlide>
         </Swiper>
       </div>
+    </section> -->
+    <section class="about_hero w-full h-auto sm:h-[85dvh] flex justify-center">
+      <div class="content mx-auto py-16 sm:py-0 w-[90%] flex h-full items-center">
+        <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
+          <p class="text-white font-adamina text-2xl sm:text-3xl font-normal md:text-4xl lg:text-5xl">
+            Rt. Hon. Benjamin <br />
+            Okezie Kalu <br />
+            Rt. Hon. Benjamin <br />
+          </p>
+          <h1 class="font-bold font-montserrat text-sm md:text-base">
+            A NIGERIAN STATESMAN
+          </h1>
+          <p class="text-white font-montserrat text-sm md:text-base font-medium">
+            Bridging National Progress with Integrity and <br /> National Leadership
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="w-full py-16">
+    <SectionsAboutQuotes :quotes="quotes" />
+    <section class="w-full flex items-center justify-center md:h-[28rem] lg:h-[34rem] bg-[#146634]">
+      <div class="max-w-[85%] md:max-w-4/5 pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-7 lg:max-w-[70%] 
+        lg:pt-[5.35rem] lg:pb-9"
+      >
+        <div class="relative h-24 w-24 mx-auto md:h-28 md:w-28 lg:w-[8.25rem] lg:h-[8.25rem]">
+          <NuxtImg alt="image" class="w-full object-cover rounded-full h-full" 
+            src="/images/about/bk_dp.png"
+          />
+        </div>
+        <div class="mx-auto mt-5 md:mt-7 lg:mt-9">
+          <p class="text-center text-white text-sm md:text-base font-normal font-adamina">
+            Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership 
+            blends institutional mastery, policy depth, and transformative service delivery. He 
+            currently serves as the Deputy Speaker of the 10th House of Representatives, where he 
+            provides strategic legislative leadership, champions constitutional reforms, and advances 
+            inclusive governance that aligns with Nigeria’s democratic ideals and the aspirations of 
+            its people.
+          </p>
+        </div>
+      </div>
+    </section>
+    <SectionsAboutLeadership />
+    <!-- <section class="w-full py-16">
       <div class="content flex flex-col w-[85%] gap-4 mx-auto">
         <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
           <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
@@ -117,17 +159,59 @@
         imageHeight="100vh"
         textJustify="justify-start"
       />
+    </section> -->
+    
+    <section class="bg-[#022822]  w-full">
+      <div class="w-[92.5%] grid grid-cols-1 gap-8 md:gap-14 lg:gap-[5.625rem] items-center 
+        md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] mx-auto"
+      >
+        <div class="order-2 pl-2 md:pl-0 md:order-1">
+          <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-2xl md:text-[2rem] md:leading-10 
+            text-[#FBEF92]"
+          >
+            A STATESMAN WITH A FORWARD-THINKING OUTLOOK
+          </h3>
+          <p class="text-sm text-white md:text-lg lg:text-xl">
+            At his core, Rt. Hon. Benjamin Okezie Kalu is driven by vision; a vision that honors 
+            Nigeria’s heritage while propelling it toward resilient governance, inclusive opportunity, 
+            and democratic excellence. His leadership is defined by:<br />
+            <ul class="mt-2 list-disc pl-6 md:pl-8">
+              <li class="text-sm text-white md:text-lg lg:text-xl">
+                Clarity of purpose
+              </li>
+              <li class="text-sm text-white md:text-lg lg:text-xl">
+                Depth of engagement
+              </li>
+              <li class="text-sm text-white md:text-lg lg:text-xl">
+                Commitment to impact
+              </li>
+              <li class="text-sm text-white md:text-lg lg:text-xl">
+                Stewardship rooted in integrity
+              </li>
+            </ul>
+          </p>
+          <p class="text-sm text-white md:text-lg lg:text-xl">
+            He leads not just with authority, but with accountability, ensuring that every policy, 
+            partnership, and initiative reflects the trust placed in his office.
+          </p>
+        </div>
+        <div class="order-1 mx-auto relative w-56 h-[14.5rem] md:w-[22rem] md:h-[22.75rem] lg:w-[27rem] 
+          lg:h-[27.75rem] md:order-2"
+        >
+          <NuxtImg alt="statesman_icon" src="/svgs/about/statesman_icon.svg" class="h-full w-full" />
+        </div>
+      </div>
     </section>
-    <section>
-      <SectionsTestimonial />
-    </section>
+    <SectionsRoadMap :roadmap="roadmap" />
     <section class="full py-16 border-borderMuted">
       <div class="flex flex-col text-center gap-4 mx-auto w-[90%]">
         <h3 class="font-semibold">Awards & Recognition</h3>
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-left">
+        <div class="flex items-start overflow-x-scroll md:overflow-x-hidden md:grid md:grid-cols-2
+          lg:grid-cols-4 gap-4 text-left"
+        >
           <CardAward
             image-url="/images/awards_and_recognition/legislative_contributions.png"
             title="Award for Outstanding Legislative Contribution towards Improved TB policy and Funding"
@@ -163,6 +247,8 @@
         </div>
       </div>
     </section>
+    <SectionsPublications :publications="publications" />
+    <SectionsAboutMedia :media="media" />
   </main>
 </template>
 
@@ -209,6 +295,108 @@ const foreignParliamentEngagement = `
     He is also a prominent member of the 6th ECOWAS Parliament where he co-leads the Nigerian delegation to the Parliament, while also serving as Chair of the Finance, Administration and Budget Committee.
   </p>
 `;
+
+const publications = [
+  {
+    id: 1,
+    image: '/images/about/publication_1.png'
+  },
+  {
+    id: 2,
+    image: '/images/about/publication_2.png'
+  },
+  {
+    id: 3,
+    image: '/images/about/publication_3.png'
+  },
+  {
+    id: 4,
+    image: '/images/about/publication_1.png'
+  },
+]
+
+const media = [
+  {
+    id: 1,
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    id: 2,
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    id: 3,
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    id: 4,
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+]
+
+const quotes = [
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
+  institutional mastery, policy depth, and transformative service delivery. `,
+]
+const roadmap = [
+  {
+    title: `Leadership for the 21st Century - Executive Certificate Program`,
+    body: `John F. Kennedy School of Government, Harvard University, USA`,
+    date: `September 2025`
+  },
+  {
+    title: `Certificate in Governance & Development`,
+    body: `Miami Herbert Business School, University of Miami, USA`,
+    date: `2022`
+  },
+  {
+    title: `Certificate in Environmental Crimes`,
+    body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
+    date: `2022`
+  },
+  {
+    title: `Certificate in Migration & Human Rights`,
+    body: `John Cabot University, Rome, Italy`,
+    date: `2022`
+  },
+  {
+    title: `Certificate in Illicit Trade`,
+    body: `University of Groningen, Netherlands`,
+    date: `2022`
+  },
+  {
+    title: `Diploma in International Commercial Arbitration`,
+    body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
+    date: `2014`
+  },
+  {
+    title: `Certificate IV in Property Services (Real Estate)`,
+    body: `Leverage Academy, Sydney, Australia`,
+    date: `2019`
+  },
+]
 
 const csr = `
  <p class="text-lg">
@@ -262,5 +450,13 @@ const images = ref([
 .hero {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png');
   background-size: cover;
+}
+.about_hero {
+  background-image: url('/public/images/about/about_hero.png');
+  background-color: #14663433;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 </style>

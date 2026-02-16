@@ -60,7 +60,8 @@
                     />
                 </div>
                 <div class="w-full bg-[#191919] md:w-[70%] gap-12 flex flex-col md:flex-row md:gap-16 
-                    lg:gap-24 items-start px-24 py-[3.75rem]"
+                    lg:gap-24 py-6 md:py-10 items-center lg:items-start md:px-16 lg:px-24 
+                    md:h-[16.5rem] lg:py-14"
                 >
                     <div class="relative w-24 h-24 md:w-[7.75rem] md:h-[7.75rem]">
                         <NuxtImg src="/svgs/home/statesman_icon.svg" alt="statesman icon"
