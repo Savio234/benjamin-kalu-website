@@ -457,6 +457,6 @@ const images = ref([
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom bottom;
+  background-position: 0% 0%;
 }
 </style>
