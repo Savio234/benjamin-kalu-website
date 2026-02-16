@@ -11,7 +11,7 @@
           v-for="(item, index) in latest"
           :key="index"
           class="news-card bg-white relative shrink-0 rounded-xl border border-borderMuted
-          overflow-hidden w-4/5 md:w-5/6 lg:w-full cursor-pointer min-h-80 md:min-h-[22.75rem] 
+          overflow-hidden w-4/5 md:w-[20rem] lg:w-[25rem] cursor-pointer min-h-80 md:min-h-[22.75rem] 
           lg:min-h-[24.75rem]"
         >
           <div class="z-[2] absolute bottom-0 top-0 left-0">
@@ -27,9 +27,9 @@
             absolute bottom-0 top-0 left-0 flex flex-col"
           >
             <p class="font-roboto mb-12 font-medium text-[0.625rem] md:text-xs text-white">
-              {{ formatDate(item.attributes.date)}}
+              {{ formatDate(item.attributes.date) }}
             </p>
-            <h3 class="font-normal text-sm md:text-base text-white font-adamina">
+            <h3 class="font-normal text-sm md:text-base mb-4 text-white font-adamina">
               {{ item.attributes.title }}
             </h3>
 
@@ -306,7 +306,7 @@ function formatDate(date) {
 
 <style lang="scss" scoped>
 .news-card {
-  transition: transform 0.4s ease-in-out;
+  transition: all 500ms ease-in-out;
   .dark-bg {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
