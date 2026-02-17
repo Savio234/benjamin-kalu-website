@@ -6,7 +6,7 @@
           <p class="text-white font-adamina text-2xl sm:text-3xl font-normal md:text-4xl lg:text-5xl">
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
-            Rt. Hon. Benjamin <br />
+            Ph.D., LLD., CFR, <br />
           </p>
           <h1 class="font-bold font-montserrat text-sm md:text-base">
             A NIGERIAN STATESMAN

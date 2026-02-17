@@ -35,7 +35,7 @@
           <p class="text-white font-adamina text-2xl sm:text-3xl font-normal md:text-4xl lg:text-5xl">
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
-            Rt. Hon. Benjamin <br />
+            Ph.D., LLD., CFR, <br />
           </p>
           <h1 class="font-bold font-montserrat text-sm md:text-base">
             A NIGERIAN STATESMAN
@@ -46,7 +46,8 @@
         </div>
       </div>
     </section>
-    <SectionsAboutQuotes :quotes="quotes" />
+    <!-- <SectionsAboutQuotes :quotes="quotes" /> -->
+    <div class="py-8 md:py-12 lg:py-16 bg-white"></div>
     <section class="w-full flex items-center justify-center md:h-[28rem] lg:h-[34rem] bg-[#146634]">
       <div class="max-w-[85%] md:max-w-4/5 pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-7 lg:max-w-[70%] 
         lg:pt-[5.35rem] lg:pb-9"
@@ -69,97 +70,6 @@
       </div>
     </section>
     <SectionsAboutLeadership />
-    <!-- <section class="w-full py-16">
-      <div class="content flex flex-col w-[85%] gap-4 mx-auto">
-        <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
-          <svg-icon name="person_icon" width="1.25rem" height="1.25rem" />
-          <p class="text-primaryGreen font-semibold text-lg">Who is Benjamin Kalu ?</p>
-        </div>
-        <div class="w-full flex items-stretch">
-          <p class="text-lg">
-            Rt. Hon. Benjamin Okezie Kalu is a prominent Nigerian Legislator currently serving as the Deputy Speaker of
-            the 10th Federal House of Representatives, National Assembly of Nigeria. A former Spokesperson and Chairman,
-            House Committee on Media and Public Affairs for the 9th House, Kalu brings several years of cognate
-            experience as an accomplished leader and member of parliament in helping nurture the Nigerian Dream. 
-          </p>
-        </div>
-        <div class="w-full flex items-stretch">
-          <p class="text-lg">
-            An astute lawyer and accomplished businessman, Kalu’s current stint at the National Parliament is on account
-            of the constituents he so dutifully represents—the Bende Federal Constituency of Abia State. In this regard,
-            his commitment to contributing to the development of the people of Bende through legislative processes,
-            project implementation, and manpower development remains and has remained unparalleled and undeterred over
-            the years.
-          </p>
-        </div>
-        <div class="w-full sm:my-8 my-8 md:my-16 h-auto sm:h-screen">
-          <NuxtImg
-            class="w-full h-full object-cover rounded-xl"
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718544617/benjamin_kalu/new_image_touring_two_kea4nk.png"
-          />
-        </div>
-        <div class="border border-borderMuted rounded-full py-1 px-2 flex items-center gap-2 w-fit">
-          <svg-icon name="education" width="1.25rem" height="1.25rem" />
-          <p class="text-primaryGreen font-semibold text-lg">Education</p>
-        </div>
-        <div class="content w-full flex flex-col gap-8 text-justify text-lg">
-          <p class="text-lg">
-            Rt. Hon. Kalu boasts an impressive academic and professional trajectory. Amongst his many qualifications, he
-            holds Bachelor of Laws (LL.B) and Master of Laws (LL.M) degrees from the University of Calabar, Nigeria; a
-            Master of Business Administration (MBA) from Oxford Brookes University; a diploma in International
-            Commercial Arbitration from the University of Oxford, UK; as well as an LL.M in Petroleum Taxation and
-            Finance from the University of Dundee, Scotland.
-          </p>
-          <p class="text-lg">
-            He also holds several certifications from reputable and globally acclaimed institutions such as John Cabot
-            University, Italy (Migration and Human Rights); the University of Groningen, Netherlands (Illicit Trade);
-            the Miami Herbert Business School, USA (Governance & Development); and the UNICRI, Italy (Environmental
-            Crimes).
-          </p>
-          <p class="text-lg">
-            His fellowships with prestigious organisations like OSHAssociation UK, Chartered Institute of Arbitration,
-            UK, Nigerian Bar Association, and the Institute of Administrative Managers highlight his sheer dedication to
-            professional excellence.
-          </p>
-        </div>
-      </div>
-      <div class="w-full my-8 md:my-20 h-[60vh]">
-        <NuxtImg
-          class="w-full h-full object-cover"
-          src="https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717575150/benjamin_kalu/ben_gown_shpzn6.png"
-        />
-      </div>
-      <SectionsAbout
-        primaryText="Legislative Contributions"
-        :textContent="legislativeContributions"
-        imageSrc="/images/about/legislative_contributions.png"
-        imagePosition="right"
-      />
-      <SectionsAbout
-        primaryText="Foreign Parliament Engagement"
-        :textContent="foreignParliamentEngagement"
-        imageSrc="/images/about/foreign_parliament_engagement.png"
-        imagePosition="left"
-        imageHeight="50vh"
-        textJustify="justify-center"
-      />
-      <SectionsAbout
-        primaryText="Civic & Social Responsibility"
-        :textContent="csr"
-        imageSrc="/images/about/csr.png"
-        imagePosition="right"
-        imageHeight="50vh"
-        textJustify="justify-center"
-      />
-      <SectionsAbout
-        primaryText="Constituency Engagements"
-        :textContent="constituencyEngagements"
-        imageSrc="/images/about/constituency_engagements.webp"
-        imagePosition="left"
-        imageHeight="100vh"
-        textJustify="justify-start"
-      />
-    </section> -->
     
     <section class="bg-[#022822]  w-full">
       <div class="w-[92.5%] grid grid-cols-1 gap-8 md:gap-14 lg:gap-[5.625rem] items-center 

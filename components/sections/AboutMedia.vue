@@ -39,7 +39,7 @@
                             />
                         </div>
                     </div>
-                    <div class="card_content hidden px-6 py-8 z-[2] top-1/4 lg:top-[40%] relative md:flex
+                    <div class="card_content hidden px-6 py-8 z-[2] top-1/4 lg:top-[32%] relative md:flex
                         flex-col gap-2"
                     >
 

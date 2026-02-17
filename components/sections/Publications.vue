@@ -6,7 +6,7 @@
             </h1>
             <div class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6">
                 <div v-for="(item, index) in latest" :key="index" 
-                    class="publications-card shrink-0 overflow-hidden w-4/5 md:w-auto lg:w-auto 
+                    class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[20rem] lg:w-[24rem] 
                     cursor-pointer h-[22.5rem] md:h-[30rem] lg:h-[36.5rem]"
                 >
                     <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
@@ -45,7 +45,7 @@ const latest = computed(() => props.publications);
 .publications-card {
     position: relative;
     .dark_overlay {
-        background-color: rgba(0, 0, 0, 0.45);
+        background-color: rgba(0, 0, 0, 0.55);
         opacity: 0;
         translate: 0% 200%;
         transition: all 500ms ease-out;
