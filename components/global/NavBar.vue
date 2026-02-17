@@ -26,12 +26,14 @@
             <SvgIcon name="carat_down" width="1rem" height="1rem" />
           </NuxtLink>
           <NuxtLink
+            to="/projects"
             class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
-            @mouseover="activateSection('projects')"
+            @mouseover="activateSection('project')"
             @click="resetActivations"
-            >Projects <SvgIcon name="carat_down" width="1rem" height="1rem"
-          /></NuxtLink>
+            >Projects
+          </NuxtLink>
           <NuxtLink
+            to="/pise-p"
             class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('pise-p')"
             @click="resetActivations"
