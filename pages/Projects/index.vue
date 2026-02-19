@@ -1,6 +1,6 @@
 <template>
-  <main class="flex flex-col gap-4 mg:gap-8 lg:gap-12">
-    <section class="py-16 bg-light mx-auto w-[85%]">
+  <main class="flex w-full flex-col gap-4 mg:gap-8 lg:gap-12">
+    <section class="py-16 bg-light mx-auto w-[92.5%] md:w-[90%]">
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-4">
           <h2 class="font-semibold">Constituency Projects</h2>
@@ -82,24 +82,58 @@
         </div>
       </div>
     </section>
-    <section class="mx-auto w-[85%]">
+    <section class="mx-auto w-[92.5%] md:w-[90%]">
       <h3 class="font-semibold font-montserrat mb-4 text-2xl">Projects from the 10th Assembly</h3>
       <SectionsAccordionAlt :items="tenthAssemblyProjects" />
     </section>
-    <section class="mx-auto w-[85%]">
+    <!-- <section class="mx-auto w-[85%]">
       <h3 class="font-semibold font-montserrat mb-4 text-2xl">Projects from the 9th Assembly</h3>
       <p class="mb-4">Projects in Bende Federal Constituency</p>
       <SectionsAccordionAlt :items="ninthAssemblyProjects" />
-    </section>
+    </section> -->
     <section class="bg-footerGreen m-0 p-10 md:p-12 lg:p-28">
       <h2 class="text-white font-montserrat lg:max-w-[80%] font-semibold">
         Projects Distribution in Different Communities of Bende Federal Constituency
       </h2>
     </section>
-    <section class="mx-auto w-[85%]">
+    <section class="mx-auto w-[92.5%] md:w-[90%] py-8 md:py-12 lg:py-16">
       <SectionsAccordion :items="accordionItems" />
     </section>
-    <section class="mx-auto w-[85%]">
+    <section class="mx-auto w-[92.5%] md:w-[90%] pb-8 md:pb-12 lg:pb-16">
+      <h1 class="hidden font-adamina text-[#022924] text-center text-[2rem] md:text-4xl 
+        lg:text-5xl md:block"
+      >
+        What Constituents are Saying About <br /> Rt. Hon. Benjamin Kalu
+      </h1>
+      <h1 class="md:hidden font-adamina text-[#022924] text-center text-[2rem] md:text-4xl 
+        lg:text-5xl"
+      >
+        What Constituents are Saying<br /> About <br /> Rt. Hon. Benjamin Kalu
+      </h1>
+      <div class="w-full mt-8 md:mt-12 lg:mt-16 overflow-x-scroll items-start flex gap-4 md:gap-6 lg:gap-10" 
+        v-if="quotes"
+      >
+        <div class="w-4/5 shrink-0 bg-[#E0E0E0] px-5 py-7 md:w-1/3 lg:w-[29rem] 
+          min-h-[25.5rem] md:min-h-[29rem] lg:min-h-[32.5rem]" 
+          v-for="(item, index) in quotes" :key="index"
+        >
+          <div class="relative w-[3.25rem] h-10">
+            <NuxtImg alt="quote" src="/svgs/about/green_quote.svg" class="h-full w-full" />
+          </div>
+          <p class="text-xs md:text-sm lg:text-base text-black font-inter font-normal 
+            text-left my-4 md:my-7 lg:my-9"
+          >
+            {{ item.quote }}
+          </p>
+          <h3 class="font-bold leading-6 font-inter text-black text-left text-base 
+            md:text-lg lg:text-xl"
+          >
+            {{ item.name }}
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="mx-auto w-[85%]">
       <NuxtImg
         class="w-full h-[1600px] object-contain"
         src="/images/projects/footer.webp"
@@ -111,7 +145,7 @@
           >https://benjaminkalu.com/impactfullegaciesofbenkalu</a
         >
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 
@@ -124,8 +158,8 @@ const tenthAssemblyProjects = [
     title: 'Latest Ongoing Projects',
     details: [
       'Amokwe_Akanu Item road',
-      '⁠Agboakoli ancient road, Alayi',
-      '⁠Bende market road Bende',
+      'Agboakoli ancient road, Alayi',
+      'Bende market road Bende',
       'Ndiokorieukwu road Bende',
       'Bende headquarters road',
       'Construction of Garri processing mill in Uzuakoli and nkpa',
@@ -327,6 +361,52 @@ const accordionItems = [
     ],
   },
 ];
+const quotes = [
+  {
+    quote: `“My name is Onyeobu Ihilu. I was a farmer but I'm aged now and can no longer go 
+      to the farm. Hon Benjamin Kalu is a very important man to us in Bende. We have 
+      unprecedented development now in Bende. If we had two of him, Bende would become like 
+      Abuja. He does so much. Stories about his kindness have gone round the world. May he 
+      be blessed at all times. I want him to be president. He does so much. I lost my eye 
+      sight. He gave me free treatment. He also provided me with lots of food. I have food 
+      at home now, thanks to him. He took down names of people whose houses would be 
+      renovated. My name was included. May God bless him with long life and good health..”`,
+    name: `ONYEOBU IHILU`,
+  },
+  {
+    quote: `“Hon Benjamin Kalu has done a lot. We are proud of him. He makes all of us happy. 
+      He has worked on our roads. He has provided boreholes and distributed rice to all of us. 
+      He has done so much. He brought eye surgeons, and they carried out treatments for 
+      everyone with a problem, free of charge. I know a blind man whom Hon. Benjamin Kalu 
+      helped regain sight and the man is living a good life now. I was there when he 
+      commissioned boreholes for our people. He has built hospitals and renovated schools, 
+      including our community school. He has made our town much better. He has brought a 
+      university to the people of Bende.”`,
+    name: `UZOMA EMENIKE`,
+  },
+  {
+    quote: `“The Uzuakoli community has never had it so good. We have had a very exciting 
+    journey with Rt Hon Benjamin Okezie Kalu. He has touched every life in Uzuakoli. He 
+    facilitated the employment of so many sons and daughters of this community into various 
+    state and federal establishments, and they have in turn become breadwinners in their 
+    families. Our roads are wearing looks they have never worn since the Civil War. Take a 
+    stroll across the community at night, the entire community is well-lit, thanks to Hon 
+    Benjamin Okezie Kalu. The community has had an unfair share of ecological issues and His 
+    Excellency Rt Hon Benjamin Kalu has taken it up on himself to address this.”`,
+    name: `CHIKODIRI EZE`,
+  },
+  {
+    quote: `“My name is Onyeobu Ihilu. I was a farmer but I'm aged now and can no longer go 
+      to the farm. Hon Benjamin Kalu is a very important man to us in Bende. We have 
+      unprecedented development now in Bende. If we had two of him, Bende would become like 
+      Abuja. He does so much. Stories about his kindness have gone round the world. May he 
+      be blessed at all times. I want him to be president. He does so much. I lost my eye 
+      sight. He gave me free treatment. He also provided me with lots of food. I have food 
+      at home now, thanks to him. He took down names of people whose houses would be 
+      renovated. My name was included. May God bless him with long life and good health..”`,
+    name: `ONYEOBU IHILU`,
+  },
+]
 </script>
 
 <style scoped>

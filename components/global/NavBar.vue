@@ -3,23 +3,23 @@
     <nav class="w-full py-4 bg-white relative">
       <div class="content mx-auto flex justify-between w-[95%] items-center">
         <FullLogo />
-        <div class="nav-content hidden lg:flex items-center p-1 gap-4 lg:gap-6 font-extralight">
+        <div class="nav-content hidden lg:flex items-center p-1 gap-2 lg:gap-1 xl:gap-4 font-extralight">
           <NuxtLink
             to="/"
-            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
             >Home</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
             to="/about"
             @mouseover="resetActivations"
             @click="resetActivations"
             >About</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('legislative')"
             @click="resetActivations"
             >Legislative Affairs
@@ -27,14 +27,14 @@
           </NuxtLink>
           <NuxtLink
             to="/projects"
-            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('project')"
             @click="resetActivations"
             >Projects
           </NuxtLink>
           <NuxtLink
             to="/pise-p"
-            class="text-[#959897] py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
             @mouseover="activateSection('pise-p')"
             @click="resetActivations"
           >
@@ -42,11 +42,11 @@
           </NuxtLink>
           <NuxtLink
             to="/news"
-            class="text-[#959897] py-2 md:px-2 lg:px-4 rounded-full hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
           >
-            Resources
+            News & updates
           </NuxtLink>
         </div>
         <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">
@@ -54,7 +54,7 @@
         </MainButton>
 
         <!-- hamburger -->
-        <button class="block sm:hidden" @click="toggleMobileNav">
+        <button class="block lg:hidden" @click="toggleMobileNav">
           <svg-icon :name="mobileNav ? 'nav_close' : 'hamburger'" width="2rem" height="2rem" />
         </button>
       </div>
@@ -72,10 +72,14 @@
         @click="resetActivations"
       />
     </nav>
-    <div v-if="mobileNav" class="sm:hidden mobile-nav h-[100vh] w-full bg-black pt-8 z-[100] text-white">
+    <div v-if="mobileNav" class="lg:hidden mobile-nav h-[100vh] w-full bg-black pt-8 z-[100] text-white">
       <div class="flex flex-col h-screen gap-6 mx-auto w-[90%]">
-        <NuxtLink to="/" class="text-white py-3 px-4 rounded-full" @click="closeMobileNav">Home</NuxtLink>
-        <NuxtLink class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">About</NuxtLink>
+        <NuxtLink to="/" class="text-white py-3 px-4 rounded-full" @click="closeMobileNav">
+          Home
+        </NuxtLink>
+        <NuxtLink class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">
+          About
+        </NuxtLink>
 
         <div>
           <button
@@ -100,10 +104,23 @@
             </div>
           </transition>
         </div>
-
-        <div>
+        <NuxtLink to="/projects" class="block text-white py-2 px-4 rounded-full" 
+          @click="closeMobileNav"
+        >
+          Projects
+        </NuxtLink>
+        <NuxtLink to="/pise-p" class="block text-white py-2 px-4 rounded-full" 
+          @click="closeMobileNav"
+        >
+          PISE-P
+        </NuxtLink>
+        <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">
+          News & updates
+        </NuxtLink>
+        
+        <!-- <div>
           <button
-            @click="toggleSection('projects')"
+          @click="toggleSection('projects')"
             class="w-full text-left text-white py-2 px-4 rounded-full focus:outline-none flex justify-between items-center"
           >
             Projects
@@ -121,9 +138,7 @@
               >
             </div>
           </transition>
-        </div>
-
-        <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">Resources</NuxtLink>
+        </div> -->
       </div>
     </div>
   </div>

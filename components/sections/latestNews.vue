@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-16 bg-light">
+  <section class="w-full py-8 md:py-12 lg:py-16 bg-light">
     <div class="content mx-auto flex flex-col gap-8 w-[90%]" v-if="latest">
       <h1 class="text-[#022924] mb-4 md:mb-8 lg:mb-16 font-adamina text-[2rem] md:text-4xl 
         lg:text-5xl"

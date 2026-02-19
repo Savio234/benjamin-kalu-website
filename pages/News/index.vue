@@ -1,6 +1,14 @@
 <template>
   <main class="flex flex-col">
-    <SectionsLatestNews />
+    <SectionsNews :newsData="newsData" />
+    <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
+      <div class="w-[92.5%] mx-auto md:w-[90%]">
+        <h1 class="text-left text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+          Publications
+        </h1>
+        <SectionsPublications :publications="publications" />
+      </div>
+    </section>
     <section class="updates w-full py-16 bg-black text-white">
       <div class="content flex flex-col mx-auto gap-8 ml-[7.5%]">
         <div class="header flex flex-col gap-1 text-white">
@@ -31,19 +39,20 @@
         </div>
       </div>
     </section>
-    <section class="p-8 md:p-20 bg-light">
-      <div>
-        <h3 class="font-montserrat text-2xl">Constitutional Review News and Updates</h3>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+    <section class="py-8 w-[90%] md:w-[92.5%] mx-auto md:py-12 lg:py-20 bg-light">
+      <h3 class="font-montserrat text-2xl">Constitutional Review News and Updates</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-6 my-4 
+        md:my-6 lg:my-8"
+      >
         <div
           v-for="news in newsItems"
           :key="news.id"
-          class="bg-white shadow-sm p-6 hover:shadow-lg transition-shadow border-t-4 border-borderMuted"
+          class="bg-white shadow-sm p4 md:p-6 hover:shadow-lg transition-shadow border-t-4 
+          border-borderMuted shrink-0"
         >
-          <div class="mb-6 flex flex-col gap-8 justify-between">
+          <div class="mb-6 flex flex-col gap-2 md:gap-4 lg:gap-8 justify-between">
             <h4 class="text-sm font-medium mb-4 font-montserrat">{{ news.category }}</h4>
-            <h2 class="text-xl font-semibold mb-4 font-montserrat">
+            <h2 class="text-xl text-left font-semibold mb-4 font-montserrat">
               {{ news.title }}
             </h2>
 
@@ -51,7 +60,7 @@
               {{ news.location }}
             </p>
 
-            <p class="text-textGray font-montserrat">
+            <p class="text-textGray text-left md:text-justify font-montserrat">
               {{ news.description }}
             </p>
             <div class="text-sm font-montserrat">
@@ -61,7 +70,6 @@
         </div>
       </div>
     </section>
-    <!-- <SectionsContact /> -->
   </main>
 </template>
 
@@ -116,6 +124,245 @@ const newsItems = [
     date: 'Feb 25th, 2024',
   },
 ];
+const newsData = [
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'In a statement issued on Monday by Levinus Nwabughiogu, Chief Press Secretary to...',
+      date: '2026-01-21',
+      image_url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Deputy Speaker, House of Representatives, Hon. Benjamin Kalu disclosed a $200 million...',
+      date: '2025-12-12',
+      image_url: '/images/home/peace_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/peace_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-11-24',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-12-14',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'In a statement issued on Monday by Levinus Nwabughiogu, Chief Press Secretary to...',
+      date: '2026-01-21',
+      image_url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Deputy Speaker, House of Representatives, Hon. Benjamin Kalu disclosed a $200 million...',
+      date: '2025-12-12',
+      image_url: '/images/home/peace_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/peace_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-11-24',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-12-14',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'In a statement issued on Monday by Levinus Nwabughiogu, Chief Press Secretary to...',
+      date: '2026-01-21',
+      image_url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Deputy Speaker, House of Representatives, Hon. Benjamin Kalu disclosed a $200 million...',
+      date: '2025-12-12',
+      image_url: '/images/home/peace_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/peace_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-11-24',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+  {
+    attributes: {
+      title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
+      description: 'Addressing the special session of the ongoing...',
+      date: '2025-12-14',
+      image_url: '/images/home/north_fund.png',
+      main_image: {
+        data: {
+          attributes: {
+            url: '/images/home/north_fund.png',
+          },
+        },
+      },
+    },
+  },
+];
+const publications = [
+  {
+    id: 1,
+    image: '/images/about/publication_1.png'
+  },
+  {
+    id: 2,
+    image: '/images/about/publication_2.png'
+  },
+  {
+    id: 3,
+    image: '/images/about/publication_3.png'
+  },
+  {
+    id: 4,
+    image: '/images/about/publication_1.png'
+  },
+]
+
+const media = [
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+]
 </script>
 
 <style lang="scss" scoped>

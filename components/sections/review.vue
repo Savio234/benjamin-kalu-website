@@ -1,6 +1,6 @@
 <template>
   <section class="w-full bg-white">
-    <div class="content w-full mx-auto text-center flex flex-col items-center">
+    <div class="content w-[92.5%] md:w-[90%] mx-auto text-center flex flex-col items-center">
       <Sublogo class="" />
       <h3 class="font-normal mt-4">
         We will love to hear from you!

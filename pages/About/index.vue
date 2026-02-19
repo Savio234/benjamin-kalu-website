@@ -58,13 +58,13 @@
           />
         </div>
         <div class="mx-auto mt-5 md:mt-7 lg:mt-9">
-          <p class="text-center text-white text-sm md:text-base font-normal font-adamina">
-            Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership 
-            blends institutional mastery, policy depth, and transformative service delivery. He 
-            currently serves as the Deputy Speaker of the 10th House of Representatives, where he 
-            provides strategic legislative leadership, champions constitutional reforms, and advances 
-            inclusive governance that aligns with Nigeria’s democratic ideals and the aspirations of 
-            its people.
+          <p class="text-center text-white text-sm md:text-base lg:text-xl font-normal font-adamina">
+            Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose 
+            leadership blends institutional mastery, policy depth, and transformative 
+            service delivery. He currently serves as the Deputy Speaker of the 10th House of 
+            Representatives, where he provides strategic legislative leadership, champions 
+            constitutional reforms, and advances inclusive governance that aligns with 
+            Nigeria’s democratic ideals and the aspirations of its people.
           </p>
         </div>
       </div>
@@ -157,8 +157,22 @@
         </div>
       </div>
     </section>
-    <SectionsPublications :publications="publications" />
-    <SectionsAboutMedia :media="media" />
+    <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
+      <div class="w-[92.5%] mx-auto md:w-[90%]">
+        <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+          Publications
+        </h1>
+        <SectionsPublications :publications="publications" />
+      </div>
+    </section>
+    <section class="w-full pb-8 md:pb-12 lg:pb-16 bg-white">
+      <div class="w-[92.5%] mx-auto md:w-[90%]">
+        <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+          Media
+        </h1>
+        <SectionsAboutMedia :media="media" />
+      </div>
+    </section>
   </main>
 </template>
 

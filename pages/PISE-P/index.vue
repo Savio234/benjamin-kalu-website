@@ -15,7 +15,7 @@
                     decline, and security threats, PISE-P seeks to restore peace and stimulate 
                     development through a multi-stakeholder approach.
                 </p>
-                <div class="relative shrink-0 w-[22.75rem] h-[22.75rem] md:w-[23rem] md:h-[23.25rem] 
+                <div class="relative shrink-0 w-full h-[22.75rem] md:w-[23rem] md:h-[23.25rem] 
                     lg:w-[24rem] lg:h-[25.25rem] md:-mt-6 lg:-mt-12"
                 >
                     <NuxtImg alt="pipe-p-logo" src="/svgs/pisep/pise_p_logo.svg"
@@ -24,9 +24,9 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative mt-10 md:mt-12 lg:mt-20 h-[70vh] md:h-screen">
+        <div class="w-full relative mt-10 bg-[#e7e4e4] md:mt-12 lg:mt-20 h-[70vh] md:h-[92vh]">
             <NuxtImg alt="frame" src="/images/pisep/frame.webp"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-contain"
             />
         </div>
         <div class="tech_for_peace h-[75dvh] sm:h-[80dvh] flex items-center justify-center mb-8
@@ -89,13 +89,17 @@
             <div class="w-full h-[25.5rem] sm:h-[40rem] md:h-[60rem] lg:h-[79rem] relative">
                 <NuxtImg alt="image" src="/images/pisep/PISEP.png" class="object-cover w-full h-full" />
             </div>
+            <div class="bg-white top-[21%] sm:left-[11rem] lg:left-80 xl:left-[30rem] 
+                absolute w-96 h-16 xl:w-[26rem]"
+            ></div>
             <div class="mx-auto w-full">
-                <p class="text-center font-montserrat mb-4 text-base text-[#585C5B] md:text-xl 
-                    lg:text-2xl"
+                <p class="text-center font-montserrat mb-4 text-sm text-[#585C5B] md:text-base 
+                    lg:text-lg"
                 >
                     To learn more and be a part of us, visit the official PISE - P website on: 
                     <a href="https://pise-p.org/"
-                        class="font-medium font-montserrat text-base text-[#0E7B60] md:text-xl lg:text-2xl underline"
+                        class="font-medium font-montserrat text-sm text-[#0E7B60] 
+                            md:text-base lg:text-lg underline"
                     >
                         https://pise-p.org/
                     </a>

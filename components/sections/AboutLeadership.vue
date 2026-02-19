@@ -8,7 +8,7 @@
                 >
                     Leadership Anchored in Service and Vision
                 </h3>
-                <p class="text-justify font-montserrat font-medium text-base md:text-xl lg:text-2xl text-[#585C5B]">
+                <p class="text-justify font-montserrat font-medium text-sm md:text-base lg:text-xl text-[#585C5B]">
                     A public servant forged in purpose and precision, Rt. Hon. Kalu’s trajectory is defined 
                     by thoughtful stewardship and consistent delivery. At the heart of his work lies a deep 
                     commitment to meaningful representation, ensuring that the voices of citizens, 
@@ -20,21 +20,26 @@
                 </p>
                 </div>
                 <div class="relative w-full h-64 md:h-[40rem] lg:h-[35.5rem]">
-                <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover" src="/images/about/anchored.png" />
+                <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" src="/images/about/anchored.png" />
                 </div>
             </div>
             <div class="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2 lg:gap-9">
                 <div class="relative order-2 md:order-1 w-full h-64 md:h-[40rem] lg:h-[35.5rem]">
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover" src="/images/about/architect.png" />
+                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" src="/images/about/architect.png" />
                 </div>
                 <div class="order-1 md:order-2">
                 <h3 class="text-[#146634] font-adamina font-normal w-full text-2xl mb-4 md:mb-6 lg:mb-8 
+                    leading-8 md:text-[2rem] hidden md:block md:w-3/4 md:leading-10 "
+                >
+                    Architect of Policy <br /> Advocate for Progress
+                </h3>
+                <h3 class="text-[#146634] block md:hidden font-adamina font-normal w-full text-2xl mb-4 md:mb-6 lg:mb-8 
                     leading-8 md:text-[2rem] md:w-3/4 md:leading-10 "
                 >
                     Architect of Policy Advocate for Progress
                 </h3>
-                <p class="text-justify leading-[1.6] font-montserrat font-medium text-base md:text-xl 
-                    lg:text-2xl text-[#585C5B]"
+                <p class="text-justify leading-[1.6] font-montserrat font-medium text-sm md:text-base 
+                    lg:text-xl text-[#585C5B]"
                 >
                     As Deputy Speaker, Rt. Hon. Kalu plays a pivotal role in steering legislative 
                     priorities that align with national development imperatives. His work spans:<br />
@@ -53,8 +58,8 @@
                         </li>
                     </ul>
                 </p>
-                <p class="text-justify leading-[1.6] font-montserrat font-medium text-base md:text-xl 
-                    lg:text-2xl text-[#585C5B]"
+                <p class="text-justify leading-[1.6] font-montserrat font-medium text-sm 
+                    md:text-base lg:text-xl text-[#585C5B]"
                 >
                     He is recognized for prioritizing data driven policy design, transparent legislative 
                     processes, and constituent-centered outcomes.
@@ -68,7 +73,9 @@
                     >
                         Constituency and Community Impact
                     </h3>
-                    <p class="text-justify leading-[1.6] font-montserrat font-medium text-base md:text-xl lg:text-2xl text-[#585C5B]">
+                    <p class="text-justify leading-[1.6] font-montserrat font-medium 
+                        text-sm md:text-base lg:text-xl text-[#585C5B]"
+                    >
                         Rt. Hon. Kalu’s approach transcends the chamber walls. He has anchored and supported 
                         initiatives that deliver tangible benefits at the grassroots, including community 
                         infrastructure, youth empowerment programs, educational interventions, and peace 
@@ -79,12 +86,12 @@
                     </p>
                 </div>
                 <div class="relative w-full h-64 md:h-[40rem] lg:h-[35.5rem]">
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover" src="/images/about/constituency.png" />
+                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" src="/images/about/constituency.png" />
                 </div>
             </div>
             <div class="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2 lg:gap-9">
                 <div class="relative order-2 md:order-1 w-full h-64 md:h-[40rem] lg:h-[35.5rem]">
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover" src="/images/about/strategic.png" />
+                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" src="/images/about/strategic.png" />
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-[#146634] font-adamina mb-4 font-normal text-2xl leading-8 
@@ -92,7 +99,9 @@
                     >
                         Strategic Partnerships <br /> and Thought Leadership
                     </h3>
-                    <p class="text-justify leading-[1.6] font-montserrat font-medium text-base md:text-xl lg:text-2xl text-[#585C5B]">
+                    <p class="text-justify leading-[1.6] font-montserrat font-medium 
+                        text-sm md:text-base lg:text-xl text-[#585C5B]"
+                    >
                         Rt. Hon. Kalu believes that Nigeria’s growth is interconnected with global 
                         collaboration and intellectual exchange. He actively engages with regional and 
                         international stakeholders, leveraging partnerships that enhance legislative capacity, 

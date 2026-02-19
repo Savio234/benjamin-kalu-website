@@ -4,7 +4,9 @@
       <h2 class="text-[#022924] text-[2rem] md:text-4xl lg:text-5xl mb-4 font-adamina font-normal">
         About Benjamin Kalu
       </h2>
-      <p class="w-full md:w-3/4 lg:w-8/12 mx-auto text-[#636363] text-center text-sm mb-4">
+      <p class="w-full md:w-3/4 lg:w-8/12 mx-auto text-[#636363] text-center text-sm 
+        md:text-base mb-4"
+      >
         Rt. Hon. Benjamin O.Kalu is a Nigerian statesman whose public service is defined by 
         disciplined leadership, institutional reform, and a commitment to measurable impact. 
         Trained as a legal practitioner and seasoned as an international businessman, he brings 

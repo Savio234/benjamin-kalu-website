@@ -19,12 +19,12 @@
                     with practical, future-ready skills for income generation, ethical digital 
                     engagement and peace building.
                 </p>
-                <button @click="$router.push('/tech-for-peace')"
+                <button @click="$router.push('/register')"
                     class="bg-[#146634] flex cursor-pointer items-center justify-center w-40 md:w-[15rem] 
                     lg:w-[21.5rem] md:w py-4 px-6 rounded-xl"
                 >
                     <p class="font-bold font-montserrat text-white text-sm md:text-base">
-                        Learn more
+                        [Apply Now - Free Registration]
                     </p>
                 </button>
             </div>
