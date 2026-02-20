@@ -42,7 +42,7 @@
           </NuxtLink>
           <NuxtLink
             to="/news"
-            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 rounded-full hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base rounded-full hover:text-black hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
           >

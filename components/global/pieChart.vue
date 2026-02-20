@@ -1,16 +1,17 @@
 <template>
-  <div class="flex h-full w-full flex-col justify-center items-center">
-    <div class="relative w-full sm:w-7/12">
+  <div class="h-full w-full grid grid-cols-1 xl:grid-cols-2">
+    <div class="relative w-full">
       <client-only>
         <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+        <!-- <apexchart type="bar" :options="chartOptions" :series="series"></apexchart> -->
       </client-only>
     </div>
     <!-- custom Legend -->
     <div class="w-full">
-      <ul class="grid w-full grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-        <li v-for="(item, index) in chartData" class="flex items-center gap-1">
+      <ul class="grid w-full grid-cols-1 gap-2 text-xs">
+        <li v-for="(item, index) in chartData" class="flex flex-col items-start gap-1">
           <div class="w-8 h-4" :style="{ background: item.color }"></div>
-          <p class="text-sm">{{ item.label }}</p>
+          <p class="text-sm w-auto md:w-3/4">{{ item.label }}</p>
         </li>
       </ul>
     </div>
@@ -30,7 +31,7 @@ const chartOptions = reactive({
     'Bills Assented to by the President',
   ],
   chart: {
-    type: 'donut',
+    type: 'bar',
   },
   colors: ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#FF9655', '#6AF9C4'],
   plotOptions: {
@@ -42,6 +43,12 @@ const chartOptions = reactive({
         size: '0%',
       },
     },
+    // bar: {
+    //   borderRadius: 16,
+    //   dataLabels: {
+    //     enabled: true,
+    //   }
+    // }
   },
   dataLabels: {
     enabled: true,

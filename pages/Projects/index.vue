@@ -7,7 +7,7 @@
           <p>See the latest projects that we are up to and actively working on to better improve our constituencies.</p>
         </div>
 
-        <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
+        <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-11 gap-4">
           <!-- Left Column -->
           <div class="col-span-4 lg:col-span-3 flex flex-col gap-4 h-[800px]">
             <div class="relative overflow-hidden rounded-lg flex-1">
@@ -27,7 +27,7 @@
           </div>
 
           <!-- Middle Column -->
-          <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 h-[800px]">
+          <div class="col-span-4 lg:col-span-5 flex flex-col gap-4 h-[800px]">
             <div class="flex gap-4 h-[40%]">
               <div class="relative overflow-hidden rounded-lg flex-1">
                 <NuxtImg
@@ -55,35 +55,28 @@
 
           <!-- Right Column -->
           <div class="col-span-4 lg:col-span-3 flex flex-col gap-4 h-[800px]">
-            <div class="relative overflow-hidden rounded-lg flex-[2]">
+            <div class="relative overflow-hidden rounded-lg">
               <NuxtImg
                 src="/images/projects/Img6.png"
                 alt="Constituency project image 6"
                 class="w-full h-full object-cover hover:scale-102 transition-transform duration-300"
               />
             </div>
-            <div class="flex gap-4 flex-1">
-              <div class="relative overflow-hidden rounded-lg flex-1">
-                <NuxtImg
-                  src="/images/projects/Img7.png"
-                  alt="Constituency project image 7"
-                  class="w-full h-full object-cover hover:scale-102 transition-transform duration-300"
-                />
-              </div>
-              <div class="relative overflow-hidden rounded-lg flex-1">
-                <NuxtImg
-                  src="/images/projects/Img.png"
-                  alt="Constituency project image 8"
-                  class="w-full h-full object-cover hover:scale-102 transition-transform duration-300"
-                />
-              </div>
+            <div class="relative overflow-hidden rounded-lg flex-1">
+              <NuxtImg
+                src="/images/about/constituency.png"
+                alt="Constituency project image 7"
+                class="w-full h-full object-cover hover:scale-102 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="mx-auto w-[92.5%] md:w-[90%]">
-      <h3 class="font-semibold font-montserrat mb-4 text-2xl">Projects from the 10th Assembly</h3>
+      <h3 class="font-semibold font-montserrat mb-4 text-2xl">
+        Projects from the 10th Assembly
+      </h3>
       <SectionsAccordionAlt :items="tenthAssemblyProjects" />
     </section>
     <!-- <section class="mx-auto w-[85%]">
@@ -275,89 +268,227 @@ const accordionItems = [
   {
     title: 'Item',
     details: [
-      'Renovation of Umunnato Item health center (2021/2022)',
-      'Renovation of class room blocks at Okai item (2020/2022)',
-      'Renovation of a block of 3 class rooms in Amaekpu Item (2021/2022)',
-      'Construction of 6 class room blocks at Apuanu Item (2021/2022)',
-      'Construction of block of 3 classrooms at Item community secondary school (2021/2022)',
-      'Construction of Amaokwe-Akanu-Okai Road (2021/2022)',
-      'Construction of solar-powered borehole in Okoko Item (2021/2022)',
+      {
+        image: '/images/projects/accordion_image_1.png',
+        accomplishment: 'Renovation of Umunnato Item health center (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Renovation of class room blocks at Okai item (2020/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Renovation of a block of 3 class rooms in Amaekpu Item (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Construction of 6 class room blocks at Apuanu Item (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of block of 3 classrooms at Item community secondary 
+          school (2021/2022)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Construction of Amaokwe-Akanu-Okai Road (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Construction of solar-powered borehole in Okoko Item (2021/2022)',
+      },
     ],
   },
   {
     title: 'Itumbauzo',
     details: [
-      'Construction of 3 classroom blocks at Ndiwo Itumbuzo (2021/2022)',
-      'Construction of 2 classroom blocks with offices at Nkporo Ubibia (2020/2021)',
-      'Construction of health/maternity center at Ntalakwu Itumbuzo (2019/2020)',
-      'Construction of Itumbauzo Ntalakwu road with drainage phase 2 by Ministry of Housing (2021)',
-      'Construction with Alphate of Itumbauzo Ntalakwu road phase 3 by FERMA',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Construction of 3 classroom blocks at Ndiwo Itumbuzo (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 2 classroom blocks with offices at Nkporo Ubibia 
+          (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of health/maternity center at Ntalakwu Itumbuzo 
+          (2019/2020)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Itumbauzo Ntalakwu road with drainage phase 2 by 
+          Ministry of Housing (2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction with Alphate of Itumbauzo Ntalakwu road phase 3 by 
+          FERMA`,
+      },
     ],
   },
   {
     title: 'Umuimenyi Nkpa',
     details: [
-      'Renovation of a 3-classroom block with office at UMUIMENYI Technical School NKPA (2020/2021)',
-      'Construction of solar-powered borehole in Ovum Ugwu Nkpa (2020/2021)',
-      'Construction of 8.3 kilometers road with bridge in Nkpa/Umuimenyi: (1) 6.1 kilometers in Nkpa community with Eme bridge; (2) 2.2 kilometers in Akoli Imenyi.',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a 3-classroom block with office at UMUIMENYI Technical 
+          School NKPA (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Ovum Ugwu Nkpa (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 8.3 kilometers road with bridge in Nkpa/Umuimenyi: 
+          (1) 6.1 kilometers in Nkpa community with Eme bridge; (2) 2.2 kilometers in Akoli 
+          Imenyi.`,
+      },
     ],
   },
   {
     title: 'Igbere',
     details: [
-      'Construction of a block of 3 classrooms at Onuibina Primary School Igbere (2020/2021)',
-      'Construction of 3-classroom block with toilet and bathroom at both ends at Ohumola Ezigbere Secondary School (2021/2022)',
-      'Construction of solar-powered borehole in Amabia, Elu Ohafia Ibina Ukwu Igbere',
-      'Renovation of Uche Ebiri Hall (ongoing)',
+      {
+        image: '/images/projects/accordion_image_3.png',
+        accomplishment: `Construction of a block of 3 classrooms at Onuibina Primary School 
+          Igbere (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 3-classroom block with toilet and bathroom at both 
+          ends at Ohumola Ezigbere Secondary School (2021/2022)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amabia, Elu Ohafia Ibina 
+          Ukwu Igbere`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of Uche Ebiri Hall (ongoing)`,
+      },
     ],
   },
   {
     title: 'Uzuakoli',
-    details: ['Renovation of a block of 6 classrooms in Girls’ Secondary School Uzuakoli (2020/2021)'],
+    details: [
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+    ],
   },
   {
     title: 'Ozuitem',
     details: [
-      'Construction of solar-powered borehole in Ozuitem (2020/2021)',
-      'Construction of Agbua Elugwumba Ozuitem road (ongoing)',
-      'Construction of a block of two classrooms in Ozuitem Secondary School (ongoing)',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Ozuitem (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Agbua Elugwumba Ozuitem road (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of two classrooms in Ozuitem Secondary 
+          School (ongoing)`
+      },
     ],
   },
   {
     title: 'Alayi',
     details: [
-      'Construction of solar-powered borehole in Amankalu Alayi (2020/2021)',
-      'Construction of Amabo Agboakoli Road Alayi',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amankalu Alayi (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Amabo Agboakoli Road Alayi`
+      },
     ],
   },
   {
     title: 'Umuhu',
     details: [
-      'Renovation of classroom blocks in Amazu Central School Umuhu Ezechi (2020/2021)',
-      'Construction of solar-powered borehole in Eke Market Square Umuokwe',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of classroom blocks in Amazu Central School Umuhu Ezechi 
+          (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Eke Market Square Umuokwe`
+      },
     ],
   },
   {
     title: 'Ugwueke',
     details: [
-      'Construction of a block of 3 classrooms at Amaokai Ugwueke (2021/2022)',
-      'Construction of Civic Hall in Umungere Ugwueke (ongoing)',
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of 3 classrooms at Amaokai Ugwueke 
+          (2021/2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Civic Hall in Umungere Ugwueke (ongoing)`
+      },
     ],
   },
   {
     title: 'Bende',
     details: [
-      'Construction of Immigration Service Office Bende (2020/2021)',
-      'Renovation of Agbamauzu Hall Bende (2020/2021)',
-      'Construction of Etitiulo Road with drainage (2020-2021)',
-      'Construction of 1km road in Onuiyang Ukpom Okporoenyi Nkalunta Road (2021-2022)',
-      'Construction of 1km Amaogwu Ndiokorieukwu Road (2021-2022)',
-      'Construction of Amaogwu Agbomiri Grammar School Road (2021-2022)',
-      'Construction of Umuorie Agbomiri Road (2021-2022)',
-      'Construction of Maternity Center at Okputong Bende (2020/2021)',
-      'Construction of ICT Center in Bende Grammar School',
-      'Perimeter fencing of Bende Secondary Grammar School Phase 1 (ongoing)',
-      'Construction of solar mini-grid along Etitiulo Road Bende',
+      {
+        image: '/images/projects/accordion_image_3.png',
+        accomplishment: `Construction of Immigration Service Office Bende (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of Agbamauzu Hall Bende (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Etitiulo Road with drainage (2020-2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 1km road in Onuiyang Ukpom Okporoenyi Nkalunta Road 
+          (2021-2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 1km Amaogwu Ndiokorieukwu Road (2021-2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Amaogwu Agbomiri Grammar School Road (2021-2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Umuorie Agbomiri Road (2021-2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Maternity Center at Okputong Bende (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of ICT Center in Bende Grammar School`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Perimeter fencing of Bende Secondary Grammar School Phase 1 (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar mini-grid along Etitiulo Road Bende`
+      },
     ],
   },
 ];

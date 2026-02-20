@@ -20,8 +20,9 @@
                     engagement and peace building.
                 </p>
                 <button @click="$router.push('/register')"
-                    class="bg-[#146634] flex cursor-pointer items-center justify-center w-40 md:w-[15rem] 
-                    lg:w-[21.5rem] md:w py-4 px-6 rounded-xl"
+                    class="bg-[#146634] flex cursor-pointer items-center justify-center 
+                    w-[17rem] md:w-80 
+                    lg:w-[21.5rem] px-2 md:px-4 py-4 lg:px-6 rounded-xl"
                 >
                     <p class="font-bold font-montserrat text-white text-sm md:text-base">
                         [Apply Now - Free Registration]
@@ -287,7 +288,12 @@ const eligibilty = [
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom center;
-    height: 85dvh;
+    background-position: 0% 0%;
+    height: 90dvh;
+}
+@media screen and (max-width: 485px) {
+    .tech_bg {
+        background-position: bottom center;
+    }
 }
 </style>

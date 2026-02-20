@@ -24,9 +24,9 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative mt-10 bg-[#e7e4e4] md:mt-12 lg:mt-20 h-[70vh] md:h-[92vh]">
+        <div class="w-full relative mt-10 bg-[#e7e4e4] md:mt-12 lg:mt-20 h-auto">
             <NuxtImg alt="frame" src="/images/pisep/frame.webp"
-                class="w-full h-full object-contain"
+                class="w-full h-full object-cover"
             />
         </div>
         <div class="tech_for_peace h-[75dvh] sm:h-[80dvh] flex items-center justify-center mb-8

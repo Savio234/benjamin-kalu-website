@@ -27,6 +27,7 @@
                         <select class="gray_bg h-10 md:h-12 lg:h-14 px-6 py-2.5 rounded-[2rem]" 
                             placeholder="State of origin" v-if="states"
                         >
+                            <option value="" selected disabled>State of origin</option>
                             <option v-for="(item, index) in states" :key="index" :value="item.value">
                                 {{ item.label }}
                             </option>
@@ -34,6 +35,7 @@
                         <select class="gray_bg h-10 md:h-12 lg:h-14 px-6 py-2.5 rounded-[2rem]" 
                             placeholder="State of Residence" v-if="states"
                         >
+                            <option value="" selected disabled>State of Residence</option>
                             <option v-for="(item, index) in states" :key="index" :value="item.value">
                                 {{ item.label }}
                             </option>
@@ -43,6 +45,9 @@
                         <select class="gray_bg h-10 md:h-12 lg:h-14 px-6 py-2.5 rounded-[2rem]" 
                             placeholder="Highest level of education"
                         >
+                            <option value="" selected disabled>
+                                Highest level of education
+                            </option>
                             <option value="SSCE">SSCE</option>
                             <option value="BSc">Barchelors' Degree</option>
                             <option value="MSc">Masters</option>
