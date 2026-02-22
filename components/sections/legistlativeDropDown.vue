@@ -11,10 +11,10 @@
           </h5>
         </div>
       </div>
-      <div class="grid grid-cols-2 w-2/5 gap-[1px] bg-[#cccccc9a]">
+      <div class="grid grid-cols-2 w-2/5 gap-[1px] bg-[#CCCCCC9A]">
         <div class="drop-card flex items-end cursor-pointer" @click="$router.push('/bills')">
           <div class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center" @click="$router.push('/bills')">
-            <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
+            <div class="bg-[#146634] w-fit h-fit rounded-full p-4">
               <svg-icon name="list" width="1.5rem" height="1.5rem" />
             </div>
             <p class="text-white text-lg text-medium mt-6">
@@ -29,7 +29,7 @@
             class="drop-card flex flex-col gap-4 p-8 cursor-pointer justify-center"
             @click="$router.push('/legislative/review')"
           >
-            <div class="bg-[#01877F] w-fit h-fit rounded-full p-4">
+            <div class="bg-[#146634] w-fit h-fit rounded-full p-4">
               <svg-icon name="gravel_white" width="1.5rem" height="1.5rem" />
             </div>
             <p class="text-white text-lg text-medium mt-6">
