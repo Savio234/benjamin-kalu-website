@@ -9,35 +9,43 @@
                     src="/images/about/background.png"
                 />
             </div>
-            <div class="hidden mb-12 lg:mb-20 md:grid grid-cols-4 gap-4 lg:gap-6">
-                <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer items-end justify-center
-                    rounded-lg bg-[#E6E6E6]"
+            <div class="hidden mb-12 lg:mb-20 md:grid grid-cols-4 gap-4 lg:gap-6"
+                v-if="tabs"
+            >
+                <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer items-end 
+                    justify-center rounded-lg card_transparent]"
+                    :class="{
+                        'card_bg text-white': activeTab === index,
+                        'card_transparent text-[#2E312F]': activeTab !== index
+                    }"
+                    v-for="(tab, index) in tabs"
+                    :key="index"
+                    @click="activeTab = index"
                 >
-                    <h3 class="text-[#2E312F] text-center md:text-xl lg:text-2xl">
-                        Political & Public Service Career</h3>
-                </div>
-                <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer items-end justify-center
-                    rounded-lg bg-[#E6E6E6]"
-                >
-                    <h3 class="text-[#2E312F] text-center md:text-xl lg:text-2xl">
-                        Regional  & International Parliamentary Leadership</h3>
-                </div>
-                <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer items-end justify-center
-                    rounded-lg bg-[#E6E6E6]"
-                >
-                    <h3 class="text-[#2E312F] text-center md:text-xl lg:text-2xl">
-                        Education</h3>
-                </div>
-                <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer card_bg items-end 
-                    justify-center rounded-lg"
-                >
-                    <h3 class="text-white text-center md:text-xl lg:text-2xl">
-                        Professional Certifications & Executive Programs</h3>
+                    <h3 class="text-center md:text-xl lg:text-2xl">
+                        {{ tab.title }}
+                    </h3>
                 </div>
             </div>
-            <div class="flex overflow-x-scroll gap-6 md:hidden">
-                <div class="min-h-12 items-center flex max-w-fit p-2 min-w-12 relative">
-                    <p class="text-[#022822] font-adamina font-normal text-sm w">
+            <div class="flex overflow-x-scroll gap-2 md:hidden" v-if="tabs">
+                <div class="items-center flex max-w-fit p-2 min-w-max relative"
+                    v-for="(tab, index) in tabs"
+                    :key="index"
+                    :class="{
+                        '': activeTab !== index,
+                        'text-[#022822]': activeTab === index
+                    }"
+                    @click="activeTab = index"
+                >
+                    <p v-if="activeTab === index" class="font-adamina font-normal text-xs">
+                        {{ tab.title }}
+                    </p>
+                    <div class="relative w-8 h-8" v-else>
+                        <NuxtImg :alt="tab.title" :src="tab.icon" class="h-full w-full" />
+                    </div>
+                </div>
+                <!-- <div class="min-h-12 items-center flex max-w-fit p-2 min-w-12 relative">
+                    <p class="text-[#022822] font-adamina font-normal text-sm">
                         Political & Public Service Career
                     </p>
                 </div>
@@ -55,11 +63,13 @@
                     <div class="relative w-8 h-8">
                         <NuxtImg alt="icons" class="h-full w-full" src="/svgs/about/programs.svg" />
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="w-full h-[1px] relative top-[1.7rem] z-[1] bg-[#434242]"></div>
-            <div class="w-full overflow-x-scroll gap-4 flex items-start lg:gap-5" v-if="latest">
-                <div v-for="(item, index) in latest" :key="index"
+            <div class="w-full overflow-x-scroll gap-4 flex items-start lg:gap-5"
+                v-if="activeData.length"
+            >
+                <div v-for="(item, index) in activeData" :key="index"
                     class="shrink-0 z-[2] w-1/3 md:w-40 p-3 gap-4 md:gap-5 relative"
                 >
                     <div class="mx-auto z-[2] w-7 h-7 rounded-full flex items-center justify-center 
@@ -84,7 +94,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </template>
@@ -98,6 +107,30 @@ const props = defineProps({
         type: Array,
     },
 });
+const activeTab = ref(3)
+
+const tabs = ref([
+    {
+        title: 'Political & Public Service Career',
+        icon: '/svgs/about/leadership.svg'
+    },
+    {
+        title: 'Regional & International Parliamentary Leadership',
+        icon: '/svgs/about/leadership.svg'
+    },
+    {
+        title: 'Education',
+        icon: '/svgs/about/education.svg'
+    },
+    {
+        title: 'Professional Certifications & Executive Programs',
+        icon: '/svgs/about/programs.svg'
+    }
+])
+
+const activeData = computed(() => {
+  return props.roadmap[activeTab.value] || [];
+})
 
 const latest = computed(() => props.roadmap);
 </script>
@@ -109,6 +142,9 @@ const latest = computed(() => props.roadmap);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+}
+.card_transparent {
+    background: #E6E6E6;
 }
 
 </style>

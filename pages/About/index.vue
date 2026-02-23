@@ -284,43 +284,123 @@ const quotes = [
   `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
   institutional mastery, policy depth, and transformative service delivery. `,
 ]
-const roadmap = [
-  {
-    title: `Leadership for the 21st Century - Executive Certificate Program`,
-    body: `John F. Kennedy School of Government, Harvard University, USA`,
-    date: `September 2025`
-  },
-  {
-    title: `Certificate in Governance & Development`,
-    body: `Miami Herbert Business School, University of Miami, USA`,
-    date: `2022`
-  },
-  {
-    title: `Certificate in Environmental Crimes`,
-    body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
-    date: `2022`
-  },
-  {
-    title: `Certificate in Migration & Human Rights`,
-    body: `John Cabot University, Rome, Italy`,
-    date: `2022`
-  },
-  {
-    title: `Certificate in Illicit Trade`,
-    body: `University of Groningen, Netherlands`,
-    date: `2022`
-  },
-  {
-    title: `Diploma in International Commercial Arbitration`,
-    body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
-    date: `2014`
-  },
-  {
-    title: `Certificate IV in Property Services (Real Estate)`,
-    body: `Leverage Academy, Sydney, Australia`,
-    date: `2019`
-  },
-]
+const roadmap = ref([
+  [
+
+    {
+      title: `Leadership for the 21st Century - Executive Certificate Program`,
+      body: `John F. Kennedy School of Government, Harvard University, USA`,
+      date: `September 2025`
+    },
+    {
+      title: `Certificate in Governance & Development`,
+      body: `Miami Herbert Business School, University of Miami, USA`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Environmental Crimes`,
+      body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Migration & Human Rights`,
+      body: `John Cabot University, Rome, Italy`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Illicit Trade`,
+      body: `University of Groningen, Netherlands`,
+      date: `2022`
+    },
+    {
+      title: `Diploma in International Commercial Arbitration`,
+      body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
+      date: `2014`
+    },
+    {
+      title: `Certificate IV in Property Services (Real Estate)`,
+      body: `Leverage Academy, Sydney, Australia`,
+      date: `2019`
+    },
+  ],
+  [
+    {
+      title: `Leadership for the 21st Century - Executive Certificate Program`,
+      body: `John F. Kennedy School of Government, Harvard University, USA`,
+      date: `September 2025`
+    },
+    {
+      title: `Certificate in Governance & Development`,
+      body: `Miami Herbert Business School, University of Miami, USA`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Environmental Crimes`,
+      body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Migration & Human Rights`,
+      body: `John Cabot University, Rome, Italy`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Illicit Trade`,
+      body: `University of Groningen, Netherlands`,
+      date: `2022`
+    },
+  ],
+  [
+    {
+      title: `Certificate in Migration & Human Rights`,
+      body: `John Cabot University, Rome, Italy`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Illicit Trade`,
+      body: `University of Groningen, Netherlands`,
+      date: `2022`
+    },
+    {
+      title: `Diploma in International Commercial Arbitration`,
+      body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
+      date: `2014`
+    },
+    {
+      title: `Certificate IV in Property Services (Real Estate)`,
+      body: `Leverage Academy, Sydney, Australia`,
+      date: `2019`
+    },
+  ],
+  [
+
+    {
+      title: `Leadership for the 21st Century - Executive Certificate Program`,
+      body: `John F. Kennedy School of Government, Harvard University, USA`,
+      date: `September 2025`
+    },
+    {
+      title: `Certificate in Governance & Development`,
+      body: `Miami Herbert Business School, University of Miami, USA`,
+      date: `2022`
+    },
+    {
+      title: `Certificate in Illicit Trade`,
+      body: `University of Groningen, Netherlands`,
+      date: `2022`
+    },
+    {
+      title: `Diploma in International Commercial Arbitration`,
+      body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
+      date: `2014`
+    },
+    {
+      title: `Certificate IV in Property Services (Real Estate)`,
+      body: `Leverage Academy, Sydney, Australia`,
+      date: `2019`
+    },
+  ],
+])
 
 const csr = `
  <p class="text-lg">
