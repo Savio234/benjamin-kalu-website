@@ -1,5 +1,7 @@
 <template>
-  <div class="w-4/5 md:w-full flex flex-col bg-white border shrink-0 border-borderMuted rounded-xl">
+  <div class="card w-4/5 md:w-full md:h-[31.25rem] flex flex-col bg-white border border-borderMuted 
+    rounded-xl relative"
+  >
     <div class="image w-full h-[17rem] relative">
       <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
     </div>
@@ -44,6 +46,15 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.card {
+  position: relative;
+  flex-shrink: 0;
+  transition: all 300ms ease-in-out;
+}
+.card:hover {
+  // transform: translateY(-2rem);
+  transform: scale(1.15);
+}
 .image {
   &::after {
     content: '';

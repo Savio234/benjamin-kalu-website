@@ -22,7 +22,7 @@
     <section class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto mt-2 md:mt-6 lg:mt-12 w-[90%] flex flex-col gap-8">
         <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 
-          md:gap-8"
+          md:gap-8 overflow-y-hidden"
         >
           <CardLegistlative
             v-for="(item, index) in legistlativeItems"
@@ -62,26 +62,7 @@
           </p>
         </div>
         <div class="w-[80vw] flex justify-between gap-6 overflow-x-auto">
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png"
-            class="w-48 h-24 object-cover flex-shrink-0"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png"
-            class="w-48 h-24 object-cover flex-shrink-0"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png"
-            class="w-48 h-24 object-cover flex-shrink-0"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png"
-            class="w-48 h-24 object-cover flex-shrink-0"
-          />
-          <NuxtImg
-            src="https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png"
-            class="w-48 h-24 object-cover flex-shrink-0"
-          />
+          <SectionsCarousel :items="partnersLogos" direction="left" speed="fast" />
         </div>
       </div>
     </section>
@@ -128,9 +109,17 @@ const legistlativeItems = ref([
     description: `Beyond the legislative chambers, Kalu launched the Peace in the South East Project 
       (PISE-P) in an effort to restore the region to its once illustrious past and  illuminating 
       glory...`,
-    route: '/legislative/review',
+    route: '/pise-p',
   },
 ]);
+
+const partnersLogos = [
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png',
+]
 
 const newsData = [
   {
@@ -139,11 +128,12 @@ const newsData = [
       title: 'NELFUN: Kalu Assures Inclusion Of Southeast Students In FG Loan Scheme',
       description: 'In a statement issued on Monday by Levinus Nwabughiogu, Chief Press Secretary to...',
       date: '2026-01-21',
-      image_url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+      image_url: '/images/home/peace_fund.png',
       main_image: {
         data: {
           attributes: {
-            url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
+            url: '/images/home/peace_fund.png',
+            // url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
           },
         },
       },
