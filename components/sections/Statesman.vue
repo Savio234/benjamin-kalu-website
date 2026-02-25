@@ -9,7 +9,7 @@
         v-if="images"
        >
         <div v-for="(item, index) in images" :key="index"
-          class="relative shrink-0 w-[92%] h-[30rem] md:h-[34rem]"
+          class="relative shrink-0 w-[91%] h-[30rem] md:h-[34rem]"
         >
           <NuxtImg alt="slider_image" :src="item" class="h-full w-full object-cover" />
         </div>
