@@ -25,7 +25,7 @@
     </section>
     <SectionsHomeAbout />
     <SectionsStatesman id="statesman" />
-    <section ref="sectionRef" class="legistlative py-16 bg-light w-full">
+    <section :ref=sectionRef class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto mt-2 md:mt-6 lg:mt-12 w-[90%] flex flex-col gap-8">
         <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 
           md:gap-8 overflow-y-hidden"
@@ -38,8 +38,8 @@
             :image="item.image_url"
             :route="item.route"
             :index="index"
-            :scroll-progress="scrollYProgress"
-          />
+            />
+            <!-- :scroll-progress="scrollYProgress" -->
         </div>
       </div>
     </section>
@@ -88,12 +88,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useScroll } from 'framer-motion'
+// import { useScroll } from 'framer-motion'
 const sectionRef = ref<HTMLElement | null>(null)
-const { scrollYProgress } = useScroll({
-  target: sectionRef,
-  offset: ['start end', 'end 90%']
-})
+// const { scrollYProgress } = useScroll({
+//   target: sectionRef,
+//   offset: ['start end', 'end 90%']
+// })
 const legistlativeItems = ref([
   {
     image_url: '/images/home/bills_and_motions.png',
