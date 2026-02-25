@@ -3,19 +3,9 @@
         :class="[`direction-${direction}`, `speed-${speed}`]"
         :data-animated="shouldAnimate"
     >
-        <ul class="scroller__inner" ref="innerRef">
-            <li
-                v-for="(item, idx) in items"
-                :key="idx"
-                class="tag relative w-48 h-24"
-                :data-index="idx"
-            >
-                <NuxtImg :src="item" alt="Partner logo"
-                    loading="lazy"
-                    class="w-full h-full object-cover flex-shrink-0"
-                />
-            </li>
-        </ul>
+        <div class="scroller__inner" ref="innerRef">
+            <slot />
+        </div>
     </div>
 </template>
 
@@ -103,14 +93,6 @@ onMounted(() => {
         gap: 0.75rem;
     }
 }
-
-.tag {
-    position: relative;
-}
-
-// .scroller:hover .scroller__inner {
-//   animation-play-state: paused;
-// }
 
 @keyframes scroll {
     to {

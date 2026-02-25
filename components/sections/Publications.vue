@@ -1,5 +1,8 @@
 <template>
-    <div class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6" v-if="latest">
+    <Slider :items="latest" speed="normal" direction="right"
+        class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6"
+        v-if="latest"
+    >
         <div v-for="(item, index) in latest" :key="index" 
             class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[20rem] lg:w-[24rem] 
             cursor-pointer h-[22.5rem] md:h-[30rem] lg:h-[36.5rem]"
@@ -17,12 +20,13 @@
                 </button>
             </div>
         </div>
-    </div>
+    </Slider>
 </template>
 
 <script setup>
 import { computed } from 'vue';
 import { defineProps } from 'vue';
+import Slider from './Slider.vue';
 
 const props = defineProps({
     publications: {

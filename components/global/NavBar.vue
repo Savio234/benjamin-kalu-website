@@ -77,7 +77,7 @@
         <NuxtLink to="/" class="text-white py-3 px-4 rounded-full" @click="closeMobileNav">
           Home
         </NuxtLink>
-        <NuxtLink class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">
+        <NuxtLink to="/about" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">
           About
         </NuxtLink>
 

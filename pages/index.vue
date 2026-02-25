@@ -1,17 +1,23 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero w-full h-auto sm:h-[85dvh] bg-black flex justify-center">
+    <section class="hero w-full h-[75dvh] sm:h-[85dvh] bg-black flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[85%] flex h-full items-center">
-        <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
-          <p class="text-white font-adamina text-2xl sm:text-3xl font-normal md:text-4xl lg:text-5xl">
+        <div class="text-box relative top-[30%] sm:top-[20%] lg:top-[15%] w-full lg:w-10/12 
+          flex flex-col text-white gap-2"
+        >
+          <p class="text-white font-adamina text-2xl sm:text-3xl sm:leading-10 font-normal 
+            md:text-4xl md:leading-[2.875rem] lg:text-5xl lg:leading-[4rem]"
+          >
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
             Ph.D., LLD., CFR, <br />
           </p>
-          <h1 class="font-bold font-montserrat text-sm md:text-base">
+          <h1 class="font-bold leading-normal font-montserrat text-sm md:text-base">
             A NIGERIAN STATESMAN
           </h1>
-          <p class="text-white font-montserrat text-sm md:text-base font-medium">
+          <p class="text-white leading-normal font-montserrat text-sm md:text-base 
+            font-medium"
+          >
             Bridging National Progress with Integrity and <br /> National Leadership
           </p>
         </div>
@@ -19,7 +25,7 @@
     </section>
     <SectionsHomeAbout />
     <SectionsStatesman id="statesman" />
-    <section class="legistlative py-16 bg-light w-full">
+    <section ref="sectionRef" class="legistlative py-16 bg-light w-full">
       <div class="content mx-auto mt-2 md:mt-6 lg:mt-12 w-[90%] flex flex-col gap-8">
         <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 
           md:gap-8 overflow-y-hidden"
@@ -31,13 +37,14 @@
             :description="item.description"
             :image="item.image_url"
             :route="item.route"
+            :index="index"
+            :scroll-progress="scrollYProgress"
           />
         </div>
       </div>
     </section>
     <SectionsStats />
-  
-    <!-- <SectionsFeaturedProject /> -->
+
     <SectionsLatestNews :news-data="newsData" />
     <section class="update py-12 flex items-center my-8 md:my-16 justify-center md:py-24 bg-light">
       <div class="mx-auto">
@@ -80,6 +87,13 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useScroll } from 'framer-motion'
+const sectionRef = ref<HTMLElement | null>(null)
+const { scrollYProgress } = useScroll({
+  target: sectionRef,
+  offset: ['start end', 'end 90%']
+})
 const legistlativeItems = ref([
   {
     image_url: '/images/home/bills_and_motions.png',
@@ -230,7 +244,10 @@ const images = ref([
 }
 .update {
   background-image: url('../public/images/home/tile.png');
-  background-color: #022924;
+  // background-color: #022924;
+  // opacity: 0.8;
+  background-color: rgba(2, 41, 36, 0.75);
+  // background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;

@@ -20,7 +20,7 @@
         also engaging regional and international partners on governance, democracy, and 
         institutional strengthening.
       </p>
-      <MainButton @click="$router.push('/about')">Learn More</MainButton>
+      <MainButton class="content_btn" @click="$router.push('/about')">Learn More</MainButton>
       <div class="w-full hidden h-auto">
         <!-- <NuxtImg
           class="w-full h-full object-cover rounded-xl"
@@ -56,3 +56,9 @@
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+// .content_btn {
+
+// }
+</style>

@@ -6,13 +6,12 @@
       >
         News
       </h1>
-      <div class="flex w-full gap-3 md:gap-6 overflow-x-scroll">
-        <div
-          v-for="(item, index) in latest"
-          :key="index"
+      <Slider :items="latest" speed="normal" direction="left"
+        class="flex w-full gap-3 md:gap-6 overflow-x-scroll">
+        <div v-for="(item, index) in latest" :key="index"
           class="news-card bg-white relative shrink-0 rounded-xl border border-borderMuted
-          overflow-hidden w-4/5 md:w-[20rem] lg:w-[25rem] cursor-pointer min-h-80 md:min-h-[22.75rem] 
-          lg:min-h-[24.75rem]"
+          overflow-hidden w-1/3 md:w-[20rem] lg:w-[25rem] cursor-pointer min-h-80 
+          md:min-h-[22.75rem] lg:min-h-[24.75rem]"
         >
           <div class="z-[2] absolute bottom-0 top-0 left-0">
             <div class="w-full relative h-[24.75rem]">
@@ -23,8 +22,9 @@
               />
             </div>
           </div>
-          <div class="dark-bg px-4 pt-4 md:px-6 md:pt-6 pb:8 md:pb-10 rounded-xl z-[3] w-full h-full 
-            absolute bottom-0 top-0 left-0 flex flex-col"
+          <div class="dark_bg z-[3] w-full h-full absolute bottom-0 top-0 left-0"></div>
+          <div class="dark-bg px-4 pt-4 md:px-6 md:pt-6 pb:8 md:pb-10 rounded-xl z-[3] w-full 
+            h-full absolute bottom-0 top-0 left-0 flex flex-col"
           >
             <p class="font-roboto mb-12 font-medium text-[0.625rem] md:text-xs text-white">
               {{ formatDate(item.attributes.date) }}
@@ -46,11 +46,15 @@
           <div class="card_content px-6 py-8 z-[5] top-[60%] relative flex
             flex-col gap-2"
           >
-            <p class="font-roboto card-date font-medium text-[0.625rem] md:text-xs text-white">
+            <p class="font-roboto card-date font-medium text-[0.625rem] md:text-xs 
+              text-white"
+            >
               {{ formatDate(item.attributes.date)}}
             </p>
 
-            <h3 class="font-normal hidden card-title text-sm md:text-base text-white font-adamina">
+            <h3 class="font-normal hidden card-title text-sm md:text-base text-white 
+              font-adamina"
+            >
               {{ item.attributes.title }}
             </h3>
 
@@ -59,7 +63,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </Slider>
     </div>
     <div class="flex flex-col items-center justify-center" v-else>
       <iframe
@@ -75,6 +79,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { defineProps } from 'vue';
+import Slider from './Slider.vue';
 
 const props = defineProps({
   newsData: {
@@ -313,6 +318,10 @@ function formatDate(date) {
     translate: 0% 200%;
     transition: all 500ms ease-out;
   }
+  .dark_bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 500ms ease-out;
+  }
   .card-date, .card-title {
     transition: all 500ms ease-out;
     opacity: 1;
@@ -323,6 +332,11 @@ function formatDate(date) {
       transition: all 500ms ease-out;
       translate: 0% 0%;
       opacity: 1;
+    }
+    .dark_bg {
+      translate: 0% 200%;
+      opacity: 0;
+      transition: all 500ms ease-out;
     }
     .card-date, .card-title, .card-desc {
       opacity: 0;

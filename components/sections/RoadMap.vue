@@ -13,7 +13,7 @@
                 v-if="tabs"
             >
                 <div class="flex h-[14rem] lg:h-[19rem] py-5 px-2.5 cursor-pointer items-end 
-                    justify-center rounded-lg card_transparent]"
+                    justify-center rounded-lg"
                     :class="{
                         'card_bg text-white': activeTab === index,
                         'card_transparent text-[#2E312F]': activeTab !== index
@@ -22,12 +22,12 @@
                     :key="index"
                     @click="activeTab = index"
                 >
-                    <h3 class="text-center md:text-xl lg:text-2xl">
+                    <h3 class="text-center md:text-base lg:text-2xl">
                         {{ tab.title }}
                     </h3>
                 </div>
             </div>
-            <div class="flex overflow-x-scroll gap-2 md:hidden" v-if="tabs">
+            <div class="flex icons overflow-x-scroll gap-2 md:hidden" v-if="tabs">
                 <div class="items-center flex max-w-fit p-2 min-w-max relative"
                     v-for="(tab, index) in tabs"
                     :key="index"
@@ -44,46 +44,26 @@
                         <NuxtImg :alt="tab.title" :src="tab.icon" class="h-full w-full" />
                     </div>
                 </div>
-                <!-- <div class="min-h-12 items-center flex max-w-fit p-2 min-w-12 relative">
-                    <p class="text-[#022822] font-adamina font-normal text-sm">
-                        Political & Public Service Career
-                    </p>
-                </div>
-                <div class="min-h-12 items-center flex max-w-fit p-2 min-w-12 relative">
-                    <div class="relative w-8 h-8">
-                        <NuxtImg alt="icons" class="h-full w-full" src="/svgs/about/leadership.svg" />
-                    </div>
-                </div>
-                <div class="min-h-12 items-center flex p-2 max-w-fit min-w-12 relative">
-                    <div class="relative w-8 h-8">
-                        <NuxtImg alt="icons" class="h-full w-full" src="/svgs/about/education.svg" />
-                    </div>
-                </div>
-                <div class="min-h-12 items-center flex p-2 max-w-fit min-w-12 relative">
-                    <div class="relative w-8 h-8">
-                        <NuxtImg alt="icons" class="h-full w-full" src="/svgs/about/programs.svg" />
-                    </div>
-                </div> -->
             </div>
             <div class="w-full h-[1px] relative top-[1.7rem] z-[1] bg-[#434242]"></div>
-            <div class="w-full overflow-x-scroll gap-4 flex items-start lg:gap-5"
+            <div class="w-full data overflow-x-scroll gap-4 flex items-start lg:gap-5"
                 v-if="activeData.length"
             >
                 <div v-for="(item, index) in activeData" :key="index"
-                    class="shrink-0 z-[2] w-1/3 md:w-40 p-3 gap-4 md:gap-5 relative"
+                    class="shrink-0 z-[2] w-1/3 md:w-[16rem] lg:w-80 p-3 gap-4 md:gap-5 relative"
                 >
                     <div class="mx-auto z-[2] w-7 h-7 rounded-full flex items-center justify-center 
                         bg-[#00786766]"
                     >
                         <div class="w-4 h-4 bg-[#007867] rounded-full"></div>
                     </div>
-                    <div class="my-4 md:my-7 lg:my-10 mx-auto">
-                        <h3 class="text-center text-sm md:text-base text-[#022924]">
+                    <div class="my-4 md:my-6 lg:my-8 mx-auto">
+                        <h3 class="text-center md:w-3/4 md:mx-auto text-sm md:text-base text-[#022924]">
                             {{ item.title }}
                         </h3>
                     </div>
                     <div class="mx-auto">
-                        <p class="text-xs text-center text-[#022924] font-inter font-normal md:text-sm">
+                        <p class="text-xs md:w-3/4 md:mx-auto text-center text-[#022924] font-inter font-normal md:text-sm">
                             {{ item.body }}
                         </p>
                     </div>
@@ -145,6 +125,15 @@ const latest = computed(() => props.roadmap);
 }
 .card_transparent {
     background: #E6E6E6;
+}
+.icons, .data {
+    &::-webkit-scrollbar {
+		display: none;
+	}
+	& {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 }
 
 </style>

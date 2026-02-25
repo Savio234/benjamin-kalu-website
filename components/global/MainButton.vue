@@ -1,7 +1,7 @@
 <template>
-  <button class="w-fit h-fit rounded-full">
-    <div class="content bg-[#146634] max-h-14 rounded-full py-2 px-3 lg:py-4 lg:px-6 text-white 
-      text-base flex items-center gap-2"
+  <button class="w-fit btn h-fit rounded-full">
+    <div class="content bg-[#146634] max-h-14 rounded-full py-2 px-3 md:px-6 lg:py-4 
+      lg:px-8 text-white text-base flex items-center gap-2"
     >
       <svg-icon :name="$props.preIcon" width="1.25rem" height="1.25rem" v-if="$props.preIcon" />
       <slot />
@@ -23,4 +23,9 @@ defineProps({
 });
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.content:hover {
+  background: #15B653;
+  transition: all 300ms ease-in-out;
+}
+</style>

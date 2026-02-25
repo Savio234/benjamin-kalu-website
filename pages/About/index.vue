@@ -29,27 +29,32 @@
         </Swiper>
       </div>
     </section> -->
-    <section class="about_hero w-full h-auto sm:h-[85dvh] flex justify-center">
+    <section class="about_hero w-full h-[75dvh] sm:h-[85dvh] flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[90%] flex h-full items-center">
-        <div class="text-box w-full lg:w-10/12 flex flex-col text-white gap-2">
-          <p class="text-white font-adamina text-2xl sm:text-3xl font-normal md:text-4xl lg:text-5xl">
+        <div class="text-box relative top-[30%] sm:top-[20%] lg:top-[15%] w-full lg:w-10/12 
+          flex flex-col text-white gap-2"
+        >
+          <p class="text-white font-adamina leading-tight text-2xl sm:text-3xl font-normal 
+            md:text-4xl lg:text-5xl sm:leading-normal"
+          >
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
             Ph.D., LLD., CFR, <br />
           </p>
-          <h1 class="font-bold font-montserrat text-sm md:text-base">
+          <h1 class="font-bold font-montserrat leading-normal text-sm md:text-base">
             A NIGERIAN STATESMAN
           </h1>
-          <p class="text-white font-montserrat text-sm md:text-base font-medium">
+          <p class="text-white font-montserrat leading-normal text-sm md:text-base 
+            font-medium"
+          >
             Bridging National Progress with Integrity and <br /> National Leadership
           </p>
         </div>
       </div>
     </section>
-    <!-- <SectionsAboutQuotes :quotes="quotes" /> -->
-    <div class="py-8 md:py-12 lg:py-16 bg-white"></div>
-    <section class="w-full flex items-center justify-center md:h-[28rem] lg:h-[34rem] bg-[#146634]">
-      <div class="max-w-[85%] md:max-w-4/5 pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-7 lg:max-w-[70%] 
+    <SectionsAboutQuotes :quotes="quotes" />
+    <section class="w-full flex items-center justify-center md:h-[30rem] lg:h-[35rem] bg-[#146634]">
+      <div class="w-[87%] md:w-[55%] pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-7 lg:w-[42%] 
         lg:pt-[5.35rem] lg:pb-9"
       >
         <div class="relative h-24 w-24 mx-auto md:h-28 md:w-28 lg:w-[8.25rem] lg:h-[8.25rem]">
@@ -58,7 +63,9 @@
           />
         </div>
         <div class="mx-auto mt-5 md:mt-7 lg:mt-9">
-          <p class="text-center text-white text-sm md:text-base lg:text-xl font-normal font-adamina">
+          <p class="text-center text-white leading-6 text-sm lg:text-base font-normal
+            lg:leading-[1.625rem] font-adamina"
+          >
             Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose 
             leadership blends institutional mastery, policy depth, and transformative 
             service delivery. He currently serves as the Deputy Speaker of the 10th House of 
@@ -71,36 +78,36 @@
     </section>
     <SectionsAboutLeadership />
     
-    <section class="bg-[#022822]  w-full">
+    <section class="bg-[#022822] w-full">
       <div class="w-[92.5%] grid grid-cols-1 gap-8 md:gap-14 lg:gap-[5.625rem] items-center 
         md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] mx-auto"
       >
         <div class="order-2 pl-2 md:pl-0 md:order-1">
-          <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-2xl md:text-[2rem] md:leading-10 
-            text-[#FBEF92]"
+          <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-[1.4rem] 
+            md:text-[2rem] md:leading-10 text-[#FBEF92]"
           >
-            A STATESMAN WITH A FORWARD-THINKING OUTLOOK
+            A STATESMAN WITH A <br /> FORWARD-THINKING OUTLOOK
           </h3>
-          <p class="text-sm text-white md:text-lg lg:text-xl">
+          <p class="text-sm text-white md:text-base">
             At his core, Rt. Hon. Benjamin Okezie Kalu is driven by vision; a vision that honors 
             Nigeria’s heritage while propelling it toward resilient governance, inclusive opportunity, 
             and democratic excellence. His leadership is defined by:<br />
             <ul class="mt-2 list-disc pl-6 md:pl-8">
-              <li class="text-sm text-white md:text-lg lg:text-xl">
+              <li class="text-sm text-white md:text-base">
                 Clarity of purpose
               </li>
-              <li class="text-sm text-white md:text-lg lg:text-xl">
+              <li class="text-sm text-white md:text-base">
                 Depth of engagement
               </li>
-              <li class="text-sm text-white md:text-lg lg:text-xl">
+              <li class="text-sm text-white md:text-base">
                 Commitment to impact
               </li>
-              <li class="text-sm text-white md:text-lg lg:text-xl">
+              <li class="text-sm text-white md:text-base">
                 Stewardship rooted in integrity
               </li>
             </ul>
           </p>
-          <p class="text-sm text-white md:text-lg lg:text-xl">
+          <p class="text-sm mt-6 text-white md:text-base">
             He leads not just with authority, but with accountability, ensuring that every policy, 
             partnership, and initiative reflects the trust placed in his office.
           </p>
@@ -119,42 +126,42 @@
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <div class="flex items-start overflow-x-scroll md:overflow-x-hidden md:grid md:grid-cols-2
-          lg:grid-cols-4 gap-4 text-left"
+        <Slider :items="[]" speed="normal" direction="left" 
+          class="mt-4 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"
         >
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/legislative_contributions.png"
             title="Award for Outstanding Legislative Contribution towards Improved TB policy and Funding"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/excellence_on_civic_engagement.png"
             title="Zik’s Award of Excellence on Civic Engagement"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/independent_newspapers.png"
             title="Independent Newspapers’ South East and Abia State Federal Lawmaker of the year Award"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/abia_most_outstanding_federal_legislator.png"
             title="Abia State Most Outstanding Federal Legislator"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/democracy_heroes.png"
             title="Democracy Heroes Award Africa As The Most Outstanding Rep. Member of the Year"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/top_performer_in_bill_sponsorship.png"
             title="Nomination as Top Performer in Bills Sponsorship on MVP Hall of Fame"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/flo_icons_awards.png"
             title="Flo Icons Award for the Most Impactful Lawmaker of the Year"
           />
-          <CardAward
+          <CardAward class="w-1/5 md:w-1/4"
             image-url="/images/awards_and_recognition/nuj_model_of_media.png"
             title="National Union of Journalists ‘Model of Media and Public Relation Matters’ Award"
           />
-        </div>
+        </Slider>
       </div>
     </section>
     <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
@@ -181,6 +188,7 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import Slider from '~/components/sections/Slider.vue';
 
 const legislativeContributions = `
       <p class="text-lg">

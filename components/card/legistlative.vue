@@ -1,6 +1,7 @@
 <template>
-  <div class="card w-4/5 md:w-full md:h-[31.25rem] flex flex-col bg-white border border-borderMuted 
+  <motion.div class="card w-4/5 md:w-full md:h-[31.25rem] flex flex-col bg-white border border-borderMuted 
     rounded-xl relative"
+    :style="{ y: cardY, opacity: cardOpacity }"
   >
     <div class="image w-full h-[17rem] relative">
       <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
@@ -17,11 +18,22 @@
         {{ $props.description.slice(0, 103)}}...
       </p>
     </div>
-  </div>
+  </motion.div>
 </template>
 
 <script lang="ts" setup>
-defineProps({
+import { computed } from 'vue'
+import { MotionValue } from 'motion'
+import { motion, useSpring, useTransform } from 'framer-motion'
+const props = defineProps({
+  index: {
+    type: Number,
+    required: true,
+  },
+  scrollProgress: {
+    type: MotionValue<number>,
+    required: true,
+  },
   title: {
     type: String,
     required: false,
@@ -43,6 +55,26 @@ defineProps({
     required: false,
   },
 });
+const start = computed(() => props.index * 0.12);
+const end = computed(() => start.value + 0.25);
+const rawY = useTransform(props.scrollProgress, [start.value, end.value], [250, 0]);
+const rawOpacity = useTransform(props.scrollProgress, [start.value, end.value], [0.3, 1]);
+const y = useSpring(rawY, {
+  stiffness: 100,
+  damping: 20,
+  mass: 0.5
+});
+const cardY = useSpring(rawY, {
+  stiffness: 100,
+  damping: 20,
+  mass: 0.5
+});
+
+const cardOpacity = useSpring(rawOpacity, { 
+  stiffness: 100,
+  damping: 20,
+  mass: 0.5
+});
 </script>
 
 <style lang="scss" scoped>
@@ -55,14 +87,15 @@ defineProps({
   // transform: translateY(-2rem);
   transform: scale(1.15);
 }
-.image {
-  &::after {
-    content: '';
-    width: 100%;
-    height: 40%;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 74.19%);
-  }
-}
+// .image {
+//   &::after {
+//     content: '';
+//     display: none;
+//     width: 100%;
+//     height: 40%;
+//     bottom: 0;
+//     position: absolute;
+//     background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 74.19%);
+//   }
+// }
 </style>

@@ -1,12 +1,13 @@
 <template>
-    <div class="mt-8 grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-4 
-        lg:gap-6" v-if="latest"
+    <Slider :items="latest" speed="normal" direction="left" 
+        class="mt-8 overflow-x-scroll flex w-full items-start gap-4 md:gap-6" 
+        v-if="latest"
     >
         <div v-for="(item, index) in latest" :key="index"
-            class="media-card shrink-0 overflow-hidden w-full
-            cursor-pointer h-full md:h-52 lg:h-56"
+            class="media-card shrink-0 overflow-hidden w-1/3 md:w-[20rem] lg:w-[24rem]
+            cursor-pointer relative h-full md:h-52 lg:h-56"
         >
-            <div class="z-[2] hidden md:block absolute bottom-0 top-0 left-0">
+            <div class="z-[2] hidden md:block absolute right-0 bottom-0 top-0 left-0">
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                     :src="item.video_thumbail"
                 />
@@ -71,12 +72,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </Slider>
 </template>
 
 <script setup>
 import { computed } from 'vue';
 import { defineProps } from 'vue';
+import Slider from './Slider.vue';
 
 const props = defineProps({
     media: {
