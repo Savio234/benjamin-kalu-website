@@ -126,7 +126,7 @@
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <Slider :items="[]" speed="normal" direction="left" 
+        <Slider :items="quotes" speed="normal" direction="left"
           class="mt-4 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"
         >
           <CardAward class="w-1/5 md:w-1/4"

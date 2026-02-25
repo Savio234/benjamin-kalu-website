@@ -13,9 +13,9 @@
 import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps<{
-    items: string[];
+    items?: string[];
     direction?: 'left' | 'right';
-    speed?: 'normal' | 'fast' | 'slow';
+    speed?: 'normal' | 'fast' | 'slow' | 'very_fast';
 }>()
 
 const defaultDirection = 'left'
@@ -67,10 +67,14 @@ onMounted(() => {
         --_animation-direction: forwards;
     }
 
+    &.speed-very_fast {
+        --_animation-duration: 10s;
+    }
+
     &.speed-fast {
         --_animation-duration: 20s;
     }
-
+    
     &.speed-slow {
         --_animation-duration: 70s;
     }
