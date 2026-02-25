@@ -235,7 +235,7 @@ const images = ref([
   url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png'); -->
 <style lang="scss" scoped>
 .hero {
-  background-image: url('../public/images/home/bk_hero.svg');
+  background-image: url('../public/images/home/home_hero.jpeg');
   background-color: #00000069;
   background-blend-mode: overlay;
   background-size: cover;
