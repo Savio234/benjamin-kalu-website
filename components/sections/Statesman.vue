@@ -3,7 +3,7 @@
     flex flex-col justify-center overflow-hidden"
   >
     <div class="w-[90vw] mx-auto flex justify-between gap-6 overflow-x-auto">
-      <BigSlider :direction="left" :speed="slow"
+      <BigSlider direction="right" speed="slow"
         class="mt-4 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"
         v-if="images"
        >
