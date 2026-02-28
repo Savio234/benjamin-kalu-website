@@ -9,8 +9,11 @@
         <button class="text-4xl text-[#146634]">{{ openIndex === index ? '−' : '+' }}</button>
       </div>
       <div v-if="openIndex === index" class="accordion-content px-4 pb-6">
-        <div class="w-full flex items-start overflow-x-scroll gap-4 md:gap-4">
-          <div class="my-2 shrink-0 w-3/4 md:w-[16rem] lg:w-[14.5rem] text-black text-lg" v-for="(detail, i) in item.details" 
+        <Slider :items="item.details" speed="normal" direction="left"
+          class="w-full flex items-start overflow-x-scroll gap-4 md:gap-4"
+        >
+          <div class="my-2 shrink-0 w-3/4 md:w-[16rem] lg:w-[14.5rem] text-black text-lg" 
+            v-for="(detail, i) in item.details" 
             :key="i"
           >
             <div class="relative mb-2 md:mb-3 w-full h-[10.75rem] md:h-[12.5rem] 
@@ -24,7 +27,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </Slider>
       </div>
       <div class="w-full h-[1px] bg-[#146634]"></div>
     </div>
@@ -33,6 +36,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Slider from './Slider.vue';
 
 const props = defineProps({
   items: {

@@ -4,8 +4,8 @@
             <h3 class="mb-6 md:mb-8 lg:mb-10">
                 PISE-P - Peace in the South -<br /> East project
             </h3>
-            <div class="w-full flex flex-col-reverse gap-8 md:flex-row md:gap-20 lg:gap-28">
-                <p class="text-justify w-full text-base md:text-2xl font-montserrat font-medium 
+            <div class="w-full flex flex-col-reverse gap-8 lg:flex-row md:gap-20 lg:gap-28">
+                <p class="text-justify w-full text-base md:text-xl font-montserrat font-medium 
                     text-[#585C5B] md:w-1/2"
                 >
                     The Peace in South East Project (PISE-P), an initiative of the Deputy Speaker, is 
@@ -15,7 +15,7 @@
                     decline, and security threats, PISE-P seeks to restore peace and stimulate 
                     development through a multi-stakeholder approach.
                 </p>
-                <div class="relative shrink-0 w-full h-[22.75rem] md:w-[23rem] md:h-[23.25rem] 
+                <div class="relative shrink-0 w-full h-[22.75rem] md:w-1/2 md:mx-auto md:h-[23.25rem] 
                     lg:w-[24rem] lg:h-[25.25rem] md:-mt-6 lg:-mt-12"
                 >
                     <NuxtImg alt="pipe-p-logo" src="/svgs/pisep/pise_p_logo.svg"
@@ -89,9 +89,6 @@
             <div class="w-full h-[25.5rem] sm:h-[40rem] md:h-[60rem] lg:h-[79rem] relative">
                 <NuxtImg alt="image" src="/images/pisep/PISEP.png" class="object-cover w-full h-full" />
             </div>
-            <div class="bg-white top-[21%] sm:left-[11rem] lg:left-80 xl:left-[30rem] 
-                absolute w-96 h-16 xl:w-[26rem]"
-            ></div>
             <div class="mx-auto w-full">
                 <p class="text-center font-montserrat mb-4 text-sm text-[#585C5B] md:text-base 
                     lg:text-lg"

@@ -9,13 +9,23 @@
         <SectionsPublications :publications="publications" />
       </div>
     </section>
+    <section class="w-full pb-8 md:pb-12 lg:pb-16 bg-white">
+      <div class="w-[92.5%] mx-auto md:w-[90%]">
+        <h1 class="text-left text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+          Media
+        </h1>
+        <SectionsAboutMedia :media="media" />
+      </div>
+    </section>
     <section class="updates w-full py-16 bg-black text-white">
       <div class="content flex flex-col mx-auto gap-8 ml-[7.5%]">
         <div class="header flex flex-col gap-1 text-white">
-          <h2 class="font-montserrat">Weekly <span class="text-secondaryGreen">updates</span></h2>
+          <h2 class="font-montserrat">Weekly <span class="text-secondaryGreen">Updates</span></h2>
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>
-        <div class="scroller w-full my-8 flex gap-8 overflow-x-auto">
+        <Slider speed="fast" direction="right"
+          class="scroller w-full my-8 flex gap-8 overflow-x-auto"
+        >
           <img
             src="/images/weekly_review/weekly_review_23_march.webp"
             alt="weekly review"
@@ -36,7 +46,7 @@
             alt="weekly review"
             class="w-full md:w-1/3 object-contain flex-shrink-0"
           />
-        </div>
+        </Slider>
       </div>
     </section>
     <section class="py-8 w-[90%] md:w-[92.5%] mx-auto md:py-12 lg:py-20 bg-light">
@@ -74,6 +84,8 @@
 </template>
 
 <script lang="ts" setup>
+import Slider from '~/components/sections/Slider.vue';
+
 const newsItems = [
   {
     id: 1,

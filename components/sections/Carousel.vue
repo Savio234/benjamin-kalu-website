@@ -7,7 +7,7 @@
             <li
                 v-for="(item, idx) in items"
                 :key="idx"
-                class="tag relative w-48 h-24"
+                class="tag relative w-52 h-24"
                 :data-index="idx"
             >
                 <NuxtImg :src="item" alt="Partner logo"

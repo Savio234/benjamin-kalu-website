@@ -103,7 +103,9 @@
       >
         What Constituents are Saying<br /> About <br /> Rt. Hon. Benjamin Kalu
       </h1>
-      <div class="w-full mt-8 md:mt-12 lg:mt-16 overflow-x-scroll items-start flex gap-4 md:gap-6 lg:gap-10" 
+      <Slider :items="quotes" speed="normal" direction="right"
+        class="w-full mt-8 md:mt-12 lg:mt-16 overflow-x-scroll items-start flex gap-4 
+        md:gap-6 lg:gap-10" 
         v-if="quotes"
       >
         <div class="w-4/5 shrink-0 bg-[#E0E0E0] px-5 py-7 md:w-1/3 lg:w-[29rem] 
@@ -124,7 +126,7 @@
             {{ item.name }}
           </h3>
         </div>
-      </div>
+      </Slider>
     </section>
     <!-- <section class="mx-auto w-[85%]">
       <NuxtImg
@@ -144,6 +146,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Slider from '~/components/sections/Slider.vue';
 const loading = ref(false);
 
 const tenthAssemblyProjects = [

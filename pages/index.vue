@@ -30,8 +30,7 @@
         <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 
           md:gap-8 overflow-y-hidden"
         >
-          <CardLegistlative
-            v-for="(item, index) in legistlativeItems"
+          <CardLegistlative v-for="(item, index) in legistlativeItems"
             :key="index"
             :title="item.title"
             :description="item.description"
@@ -40,6 +39,7 @@
             :index="index"
             />
             <!-- :scroll-progress="scrollYProgress" -->
+            <!-- ref="containerRef" -->
         </div>
       </div>
     </section>
@@ -89,9 +89,9 @@
 <script setup>
 import { ref } from 'vue'
 // import { useScroll } from 'framer-motion'
-// const sectionRef = ref<HTMLElement | null>(null);
+// const containerRef = ref<any>(null);
 // const { scrollYProgress } = useScroll({
-//   target: sectionRef,
+//   target: containerRef,
 //   offset: ['start end', 'end 90%']
 // })
 const legistlativeItems = ref([
