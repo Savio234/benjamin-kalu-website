@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="py-12 w-full bg-[#FAFFFA]" v-if="bill">
+    <section class="py-12 w-full bg-[#FAFFFA]">
       <div class="content flex flex-col gap-8 mx-auto w-[85%]">
         <button
           @click="$router.push('/bills')"
@@ -61,7 +61,7 @@
         </div>
       </div>
     </section>
-    <div class="flex flex-col items-center justify-center mb-12" v-else>
+    <div class="flex flex-col items-center justify-center mb-12">
       <iframe
         src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
         height="200px"

@@ -1,6 +1,7 @@
 <template>
-    <Slider :items="latest" speed="normal" direction="right"
-        class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6"
+    <!-- <Slider :items="latest" speed="normal" direction="right" -->
+        <!-- class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6" -->
+    <ManualSlider
         v-if="latest"
     >
         <div v-for="(item, index) in latest" :key="index"
@@ -20,13 +21,14 @@
                 </button>
             </div>
         </div>
-    </Slider>
+    </ManualSlider>
 </template>
 
 <script setup>
 import { computed } from 'vue';
 import { defineProps } from 'vue';
-import Slider from './Slider.vue';
+// import Slider from './Slider.vue';
+import ManualSlider from './ManualSlider.vue';
 
 const props = defineProps({
     publications: {
@@ -44,7 +46,7 @@ const latest = computed(() => props.publications);
     .dark_overlay {
         background-color: rgba(0, 0, 0, 0.55);
         opacity: 0;
-        translate: 0% 200%;
+        translate: 0% 50%;
         transition: all 500ms ease-out;
     }
     &:hover {

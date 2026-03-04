@@ -46,7 +46,7 @@
             @mouseover="resetActivations"
             @click="resetActivations"
           >
-            News & updates
+            Resources
           </NuxtLink>
         </div>
         <MainButton append-icon="sms" class="hidden lg:block" @click="$router.push('/contact')">
@@ -115,7 +115,7 @@
           PISE-P
         </NuxtLink>
         <NuxtLink to="/news" class="text-white py-2 px-4 rounded-full" @click="closeMobileNav">
-          News & updates
+          Resources
         </NuxtLink>
         
         <!-- <div>

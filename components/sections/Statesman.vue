@@ -1,24 +1,40 @@
 <template>
-  <section class="w-full md:h-[32rem] lg:h-[37rem] py-2 bg-white relative 
+  <section class="w-full py-8 md:py-12 lg:py-20 bg-white relative 
     flex flex-col justify-center overflow-hidden"
   >
     <div class="w-[90vw] mx-auto flex justify-between gap-6 overflow-x-auto">
-      <BigSlider direction="right" speed="slow"
-        class="mt-4 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"
-        v-if="images"
-       >
-        <div v-for="(item, index) in images" :key="index"
-          class="relative shrink-0 w-[91%] h-[30rem] md:h-[34rem]"
+      <Swiper class="w-full h-full"
+        :modules="[SwiperAutoplay, SwiperEffectFade, SwiperPagination]"
+        :slides-per-view="1"
+        :loop="true"
+        :effect="'fade'"
+        :fade-effect="{
+          crossFade: true,
+        }"
+        :autoplay="{
+          delay: 4000,
+          disableOnInteraction: true,
+        }"
+        :pagination="true"
+      >
+        <SwiperSlide class="w-full md:h-[32rem] lg:h-[35rem]"
+          v-for="(image, index) in images" :key="index"
         >
-          <NuxtImg alt="slider_image" :src="item" class="h-full w-full object-cover" />
-        </div>
-      </BigSlider>
+          <!-- <div class="absolute inset-0 bg-black opacity-10"></div> -->
+          <NuxtImg :src="image" class="w-full rounded-2xl h-full object-cover" 
+            format="webp"
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   </section>
 </template>
 
 <script setup>
-import BigSlider from "./BigSlider.vue";
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 
 const images = [
   "/images/home/slider_1.jpeg",

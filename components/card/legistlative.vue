@@ -1,12 +1,13 @@
 <template>
-  <div class="card w-4/5 md:w-full md:h-[31.25rem] flex flex-col bg-white border border-borderMuted 
-    rounded-xl relative"
+  <div class="card w-4/5 md:w-full md:h-[26.25rem] flex flex-col bg-white border 
+    border-borderMuted rounded-xl cursor-pointer overflow-y-hidden relative"
+    @click="$router.push(`${$props.route}`)"
   >
     <!-- :style="{ y: cardY, opacity: cardOpacity }" -->
     <div class="image w-full h-[17rem] relative">
       <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
     </div>
-    <div class="content my-8 mx-auto w-[90%] flex flex-col gap-2">
+    <div class="content my-6 mx-auto w-[90%] flex flex-col gap-2">
       <h5 class="font-semibold font-montserrat">{{ $props.title }}</h5>
       <a
       class="text-primaryGreen text-md font-semibold flex items-center gap-1 cursor-pointer"
@@ -14,8 +15,11 @@
       @click="$router.push(`${$props.route}`)"
       >Learn More <svg-icon name="carat_green_right" width="2rem" height="2rem"
       /></a>
-      <p class="text-gray my-2 hidden md:block text-[16px] leading-[1.2] tracking-[0.4px] font-montserrat">
-        {{ $props.description.slice(0, 103)}}...
+      <p class="text-gray my-2 hidden text-xs md:block md:text-sm leading-[1.2] 
+        tracking-[0.4px] font-montserrat"
+      >
+        <!-- {{ $props.description.slice(0, 103)}}... -->
+        {{ $props.description}}
       </p>
     </div>
   </div>
@@ -83,8 +87,7 @@ const props = defineProps({
   transition: all 300ms ease-in-out;
 }
 .card:hover {
-  // transform: translateY(-2rem);
-  transform: scale(1.15);
+  transform: scale(1.02);
 }
 // .image {
 //   &::after {

@@ -8,7 +8,7 @@
                     :src="item.image"
                 />
             </div>
-            <h3 class="text-base my-4 text-[#2B2B2B] font-semibold font-montserrat">
+            <h3 class="text-base md:text-xl my-4 text-[#2B2B2B] font-semibold font-montserrat">
                 {{ item.title }}
             </h3>
             <p class="w-full md:w-[90%] text-[#2B2B2B] text-justify font-normal font-montserrat 

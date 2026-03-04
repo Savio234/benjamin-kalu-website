@@ -5,8 +5,8 @@
                 PISE-P - Peace in the South -<br /> East project
             </h3>
             <div class="w-full flex flex-col-reverse gap-8 lg:flex-row md:gap-20 lg:gap-28">
-                <p class="text-justify w-full text-base md:text-xl font-montserrat font-medium 
-                    text-[#585C5B] md:w-1/2"
+                <p class="text-justify w-full text-sm md:text-base font-montserrat 
+                    font-medium text-[#585C5B] md:w-1/2"
                 >
                     The Peace in South East Project (PISE-P), an initiative of the Deputy Speaker, is 
                     a peace-building and development program designed to address the complex 

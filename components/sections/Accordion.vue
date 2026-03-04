@@ -1,11 +1,12 @@
 <template>
   <div class="accordion">
     <div v-for="(item, index) in items" :key="index" class="accordion-item mb-4">
-      <div
-        class="accordion-header flex justify-between items-center px-4 py-6 text-white 
-          cursor-pointer" @click="toggleItem(index)"
+      <div class="accordion-header flex justify-between items-center px-4 py-3 md:py-4 
+        lg:py-6 text-white cursor-pointer" @click="toggleItem(index)"
       >
-        <h3 class="font-medium text-[#146634] text-lg font-montserrat">{{ item.title }}</h3>
+        <h3 class="font-medium text-[#146634] text-base md:text-lg font-montserrat">
+          {{ item.title }}
+        </h3>
         <button class="text-4xl text-[#146634]">{{ openIndex === index ? '−' : '+' }}</button>
       </div>
       <div v-if="openIndex === index" class="accordion-content px-4 pb-6">

@@ -25,7 +25,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .content:hover {
-  background: #15B653;
+  background: #105129;
   transition: all 300ms ease-in-out;
 }
 </style>

@@ -10,7 +10,7 @@
                 Latest news on how our office performed lately
             </p>
             <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
-                <div v-for="(item, index) in latest" :key="index"
+                <div v-for="(item, index) in latest.slice(0, 6)" :key="index"
                     class="news-card bg-white relative shrink-0 rounded-xl border border-borderMuted
                     overflow-hidden w-full cursor-pointer min-h-80 md:min-h-[22.75rem] 
                     lg:min-h-[24.75rem]"

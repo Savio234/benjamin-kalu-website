@@ -32,7 +32,7 @@
       <hr v-if="activeIndex === index" class="border-borderGray" />
       <div v-if="activeIndex === index" class="accordion-content p-4">
         <ul class="my-6 list-disc">
-          <li class="my-2" v-for="(detail, detailIndex) in item.details" :key="detailIndex">
+          <li class="my-2 text-sm md:text-base" v-for="(detail, detailIndex) in item.details" :key="detailIndex">
             {{ detail }}
           </li>
         </ul>

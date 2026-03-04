@@ -3,8 +3,13 @@
     <section class="py-16 bg-light mx-auto w-[92.5%] md:w-[90%]">
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-4">
-          <h2 class="font-semibold">Constituency Projects</h2>
-          <p>See the latest projects that we are up to and actively working on to better improve our constituencies.</p>
+          <h2 class="font-semibold text-xl md:text-2xl lg:text-[2rem]">
+            Constituency Projects
+          </h2>
+          <p class="text-sm md:text-base">
+            See the latest projects that we are up to and actively working on to better 
+            improve our constituencies.
+          </p>
         </div>
 
         <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-11 gap-4">
@@ -85,7 +90,9 @@
       <SectionsAccordionAlt :items="ninthAssemblyProjects" />
     </section> -->
     <section class="bg-footerGreen m-0 p-10 md:p-12 lg:p-28">
-      <h2 class="text-white font-montserrat lg:max-w-[80%] font-semibold">
+      <h2 class="text-white text-xl md:text-2xl lg:text-[2rem] lg:leading-10 
+        font-montserrat lg:max-w-[80%] font-semibold"
+      >
         Projects Distribution in Different Communities of Bende Federal Constituency
       </h2>
     </section>
@@ -93,14 +100,12 @@
       <SectionsAccordion :items="accordionItems" />
     </section>
     <section class="mx-auto w-[92.5%] md:w-[90%] pb-8 md:pb-12 lg:pb-16">
-      <h1 class="hidden font-adamina text-[#022924] text-center text-[2rem] md:text-4xl 
-        lg:text-5xl md:block"
+      <h1 class="hidden font-adamina text-[#022924] text-center md:text-[2rem] 
+        md:leading-10 lg:text-4xl lg:leading-[3rem] md:block"
       >
         What Constituents are Saying About <br /> Rt. Hon. Benjamin Kalu
       </h1>
-      <h1 class="md:hidden font-adamina text-[#022924] text-center text-[2rem] md:text-4xl 
-        lg:text-5xl"
-      >
+      <h1 class="md:hidden font-adamina text-[#022924] text-center text-2xl">
         What Constituents are Saying<br /> About <br /> Rt. Hon. Benjamin Kalu
       </h1>
       <Slider :items="quotes" speed="normal" direction="right"

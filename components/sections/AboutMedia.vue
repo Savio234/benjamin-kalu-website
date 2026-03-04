@@ -1,10 +1,13 @@
 <template>
-    <Slider :items="latest" speed="normal" direction="left" 
-        class="mt-8 overflow-x-scroll flex w-full items-start gap-4 md:gap-6" 
+    <!-- <Slider :items="latest" speed="normal" direction="left" -->
+    <!-- class="mt-8 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"  -->
+    <!-- class="media-card shrink-0 overflow-hidden w-1/3 md:w-[20rem] lg:w-[24rem] -->
+    <div
+        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-4 md:gap-6" 
         v-if="latest"
     >
         <div v-for="(item, index) in latest" :key="index"
-            class="media-card shrink-0 overflow-hidden w-1/3 md:w-[20rem] lg:w-[24rem]
+            class="media-card shrink-0 overflow-hidden w-full
             cursor-pointer relative h-full md:h-52 lg:h-56"
         >
             <div class="z-[2] hidden md:block absolute right-0 bottom-0 top-0 left-0">
@@ -72,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </Slider>
+    </div>
 </template>
 
 <script setup>
@@ -99,7 +102,7 @@ const latest = computed(() => props.media);
     .dark_overlay {
         background-color: rgba(0, 0, 0, 0.55);
         opacity: 0;
-        translate: 0% 200%;
+        translate: 0% 50%;
         transition: all 500ms ease-out;
     }
     .card_content {
@@ -115,7 +118,7 @@ const latest = computed(() => props.media);
         }
         .card_content {
             opacity: 0;
-            translate: 0% 100%;
+            translate: 0% 70%;
             transition: all 500ms ease-out;
         }
     }

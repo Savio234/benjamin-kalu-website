@@ -25,22 +25,20 @@
     </section>
     <SectionsHomeAbout />
     <SectionsStatesman id="statesman" />
-    <section class="legistlative py-12 md:py-16 lg:py-20 bg-light w-full">
-      <div class="content mx-auto mt-2 md:mt-6 lg:mt-12 w-[90%] flex flex-col gap-8">
-        <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 
-          md:gap-8 overflow-y-hidden"
-        >
-          <CardLegistlative v-for="(item, index) in legistlativeItems"
-            :key="index"
-            :title="item.title"
-            :description="item.description"
-            :image="item.image_url"
-            :route="item.route"
-            :index="index"
-            />
-            <!-- :scroll-progress="scrollYProgress" -->
-            <!-- ref="containerRef" -->
-        </div>
+    <section class="legistlative py-18 mx-auto md:py-12 lg:py-16 bg-light w-[92.5%] md:w-[90%]">
+      <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 
+        lg:grid-cols-4 md:gap-8 overflow-y-hidden"
+      >
+        <CardLegistlative v-for="(item, index) in legistlativeItems"
+          :key="index"
+          :title="item.title"
+          :description="item.description"
+          :image="item.image_url"
+          :route="item.route"
+          :index="index"
+          />
+          <!-- :scroll-progress="scrollYProgress" -->
+          <!-- ref="containerRef" -->
       </div>
     </section>
     <SectionsStats />
@@ -128,6 +126,11 @@ const legistlativeItems = ref([
 ]);
 
 const partnersLogos = [
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-3_mikgrn.png',
+  'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484149/benjamin_kalu/Logo-4_whznls.png',
   'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo_srt3cm.png',
   'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-1_mpjsvy.png',
   'https://res.cloudinary.com/damkhdi7d/image/upload/v1717484150/benjamin_kalu/Logo-2_qkehnj.png',
@@ -244,9 +247,9 @@ const images = ref([
 }
 .update {
   background-image: url('../public/images/home/tile.png');
-  // background-color: #022924;
+  background-color: #022924;
   // opacity: 0.8;
-  background-color: rgba(2, 41, 36, 0.75);
+  // background-color: rgba(2, 41, 36, 0.75);
   // background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;

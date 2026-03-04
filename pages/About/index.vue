@@ -34,8 +34,8 @@
         <div class="text-box relative top-[30%] sm:top-[20%] lg:top-[15%] w-full lg:w-10/12 
           flex flex-col text-white gap-2"
         >
-          <p class="text-white font-adamina leading-tight text-2xl sm:text-3xl font-normal 
-            md:text-4xl lg:text-5xl sm:leading-normal"
+          <p class="text-white font-adamina text-2xl sm:text-3xl sm:leading-10 font-normal 
+            md:text-4xl md:leading-[2.875rem] lg:text-5xl lg:leading-[4rem]"
           >
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
@@ -63,7 +63,7 @@
           />
         </div>
         <div class="mx-auto mt-5 md:mt-7 lg:mt-9">
-          <p class="text-center text-white leading-6 text-sm lg:text-base font-normal
+          <p class="text-center text-white leading-6 text-xs lg:text-sm font-normal
             lg:leading-[1.625rem] font-adamina"
           >
             Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose 
@@ -83,8 +83,8 @@
         md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] mx-auto"
       >
         <div class="order-2 pl-2 md:pl-0 md:order-1">
-          <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-[1.4rem] 
-            md:text-[2rem] md:leading-10 text-[#FBEF92]"
+          <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-2xl 
+            md:text-[2rem] md:leading-[3rem] text-[#FBEF92]"
           >
             A STATESMAN WITH A <br /> FORWARD-THINKING OUTLOOK
           </h3>
@@ -126,42 +126,40 @@
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <Slider :items="quotes" speed="normal" direction="left"
-          class="mt-4 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"
-        >
-          <CardAward class="w-1/5 md:w-1/4"
+        <ManualSlider>
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/legislative_contributions.png"
             title="Award for Outstanding Legislative Contribution towards Improved TB policy and Funding"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/excellence_on_civic_engagement.png"
             title="Zik’s Award of Excellence on Civic Engagement"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/independent_newspapers.png"
             title="Independent Newspapers’ South East and Abia State Federal Lawmaker of the year Award"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/abia_most_outstanding_federal_legislator.png"
             title="Abia State Most Outstanding Federal Legislator"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/democracy_heroes.png"
             title="Democracy Heroes Award Africa As The Most Outstanding Rep. Member of the Year"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/top_performer_in_bill_sponsorship.png"
             title="Nomination as Top Performer in Bills Sponsorship on MVP Hall of Fame"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/flo_icons_awards.png"
             title="Flo Icons Award for the Most Impactful Lawmaker of the Year"
           />
-          <CardAward class="w-1/5 md:w-1/4"
+          <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/nuj_model_of_media.png"
             title="National Union of Journalists ‘Model of Media and Public Relation Matters’ Award"
           />
-        </Slider>
+        </ManualSlider>
       </div>
     </section>
     <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
@@ -189,6 +187,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import Slider from '~/components/sections/Slider.vue';
+import ManualSlider from '~/components/sections/ManualSlider.vue';
 
 const legislativeContributions = `
       <p class="text-lg">
@@ -245,6 +244,14 @@ const publications = [
     id: 4,
     image: '/images/about/publication_1.png'
   },
+  {
+    id: 5,
+    image: '/images/about/publication_1.png'
+  },
+  {
+    id: 6,
+    image: '/images/about/publication_2.png'
+  },
 ]
 
 const media = [
@@ -269,13 +276,13 @@ const media = [
     title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
     media_type: 'speech',
   },
-  {
-    id: 4,
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.jpg',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
+  // {
+  //   id: 4,
+  //   video: '/',
+  //   video_thumbail: '/images/about/thumbnail.jpg',
+  //   title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+  //   media_type: 'speech',
+  // },
 ]
 
 const quotes = [
@@ -294,7 +301,6 @@ const quotes = [
 ]
 const roadmap = ref([
   [
-
     {
       title: `Leadership for the 21st Century - Executive Certificate Program`,
       body: `John F. Kennedy School of Government, Harvard University, USA`,

@@ -27,7 +27,7 @@ defineProps({
   height: 0.75rem;
   .progress {
     width: v-bind(percentageFill);
-    background-color: #009a84;
+    background-color: #146634;
     height: 0.75rem;
   }
 }
