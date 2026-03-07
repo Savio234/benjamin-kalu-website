@@ -18,8 +18,8 @@
       </div>
     </section>
     <section class="updates w-full py-16 bg-black text-white">
-      <div class="content flex flex-col mx-auto gap-8 ml-[7.5%]">
-        <div class="header flex flex-col gap-1 text-white">
+      <div class="content flex flex-col mx-auto gap-8">
+        <div class="header flex flex-col gap-1 text-white ml-[7.5%]">
           <h2 class="font-montserrat">Weekly <span class="text-secondaryGreen">Updates</span></h2>
           <h4>Get first hand updates with your deputy speaker</h4>
         </div>

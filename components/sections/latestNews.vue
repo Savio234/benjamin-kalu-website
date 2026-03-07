@@ -315,7 +315,7 @@ function formatDate(date) {
   .dark-bg {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
-    translate: 0% 200%;
+    translate: 0% 10%;
     transition: all 500ms ease-out;
   }
   .dark_bg {
@@ -325,7 +325,7 @@ function formatDate(date) {
   .card-date, .card-title {
     transition: all 500ms ease-out;
     opacity: 1;
-    translate: 0% 0%;
+    translate: 0% 50%;
   }
   &:hover {
     .dark-bg {
@@ -334,13 +334,13 @@ function formatDate(date) {
       opacity: 1;
     }
     .dark_bg {
-      translate: 0% 200%;
+      translate: 0% 0%;
       opacity: 0;
       transition: all 500ms ease-out;
     }
     .card-date, .card-title, .card-desc {
       opacity: 0;
-      translate: 0% 100%;
+      translate: 0% 0%;
       transition: all 500ms ease-out;
     }
   }

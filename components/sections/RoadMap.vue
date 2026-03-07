@@ -46,8 +46,15 @@
                 </div>
             </div>
             <div class="w-full h-[1px] relative top-[1.7rem] z-[1] bg-[#434242]"></div>
-            <div class="w-full data overflow-x-scroll gap-4 flex items-start lg:gap-2 
-                lg:grid lg:grid-cols-7" v-if="activeData.length"
+            <div class="w-full data mx-auto overflow-x-scroll gap-4 flex items-start lg:gap-2 
+                lg:grid" :data-length="activeData.length" v-if="activeData.length"
+                :class="{
+                    'lg:grid-cols-3': activeData.length === 3,
+                    'lg:grid-cols-4': activeData.length === 4,
+                    'lg:grid-cols-5': activeData.length === 5,
+                    'lg:grid-cols-6': activeData.length === 6,
+                    'lg:grid-cols-7': activeData.length === 7,
+                }"
             >
                 <div v-for="(item, index) in activeData" :key="index"
                     class="shrink-0 z-[2] w-1/3 md:w-60 py-3 gap-4 md:gap-5
@@ -126,6 +133,9 @@ const latest = computed(() => props.roadmap);
 }
 .card_transparent {
     background: #E6E6E6;
+}
+data {
+    position: relative;
 }
 .icons, .data {
     &::-webkit-scrollbar {

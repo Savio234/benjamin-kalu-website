@@ -92,7 +92,7 @@
             At his core, Rt. Hon. Benjamin Okezie Kalu is driven by vision; a vision that honors 
             Nigeria’s heritage while propelling it toward resilient governance, inclusive opportunity, 
             and democratic excellence. His leadership is defined by:<br />
-            <ul class="mt-2 list-disc pl-6 md:pl-8">
+            <ul class="mt-4 list-disc pl-6 md:pl-8">
               <li class="text-sm text-white md:text-base">
                 Clarity of purpose
               </li>
@@ -107,7 +107,7 @@
               </li>
             </ul>
           </p>
-          <p class="text-sm mt-6 text-white md:text-base">
+          <p class="text-sm mt-4 text-white md:text-base">
             He leads not just with authority, but with accountability, ensuring that every policy, 
             partnership, and initiative reflects the trust placed in his office.
           </p>

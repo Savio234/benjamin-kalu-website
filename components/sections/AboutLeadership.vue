@@ -1,8 +1,8 @@
 <template>
     <section class="py-8 md:py-16 lg:py-24 bg-white">
         <div class="w-[92.5%] gap-8 md:gap-12 lg:gap-16 flex flex-col lg:w-[90%] mx-auto">
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row lg:gap-9">
-                <div class="w-full md:w-[55%]">
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+                <div class="w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] mb-4 md:mb-6 lg:mb-8 font-adamina font-normal 
                         text-xl leading-9 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem]"
                     >
@@ -22,7 +22,7 @@
                         collaboration with communities, lawmakers, civil society, and international partners
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative w-[45%] h-64 md:h-[28rem] 
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[39.95%] h-64 md:h-[28rem] 
                     lg:h-[34rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -35,8 +35,8 @@
                     />
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row lg:gap-9">
-                <div class="hidden md:block relative order-2 md:order-1 w-[45%] h-64 
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+                <div class="hidden md:block relative md:w-2/5 lg:w-[39.95%] order-2 md:order-1 h-64 
                     md:h-[35rem] shrink-0 lg:h-[40.25rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -50,7 +50,7 @@
                         src="/images/about/leadership_2.png"
                     />
                 </div>
-                <div class="order-1 md:order-2 w-full md:w-[55%]">
+                <div class="order-1 md:order-2 w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] font-adamina font-normal w-full text-xl 
                         mb-4 md:mb-6 lg:mb-8 leading-8 md:text-2xl lg:text-[2rem] 
                         lg:leading-[3.2rem] hidden md:block md:w-3/4"
@@ -97,8 +97,8 @@
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row lg:gap-9">
-                <div class="w-full md:w-[55%]">
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+                <div class="w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] font-adamina font-normal mb-4 text-xl 
                         leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
                         w-full md:w-3/4 lg:mb-8 lg:w-1/2"
@@ -117,7 +117,7 @@
                         transformation, not mere title or rhetoric.
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative w-[45%] h-64 md:h-[25rem]
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[39.95%] h-64 md:h-[25rem]
                     lg:h-[32rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
@@ -130,9 +130,9 @@
                     />
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row lg:gap-9">
-                <div class="hidden md:block relative order-2 md:order-1
-                    md:h-[30rem] lg:h-[32rem] shrink-0 md:w-[45%]"
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+                <div class="hidden md:block relative md:w-2/5 lg:w-[39.95%] order-2 md:order-1
+                    md:h-[30rem] lg:h-[32rem] shrink-0"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/strategic.png"
@@ -145,7 +145,7 @@
                         src="/images/about/leadership_4.png"
                     />
                 </div>
-                <div class="order-1 w-full md:w-[55%] md:order-2">
+                <div class="order-1 w-full md:w-1/2 lg:w-[45%] md:order-2">
                     <h3 class="text-[#146634] font-adamina mb-4 font-normal text-xl 
                         leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
                         lg:mb-8"

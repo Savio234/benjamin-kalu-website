@@ -3,8 +3,9 @@
         <div class="carousel-viewport" ref="viewportRef">
             <div class="carousel-inner gap-4 md:gap-6 lg:gap-8 flex
                 transition-transform duration-500 ease-out"
-                :style="{ transform: `translateX(-${currentIndex * 22.75}%)` }"
+                :style="{ transform: `translateX(-${translateX}%)` }"
             >
+                <!-- :style="{ transform: `translateX(-${currentIndex * 22.75}%)` }" -->
                 <slot />
             </div>
         </div>
@@ -60,6 +61,11 @@ const translatePercent = computed(() => {
 const transformStyle = computed(() => ({
   transform: `translateX(-${currentIndex.value * translatePercent.value}%)`
 }))
+const translateX = computed(() => {
+  const maxTranslate = (totalItems.value - 1) * 22.75
+  const raw = currentIndex.value * 22.75
+  return Math.min(raw, maxTranslate)
+})
 
 onMounted(() => {
     if (viewportRef.value) {

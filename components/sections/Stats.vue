@@ -76,7 +76,9 @@
                             A Legislative and Policy Review
                         </p>
                         <div class="md:-ml-6">
-                            <MainButton @click="">Download Latest Issue</MainButton>
+                            <MainButton @click="downloadPdf">
+                                Download Latest Issue
+                            </MainButton>
                         </div>
                     </div>
                 </div>
@@ -84,3 +86,15 @@
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+const downloadPdf = () => {
+  const link = document.createElement('a')
+  link.href = '/books/THE-STATESMAN-ISSUE-001.pdf'
+  link.download = 'statesman.pdf'
+  link.target = '_blank'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
+</script>

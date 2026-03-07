@@ -2,7 +2,7 @@
   <section class="w-full py-8 md:py-12 lg:py-20 bg-white relative 
     flex flex-col justify-center overflow-hidden"
   >
-    <div class="w-[90vw] mx-auto flex justify-between gap-6 overflow-x-auto">
+    <div class="w-full mx-auto flex justify-between gap-6">
       <Swiper class="w-full h-full"
         :modules="[SwiperAutoplay, SwiperEffectFade, SwiperPagination]"
         :slides-per-view="1"

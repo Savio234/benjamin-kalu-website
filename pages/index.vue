@@ -25,9 +25,9 @@
     </section>
     <SectionsHomeAbout />
     <SectionsStatesman id="statesman" />
-    <section class="legistlative py-18 mx-auto md:py-12 lg:py-16 bg-light w-[92.5%] md:w-[90%]">
+    <section class="legistlative py-8 mx-auto md:py-12 lg:py-16 bg-light w-[92.5%] md:w-[90%]">
       <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 
-        lg:grid-cols-4 md:gap-8 overflow-y-hidden"
+        lg:grid-cols-4 md:gap-6"
       >
         <CardLegistlative v-for="(item, index) in legistlativeItems"
           :key="index"
@@ -36,7 +36,7 @@
           :image="item.image_url"
           :route="item.route"
           :index="index"
-          />
+        />
           <!-- :scroll-progress="scrollYProgress" -->
           <!-- ref="containerRef" -->
       </div>
@@ -53,8 +53,13 @@
           Recieve Updates on BOK’s Activities
         </p>
         <div class="mx-auto w-fit">
-          <MainButton @click="">Click to subscribe</MainButton>
+          <MainButton @click="showModal = true">
+            Click to subscribe
+          </MainButton>
         </div>
+        <ModalsSubscribe :is-open="showModal" @close="showModal = false"
+          @submit="handleLeadSubmit"
+        />
       </div>
     </section>
     <section class="partners w-full py-8 md:py-12 lg:py-16 bg-white">
@@ -92,6 +97,7 @@ import { ref } from 'vue'
 //   target: containerRef,
 //   offset: ['start end', 'end 90%']
 // })
+const showModal = ref(false);
 const legistlativeItems = ref([
   {
     image_url: '/images/home/bills_and_motions.png',

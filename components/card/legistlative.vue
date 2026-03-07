@@ -1,6 +1,7 @@
 <template>
   <div class="card w-4/5 md:w-full md:h-[26.25rem] flex flex-col bg-white border 
-    border-borderMuted rounded-xl cursor-pointer overflow-y-hidden relative"
+    border-borderMuted shrink-0 md:p-6 hover:shadow-lg transition-shadow rounded-xl 
+    cursor-pointer relative"
     @click="$router.push(`${$props.route}`)"
   >
     <!-- :style="{ y: cardY, opacity: cardOpacity }" -->
@@ -19,7 +20,7 @@
         tracking-[0.4px] font-montserrat"
       >
         <!-- {{ $props.description.slice(0, 103)}}... -->
-        {{ $props.description}}
+        <!-- {{ $props.description}} -->
       </p>
     </div>
   </div>
@@ -86,9 +87,9 @@ const props = defineProps({
   flex-shrink: 0;
   transition: all 300ms ease-in-out;
 }
-.card:hover {
-  transform: scale(1.02);
-}
+// .card:hover {
+//   transform: scale(1.02);
+// }
 // .image {
 //   &::after {
 //     content: '';
