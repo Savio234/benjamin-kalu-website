@@ -20,7 +20,7 @@
 
             <button
                 class="bg-black/40 text-white p-3 rounded-full hover:bg-black/70 transition disabled:opacity-40 disabled:cursor-not-allowed z-10"
-                :disabled="currentIndex === totalItems - 1"
+                :disabled="currentIndex === totalItems - 2"
                 @click="goToNext"
             >
                 →
@@ -62,17 +62,27 @@ const totalItems = ref(0)
 //   transform: `translateX(-${currentIndex.value * translatePercent.value}%)`
 // }))
 const translateX = computed(() => {
-  const maxTranslate = (totalItems.value - 1) * 22.75
-  const raw = currentIndex.value * 22.75
+    const raw = currentIndex.value * 22.75
+    const maxTranslate = (totalItems.value >= 5) ? (totalItems.value - 2.75) * 22.75 :
+        (totalItems.value - 1) * 22.75
+  
   return Math.min(raw, maxTranslate)
 })
+
+// const translateX = computed(() => {
+//   if (totalItems.value === 0) return 0
+//   const stepPercent = 100 / 22.5
+//   const maxTranslate = (totalItems.value - 22.5) * stepPercent
+//   const raw = currentIndex.value * stepPercent
+//   return Math.min(raw, maxTranslate)
+// })
 
 onMounted(() => {
     if (viewportRef.value) {
         const children = viewportRef.value.querySelectorAll('.carousel-inner > *')
         totalItems.value = children.length
         children.forEach((el, i) => {
-            el.classList.add('w-full', 'flex-shrink-0')
+            el.classList.add('relative', 'flex-shrink-0')
         })
     }
 })

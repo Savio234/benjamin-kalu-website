@@ -25,20 +25,22 @@
     </section>
     <SectionsHomeAbout />
     <SectionsStatesman id="statesman" />
-    <section class="legistlative py-8 mx-auto md:py-12 lg:py-16 bg-light w-[92.5%] md:w-[90%]">
-      <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 
-        lg:grid-cols-4 md:gap-6"
-      >
-        <CardLegistlative v-for="(item, index) in legistlativeItems"
-          :key="index"
-          :title="item.title"
-          :description="item.description"
-          :image="item.image_url"
-          :route="item.route"
-          :index="index"
-        />
-          <!-- :scroll-progress="scrollYProgress" -->
-          <!-- ref="containerRef" -->
+    <section class="legistlative py-8 w-full md:py-12 lg:py-16 bg-light">
+      <div class="mx-auto w-[92.5%] md:w-[90%]">
+        <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 
+          lg:grid-cols-4 md:gap-6"
+        >
+          <CardLegistlative v-for="(item, index) in legistlativeItems"
+            :key="index"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image_url"
+            :route="item.route"
+            :index="index"
+          />
+            <!-- :scroll-progress="scrollYProgress" -->
+            <!-- ref="containerRef" -->
+        </div>
       </div>
     </section>
     <SectionsStats />

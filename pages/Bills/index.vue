@@ -70,12 +70,20 @@
           md:flex-wrap gap-2.5"
           v-if="filters"
         >
-          <div class="px-8 md:px-6 lg:px-9 h-fit md:min-h-auto bg-[#DFDFDF] 
-            rounded-[2.5rem] py-1 md:py-1.5 lg:py-2.5"
+          <div class="px-8 md:px-6 lg:px-9 h-fit md:min-h-auto  
+            rounded-[2.5rem] py-1 md:py-1.5 lg:py-2.5 cursor-pointer"
             v-for="(filter, index) in filters" :key="index"
+            :class="{
+              'bg-black': activeFilter === index,
+              'bg-[#DFDFDF]': activeFilter !== index
+            }"
+            @click="activeFilter = index"
           >
-            <p class=" text-xs md:text-sm font-medium font-montserrat text-[#8A8A8A] 
-              lg:text-base"
+            <p class=" text-xs md:text-sm font-medium font-montserrat  
+              lg:text-base" :class="{
+                'text-white': activeFilter === index,
+                'text-[#8A8A8A]': activeFilter !== index,
+              }"
             >
               {{ filter }}
             </p>
@@ -385,6 +393,7 @@ const displayedMotions = ref([]);
 const searchTerm = ref('');
 const loading = ref(false);
 const motions = ref([]);
+const activeFilter = ref(0)
 
 const filteredBills = computed(() => {
   return bills.value.filter((item) => item.title.toLowerCase().includes(searchTerm.value.toLowerCase()));
@@ -430,8 +439,7 @@ const filters = [
   'All',
   'Constitution',
   // 'Justice Sector Reform',
-  'Justice Sector',
-  'Health Bill',
+  'Judicial reforms',
   'Security sectors',
   'Education',
   'Professional Bodies',

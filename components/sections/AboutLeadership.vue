@@ -22,7 +22,7 @@
                         collaboration with communities, lawmakers, civil society, and international partners
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[39.95%] h-64 md:h-[28rem] 
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[28rem] 
                     lg:h-[34rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
-                <div class="hidden md:block relative md:w-2/5 lg:w-[39.95%] order-2 md:order-1 h-64 
+                <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1 h-64 
                     md:h-[35rem] shrink-0 lg:h-[40.25rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -117,7 +117,7 @@
                         transformation, not mere title or rhetoric.
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[39.95%] h-64 md:h-[25rem]
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[25rem]
                     lg:h-[32rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
-                <div class="hidden md:block relative md:w-2/5 lg:w-[39.95%] order-2 md:order-1
+                <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1
                     md:h-[30rem] lg:h-[32rem] shrink-0"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"

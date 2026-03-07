@@ -16,10 +16,10 @@
                 </svg>
             </button>
 
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-adamina font-bold text-center mb-2">
                 Get in Touch
             </h2>
-            <p class="text-center text-gray-600 mb-8">
+            <p class="text-center text-sm md:text-base font-montserrat text-gray-600 mb-8">
                 Please fill in your details and we'll get back to you shortly.
             </p>
 

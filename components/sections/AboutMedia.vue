@@ -102,7 +102,7 @@ const latest = computed(() => props.media);
     .dark_overlay {
         background-color: rgba(0, 0, 0, 0.55);
         opacity: 0;
-        translate: 0% 7%;
+        translate: 0% 5%;
         transition: all 500ms ease-out;
     }
     .card_content {
@@ -118,7 +118,7 @@ const latest = computed(() => props.media);
         }
         .card_content {
             opacity: 0;
-            translate: 0% 70%;
+            translate: 0% 5%;
             transition: all 500ms ease-out;
         }
     }

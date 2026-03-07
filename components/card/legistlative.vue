@@ -1,12 +1,12 @@
 <template>
   <div class="card w-4/5 md:w-full md:h-[26.25rem] flex flex-col bg-white border 
-    border-borderMuted shrink-0 md:p-6 hover:shadow-lg transition-shadow rounded-xl 
+    border-borderMuted shrink-0 md:p-4 hover:shadow-2xl transition-shadow rounded-xl 
     cursor-pointer relative"
     @click="$router.push(`${$props.route}`)"
   >
     <!-- :style="{ y: cardY, opacity: cardOpacity }" -->
     <div class="image w-full h-[17rem] relative">
-      <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-t-xl" />
+      <NuxtImg :src="$props.image" class="w-full h-full object-cover object-top rounded-xl" />
     </div>
     <div class="content my-6 mx-auto w-[90%] flex flex-col gap-2">
       <h5 class="font-semibold font-montserrat">{{ $props.title }}</h5>

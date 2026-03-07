@@ -22,6 +22,7 @@
                             />
                         </div>
                     </div>
+                    <div class="dark_bg z-[3] w-full h-full absolute bottom-0 top-0 left-0"></div>
                     <div class="dark-bg px-4 pt-4 md:px-6 md:pt-6 pb:8 md:pb-10 rounded-xl z-[3] w-full h-full 
                         absolute bottom-0 top-0 left-0 flex flex-col"
                     >
@@ -87,7 +88,11 @@ function formatDate(date) {
     .dark-bg {
         background-color: rgba(0, 0, 0, 0.7);
         opacity: 0;
-        translate: 0% 7%;
+        translate: 0% 5%;
+        transition: all 500ms ease-out;
+    }
+    .dark_bg {
+        background-color: rgba(0, 0, 0, 0.3);
         transition: all 500ms ease-out;
     }
     .card-date, .card-title {
@@ -100,6 +105,11 @@ function formatDate(date) {
             transition: all 500ms ease-out;
             translate: 0% 0%;
             opacity: 1;
+        }
+        .dark_bg {
+            translate: 0% 0%;
+            opacity: 0;
+            transition: all 500ms ease-out;
         }
         .card-date, .card-title, .card-desc {
             opacity: 0;

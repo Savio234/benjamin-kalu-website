@@ -1,6 +1,8 @@
 <template>
-  <div class="h-full w-full grid grid-cols-1 xl:grid-cols-2">
-    <div class="relative w-full">
+  <div class="h-full w-full flex gap-4 items-start md:gap-6 lg:gap-10 lg:justify-between 
+    flex-col lg:flex-row"
+  >
+    <div class="relative w-full shrink-0 lg:w-1/2">
       <client-only>
         <apexchart 
           type="bar" 
@@ -11,8 +13,7 @@
       </client-only>
     </div>
 
-    <!-- Custom Legend (unchanged) -->
-    <div class="w-full">
+    <div class="w-full shrink-0 lg:w-1/2">
       <ul class="grid w-full grid-cols-1 gap-2 text-xs">
         <li v-for="(item, index) in chartData" :key="index" class="flex flex-col items-start gap-1">
           <div class="w-8 h-4" :style="{ background: item.color }"></div>
@@ -28,7 +29,7 @@ import { reactive, computed } from 'vue'
 
 const series = reactive([{
   name: 'Count',
-  data: [58, 11, 14, 20, 2, 2]   // your values
+  data: [58, 11, 14, 20, 2, 2]
 }])
 
 const chartOptions = reactive({
@@ -39,9 +40,9 @@ const chartOptions = reactive({
   },
   plotOptions: {
     bar: {
-      borderRadius: 8,          // rounded corners
-      horizontal: false,        // vertical bars (change to true for horizontal)
-      columnWidth: '55%',       // width of bars
+      borderRadius: 8,
+      horizontal: false,
+      columnWidth: '50%',
       dataLabels: { position: 'top' }
     }
   },

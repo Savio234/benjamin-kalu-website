@@ -181,13 +181,13 @@
                         Partners
                     </h1>
                     <div class="mt-6 md:mt-9 lg:mt-12 mb-3.5">
-                        <div class="w-full h-[4.75rem] relative md:h-20">
+                        <div class="w-full h-[4.75rem] relative md:h-28">
                             <NuxtImg alt="icon" class="h-full object-contain lg:object-cover w-full"
                                 src="/svgs/pisep/foundation.svg"
                             />
                         </div>
                         <button class="mt-6 w-full rounded-full items-center justify-center flex 
-                            h-12 lg:h-14 md:w-[90%] lg:w-4/5 md:mt-10 lg:mt-12 cursor-pointer
+                            h-12 lg:h-14 md:w-[90%] md:mt-8 lg:mt-12 cursor-pointer
                             bg-[#146634]"
                         >
                             <p class="text-sm font-bold font-montserrat text-white md:text-base">

@@ -17,14 +17,18 @@
                 </div>
             </div>
             <div class="bg relative flex flex-col gap-0">
-                <div class="bg-[#E6E6E6] w-fit px-2 py-1">
+                <div class="bg-[#E6E6E6] w-fit px-2 py-1"
+                    v-for="(line, lineIdx) in splitQuoteIntoLines(item)"
+                    :key="lineIdx"
+                >
                     <h3 class="text-[#146634] w-fit font-adamina font-normal text-sm 
                         md:text-base"
                     >
-                        {{ item.slice(0, 36) }}
+                        <!-- {{ item.slice(0, 36) }} -->
+                        {{ line }}
                     </h3>
                 </div>
-                <div class="bg-[#E6E6E6] w-fit relative px-2 py-1">
+                <!-- <div class="bg-[#E6E6E6] w-fit relative px-2 py-1">
                     <h3 class="text-[#146634] w-fit font-adamina font-normal text-sm 
                         md:text-base"
                     >
@@ -44,7 +48,7 @@
                     >
                         {{ item.slice(125, 160) }}
                     </h3>
-                </div>
+                </div> -->
             </div>
         </div>
     </Slider>
@@ -63,4 +67,25 @@ const props = defineProps({
 });
 
 const latest = computed(() => props.quotes);
+
+const splitQuoteIntoLines = (quote) => {
+    if (!quote) return []
+    const words = quote.trim().split(/\s+/)
+    const lineWordCounts = [7, 8, 9, 7, 8, 9]
+    const lines = []
+    let wordIndex = 0
+
+    for (const count of lineWordCounts) {
+        if (wordIndex >= words.length) break
+        const lineWords = words.slice(wordIndex, wordIndex + count)
+        if (lineWords.length === 0) break
+        lines.push(lineWords.join(' '))
+        wordIndex += count
+    }
+    if (wordIndex < words.length) {
+        lines.push(words.slice(wordIndex).join(' '))
+    }
+
+  return lines
+}
 </script>

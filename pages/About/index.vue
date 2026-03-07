@@ -286,108 +286,105 @@ const media = [
 ]
 
 const quotes = [
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
-  `Rt. Hon. Benjamin Okezie Kalu, is a distinguished Nigerian statesman whose leadership blends 
-  institutional mastery, policy depth, and transformative service delivery. `,
+  `Everything changes the moment you stop asking how to feel motivated and start asking what 
+  must be done regardless of how you feel. Discipline isn't intensity, it's agreement with 
+  your future self that today doesn't get a vote.`,
+  `Most people are tired not because they’re doing too much, but because they’re doing too 
+  many meaningless things. Focus isn’t about adding effort; it’s about removing noise until 
+  only what moves the needle is left.`,
+  `Talent gives you entry, consistency gives you leverage, and systems give you freedom. If 
+  your progress collapses the moment your mood changes, you don’t have a strategy, you have 
+  a fantasy.`,
+  `Busyness is the most socially acceptable form of avoidance. Real progress looks boring, 
+  repetitive, and unimpressive from the outside, but it compounds quietly while others chase 
+  visible motion.`,
+  `The gap between where you are and where you want to be is rarely knowledge. It’s execution. 
+  And execution is simply the courage to do the same right things long after the excitement 
+  has expired.`,
 ]
 const roadmap = ref([
   [
     {
-      title: `Leadership for the 21st Century - Executive Certificate Program`,
-      body: `John F. Kennedy School of Government, Harvard University, USA`,
-      date: `September 2025`
+      title: `Deputy Speaker, House of Representative`,
+      body: `Federal Republic of Nigeria`,
+      date: `June 2023 - Present`
     },
     {
-      title: `Certificate in Governance & Development`,
-      body: `Miami Herbert Business School, University of Miami, USA`,
-      date: `2022`
+      title: `Member, House of Representatives`,
+      body: `Bende Federal Constituency, Abia State`,
+      date: ` June 2019 - Present`
     },
     {
-      title: `Certificate in Environmental Crimes`,
-      body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
-      date: `2022`
+      title: `Chairman, House Committee on Constitutional Amendments`,
+      body: `Federal Republic of Nigeria`,
+      date: `June 2023 - Present`
     },
     {
-      title: `Certificate in Migration & Human Rights`,
-      body: `John Cabot University, Rome, Italy`,
-      date: `2022`
+      title: `Chairman, House Committee of the Whole`,
+      body: `House of Representatives, National Assembly`,
+      date: `2023 - 2027`
     },
     {
-      title: `Certificate in Illicit Trade`,
-      body: `University of Groningen, Netherlands`,
-      date: `2022`
+      title: `Chairman, House Committee on Media & Public Affairs`,
+      body: `House of Representatives, National Assembly`,
+      date: `June 2023 - Present`
     },
     {
-      title: `Diploma in International Commercial Arbitration`,
-      body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
-      date: `2014`
+      title: `Chairman, House Committee on Media & Public Affairs`,
+      body: `House of Representatives, National Assembly`,
+      date: `2019 - 2023`
     },
     {
-      title: `Certificate IV in Property Services (Real Estate)`,
-      body: `Leverage Academy, Sydney, Australia`,
-      date: `2019`
+      title: `Local Government Chairman (Transition)`,
+      body: `Bende Local Government Area, Abia State`,
+      date: `June 2003 - December 2004`
     },
   ],
   [
     {
-      title: `Leadership for the 21st Century - Executive Certificate Program`,
-      body: `John F. Kennedy School of Government, Harvard University, USA`,
-      date: `September 2025`
+      title: `Chairman, Finance & Administration Committee`,
+      body: `ECOWAS Parliament`,
+      date: `2025 - Present`
     },
     {
-      title: `Certificate in Governance & Development`,
-      body: `Miami Herbert Business School, University of Miami, USA`,
-      date: `2022`
+      title: `Chairman, Committee on Finance & Monitoring`,
+      body: `African Union Pan-African Parliament (PAP)`,
+      date: `2025 - Present`
     },
     {
-      title: `Certificate in Environmental Crimes`,
-      body: `United Nations Interregional Crime and Justice Research Institute (UNICRI), Italy`,
-      date: `2022`
-    },
-    {
-      title: `Certificate in Migration & Human Rights`,
-      body: `John Cabot University, Rome, Italy`,
-      date: `2022`
-    },
-    {
-      title: `Certificate in Illicit Trade`,
-      body: `University of Groningen, Netherlands`,
-      date: `2022`
+      title: `Steering Committee Member`,
+      body: `Inter-Parliamentary Union (IPU) - WTO Committee`,
+      date: `2025 - Present`
     },
   ],
   [
     {
-      title: `Certificate in Migration & Human Rights`,
-      body: `John Cabot University, Rome, Italy`,
-      date: `2022`
+      title: `Doctor of Philosophy (Ph.D.) in Law (Distinction)`,
+      body: `University of Calabar, Nigeria`,
+      date: `December 2025`
     },
     {
-      title: `Certificate in Illicit Trade`,
-      body: `University of Groningen, Netherlands`,
-      date: `2022`
+      title: `Doctor of Philosophy (Ph.D.) in Public Policy & Strategic Studies (Distinction)`,
+      body: `University of Abuja, Nigeria`,
+      date: `August 2025`
     },
     {
-      title: `Diploma in International Commercial Arbitration`,
-      body: `Chartered Institute of Arbitrators (CIArb), United Kingdom (University of Oxford)`,
-      date: `2014`
+      title: `Master of Laws (LL.M) in Terrorism & International Humanitarian Law (Distinction)`,
+      body: `University of Calabar, Nigeria`,
+      date: `2023`
     },
     {
-      title: `Certificate IV in Property Services (Real Estate)`,
-      body: `Leverage Academy, Sydney, Australia`,
-      date: `2019`
+      title: `Master of Business Administration (MBA)`,
+      body: `Oxford Brookes University, Oxford, United Kingdom`,
+      date: `April 2006`
+    },
+    {
+      title: `Bachelor of Laws (LL.B Hons.)`,
+      body: `University of Calabar, Nigeria`,
+      date: `October 1998`
     },
   ],
   [
-
     {
       title: `Leadership for the 21st Century - Executive Certificate Program`,
       body: `John F. Kennedy School of Government, Harvard University, USA`,
