@@ -87,7 +87,7 @@ function formatDate(date) {
     .dark-bg {
         background-color: rgba(0, 0, 0, 0.7);
         opacity: 0;
-        translate: 0% 200%;
+        translate: 0% 7%;
         transition: all 500ms ease-out;
     }
     .card-date, .card-title {
@@ -103,7 +103,7 @@ function formatDate(date) {
         }
         .card-date, .card-title, .card-desc {
             opacity: 0;
-            translate: 0% 100%;
+            translate: 0% 5%;
             transition: all 500ms ease-out;
         }
     }
