@@ -14,8 +14,10 @@
     </div>
 
     <div class="w-full shrink-0 lg:w-1/2">
-      <ul class="grid w-full grid-cols-1 gap-2 text-xs">
-        <li v-for="(item, index) in chartData" :key="index" class="flex flex-col items-start gap-1">
+      <ul class="flex w-full flex-col gap-2 text-xs">
+        <li v-for="(item, index) in chartData" :key="index"
+          class="flex flex-col items-start gap-1"
+        >
           <div class="w-8 h-4" :style="{ background: item.color }"></div>
           <p class="text-sm w-auto md:w-3/4">{{ item.label }}</p>
         </li>
