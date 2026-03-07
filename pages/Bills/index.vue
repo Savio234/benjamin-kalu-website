@@ -330,7 +330,8 @@
       <div class="content w-[92.5%] md:w-[90%] mx-auto">
         <h3 class="font-semibold">Bills Chart</h3>
         <div class="w-full flex flex-col items-center h-auto">
-          <PieChart />
+          <!-- <PieChart /> -->
+          <Barchart />
         </div>
       </div>
     </section>

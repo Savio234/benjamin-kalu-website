@@ -50,17 +50,17 @@ const viewportRef = ref<HTMLElement | null>(null)
 const currentIndex = ref(0)
 const totalItems = ref(0)
 
-const translatePercent = computed(() => {
-    if (typeof window === 'undefined') return 15
-    const width = window.innerWidth
-    if (width >= 1024) return 22.75
-    if (width >= 768) return 25
-    return 15
-})
+// const translatePercent = computed(() => {
+//     if (typeof window === 'undefined') return 15
+//     const width = window.innerWidth
+//     if (width >= 1024) return 22.75
+//     if (width >= 768) return 25
+//     return 15
+// })
 
-const transformStyle = computed(() => ({
-  transform: `translateX(-${currentIndex.value * translatePercent.value}%)`
-}))
+// const transformStyle = computed(() => ({
+//   transform: `translateX(-${currentIndex.value * translatePercent.value}%)`
+// }))
 const translateX = computed(() => {
   const maxTranslate = (totalItems.value - 1) * 22.75
   const raw = currentIndex.value * 22.75
