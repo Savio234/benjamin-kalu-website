@@ -21,7 +21,7 @@
           v-for="(image, index) in images" :key="index"
         >
           <!-- <div class="absolute inset-0 bg-black opacity-10"></div> -->
-          <NuxtImg :src="image" class="w-full rounded-2xl h-full object-cover" 
+          <NuxtImg :src="image" class="w-full h-full object-cover" 
             format="webp"
           />
         </SwiperSlide>

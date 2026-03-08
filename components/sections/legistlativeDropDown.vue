@@ -6,8 +6,8 @@
         <div class="w-10/12 flex flex-col gap-4 mx-auto">
           <h3 class="font-semibold gap-4 text-white">Legislative Affairs</h3>
           <h5 class="text-white font-medium">
-            Keep track of Kalu’s Mission, Bills and Motions as well as the Constitutional Review activities of the 10th
-            House of Reps
+            Keep track of Kalu’s, bills and motions as well as the constitutional review 
+            activities of the 10th House of representatives.
           </h5>
         </div>
       </div>
