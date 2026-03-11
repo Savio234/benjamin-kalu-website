@@ -1,7 +1,7 @@
 <template>
     <section class="py-16 md:py-24 lg:py-32 bg-white">
-        <div class="w-[92.5%] gap-14 md:gap-20 lg:gap-28 flex flex-col sm:w-[85%] md:w-4/5 
-            lg:w-3/4 mx-auto"
+        <div class="w-[92.5%] gap-14 md:gap-20 lg:gap-28 flex flex-col sm:w-[85%] 
+            lg:w-4/5 xl:w-3/4 mx-auto"
         >
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
                 lg:gap-10 lg:justify-evenly w-full"
@@ -13,7 +13,7 @@
                         Leadership Anchored in Service and Vision
                     </h3>
                     <p class="text-justify font-montserrat font-medium text-sm leading-6 
-                        md:text-base lg:leading-6
+                        md:text-base
                         text-[#585C5B]"
                     >
                         A public servant forged in purpose and precision, Rt. Hon. Kalu’s trajectory is defined 
@@ -26,8 +26,8 @@
                         collaboration with communities, lawmakers, civil society, and international partners
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[28rem] 
-                    lg:h-[34rem]"
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[24rem] 
+                    lg:h-[28rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
                         src="/images/about/anchored.png"
@@ -43,7 +43,7 @@
                 lg:gap-10 lg:justify-evenly w-full"
             >
                 <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1 h-64 
-                    md:h-[35rem] shrink-0 lg:h-[40.25rem]"
+                    md:h-[30rem] shrink-0 lg:h-[35rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
                         src="/images/about/architect.png"
@@ -58,7 +58,7 @@
                 </div>
                 <div class="order-1 md:order-2 w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] font-adamina font-normal w-full text-xl 
-                        mb-4 md:mb-6 lg:mb-8 leading-8 md:text-2xl lg:text-[2rem] 
+                        mb-4 md:mb-3 lg:mb-4 leading-8 md:text-2xl lg:text-[2rem] 
                         lg:leading-[3.2rem] hidden md:block md:w-3/4"
                     >
                         Architect of Policy <br /> Advocate for Progress
@@ -70,25 +70,25 @@
                         Architect of Policy Advocate for Progress
                     </h3>
                     <p class="text-justify leading-6 font-montserrat font-medium text-sm 
-                        md:text-base lg:leading-8 text-[#585C5B]"
+                        md:text-base text-[#585C5B]"
                     >
                         As Deputy Speaker, Rt. Hon. Kalu plays a pivotal role in steering legislative 
                         priorities that align with national development imperatives. His work spans:<br />
-                        <ul class="pl-5 my-3 md:my-5 lg:my-8 list-disc md:pl-6">
+                        <ul class="pl-5 my-3 md:my-4 lg:my-6 list-disc md:pl-6">
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8 text-justify"
+                             text-justify"
                             >
                                 Constitutional review and reform, focusing on governance structures that 
                                 enhance accountability and federalism;
                             </li>
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8 text-justify"
+                             text-justify"
                             >
                                 Legislative advocacy, advancing bills and motions that reflect the changing 
                                 needs of Nigeria’s socio-economic landscape;
                             </li>
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8 text-justify"
+                             text-justify"
                             >
                                 Policy integration, ensuring that legislative outputs respond to both national 
                                 imperatives and global standards.
@@ -96,7 +96,7 @@
                         </ul>
                     </p>
                     <p class="text-justify leading-6 font-montserrat font-medium text-sm 
-                        md:text-base lg:leading-8 text-[#585C5B]"
+                        md:text-base text-[#585C5B]"
                     >
                         He is recognized for prioritizing data driven policy design, transparent legislative 
                         processes, and constituent-centered outcomes.
@@ -107,14 +107,14 @@
                 lg:gap-10 lg:justify-evenly w-full"
             >
                 <div class="w-full md:w-1/2 lg:w-[45%]">
-                    <h3 class="text-[#146634] font-adamina font-normal mb-4 text-xl 
-                        leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
+                    <h3 class="text-[#146634] font-adamina font-normal mb-3 text-xl 
+                        leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-4 
                         w-full md:w-3/4 lg:mb-8"
                     >
                         Constituency and Community Impact
                     </h3>
                     <p class="text-justify leading-6 font-montserrat font-medium text-sm 
-                        md:text-base lg:leading-8 text-[#585C5B]"
+                        md:text-base text-[#585C5B]"
                     >
                         Rt. Hon. Kalu’s approach transcends the chamber walls. He has anchored and supported 
                         initiatives that deliver tangible benefits at the grassroots, including community 
@@ -125,8 +125,8 @@
                         transformation, not mere title or rhetoric.
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[25rem]
-                    lg:h-[32rem]"
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 
+                    md:h-[22rem] lg:h-[27.5rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/constituency.png"
@@ -142,7 +142,7 @@
                 lg:gap-10 lg:justify-evenly w-full"
             >
                 <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1
-                    md:h-[30rem] lg:h-[32rem] shrink-0"
+                    md:h-[23rem] lg:h-[28rem] shrink-0"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/strategic.png"
