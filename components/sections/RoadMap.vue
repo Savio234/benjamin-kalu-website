@@ -4,7 +4,7 @@
             <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
                 Road Map and Educational Background
             </h1>
-            <div class="my-6 md:my-8 relative w-full h-64 md:h-[28rem] lg:h-[30.5rem]">
+            <div class="my-6 md:my-8 relative w-full h-64 md:h-[35rem] lg:h-[39.5rem]">
                 <NuxtImg alt="bg" class="object-cover object-top w-full h-full rounded-2xl"
                     src="/images/about/background.png"
                 />

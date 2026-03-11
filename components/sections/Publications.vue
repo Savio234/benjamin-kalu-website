@@ -4,7 +4,7 @@
     <ManualSlider v-if="latest" :step="10">
         <div v-for="(item, index) in latest" :key="index"
             class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[18rem] lg:w-[20rem] 
-            cursor-pointer h-[22.5rem] md:h-[25rem] lg:h-[28.5rem]"
+            cursor-pointer h-[28rem] md:h-[33rem] lg:h-[37.5rem]"
         >
             <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                 :src="item.image"
