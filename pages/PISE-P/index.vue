@@ -1,22 +1,24 @@
 <template>
     <main class="w-full bg-white">
         <div class="w-[92.5%] md:w-[90%] mx-auto pt-8 md:pt-12 lg:pt-16">
-            <h3 class="mb-6 md:mb-8 lg:mb-10">
-                PISE-P - Peace in the South -<br /> East project
-            </h3>
             <div class="w-full flex flex-col-reverse gap-8 lg:flex-row md:gap-20 lg:gap-28">
-                <p class="text-justify w-full text-sm md:text-base font-montserrat 
-                    font-medium text-[#585C5B] md:w-1/2"
-                >
-                    The Peace in South East Project (PISE-P), an initiative of the Deputy Speaker, is 
-                    a peace-building and development program designed to address the complex 
-                    socio-economic challenges and security issues facing the South East region of 
-                    Nigeria. Developed in response to the growing impact of agitations, economic 
-                    decline, and security threats, PISE-P seeks to restore peace and stimulate 
-                    development through a multi-stakeholder approach.
-                </p>
-                <div class="relative shrink-0 w-full h-[22.75rem] md:w-1/2 md:mx-auto md:h-[23.25rem] 
-                    lg:w-[24rem] lg:h-[25.25rem] md:-mt-6 lg:-mt-12"
+                <div class="w-full relative md:w-1/2">
+                    <h3 class="mb-6 md:mb-8 lg:mb-10">
+                        PISE-P - Peace in the South -<br /> East project
+                    </h3>
+                    <p class="text-justify w-full text-sm md:text-base font-montserrat 
+                        font-medium text-[#585C5B]"
+                    >
+                        The Peace in South East Project (PISE-P), an initiative of the Deputy Speaker, is 
+                        a peace-building and development program designed to address the complex 
+                        socio-economic challenges and security issues facing the South East region of 
+                        Nigeria. Developed in response to the growing impact of agitations, economic 
+                        decline, and security threats, PISE-P seeks to restore peace and stimulate 
+                        development through a multi-stakeholder approach.
+                    </p>
+                </div>
+                <div class="relative shrink-0 w-full h-[22.75rem] md:w-1/2 md:mx-auto 
+                    md:h-[23.25rem] lg:w-[24rem] lg:h-[25.25rem] md:-mt-6 lg:-mt-12"
                 >
                     <NuxtImg alt="pipe-p-logo" src="/svgs/pisep/pise_p_logo.svg"
                         class="h-full w-full object-cover"
@@ -33,20 +35,21 @@
             md:mb-12 lg:mb-16 w-full"
         >
             <div class="w-[92.5%] md:w-[90%] mx-auto">
-                <h1 class="text-white font-adamina font-normal text-[2rem] md:text-4xl 
-                    lg:text-5xl"
+                <h1 class="text-white font-adamina font-normal text-[2rem] leading-[3rem]
+                    md:text-4xl md:leading-[3.5rem] lg:text-5xl lg:leading-[4.5rem]"
                 >
                     Tech For Peace
                 </h1>
                 <p class="w-4/5 mt-2 mb-4 md:mb-16 lg:mb-[5.5rem] md:w-[23.75rem] font-medium 
                     font-montserrat text-sm md:text-base text-white"
                 >
-                    A Free Digital Skills Initiative equiping young people witin South-East Nigeria, 
-                    with practical, future-ready skills for income generation, ethical digital 
-                    engagement and peace building.
+                    A Free Digital Skills Initiative equiping young people witin South-East 
+                    Nigeria, with practical, future-ready skills for income generation, 
+                    ethical digital engagement and peace building.
                 </p>
                 <button @click="$router.push('/tech-for-peace')"
-                    class="bg-[#146634] flex cursor-pointer items-center justify-center w-40 md:w-[15rem] 
+                    class="bg-[#146634] flex cursor-pointer items-center justify-center 
+                    w-40 md:w-[15rem] transition duration-300 hover:bg-[#105129]
                     lg:w-[21.5rem] md:w py-4 px-6 rounded-xl"
                 >
                     <p class="font-bold font-montserrat text-white text-sm md:text-base">
@@ -64,7 +67,8 @@
             <SectionsEvents :events="events" />
             <div class="w-full flex mt-12 md:mt-20 lg:mt-24 justify-center md:justify-end">
                 <button @click="$router.push('/pise-p/events')"
-                    class="bg-[#146634] w-32 h-10 cursor-pointer rounded-full py-2 px-6"
+                    class="bg-[#146634] w-32 h-10 md:h-12 cursor-pointer rounded-full py-2 
+                    px-6 transition duration-300 hover:bg-[#105129]"
                 >
                     <p class="text-sm text-white font-semibold font-montserrat md:text-base">
                         See more
@@ -95,8 +99,9 @@
                 >
                     To learn more and be a part of us, visit the official PISE - P website on: 
                     <a href="https://pise-p.org/"
-                        class="font-medium font-montserrat text-sm text-[#0E7B60] 
-                            md:text-base lg:text-lg underline"
+                        class="font-medium font-montserrat text-xs text-[#0E7B60] 
+                            md:text-sm lg:text-base underline transition duration-300 
+                            hover:bg-[#105129]"
                     >
                         https://pise-p.org/
                     </a>
@@ -146,7 +151,7 @@ const events = [
 <style lang="scss" scoped>
 .tech_for_peace {
     background-image: url('/public/images/pisep/tech_for_peace.jpg');
-  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-color: rgba($color: #000000, $alpha: 0.6);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;

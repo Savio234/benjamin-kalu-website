@@ -83,7 +83,6 @@ small {
 .router-link-active {
   color: green;
 }
-// global animations
 .swiper-pagination-bullet-active {
   background-color: green;
 }
@@ -91,12 +90,12 @@ small {
   width: 100%;
   height: 100%;
   position: relative;
-  background: #00635d;
-  background-position: center center;
+  // background: #00635d;
+  // background-position: center center;
 }
 .drop-card:hover {
-  // animation: zoom 2s ease-in-out;
-  background: #013a36;
+  background: #105129;
+  transition: all 300ms ease-in-out;
 }
 // @keyframes zoom {
 //   0% {

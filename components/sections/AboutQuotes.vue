@@ -1,7 +1,7 @@
 <template>
-    <Slider :items="latest" speed="slow" direction="left"
-        class="py-16 bg-white flex w-full overflow-x-scroll 
-        md:py-24 lg:py-36" v-if="latest"
+    <Slider :items="latest" speed="fast" direction="left"
+        class="py-8 bg-white flex w-full overflow-x-scroll 
+        md:py-16 lg:py-28" v-if="latest"
     >
         <div class="relative mr-20 md:mr-24 lg:mr-28
             w-fit shrink-0" 

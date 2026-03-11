@@ -27,8 +27,8 @@
     <SectionsStatesman id="statesman" />
     <section class="legistlative py-8 w-full md:py-12 lg:py-16 bg-light">
       <div class="mx-auto w-[92.5%] md:w-[90%]">
-        <div class="flex items-center gap-4 overflow-x-scroll md:grid md:grid-cols-2 
-          lg:grid-cols-4 md:gap-6"
+        <div class="flex items-center p-4 md:p-6 lg:p-8 gap-2 overflow-x-scroll md:grid 
+          md:grid-cols-2 lg:grid-cols-4 md:gap-4"
         >
           <CardLegistlative v-for="(item, index) in legistlativeItems"
             :key="index"
@@ -254,15 +254,10 @@ const images = ref([
   background-position: bottom center;
 }
 .update {
-  background-image: url('../public/images/home/tile.png');
-  background-color: #022924;
-  // opacity: 0.8;
-  // background-color: rgba(2, 41, 36, 0.75);
-  // background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: overlay;
+  background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),
+    url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717433021/benjamin_kalu/updates_noise_clx0wk.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom center;
 }
 .updates {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),

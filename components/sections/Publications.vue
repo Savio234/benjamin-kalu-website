@@ -1,10 +1,10 @@
 <template>
     <!-- <Slider :items="latest" speed="normal" direction="right" -->
         <!-- class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6" -->
-    <ManualSlider v-if="latest">
+    <ManualSlider v-if="latest" :step="10">
         <div v-for="(item, index) in latest" :key="index"
-            class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[20rem] lg:w-[24rem] 
-            cursor-pointer h-[22.5rem] md:h-[30rem] lg:h-[36.5rem]"
+            class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[18rem] lg:w-[20rem] 
+            cursor-pointer h-[22.5rem] md:h-[25rem] lg:h-[28.5rem]"
         >
             <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                 :src="item.image"
@@ -12,8 +12,8 @@
             <div class="dark_overlay rounded-xl w-full h-full absolute top-0 bottom-0 left-0 flex 
                 items-center justify-center"
             >
-                <button class="mx-auto h-14 rounded-[3.75rem] bg-white w-[90%]">
-                    <p class="text-base md:text-xl text-black font-medium">
+                <button class="mx-auto h-12 md:h-14 rounded-[3.75rem] bg-white w-[90%]">
+                    <p class="text-sm md:text-base lg:text-lg text-black font-medium">
                         Download latest Issue
                     </p>
                 </button>
@@ -33,7 +33,6 @@ const props = defineProps({
         type: Array,
     },
 });
-
 const latest = computed(() => props.publications);
 
 </script>
@@ -42,9 +41,9 @@ const latest = computed(() => props.publications);
 .publications-card {
     position: relative;
     .dark_overlay {
-        background-color: rgba(0, 0, 0, 0.55);
+        background-color: rgba(0, 0, 0, 0.6);
         opacity: 0;
-        translate: 0% 5%;
+        translate: 0% 3.5%;
         transition: all 500ms ease-out;
     }
     &:hover {

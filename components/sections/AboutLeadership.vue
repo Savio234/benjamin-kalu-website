@@ -1,7 +1,11 @@
 <template>
     <section class="py-8 md:py-16 lg:py-24 bg-white">
-        <div class="w-[92.5%] gap-8 md:gap-12 lg:gap-16 flex flex-col lg:w-[90%] mx-auto">
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+        <div class="w-[92.5%] gap-8 md:gap-12 lg:gap-16 flex flex-col sm:w-[85%] md:w-4/5 
+            lg:w-3/4 mx-auto"
+        >
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
                 <div class="w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] mb-4 md:mb-6 lg:mb-8 font-adamina font-normal 
                         text-xl leading-9 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem]"
@@ -35,7 +39,9 @@
                     />
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
                 <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1 h-64 
                     md:h-[35rem] shrink-0 lg:h-[40.25rem]"
                 >
@@ -68,21 +74,21 @@
                     >
                         As Deputy Speaker, Rt. Hon. Kalu plays a pivotal role in steering legislative 
                         priorities that align with national development imperatives. His work spans:<br />
-                        <ul class="pl-6 my-3 md:my-5 lg:my-8 list-disc md:pl-8">
+                        <ul class="pl-5 my-3 md:my-5 lg:my-8 list-disc md:pl-6">
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8"
+                                lg:leading-8 text-justify"
                             >
                                 Constitutional review and reform, focusing on governance structures that 
                                 enhance accountability and federalism;
                             </li>
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8"
+                                lg:leading-8 text-justify"
                             >
                                 Legislative advocacy, advancing bills and motions that reflect the changing 
                                 needs of Nigeria’s socio-economic landscape;
                             </li>
                             <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
-                                lg:leading-8"
+                                lg:leading-8 text-justify"
                             >
                                 Policy integration, ensuring that legislative outputs respond to both national 
                                 imperatives and global standards.
@@ -97,11 +103,13 @@
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
                 <div class="w-full md:w-1/2 lg:w-[45%]">
                     <h3 class="text-[#146634] font-adamina font-normal mb-4 text-xl 
                         leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
-                        w-full md:w-3/4 lg:mb-8 lg:w-1/2"
+                        w-full md:w-3/4 lg:mb-8"
                     >
                         Constituency and Community Impact
                     </h3>
@@ -130,7 +138,9 @@
                     />
                 </div>
             </div>
-            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between w-full">
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
                 <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1
                     md:h-[30rem] lg:h-[32rem] shrink-0"
                 >

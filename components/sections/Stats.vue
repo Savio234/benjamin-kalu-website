@@ -53,23 +53,18 @@
                 </div>
             </div>
             <div class="my-10 lg:my-14 h-[0.0625rem] bg-black w-full"></div>
-            <div class="w-full flex flex-col-reverse items-start md:flex-row md:items-center">
-                <div class="w-full h-60 md:w-[30%] relative md:h-[16.5rem]">
-                    <NuxtImg src="/images/home/statesman_dp.png" alt="statesman picture"
-                        class="w-full h-full object-cover"
-                    />
-                </div>
-                <div class="w-full bg-[#191919] md:w-[70%] gap-12 flex flex-col md:flex-row md:gap-16 
-                    lg:gap-24 py-6 md:py-10 items-center lg:items-start md:px-16 lg:px-24 
+            <div class="w-full flex flex-col items-start md:flex-row md:items-center">
+                <div class="w-full bg-[#191919] md:w-[70%] gap-8 flex flex-col md:flex-row 
+                    py-9 md:py-10 items-center lg:items-start md:px-10 lg:px-16 xl:px-24
                     md:h-[16.5rem] lg:py-14"
                 >
-                    <div class="relative w-24 h-24 md:w-[7.75rem] md:h-[7.75rem]">
+                    <div class="relative shrink-0 w-24 h-24 md:w-[7.75rem] md:h-[7.75rem]">
                         <NuxtImg src="/svgs/home/statesman_icon.svg" alt="statesman icon"
                             class="w-full h-full"
                         />
                     </div>
-                    <div class="mx-auto md:mx-0">
-                        <h3 class="mb-2.5 text-2xl font-adamina text-center md:text-left text-white">
+                    <div class="mx-auto">
+                        <h3 class="mb-2.5 text-2xl font-adamina text-center lg:text-left text-white">
                             The Statesman
                         </h3>
                         <p class="mb-4 text-sm text-white md:text-base md:mb-6">
@@ -77,10 +72,15 @@
                         </p>
                         <div class="md:-ml-6">
                             <MainButton @click="downloadPdf">
-                                Download Latest Issue
+                                <p class="text-xs md:text-sm text-white">Download Latest Issue</p>
                             </MainButton>
                         </div>
                     </div>
+                </div>
+                <div class="w-full h-60 md:w-[30%] relative md:h-[16.5rem]">
+                    <NuxtImg src="/images/home/statesman_dp.png" alt="statesman picture"
+                        class="w-full h-full object-cover"
+                    />
                 </div>
             </div>
         </div>

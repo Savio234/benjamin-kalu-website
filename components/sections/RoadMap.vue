@@ -4,7 +4,7 @@
             <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
                 Road Map and Educational Background
             </h1>
-            <div class="my-6 md:my-8 relative w-full h-64 md:h-[32rem] lg:h-[37.5rem]">
+            <div class="my-6 md:my-8 relative w-full h-64 md:h-[28rem] lg:h-[30.5rem]">
                 <NuxtImg alt="bg" class="object-cover object-top w-full h-full rounded-2xl"
                     src="/images/about/background.png"
                 />
@@ -13,7 +13,7 @@
                 v-if="tabs"
             >
                 <div class="flex h-[14rem] lg:h-80 py-5 px-2.5 cursor-pointer items-end 
-                    justify-center rounded-lg"
+                    justify-center transition duration-300 hover:shadow-xl rounded-lg"
                     :class="{
                         'card_bg text-white': activeTab === index,
                         'card_transparent text-[#2E312F]': activeTab !== index
@@ -49,7 +49,7 @@
             <div class="w-full data mx-auto overflow-x-scroll gap-4 flex items-start lg:gap-2"
                 :data-length="activeData.length" v-if="activeData.length"
                 :class="{
-                    'lg:flex mx-auto': activeData.length === 3,
+                    'lg:flex lg:items-center lg:justify-center mx-auto': activeData.length === 3,
                     'lg:grid lg:grid-cols-4': activeData.length === 4,
                     'lg:grid lg:grid-cols-5': activeData.length === 5,
                     'lg:grid lg:grid-cols-6': activeData.length === 6,
@@ -58,7 +58,7 @@
             >
                 <div v-for="(item, index) in activeData" :key="index"
                     class="shrink-0 z-[2] w-1/3 md:w-60 py-3 gap-4 md:gap-5
-                    relative lg:w-auto"
+                    relative lg:w-auto lg:max-w-[16rem]"
                 >
                     <div class="mx-auto z-[2] w-7 h-7 rounded-full flex items-center justify-center 
                         bg-[#00786766]"

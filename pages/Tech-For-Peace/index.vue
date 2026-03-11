@@ -2,13 +2,13 @@
     <main class="w-full bg-white">
         <section class="tech_bg flex items-center justify-center w-full">
             <div class="w-[92.5%] md:w-[90%] mx-auto">
-                <h1 class="text-white hidden md:block font-adamina font-normal text-2xl md:text-4xl 
-                    lg:text-5xl"
+                <h1 class="text-white hidden md:block font-adamina font-normal md:text-4xl 
+                    md:leading-[3.5rem] lg:text-5xl lg:leading-[4.5rem]"
                 >
                     Tech for Peace: Empowering South-<br />East Youth Through Digital Skills
                 </h1>
-                <h1 class="text-white block md:hidden font-adamina font-normal text-2xl md:text-4xl 
-                    lg:text-5xl"
+                <h1 class="text-white block md:hidden font-adamina font-normal text-[2rem] 
+                    leading-[3rem]"
                 >
                     Tech for Peace:<br /> Empowering South-East<br /> Youth Through Digital<br /> Skills
                 </h1>
@@ -21,7 +21,7 @@
                 </p>
                 <button @click="$router.push('/register')"
                     class="bg-[#146634] flex cursor-pointer items-center justify-center 
-                    w-[17rem] md:w-80 
+                    w-[17rem] md:w-80 transition duration-300 hover:bg-[#105129]
                     lg:w-[21.5rem] px-2 md:px-4 py-4 lg:px-6 rounded-xl"
                 >
                     <p class="font-bold font-montserrat text-white text-sm md:text-base">
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section class="w-full py-10 md:py-14 lg:py-20 text-center flex flex-col">
+        <section class="w-full py-14 md:py-20 lg:py-28 text-center flex flex-col">
             <div class="content mx-auto w-[92.5%] md:w-[85%] flex flex-col gap-2 items-center">
                 <h2 class="text-[#146634] text-xl md:text-4xl lg:text-5xl mb-4 font-adamina 
                     font-normal"
@@ -77,7 +77,7 @@
                 </p>
             </div>
         </section>
-        <section class="bg-[#EAEAEA] py-10 md:py-14 lg:py-20 w-full">
+        <section class="bg-[#EAEAEA] py-14 md:py-20 lg:py-28 w-full">
             <div class="w-[90%] md:w-[92.5%] mx-auto">
                 <h1 class="text-center text-[#2E312F] text-xl md:text-2xl lg:text-[2rem] font-adamina">
                     Skills in Focus
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section class="py-10 md:py-14 lg:py-20 w-full">
+        <section class="py-14 md:py-20 lg:py-28 w-full">
             <div class="w-[92.5%] md:w-[90%] flex flex-col items-start gap-8 md:gap-12 lg:gap-20 
                 md:flex-row mx-auto"
             >
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="pb-10 md:pb-14 lg:pb-20 w-full">
+        <section class="pb-14 md:pb-20 lg:pb-28 w-full">
             <div class="w-[92.5%] md:w-[90%] flex flex-col items-start gap-4 md:flex-row mx-auto">
                 <div class="w-full md:w-[55%] lg:w-3/5 px-4 py-12 md:px-6 md:py-10 lg:px-11 lg:py-11 relative 
                     bg-[#F0F0F0] rounded-2xl"
@@ -188,7 +188,7 @@
                         </div>
                         <button class="mt-6 w-full rounded-full items-center justify-center flex 
                             h-12 lg:h-14 md:w-[90%] md:mt-8 lg:mt-12 cursor-pointer
-                            bg-[#146634]"
+                            bg-[#146634] transition duration-300 hover:bg-[#105129]"
                         >
                             <p class="text-sm font-bold font-montserrat text-white md:text-base">
                                 Apply now
@@ -284,7 +284,7 @@ const eligibilty = [
 <style lang="scss" scoped>
 .tech_bg {
     background-image: url('/public/images/pisep/tech_for_peace.jpg');
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: rgba($color: #000000, $alpha: 0.6);
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;

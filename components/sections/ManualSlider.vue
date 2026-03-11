@@ -27,9 +27,9 @@
             </button>
         </div>
 
-
-
-        <div v-if="showDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div v-if="showDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 
+            z-10"
+        >
             <button v-for="i in totalItems" :key="i" class="w-3 h-3 rounded-full transition"
                 :class="currentIndex === i-1 ? 'bg-white' : 'bg-white/50'"
                 @click="currentIndex = i-1"
@@ -41,8 +41,9 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 
-defineProps<{
-  showDots?: boolean
+const props = defineProps<{
+  showDots?: boolean;
+  step: number;
 }>()
 
 const emit = defineEmits(['change'])
@@ -62,9 +63,9 @@ const totalItems = ref(0)
 //   transform: `translateX(-${currentIndex.value * translatePercent.value}%)`
 // }))
 const translateX = computed(() => {
-    const raw = currentIndex.value * 22.75
-    const maxTranslate = (totalItems.value >= 5) ? (totalItems.value - 2.75) * 22.75 :
-        (totalItems.value - 1) * 22.75
+    const raw = currentIndex.value * props.step
+    const maxTranslate = (totalItems.value >= 5) ? (totalItems.value - 2.75) * props.step :
+        (totalItems.value - 1) * props.step
   
   return Math.min(raw, maxTranslate)
 })

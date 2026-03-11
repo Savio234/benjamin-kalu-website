@@ -1,17 +1,28 @@
 <template>
   <section class="w-full py-8 md:py-12 lg:py-16 bg-light">
     <div class="content mx-auto flex flex-col gap-8 w-[90%]" v-if="latest">
-      <h1 class="text-[#022924] mb-4 md:mb-8 lg:mb-16 font-adamina text-[2rem] md:text-4xl 
-        lg:text-5xl"
-      >
-        News
-      </h1>
+      <div class="w-full flex items-center justify-between">
+        <h1 class="text-[#022924]  font-adamina text-[2rem] md:text-4xl lg:text-5xl">
+          News
+        </h1>
+        <div class="flex cursor-pointer items-center gap-2"
+          @click="$router.push(`/news`)"
+        >
+          <p class="font-medium font-montserrat text-base md:text-lg text-[#146634]">
+            See more
+          </p>
+          <div class="relative w-6 h-6">
+            <NuxtImg alt="" src="/svgs/home/arrow.svg" class="w-full h-full" />
+          </div>
+        </div>
+      </div>
       <Slider :items="latest" speed="normal" direction="left"
         class="flex w-full gap-3 md:gap-6 overflow-x-scroll">
         <div v-for="(item, index) in latest" :key="index"
           class="news-card bg-white relative shrink-0 rounded-xl border border-borderMuted
-          overflow-hidden w-1/3 md:w-[20rem] lg:w-[25rem] cursor-pointer min-h-80 
+          overflow-hidden w-1/3 md:w-[20rem] lg:w-[25rem] cursor-pointer min-h-80
           md:min-h-[22.75rem] lg:min-h-[24.75rem]"
+          @click="$router.push('/news/details')"
         >
           <div class="z-[2] absolute bottom-0 top-0 left-0">
             <div class="w-full relative h-[24.75rem]">
@@ -22,7 +33,7 @@
               />
             </div>
           </div>
-          <div class="dark_bg z-[3] w-full h-full absolute bottom-0 top-0 left-0"></div>
+          <div class="dark_bg z-[3] w-full h-1/3 absolute bottom-0 top-auto left-0"></div>
           <div class="dark-bg px-4 pt-4 md:px-6 md:pt-6 pb:8 md:pb-10 rounded-xl z-[3] w-full 
             h-full absolute bottom-0 top-0 left-0 flex flex-col"
           >
@@ -52,13 +63,13 @@
               {{ formatDate(item.attributes.date)}}
             </p>
 
-            <h3 class="font-normal hidden card-title text-sm md:text-base text-white 
+            <h3 class="font-normal card-title text-sm md:text-base text-white 
               font-adamina"
             >
               {{ item.attributes.title }}
             </h3>
 
-            <p class="text-white card-desc font-inter text-xs md:text-sm">
+            <p class="text-white hidden card-desc font-inter text-xs md:text-sm">
               {{ item.attributes.description }}
             </p>
           </div>

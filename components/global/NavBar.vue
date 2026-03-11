@@ -3,7 +3,9 @@
     <nav class="w-full py-4 bg-white relative">
       <div class="content mx-auto flex justify-between w-[95%] items-center">
         <FullLogo />
-        <div class="nav-content hidden lg:flex items-center p-1 gap-2 lg:gap-1 xl:gap-4 font-extralight">
+        <div class="nav-content hidden lg:flex items-center p-1 gap-2 lg:gap-1 xl:gap-4 
+          font-extralight"
+        >
           <NuxtLink
             to="/"
             class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full hover:text-black hover:underline"
@@ -19,7 +21,9 @@
             >About</NuxtLink
           >
           <NuxtLink
-            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max 
+              lg:w-auto rounded-full flex items-center gap-2 hover:text-black 
+              hover:underline"
             @mouseover="activateSection('legislative')"
             @click="resetActivations"
             >Legislative Affairs
@@ -27,14 +31,18 @@
           </NuxtLink>
           <NuxtLink
             to="/projects"
-            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max 
+              lg:w-auto rounded-full flex items-center gap-2 hover:text-black 
+              hover:underline"
             @mouseover="activateSection('project')"
             @click="resetActivations"
             >Projects
           </NuxtLink>
           <NuxtLink
             to="/pise-p"
-            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max lg:w-auto rounded-full flex items-center gap-2 hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base py-2 md:px-2 lg:px-4 md:min-w-max 
+              lg:w-auto rounded-full flex items-center gap-2 hover:text-black 
+              hover:underline"
             @mouseover="activateSection('pise-p')"
             @click="resetActivations"
           >
@@ -42,7 +50,8 @@
           </NuxtLink>
           <NuxtLink
             to="/news"
-            class="text-[#959897] text-sm xl:text-base rounded-full hover:text-black hover:underline"
+            class="text-[#959897] text-sm xl:text-base rounded-full hover:text-black 
+              hover:underline"
             @mouseover="resetActivations"
             @click="resetActivations"
           >

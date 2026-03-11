@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-8 md:py-12 lg:py-20 bg-white relative 
+  <section class="w-full pb-14 md:pb-20 lg:pb-28 bg-white relative 
     flex flex-col justify-center overflow-hidden"
   >
     <div class="w-full mx-auto flex justify-between gap-6">
@@ -17,7 +17,7 @@
         }"
         :pagination="true"
       >
-        <SwiperSlide class="w-full md:h-[32rem] lg:h-[35rem]"
+        <SwiperSlide class="w-full md:h-[32rem] lg:h-[36.25rem]"
           v-for="(image, index) in images" :key="index"
         >
           <!-- <div class="absolute inset-0 bg-black opacity-10"></div> -->

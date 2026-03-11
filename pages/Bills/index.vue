@@ -33,7 +33,7 @@
           </div>
           <button
             class="bg-[#146634] py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center 
-            text-white gap-2"
+            text-white gap-2 transition duration-300 hover:bg-[#105129]"
             @click="searchTable"
           >
             <span class="hidden sm:block">Find</span>
@@ -187,7 +187,8 @@
     >
       <div class="w-full flex flex-col gap-4 md:gap-6" v-if="listOfBills">
         <div class="w-full cursor-pointer hidden border border-solid border-[#CECFCF] md:flex 
-          md:h-40 lg:h-[6.75rem] items-start justify-between overflow-x-scroll"
+          md:h-40 lg:h-[6.75rem] items-start justify-between overflow-x-scroll transition
+          duration-300 hover:shadow-xl"
           v-for="(bill, index) in listOfBills" :key="index"
           @click="$router.push(`/bills/details`)"
         >
@@ -232,7 +233,7 @@
           </div>
         </div>
         <div class="w-full cursor-pointer md:hidden min-h-60 rounded-lg border border-solid 
-          border-[#CECFCF] flex gap-4 bg-white"
+          border-[#CECFCF] flex gap-4 bg-white transition duration-300 hover:shadow-xl"
           v-for="(bill, index) in listOfBills" :key="index"
           @click="$router.push(`/bills/details`)"
         >
@@ -282,7 +283,8 @@
     >
       <div class="w-full flex flex-col gap-4 md:gap-6" v-if="listOfMotions">
         <div class="w-full cursor-pointer border border-solid border-[#CECFCF] md:flex 
-          md:h-40 lg:h-[6.75rem] items-start justify-start hidden"
+          md:h-40 lg:h-[6.75rem] items-start justify-start hidden transition duration-300 
+          hover:shadow-xl"
           v-for="(motion, index) in listOfMotions" :key="index"
           @click="$router.push(`/bills/motions/details`)"
         >
@@ -306,7 +308,7 @@
           </div>
         </div>
         <div class="w-full cursor-pointer md:hidden min-h-60 rounded-lg border border-solid 
-          border-[#CECFCF] flex gap-4 bg-white"
+          border-[#CECFCF] flex gap-4 bg-white transition duration-300 hover:shadow-xl"
           v-for="(motion, index) in listOfMotions" :key="index"
           @click="$router.push(`/bills/motions/details`)"
         >

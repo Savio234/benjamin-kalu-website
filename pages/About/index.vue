@@ -54,8 +54,8 @@
     </section>
     <SectionsAboutQuotes :quotes="quotes" />
     <section class="w-full flex items-center justify-center md:h-[30rem] lg:h-[35rem] bg-[#146634]">
-      <div class="w-[87%] md:w-[55%] pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-7 lg:w-[42%] 
-        lg:pt-[5.35rem] lg:pb-9"
+      <div class="w-[87%] md:w-[55%] pt-[3.25rem] pb-[3.25rem] md:pt-14 md:pb-12 lg:w-[42%] 
+        lg:pt-[5.35rem] lg:pb-16"
       >
         <div class="relative h-24 w-24 mx-auto md:h-28 md:w-28 lg:w-[8.25rem] lg:h-[8.25rem]">
           <NuxtImg alt="image" class="w-full object-cover rounded-full h-full" 
@@ -84,7 +84,7 @@
       >
         <div class="order-2 pl-2 md:pl-0 md:order-1">
           <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-2xl 
-            md:text-[2rem] md:leading-[3rem] text-[#FBEF92]"
+            md:text-[2rem] md:leading-[3.25rem] text-[#FBEF92]"
           >
             A STATESMAN WITH A <br /> FORWARD-THINKING OUTLOOK
           </h3>
@@ -92,7 +92,7 @@
             At his core, Rt. Hon. Benjamin Okezie Kalu is driven by vision; a vision that honors 
             Nigeria’s heritage while propelling it toward resilient governance, inclusive opportunity, 
             and democratic excellence. His leadership is defined by:<br />
-            <ul class="mt-4 list-disc pl-6 md:pl-8">
+            <ul class="mt-5 list-disc pl-6 md:pl-8">
               <li class="text-sm text-white md:text-base">
                 Clarity of purpose
               </li>
@@ -107,7 +107,7 @@
               </li>
             </ul>
           </p>
-          <p class="text-sm mt-4 text-white md:text-base">
+          <p class="text-sm mt-5 text-white md:text-base">
             He leads not just with authority, but with accountability, ensuring that every policy, 
             partnership, and initiative reflects the trust placed in his office.
           </p>
@@ -126,7 +126,7 @@
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
         </p>
-        <ManualSlider>
+        <ManualSlider :step="22.5">
           <CardAward class="w-1/5 md:w-1/3 lg:w-1/4"
             image-url="/images/awards_and_recognition/legislative_contributions.png"
             title="Award for Outstanding Legislative Contribution towards Improved TB policy and Funding"
@@ -164,17 +164,41 @@
     </section>
     <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
-        <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
-          Publications
-        </h1>
+        <div class="w-full flex items-center justify-between">
+          <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+            Publications
+          </h1>
+          <div class="flex cursor-pointer items-center gap-2"
+            @click="$router.push(`/news#publications`)"
+          >
+            <p class="font-medium font-montserrat text-base md:text-lg text-[#146634]">
+              See more
+            </p>
+            <div class="relative w-6 h-6">
+              <NuxtImg alt="" src="/svgs/home/arrow.svg" class="w-full h-full" />
+            </div>
+          </div>
+        </div>
         <SectionsPublications :publications="publications" />
       </div>
     </section>
     <section class="w-full pb-8 md:pb-12 lg:pb-16 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
-        <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
-          Media
-        </h1>
+        <div class="w-full flex items-center justify-between">
+          <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
+            Media
+          </h1>
+          <div class="flex cursor-pointer items-center gap-2"
+            @click="$router.push(`/news#media`)"
+          >
+            <p class="font-medium font-montserrat text-base md:text-lg text-[#146634]">
+              See more
+            </p>
+            <div class="relative w-6 h-6">
+              <NuxtImg alt="" src="/svgs/home/arrow.svg" class="w-full h-full" />
+            </div>
+          </div>
+        </div>
         <SectionsAboutMedia :media="media" />
       </div>
     </section>
@@ -186,7 +210,6 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import Slider from '~/components/sections/Slider.vue';
 import ManualSlider from '~/components/sections/ManualSlider.vue';
 
 const legislativeContributions = `
@@ -244,14 +267,14 @@ const publications = [
     id: 4,
     image: '/images/about/publication_1.png'
   },
-  {
-    id: 5,
-    image: '/images/about/publication_1.png'
-  },
-  {
-    id: 6,
-    image: '/images/about/publication_2.png'
-  },
+  // {
+  //   id: 5,
+  //   image: '/images/about/publication_2.png'
+  // },
+  // {
+  //   id: 6,
+  //   image: '/images/about/publication_2.png'
+  // },
 ]
 
 const media = [

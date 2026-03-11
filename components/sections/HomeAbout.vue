@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-16 mb-12 text-center flex flex-col">
+  <section class="w-full py-16 md:py-24 lg:py-28 text-center flex flex-col">
     <div class="content mx-auto w-[95%] md:w-[85%] flex flex-col gap-2 items-center">
       <h2 class="text-[#022924] text-[2rem] md:text-4xl lg:text-5xl mb-4 font-adamina font-normal">
         About Benjamin Kalu
