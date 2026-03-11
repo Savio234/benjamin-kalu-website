@@ -2,10 +2,10 @@
     <div class="w-full relative">
         <div v-if="latest"
             class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-6 md:gap-8 
-            lg:gap-12" 
+            lg:gap-12"
         >
             <div v-for="(item, index) in displayedNews" :key="index"
-                class="media-card shrink-0 overflow-hidden w-full
+                class="media-card shrink-0 overflow-hidden w-[90%] mx-auto sm:w-full
                 cursor-pointer relative h-full md:h-52 lg:h-56"
             >
                 <div class="z-[2] hidden md:block absolute right-0 bottom-0 top-0 left-0">

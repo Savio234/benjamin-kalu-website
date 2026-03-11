@@ -1,30 +1,33 @@
 <template>
     <div class="w-full relative">
         <div v-if="latest"
-            class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-6 md:gap-8 
-            lg:gap-12" 
+            class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full items-start 
+                gap-6 md:gap-8 lg:gap-12"
         >
             <div v-for="(news, index) in displayedNews" :key="index"
-                class="bg-white shadow-sm p4 md:p-6 hover:shadow-lg transition-shadow border-t-4 
-                border-borderMuted shrink-0 cursor-pointer"
+                class="bg-white shadow-sm p-4 lg:p-6 hover:shadow-lg transition-shadow 
+                    border-t-4 border-borderMuted shrink-0 min-h-72 md:min-h-[30rem] 
+                    lg:min-h-[28rem] cursor-pointer"
                 @click="$router.push('/news/details')"
             >
                 <div class="mb-6 flex flex-col gap-2 md:gap-4 lg:gap-8 justify-between">
                     <h4 class="text-sm font-medium mb-4 font-montserrat">
                         {{ news.category }}
                     </h4>
-                    <h2 class="text-xl text-left font-semibold mb-4 font-montserrat">
+                    <h2 class="text-lg md:text-xl text-left font-semibold mb-4 font-montserrat">
                         {{ news.title }}
                     </h2>
 
-                    <p v-if="news.location" class="mb-4 font-montserrat">
+                    <p v-if="news.location" class="mb-4 text-sm md:text-base font-montserrat">
                         {{ news.location }}
                     </p>
 
-                    <p class="text-textGray text-left md:text-justify font-montserrat">
+                    <p class="text-textGray text-sm md:text-base text-left md:text-justify 
+                        font-montserrat"
+                    >
                         {{ news.description }}
                     </p>
-                    <div class="text-sm font-montserrat">
+                    <div class="text-xs md:text-sm font-montserrat">
                         {{ news.date }}
                     </div>
                 </div>

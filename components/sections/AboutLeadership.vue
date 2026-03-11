@@ -6,7 +6,7 @@
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
                 lg:gap-10 lg:justify-evenly w-full"
             >
-                <div class="w-full md:w-1/2 lg:w-[45%]">
+                <div class="w-full md:w-1/2 lg:w-2/5">
                     <h3 class="text-[#146634] mb-4 md:mb-6 lg:mb-8 font-adamina font-normal 
                         text-xl leading-9 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem]"
                     >
@@ -26,7 +26,7 @@
                         collaboration with communities, lawmakers, civil society, and international partners
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 md:h-[24rem] 
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 md:h-[24rem] 
                     lg:h-[28rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -42,7 +42,7 @@
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
                 lg:gap-10 lg:justify-evenly w-full"
             >
-                <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1 h-64 
+                <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1 h-64 
                     md:h-[30rem] shrink-0 lg:h-[35rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
@@ -56,7 +56,7 @@
                         src="/images/about/leadership_2.png"
                     />
                 </div>
-                <div class="order-1 md:order-2 w-full md:w-1/2 lg:w-[45%]">
+                <div class="order-1 md:order-2 w-full md:w-1/2 lg:w-2/5">
                     <h3 class="text-[#146634] font-adamina font-normal w-full text-xl 
                         mb-4 md:mb-3 lg:mb-4 leading-8 md:text-2xl lg:text-[2rem] 
                         lg:leading-[3.2rem] hidden md:block md:w-3/4"
@@ -106,7 +106,7 @@
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
                 lg:gap-10 lg:justify-evenly w-full"
             >
-                <div class="w-full md:w-1/2 lg:w-[45%]">
+                <div class="w-full md:w-1/2 lg:w-2/5">
                     <h3 class="text-[#146634] font-adamina font-normal mb-3 text-xl 
                         leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-4 
                         w-full md:w-3/4 lg:mb-8"
@@ -125,7 +125,7 @@
                         transformation, not mere title or rhetoric.
                     </p>
                 </div>
-                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-[35%] h-64 
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 
                     md:h-[22rem] lg:h-[27.5rem]"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
@@ -141,7 +141,7 @@
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
                 lg:gap-10 lg:justify-evenly w-full"
             >
-                <div class="hidden md:block relative md:w-2/5 lg:w-[35%] order-2 md:order-1
+                <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1
                     md:h-[23rem] lg:h-[28rem] shrink-0"
                 >
                     <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
@@ -155,7 +155,7 @@
                         src="/images/about/leadership_4.png"
                     />
                 </div>
-                <div class="order-1 w-full md:w-1/2 lg:w-[45%] md:order-2">
+                <div class="order-1 w-full md:w-1/2 lg:w-2/5 md:order-2">
                     <h3 class="text-[#146634] font-adamina mb-4 font-normal text-xl 
                         leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
                         lg:mb-8"

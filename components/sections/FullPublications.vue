@@ -4,8 +4,8 @@
             gap-4 md:gap-6 lg:gap-8" v-if="latest"
         >
             <div v-for="(item, index) in displayedNews" :key="index"
-                class="publications-card shrink-0 overflow-hidden w-full 
-                cursor-pointer h-[28rem] md:h-[33rem] lg:h-[37.5rem]"
+                class="publications-card shrink-0 overflow-hidden w-[95%] mx-auto sm:w-full 
+                cursor-pointer h-[31rem] md:h-[35rem] lg:h-[38.5rem]"
             >
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                     :src="item.image"

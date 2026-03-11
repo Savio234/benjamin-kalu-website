@@ -439,10 +439,10 @@ onMounted(async () => {
 
 const filters = [
   'All',
-  'Constitution',
+  'Constitution review',
   // 'Justice Sector Reform',
   'Judicial reforms',
-  'Security sectors',
+  'Security sector',
   'Education',
   'Professional Bodies',
   // 'Governance, Public service & Institutional',

@@ -11,7 +11,7 @@
     <div class="content px-4 my-4 md:my-6 mx-auto flex flex-col gap-2">
       <h5 class="font-semibold font-montserrat">{{ $props.title }}</h5>
       <a
-      class="text-primaryGreen text-md font-semibold flex items-center gap-1 cursor-pointer"
+      class="text-[#146634] text-md font-semibold flex items-center gap-1 cursor-pointer"
       v-if="$props.route"
       @click="$router.push(`${$props.route}`)"
       >Learn More <svg-icon name="carat_green_right" width="2rem" height="2rem"

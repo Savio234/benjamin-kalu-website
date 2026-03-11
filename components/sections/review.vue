@@ -19,8 +19,13 @@
           v-model="message_content"
         ></textarea>
 
-        <button type="submit" class="bg-[#146634] mt-2 w-full h-14 p-[1px] rounded-lg">
-          <div class="bg-[#146634] rounded-lg py-3 px-6 text-white flex justify-center items-center" style="font-family: 'Inter', sans-serif">
+        <button type="submit" class="bg-[#146634] mt-2 w-full h-14 p-[1px] rounded-lg
+          hover:bg-[#105129] transition duration-300"
+        >
+          <div class="bg-[#146634] rounded-lg py-3 px-6 text-white flex justify-center 
+            items-center hover:bg-[#105129] transition duration-300"
+            style="font-family: 'Inter', sans-serif"
+          >
             <span v-if="isLoading" class="flex items-center">
               <svg class="animate-spin h-5 w-5 text-white mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
