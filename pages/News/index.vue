@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col">
     <SectionsNews :newsData="newsData" />
-    <section id="publications" class="w-full py-8 md:py-12 lg:py-16 bg-white">
+    <section id="publications" class="w-full py-14 md:py-20 lg:py-28 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
         <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
           Publications
@@ -9,7 +9,7 @@
         <SectionsFullPublications :publications="publications" />
       </div>
     </section>
-    <section id="media" class="w-full pb-8 md:pb-12 lg:pb-16 bg-white">
+    <section id="media" class="w-full py-14 md:py-20 lg:py-28 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
         <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
           Media
@@ -17,9 +17,9 @@
         <SectionsMedia :media="media" />
       </div>
     </section>
-    <section class="updates w-full py-16 bg-black text-white">
+    <section class="updates w-full pb-14 md:pb-20 lg:pb-28 bg-black text-white">
       <div class="content flex pl-16 flex-col mx-auto gap-8">
-        <div class="header flex flex-col gap-1 text-white">
+        <div class="header mt-8 md:mt-12 lg:mt-16 flex flex-col gap-1 text-white">
           <h2 class="font-montserrat">Weekly
             <span class="text-secondaryGreen">Updates</span>
           </h2>
@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="py-8 w-[90%] md:w-[92.5%] mx-auto md:py-12 lg:py-20 bg-light">
+    <section class="py-14 w-[90%] md:w-[92.5%] mx-auto md:py-20 lg:py-28 bg-light">
       <h3 class="font-montserrat text-center text-2xl">
         Constitutional Review News and Updates
       </h3>

@@ -77,10 +77,10 @@
       </div>
     </section>
     <SectionsAboutLeadership />
-    
     <section class="bg-[#022822] w-full">
       <div class="w-[92.5%] grid grid-cols-1 gap-8 md:gap-14 lg:gap-[5.625rem] items-center 
-        md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] mx-auto"
+        md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] 
+        mx-auto"
       >
         <div class="order-2 pl-2 md:pl-0 md:order-1">
           <h3 class="mb-3 md:mb-4 lg:mb-6 font-adamina font-normal text-2xl 
@@ -120,7 +120,7 @@
       </div>
     </section>
     <SectionsRoadMap :roadmap="roadmap" />
-    <section class="full py-16 border-borderMuted">
+    <section class="full py-14 md:py-20 lg:py-28 border-borderMuted">
       <div class="flex flex-col text-center gap-4 mx-auto w-[90%]">
         <h3 class="font-semibold">Awards & Recognition</h3>
         <p class="text-md text-gray font-montserrat mb-4">
@@ -162,7 +162,7 @@
         </ManualSlider>
       </div>
     </section>
-    <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
+    <section class="w-full py-14 md:py-20 lg:py-28 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
         <div class="w-full flex items-center justify-between">
           <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
@@ -182,7 +182,7 @@
         <SectionsPublications :publications="publications" />
       </div>
     </section>
-    <section class="w-full pb-8 md:pb-12 lg:pb-16 bg-white">
+    <section class="w-full pb-14 md:pb-20 lg:pb-28 bg-white">
       <div class="w-[92.5%] mx-auto md:w-[90%]">
         <div class="w-full flex items-center justify-between">
           <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">

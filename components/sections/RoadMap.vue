@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-white w-full py-12 md:py-16 lg:py-20">
+    <section class="bg-white w-full py-16 md:py-24 lg:py-32">
         <div class="mx-auto w-[92.5%] md:w-[90%]">
             <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
                 Road Map and Educational Background

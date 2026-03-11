@@ -1,6 +1,6 @@
 <template>
-    <section class="py-8 md:py-16 lg:py-24 bg-white">
-        <div class="w-[92.5%] gap-8 md:gap-12 lg:gap-16 flex flex-col sm:w-[85%] md:w-4/5 
+    <section class="py-16 md:py-24 lg:py-32 bg-white">
+        <div class="w-[92.5%] gap-14 md:gap-20 lg:gap-28 flex flex-col sm:w-[85%] md:w-4/5 
             lg:w-3/4 mx-auto"
         >
             <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
