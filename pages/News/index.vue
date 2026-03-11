@@ -73,34 +73,6 @@
       <h3 class="font-montserrat text-center text-2xl">
         Constitutional Review News and Updates
       </h3>
-      <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-6 my-4 
-        md:my-6 lg:my-8"
-      >
-        <div
-          v-for="news in newsItems"
-          :key="news.id"
-          class="bg-white shadow-sm p4 md:p-6 hover:shadow-lg transition-shadow border-t-4 
-          border-borderMuted shrink-0"
-        >
-          <div class="mb-6 flex flex-col gap-2 md:gap-4 lg:gap-8 justify-between">
-            <h4 class="text-sm font-medium mb-4 font-montserrat">{{ news.category }}</h4>
-            <h2 class="text-xl text-left font-semibold mb-4 font-montserrat">
-              {{ news.title }}
-            </h2>
-
-            <p v-if="news.location" class="mb-4 font-montserrat">
-              {{ news.location }}
-            </p>
-
-            <p class="text-textGray text-left md:text-justify font-montserrat">
-              {{ news.description }}
-            </p>
-            <div class="text-sm font-montserrat">
-              {{ news.date }}
-            </div>
-          </div>
-        </div>
-      </div> -->
       <SectionsUpdates :newsItems="newsItems" />
     </section>
   </main>
