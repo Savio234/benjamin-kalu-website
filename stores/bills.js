@@ -12,8 +12,9 @@ export const useMyBillsStore = defineStore({
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      const storeBills = await $fetch(
-        `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
+      // const endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
+      const endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate[get_bill_details][populate]=*`
+      const storeBills = await $fetch(endpoint,
         {
           method: 'get',
           headers: baseHeader,
@@ -26,10 +27,13 @@ export const useMyBillsStore = defineStore({
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      const bill = await $fetch(`${envVars.strapiURL}/bills/${id}`, {
+      // const endpoint = `${envVars.strapiURL}/bills/${id}`
+      const endpoint = `${envVars.strapiURL}/bills/${id}?populate[get_bill_details][populate]=*`
+      const bill = await $fetch(endpoint, {
         method: 'get',
         headers: baseHeader,
       });
+      console.log('bill: ', bill);
       return bill;
     },
 

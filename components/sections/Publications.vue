@@ -1,10 +1,14 @@
 <template>
     <!-- <Slider :items="latest" speed="normal" direction="right" -->
         <!-- class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6" -->
-    <ManualSlider v-if="latest" :step="8">
+    <!-- <ManualSlider v-if="latest" :step="8"> -->
+    <div v-if="latest"
+        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-4 md:gap-6 lg:gap-8"
+    >
+    <!-- w-4/5 md:w-[23rem] lg:w-[26rem]  -->
         <div v-for="(item, index) in latest" :key="index"
-            class="publications-card shrink-0 overflow-hidden w-4/5 md:w-[23rem] lg:w-[26rem] 
-            cursor-pointer h-[31rem] md:h-[35rem] lg:h-[38.5rem]"
+            class="publications-card shrink-0 overflow-hidden w-full
+            cursor-pointer h-[34rem] md:h-[38rem] lg:h-[41rem]"
         >
             <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                 :src="item.image"
@@ -19,7 +23,8 @@
                 </button>
             </div>
         </div>
-    </ManualSlider>
+    </div>
+    <!-- </ManualSlider> -->
 </template>
 
 <script setup>

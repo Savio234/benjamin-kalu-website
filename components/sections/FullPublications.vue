@@ -5,7 +5,7 @@
         >
             <div v-for="(item, index) in displayedNews" :key="index"
                 class="publications-card shrink-0 overflow-hidden w-[95%] mx-auto sm:w-full 
-                cursor-pointer h-[31rem] md:h-[35rem] lg:h-[38.5rem]"
+                cursor-pointer h-[31rem] md:h-[35rem] lg:h-[43rem]"
             >
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
                     :src="item.image"

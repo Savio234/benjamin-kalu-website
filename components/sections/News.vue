@@ -1,6 +1,6 @@
 <template>
     <section class="w-full py-8 md:py-12 lg:py-16 bg-light">
-        <div class="content mx-auto flex flex-col w-[92.5%] md:w-[90%]" v-if="latest">
+        <div class="content mx-auto flex flex-col w-[92.5%] md:w-[90%] lg:w-[85%]" v-if="latest">
             <h1 class="text-[#022924] text-center font-adamina text-[2rem] md:text-4xl lg:text-5xl">
                 In The News
             </h1>

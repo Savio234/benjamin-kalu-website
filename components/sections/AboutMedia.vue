@@ -3,7 +3,7 @@
     <!-- class="mt-8 overflow-x-scroll flex w-full items-start gap-4 md:gap-6"  -->
     <!-- class="media-card shrink-0 overflow-hidden w-1/3 md:w-[20rem] lg:w-[24rem] -->
     <div
-        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-6 md:gap-8 lg:gap-10" 
+        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-6 md:gap-8 lg:gap-10"
         v-if="latest"
     >
         <div v-for="(item, index) in latest" :key="index"

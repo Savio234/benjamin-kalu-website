@@ -79,7 +79,7 @@
     <SectionsAboutLeadership />
     <section class="bg-[#022822] w-full">
       <div class="w-[92.5%] grid grid-cols-1 gap-8 md:gap-14 lg:gap-[5.625rem] items-center 
-        md:grid-cols-2 md:items-start md:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] 
+        md:grid-cols-2 md:items-start md:w-[90%] lg:w-[85%] py-[3.25rem] md:py-[5.5rem] lg:py-[6.25rem] 
         mx-auto"
       >
         <div class="order-2 pl-2 md:pl-0 md:order-1">
@@ -121,7 +121,7 @@
     </section>
     <SectionsRoadMap :roadmap="roadmap" />
     <section class="full py-14 md:py-20 lg:py-28 border-borderMuted">
-      <div class="flex flex-col text-center gap-4 mx-auto w-[90%]">
+      <div class="flex flex-col text-center gap-4 mx-auto w-[91%] md:w-[90%] lg:w-[85%]">
         <h3 class="font-semibold">Awards & Recognition</h3>
         <p class="text-md text-gray font-montserrat mb-4">
           Rt. Hon Kalu’s outstanding service has earned him numerous awards, including
@@ -163,7 +163,7 @@
       </div>
     </section>
     <section class="w-full py-14 md:py-20 lg:py-28 bg-white">
-      <div class="w-[92.5%] mx-auto md:w-[90%]">
+      <div class="w-[92.5%] mx-auto md:w-[90%] lg:w-[85%]">
         <div class="w-full flex items-center justify-between">
           <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
             Publications
@@ -183,7 +183,7 @@
       </div>
     </section>
     <section class="w-full pb-14 md:pb-20 lg:pb-28 bg-white">
-      <div class="w-[92.5%] mx-auto md:w-[90%]">
+      <div class="w-[92.5%] mx-auto md:w-[90%] lg:w-[85%]">
         <div class="w-full flex items-center justify-between">
           <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
             Media
@@ -263,10 +263,10 @@ const publications = [
     id: 3,
     image: '/images/about/publication_3.png'
   },
-  {
-    id: 4,
-    image: '/images/about/publication_1.png'
-  },
+  // {
+  //   id: 4,
+  //   image: '/images/about/publication_1.png'
+  // },
   // {
   //   id: 5,
   //   image: '/images/about/publication_2.png'

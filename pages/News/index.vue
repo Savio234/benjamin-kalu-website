@@ -2,7 +2,7 @@
   <main class="flex flex-col">
     <SectionsNews :newsData="newsData" />
     <section id="publications" class="w-full py-14 md:py-20 lg:py-28 bg-white">
-      <div class="w-[92.5%] mx-auto md:w-[90%]">
+      <div class="w-[92.5%] mx-auto md:w-[90%] lg:w-[85%]">
         <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
           Publications
         </h1>
@@ -10,7 +10,7 @@
       </div>
     </section>
     <section id="media" class="w-full py-14 md:py-20 lg:py-28 bg-white">
-      <div class="w-[92.5%] mx-auto md:w-[90%]">
+      <div class="w-[92.5%] mx-auto md:w-[90%] lg:w-[85%]">
         <h1 class="text-center text-[#022924] text-[2rem] md:text-4xl lg:text-5xl">
           Media
         </h1>
@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="py-14 w-[90%] md:w-[92.5%] mx-auto md:py-20 lg:py-28 bg-light">
+    <section class="py-14 w-[92.5%] md:w-[90%] lg:w-[85%] mx-auto md:py-20 lg:py-28 bg-light">
       <h3 class="font-montserrat text-center text-2xl">
         Constitutional Review News and Updates
       </h3>
