@@ -1,7 +1,7 @@
 <template>
     <div class="w-full relative">
         <div v-if="latest"
-            class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-6 md:gap-8 
+            class="mt-8 grid grid-cols-1 md:grid-cols-4 w-full items-start gap-6 md:gap-8 
             lg:gap-12"
         >
             <div v-for="(item, index) in displayedNews" :key="index"
@@ -95,8 +95,8 @@ const props = defineProps({
 });
 
 const latest = computed(() => props.media);
-const itemsPerPage = 3
-const itemsToAdd = 3
+const itemsPerPage = 4
+const itemsToAdd = 4
 
 const visibleCount = ref(itemsPerPage)
 const isLoadingMore = ref(false)

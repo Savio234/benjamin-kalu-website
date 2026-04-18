@@ -179,98 +179,98 @@ const tenthAssemblyProjects = [
   },
 ];
 
-const ninthAssemblyProjects = [
-  {
-    title: 'Roads and Infrastructure',
-    details: [
-      'Umuimenyi Nkpa Ecological Fund Project (on-going): Attracted an 11km Ecological Intervention Project in Umuimenyi Nkpa which includes construction of roads and the Nkpa bridge to curb the erosion menace in the communities.',
-      'Umuahia-Bende-Ohafia Road (on-going): Commenced the rehabilitation and construction of the Umuahia-Bende-Ohafia Road (LOT2) in Abia State to the tune of ₦12bn.',
-      'Etitiulo-Itumbauzo Road: Secured the rehabilitation of the Etitiulo-Itumbauzo road which has now been asphalted.',
-      'Construction of 1km Road in Etitiulo Bende in Bende LGA (ongoing).',
-      'Construction of 1km Amaogwu Ndiokorieukwu road (ongoing).',
-      'Construction of 600-metre Amaogwu Agbomiri road (ongoing).',
-      'Construction of 400-metre Agbomiri Umorie road (ongoing).',
-    ],
-  },
-  {
-    title: 'Health',
-    details: [
-      'Completion of Health and Maternity Centre for Amaogwu, Bende, Bende Federal Constituency. (Completed)',
-      'Health Insurance Scheme for Bende providing 90% subsidized healthcare for over 500 Bende indigenes. (Completed)',
-      'Ntalakwu Health Centre. (90% completed)',
-      'Construction of Maternity Health care in Okputong, Bende town in Bende L.G.A. (ongoing)',
-      'Renovation of Umunnato Item Health Centre (Ongoing).',
-    ],
-  },
-  {
-    title: 'Employment',
-    details: ['Several Bende graduates have benefited from federal employment.'],
-  },
-  {
-    title: 'Education',
-    details: [
-      'Construction and Furnishing of a 3-classroom block in Nkporo central school, Ubibia in Itumbauzo Bende LGA.',
-      'Construction of a 3-classroom block at Ndiwo Town School in Itumbauzo Bende LGA.',
-      'Completed renovation of Uzuakoli Practicing School.',
-      'Completed renovation of Amazu Central School, Umuhu Ezechi.',
-      'Distribution of learning and educational materials to community schools in 13 wards of Bende Federal Constituency.',
-      'Renovation of a block of 6 classrooms in Girls secondary school Uzuakoli.',
-      'Renovation of 3 classrooms in Uzuakoli township school, currently ongoing.',
-      'Renovation of Nkpa technical school Nkpa in Bende L.G.A, (Completed).',
-      'Construction and furnishing of 3 classrooms in Onuibina primary school Igbere in Bende L.G.A completed.',
-      'Renovation of a block of 3 classrooms in Community primary school Okai item completed.',
-      'Construction of a block of 3 classrooms in Amaokai primary school Ugwueke, ongoing.',
-      'Construction and renovation of six classroom blocks in community primary school, Apanu Item.',
-      'Construction of a Block of 3 Classrooms in Okporoenyi, Bende.',
-      'Construction/renovation and furnishing of a block of 3 classrooms at Item Community High School.',
-    ],
-  },
-  {
-    title: 'Infrastructure Development',
-    details: ['Completed the Divisional Immigration Office in Bende.', 'Construction of ICT Centre.'],
-  },
-  {
-    title: 'Agriculture',
-    details: [
-      'Skills Acquisition/Training of 200 Bende Constituents on Aquaponics development in Bende Federal Constituency.',
-      'Training and empowerment of Youth and Women on Agribusiness management in Bende Federal Constituency.',
-      'Training and empowerment of over 1000 Bende indigenes on rice farming and production.',
-      'Supply of Agricultural Seeds to Farmers in Bende.',
-    ],
-  },
-  {
-    title: 'Water',
-    details: [
-      'Solar powered borehole drilling at Ovum Ugwu, Nkpa (Completed).',
-      'Construction of a solar powered borehole in Mba Autonomous community Ozuitem, (Completed).',
-      'Construction of a solar powered borehole in Okpufu Amankalu Alayi in Bende L.G.A, (Ongoing).',
-      'Construction of a solar powered borehole in Okoko Item (Ongoing).',
-    ],
-  },
-  {
-    title: 'Security and Transport Support Programmes',
-    details: [
-      'Donation of 27 motorbikes and 13 tricycles (keke napep) to various wards in Bende to curb insecurity and improve transportation in Bende.',
-    ],
-  },
-  {
-    title: 'Power Infrastructure',
-    details: [
-      'Construction of a solar farm to house a mini grid for energy supply in Bende which will provide light for 25 years non-stop and away from the national grid (Ongoing).',
-      'Installation of 2.5 kva transformer in Amaokwe Item, (Completed).',
-      'Provision of Solar Street lights across various communities in Bende.',
-      'Construction of 2x7.5 MVA 33/11KV injection Substation in Bende Town with one feeder extension at Ozuitem.',
-    ],
-  },
-  {
-    title: 'Town Halls',
-    details: ['Rehabilitation of Uche-Ebiri hall in Igbere (Ongoing).', 'Agbamuzu town hall, Bende completed.'],
-  },
-  {
-    title: 'Community Support',
-    details: ['Bende Widows Support Programme (19th Edition).', 'Bende Food Support Programme (19th Edition).'],
-  },
-];
+// const ninthAssemblyProjects = [
+//   {
+//     title: 'Roads and Infrastructure',
+//     details: [
+//       'Umuimenyi Nkpa Ecological Fund Project (on-going): Attracted an 11km Ecological Intervention Project in Umuimenyi Nkpa which includes construction of roads and the Nkpa bridge to curb the erosion menace in the communities.',
+//       'Umuahia-Bende-Ohafia Road (on-going): Commenced the rehabilitation and construction of the Umuahia-Bende-Ohafia Road (LOT2) in Abia State to the tune of ₦12bn.',
+//       'Etitiulo-Itumbauzo Road: Secured the rehabilitation of the Etitiulo-Itumbauzo road which has now been asphalted.',
+//       'Construction of 1km Road in Etitiulo Bende in Bende LGA (ongoing).',
+//       'Construction of 1km Amaogwu Ndiokorieukwu road (ongoing).',
+//       'Construction of 600-metre Amaogwu Agbomiri road (ongoing).',
+//       'Construction of 400-metre Agbomiri Umorie road (ongoing).',
+//     ],
+//   },
+//   {
+//     title: 'Health',
+//     details: [
+//       'Completion of Health and Maternity Centre for Amaogwu, Bende, Bende Federal Constituency. (Completed)',
+//       'Health Insurance Scheme for Bende providing 90% subsidized healthcare for over 500 Bende indigenes. (Completed)',
+//       'Ntalakwu Health Centre. (90% completed)',
+//       'Construction of Maternity Health care in Okputong, Bende town in Bende L.G.A. (ongoing)',
+//       'Renovation of Umunnato Item Health Centre (Ongoing).',
+//     ],
+//   },
+//   {
+//     title: 'Employment',
+//     details: ['Several Bende graduates have benefited from federal employment.'],
+//   },
+//   {
+//     title: 'Education',
+//     details: [
+//       'Construction and Furnishing of a 3-classroom block in Nkporo central school, Ubibia in Itumbauzo Bende LGA.',
+//       'Construction of a 3-classroom block at Ndiwo Town School in Itumbauzo Bende LGA.',
+//       'Completed renovation of Uzuakoli Practicing School.',
+//       'Completed renovation of Amazu Central School, Umuhu Ezechi.',
+//       'Distribution of learning and educational materials to community schools in 13 wards of Bende Federal Constituency.',
+//       'Renovation of a block of 6 classrooms in Girls secondary school Uzuakoli.',
+//       'Renovation of 3 classrooms in Uzuakoli township school, currently ongoing.',
+//       'Renovation of Nkpa technical school Nkpa in Bende L.G.A, (Completed).',
+//       'Construction and furnishing of 3 classrooms in Onuibina primary school Igbere in Bende L.G.A completed.',
+//       'Renovation of a block of 3 classrooms in Community primary school Okai item completed.',
+//       'Construction of a block of 3 classrooms in Amaokai primary school Ugwueke, ongoing.',
+//       'Construction and renovation of six classroom blocks in community primary school, Apanu Item.',
+//       'Construction of a Block of 3 Classrooms in Okporoenyi, Bende.',
+//       'Construction/renovation and furnishing of a block of 3 classrooms at Item Community High School.',
+//     ],
+//   },
+//   {
+//     title: 'Infrastructure Development',
+//     details: ['Completed the Divisional Immigration Office in Bende.', 'Construction of ICT Centre.'],
+//   },
+//   {
+//     title: 'Agriculture',
+//     details: [
+//       'Skills Acquisition/Training of 200 Bende Constituents on Aquaponics development in Bende Federal Constituency.',
+//       'Training and empowerment of Youth and Women on Agribusiness management in Bende Federal Constituency.',
+//       'Training and empowerment of over 1000 Bende indigenes on rice farming and production.',
+//       'Supply of Agricultural Seeds to Farmers in Bende.',
+//     ],
+//   },
+//   {
+//     title: 'Water',
+//     details: [
+//       'Solar powered borehole drilling at Ovum Ugwu, Nkpa (Completed).',
+//       'Construction of a solar powered borehole in Mba Autonomous community Ozuitem, (Completed).',
+//       'Construction of a solar powered borehole in Okpufu Amankalu Alayi in Bende L.G.A, (Ongoing).',
+//       'Construction of a solar powered borehole in Okoko Item (Ongoing).',
+//     ],
+//   },
+//   {
+//     title: 'Security and Transport Support Programmes',
+//     details: [
+//       'Donation of 27 motorbikes and 13 tricycles (keke napep) to various wards in Bende to curb insecurity and improve transportation in Bende.',
+//     ],
+//   },
+//   {
+//     title: 'Power Infrastructure',
+//     details: [
+//       'Construction of a solar farm to house a mini grid for energy supply in Bende which will provide light for 25 years non-stop and away from the national grid (Ongoing).',
+//       'Installation of 2.5 kva transformer in Amaokwe Item, (Completed).',
+//       'Provision of Solar Street lights across various communities in Bende.',
+//       'Construction of 2x7.5 MVA 33/11KV injection Substation in Bende Town with one feeder extension at Ozuitem.',
+//     ],
+//   },
+//   {
+//     title: 'Town Halls',
+//     details: ['Rehabilitation of Uche-Ebiri hall in Igbere (Ongoing).', 'Agbamuzu town hall, Bende completed.'],
+//   },
+//   {
+//     title: 'Community Support',
+//     details: ['Bende Widows Support Programme (19th Edition).', 'Bende Food Support Programme (19th Edition).'],
+//   },
+// ];
 
 const accordionItems = [
   {
@@ -334,11 +334,40 @@ const accordionItems = [
         accomplishment: `Construction with Alphate of Itumbauzo Ntalakwu road phase 3 by 
           FERMA`,
       },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: 'Construction of 3 classroom blocks at Ndiwo Itumbuzo (2021/2022)',
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 2 classroom blocks with offices at Nkporo Ubibia 
+          (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of health/maternity center at Ntalakwu Itumbuzo 
+          (2019/2020)`,
+      },
     ],
   },
   {
     title: 'Umuimenyi Nkpa',
     details: [
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a 3-classroom block with office at UMUIMENYI Technical 
+          School NKPA (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Ovum Ugwu Nkpa (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 8.3 kilometers road with bridge in Nkpa/Umuimenyi: 
+          (1) 6.1 kilometers in Nkpa community with Eme bridge; (2) 2.2 kilometers in Akoli 
+          Imenyi.`,
+      },
       {
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Renovation of a 3-classroom block with office at UMUIMENYI Technical 
@@ -378,6 +407,25 @@ const accordionItems = [
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Renovation of Uche Ebiri Hall (ongoing)`,
       },
+      {
+        image: '/images/projects/accordion_image_3.png',
+        accomplishment: `Construction of a block of 3 classrooms at Onuibina Primary School 
+          Igbere (2020/2021)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of 3-classroom block with toilet and bathroom at both 
+          ends at Ohumola Ezigbere Secondary School (2021/2022)`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amabia, Elu Ohafia Ibina 
+          Ukwu Igbere`,
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of Uche Ebiri Hall (ongoing)`,
+      },
     ],
   },
   {
@@ -388,11 +436,67 @@ const accordionItems = [
         accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
           Uzuakoli (2020/2021)`
       },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of a block of 6 classrooms in Girls' Secondary School 
+          Uzuakoli (2020/2021)`
+      },
     ],
   },
   {
     title: 'Ozuitem',
     details: [
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Ozuitem (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Agbua Elugwumba Ozuitem road (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of two classrooms in Ozuitem Secondary 
+          School (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Ozuitem (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Agbua Elugwumba Ozuitem road (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of two classrooms in Ozuitem Secondary 
+          School (ongoing)`
+      },
       {
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Construction of solar-powered borehole in Ozuitem (2020/2021)`
@@ -419,6 +523,30 @@ const accordionItems = [
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Construction of Amabo Agboakoli Road Alayi`
       },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amankalu Alayi (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Amabo Agboakoli Road Alayi`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amankalu Alayi (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Amabo Agboakoli Road Alayi`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Amankalu Alayi (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Amabo Agboakoli Road Alayi`
+      },
     ],
   },
   {
@@ -433,11 +561,65 @@ const accordionItems = [
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Construction of solar-powered borehole in Eke Market Square Umuokwe`
       },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of classroom blocks in Amazu Central School Umuhu Ezechi 
+          (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Eke Market Square Umuokwe`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of classroom blocks in Amazu Central School Umuhu Ezechi 
+          (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Eke Market Square Umuokwe`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Renovation of classroom blocks in Amazu Central School Umuhu Ezechi 
+          (2020/2021)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of solar-powered borehole in Eke Market Square Umuokwe`
+      },
     ],
   },
   {
     title: 'Ugwueke',
     details: [
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of 3 classrooms at Amaokai Ugwueke 
+          (2021/2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Civic Hall in Umungere Ugwueke (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of 3 classrooms at Amaokai Ugwueke 
+          (2021/2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Civic Hall in Umungere Ugwueke (ongoing)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of a block of 3 classrooms at Amaokai Ugwueke 
+          (2021/2022)`
+      },
+      {
+        image: '/images/projects/accordion_image_2.png',
+        accomplishment: `Construction of Civic Hall in Umungere Ugwueke (ongoing)`
+      },
       {
         image: '/images/projects/accordion_image_2.png',
         accomplishment: `Construction of a block of 3 classrooms at Amaokai Ugwueke 

@@ -1,25 +1,25 @@
 <template>
-  <div class="h-full w-full flex gap-4 items-start md:gap-6 lg:gap-10 lg:justify-between 
-    flex-col lg:flex-row"
+  <div class="h-full w-full flex gap-4 items-start md:gap-8 lg:gap-16 
+    lg:justify-between flex-col lg:flex-row"
   >
     <div class="relative w-full shrink-0 lg:w-1/2">
       <client-only>
-        <apexchart 
-          type="bar" 
-          height="350" 
-          :options="chartOptions" 
+        <apexchart
+          type="bar"
+          height="350"
+          :options="chartOptions"
           :series="series"
         ></apexchart>
       </client-only>
     </div>
 
     <div class="w-full shrink-0 lg:w-1/2">
-      <ul class="flex w-full flex-col gap-2 text-xs">
+      <ul class="flex w-full flex-col gap-4 md:gap-6 text-xs">
         <li v-for="(item, index) in chartData" :key="index"
           class="flex flex-col items-start gap-1"
         >
           <div class="w-8 h-4" :style="{ background: item.color }"></div>
-          <p class="text-sm w-auto md:w-3/4">{{ item.label }}</p>
+          <p class="text-sm w-auto md:w-3/4 lg:w-1/2">{{ item.label }}</p>
         </li>
       </ul>
     </div>
@@ -72,9 +72,9 @@ const chartOptions = reactive({
   },
   plotOptions: {
     bar: {
-      borderRadius: 8,
+      borderRadius: 12,
       horizontal: false,
-      columnWidth: '50%',
+      columnWidth: '45%',
       dataLabels: { position: 'top' }
     }
   },

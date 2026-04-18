@@ -12,13 +12,12 @@ export const useMyBillsStore = defineStore({
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      let endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}
-        &pagination[pageSize]=${pageSize}&populate[get_bill_details][populate]=*`;
+      let endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate[get_bill_details][populate]=*`;
       if (searchTerm) {
         if (searchType) {
           endpoint += `&filters[${searchType}][$containsi]=${searchTerm}`;
         } else {
-          endpoint += `&filters[title][$containsi]=${searchTerm}`;
+          endpoint += `&filters[$or][0][title][$containsi]=${searchTerm}&filters[$or][1][hb_number][$containsi]=${searchTerm}&filters[$or][2][status][$containsi]=${searchTerm}&filters[$or][3][status_desc][$containsi]=${searchTerm}`;
         }
       }
 

@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="py-14 w-[92.5%] md:w-[90%] lg:w-[85%] mx-auto md:py-20 lg:py-28 bg-light">
+    <section id="news" class="py-14 w-[92.5%] md:w-[90%] lg:w-[85%] mx-auto md:py-20 lg:py-28 bg-light">
       <h3 class="font-montserrat text-center text-2xl">
         Constitutional Review News and Updates
       </h3>
@@ -399,6 +399,42 @@ const weeklyUpdates = [
 ]
 
 const media = [
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
+  {
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
   {
     video: '/',
     video_thumbail: '/images/about/thumbnail.jpg',

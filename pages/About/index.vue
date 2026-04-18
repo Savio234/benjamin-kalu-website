@@ -206,49 +206,11 @@
 </template>
 
 <script lang="ts" setup>
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
+// import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/effect-fade';
+// import 'swiper/css/pagination';
 import ManualSlider from '~/components/sections/ManualSlider.vue';
-
-const legislativeContributions = `
-      <p class="text-lg">
-        Since 2019, Rt. Hon Kalu has been a dynamic member of the National Assembly. He has actively
-        participated in over 22 crucial motions, contributing to national development and public well-being. Key
-        areas of his legislative focus include:
-      </p>
-      <ul class="list-disc pl-12">
-        <li>Environmental Protection</li>
-        <li>Investigating governmental agency failures</li>
-        <li>Promoting the welfare of Nigerians globally</li>
-      </ul>
-      <p class="text-lg">
-        With over 100 bills to his name, he has been instrumental to much needed amendments to national laws
-        principal of which include the Acts Authentication Act and the Nigerian Communications Act, to mention a
-        few. He has also, through legislative interventions, pioneered the creation of critical public
-        institutions such as the Federal Capital Territory Education Resource Centre.
-      </p>
-      <p class="text-lg">
-        Having sponsored the bill for the establishment of the South-East Development Commission in the 10th
-        House (a bill which has now been signed into law by the President of the Federal Republic of Nigeria),
-        Kalu has remained committed to addressing the socio-economic and infrastructural deficits in the
-        South-East.
-      </p>
-      <p class="text-lg">
-        As Deputy Speaker of the 10th House of Representatives, Rt. Hon. Benjamin Kalu currently Chairs the
-        House Committee on the review of the 1999 Constitution, as well as the House Committee of the Whole.
-      </p>
-`;
-
-const foreignParliamentEngagement = `
-  <p class="text-lg">
-    Notable amongst his foreign parliamentary engagements is his membership of the African Union’s Pan African Parliament where he contributes his two cents serving under the specialised Committee on Finance and Administration.
-  </p>
-  <p class="text-lg">
-    He is also a prominent member of the 6th ECOWAS Parliament where he co-leads the Nigerian delegation to the Parliament, while also serving as Chair of the Finance, Administration and Budget Committee.
-  </p>
-`;
 
 const publications = [
   {
@@ -299,13 +261,13 @@ const media = [
     title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
     media_type: 'speech',
   },
-  // {
-  //   id: 4,
-  //   video: '/',
-  //   video_thumbail: '/images/about/thumbnail.jpg',
-  //   title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-  //   media_type: 'speech',
-  // },
+  {
+    id: 4,
+    video: '/',
+    video_thumbail: '/images/about/thumbnail.jpg',
+    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
+    media_type: 'speech',
+  },
 ]
 
 const quotes = [

@@ -8,8 +8,13 @@
         Constitutional Review
       </h5>
       <div class="form w-full my-6 flex flex-col gap-4">
-        <button class="bg-white w-full h-10 md:h-12 lg:h-14 p-[1px] rounded-lg">
-          <div class="content bg-[#146634] h-full rounded-lg py-3 px-6 text-white" style="font-family: 'Inter', sans-serif">
+        <button class="bg-white w-full h-10 md:h-12 
+          lg:h-14 p-[1px] rounded-lg"
+        >
+          <div class="content bg-[#146634] flex items-center justify-center transition
+            duration-300 font-semibold hover:bg-[#105129] h-full rounded-lg py-3 px-6 text-white" 
+            style="font-family: 'Inter', sans-serif"
+          >
             Visit Portal
           </div>
         </button>

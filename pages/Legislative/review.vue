@@ -78,10 +78,11 @@
           Constitutional Review News and Updates
         </h3>
         <div class="w-full md:flex hidden justify-center md:justify-end">
-          <button @click="$router.push('/news')"
-            class="bg-[#146634] w-32 h-10 cursor-pointer rounded-full py-2 px-6"
+          <button @click="$router.push('/news#news')"
+            class="bg-[#146634] w-32 h-10 transition duration-300 hover:bg-[#105129]
+            cursor-pointer rounded-full py-2 px-6"
           >
-            <p class="text-sm underline text-white font-semibold font-montserrat 
+            <p class="text-sm text-white font-semibold font-montserrat 
               md:text-base"
             >
               See more
@@ -116,8 +117,9 @@
         </div>
       </div>
       <div class="w-full flex md:hidden mt-6 md:mt-12 lg:mt-16 justify-end">
-        <button @click="$router.push('/news')"
-          class="bg-[#146634] w-32 h-10 cursor-pointer rounded-full py-2 px-6"
+        <button @click="$router.push('/news#news')"
+          class="bg-[#146634] w-32 h-10 transition duration-300 hover:bg-[#105129]
+          cursor-pointer rounded-full py-2 px-6"
         >
           <p class="text-sm underline text-white font-semibold font-montserrat md:text-base">
             See more

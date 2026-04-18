@@ -20,15 +20,10 @@
           <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
             <select name="" id="" class="p-0 w-full m-0 outline-none" v-model="searchType">
               <option value="" selected disabled>Filter by Status</option>
-              <!-- <option value="first_time_read">First Time Read, Awaiting Second Reading</option>
-              <option value="second_time_read">Second Time Read, Referred to Committees</option>
-              <option value="committee_of_whole">Referred to Committee of the Whole (Order 12 Rule 16)</option>
-              <option value="passed_by_house">Passed by House of Representatives</option>
-              <option value="passed_by_house_senate">Passed by House of Representatives and Senate</option>
-              <option value="accented_by_the_president">Assented to by the President</option> -->
               <option value="hb_number">HB Number</option>
               <option value="title">Title</option>
               <option value="status">Status</option>
+              <option value="status_desc"></option>
             </select>
           </div>
           <button
@@ -103,7 +98,7 @@
               border-[#CECFCF] md:min-h-40 lg:min-h-[4.75rem]
               md:grid md:grid-cols-[0.05fr_0.5fr_2.5fr_1fr_1fr]
               overflow-x-scroll transition duration-300 hover:shadow-xl"
-              v-for="(bill, index) in bills.slice(0, 10)" :key="index"
+              v-for="(bill, index) in bills" :key="index"
               v-if="bills.length > 0"
               @click="$router.push(`/bills/${bill.id}`)"
             >
@@ -146,58 +141,12 @@
                 </h3>
               </div>
             </div>
-            <div class="w-full flex flex-col gap-4 md:gap-6" v-if="bills">
-              <div class="w-full cursor-pointer hidden border border-solid border-[#CECFCF] md:flex 
-                md:h-40 lg:h-[6.75rem] items-start justify-start overflow-x-scroll transition
-                duration-300 hover:shadow-xl"
-                v-for="(bill, index) in bills.slice(0, 10)" :key="index"
-                v-if="bills.length > 0"
-                @click="$router.push(`/bills/${bill.id}`)"
-              >
-                <!-- @click="$router.push(`/bills/details`)" -->
-                <div class="py-2.5 flex h-full flex-col">
-                  <p class="hidden">{{ bill.attributes.status }}</p>
-                  <div class="h-full w-2"
-                    :class="{
-                      'bg-[#50B432]': bill.attributes.status.toLowerCase() === 'second reading',
-                      'bg-[#022923]': bill.attributes.status.toLowerCase() === 'committee stage',
-                      'bg-[#007867]': bill.attributes.status.toLowerCase() === 'assented',
-                      'bg-[#B3B3B3]': bill.attributes.status.toLowerCase() === 'transmitted to senate',
-                    }"
-                  >
-                  </div>
-                </div>
-                <div class="py-2.5 flex flex-col gap-2.5 px-5">
-                  <p class="text-sm w-max font-montserrat font-normal text-[#808080]">
-                    HB Number
-                  </p>
-                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
-                    {{ bill.attributes.hb_number }}
-                  </h3>
-                </div>
-                <div class="py-2.5 h-full border-r border-l border-[#CECFCF] flex flex-col gap-2.5 px-5">
-                  <p class="text-sm font-montserrat font-normal text-[#808080]">Title</p>
-                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
-                    {{ bill.attributes.title }}
-                  </h3>
-                </div>
-                <div class="py-2.5 h-full border-r border-[#CECFCF] flex flex-col gap-2.5 px-5">
-                  <p class="text-sm font-montserrat font-normal text-[#808080]">Bill Sponsor</p>
-                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
-                    {{ bill.attributes.bill_sponsor }}
-                  </h3>
-                </div>
-                <div class="py-2.5 flex flex-col gap-2.5 px-5">
-                  <p class="text-sm font-montserrat font-normal text-[#808080]">Status</p>
-                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
-                    {{ bill.attributes.status }}
-                  </h3>
-                </div>
-              </div>
-              <div class="w-full cursor-pointer md:hidden min-h-60 rounded-lg border border-solid 
-                border-[#CECFCF] flex gap-4 bg-white transition duration-300 hover:shadow-xl"
+            <div class="w-full flex md:hidden flex-col gap-4 md:gap-6" v-if="bills">
+              <div class="w-full cursor-pointer md:hidden min-h-60 rounded-lg border 
+                border-solid border-[#CECFCF] flex gap-4 bg-white transition duration-300 
+                hover:shadow-xl"
                 v-for="(bill, index) in bills" :key="index"
-                @click="$router.push(`/bills/details`)"
+                @click="$router.push(`/bills/${bill.id}`)"
               >
                 <div class="py-1 flex h-60 flex-col">
                   <p class="hidden">{{ bill.attributes.status }}</p>
@@ -255,8 +204,8 @@
         <template v-else>
           <!-- grid table -->
           <div class="w-full flex flex-col gap-4 my-8">
-            <div
-              class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x divide-borderMuted w-full border border-borderMuted cursor-pointer"
+            <div class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x 
+                divide-borderMuted w-full border border-borderMuted cursor-pointer"
               v-for="(items, index) in motions"
               :key="index"
               v-if="displayedMotions.length > 0"
@@ -464,17 +413,6 @@ const filters = [
   'Treaties & convention',
   'Infrastructure',
 ]
-// const listOfBills = [
-//   {
-//     type: 'passed',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//
-// ]
 const listOfMotions = [
   {
     title: `Need for the Rehabilitation of Orlu - Ihiala Road`,
