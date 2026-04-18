@@ -27,12 +27,42 @@
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
+import { reactive, computed, ref, onMounted } from 'vue'
+import { useMyBillsStore } from '@/stores/bills'
 
-const series = reactive([{
-  name: 'Count',
-  data: [58, 11, 14, 20, 2, 2]
-}])
+const chartBills = ref([])
+
+onMounted(async () => {
+  try {
+    const storeBills = await useMyBillsStore().getAllBills(1, 1000)
+    if (storeBills && storeBills.data) {
+      chartBills.value = storeBills.data
+    }
+  } catch (e) {
+    console.error(e)
+  }
+})
+
+const series = computed(() => {
+  const counts = [0, 0, 0, 0, 0];
+  chartBills.value.forEach((b) => {
+    const s = (b.attributes.status || "").toLowerCase();
+    if (s.includes("first time") || s.includes("awaiting second") || s.includes("first reading")) {
+      counts[0]++;
+    } else if (s.includes("committee of the whole") || s.includes("committee stage")) {
+      counts[1]++;
+    } else if (s.includes("passed by the house") && !s.includes("senate")) {
+      counts[2]++;
+    } else if (s.includes("senate") || s.includes("transmitted to senate")) {
+      counts[3]++;
+    } else if (s.includes("assent")) {
+      counts[4]++;
+    } else {
+      counts[0]++;
+    }
+  });
+  return [{ name: 'Count', data: counts }]
+})
 
 const chartOptions = reactive({
   chart: {
@@ -57,11 +87,11 @@ const chartOptions = reactive({
     },
     offsetY: -20
   },
-  colors: ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#FF9655', '#6AF9C4'],
+  colors: ['#50B432', '#009141', '#007867', '#022923', '#B3B3B3'],
   xaxis: {
     categories: [
       'Bills Read First Time and Awaiting Second Reading',
-      'Bills Read Second Time and Referred to Committees',
+      // 'Bills Read Second Time and Referred to Committees',
       'Bills Referred to Committee of the Whole',
       'Bills Passed by the House',
       'Bills Passed by House & Senate',

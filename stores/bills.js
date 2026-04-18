@@ -7,19 +7,34 @@ export const useMyBillsStore = defineStore({
     motions: [],
   }),
   actions: {
-    async getAllBills(page = 1, pageSize = 10) {
+    async getAllBills(page = 1, pageSize = 10, searchType = '', searchTerm = '', category = '') {
       const envVars = useRuntimeConfig().public;
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      // const endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
-      const endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate[get_bill_details][populate]=*`
+      let endpoint = `${envVars.strapiURL}/bills?sort[0]=id:desc&pagination[page]=${page}
+        &pagination[pageSize]=${pageSize}&populate[get_bill_details][populate]=*`;
+      if (searchTerm) {
+        if (searchType) {
+          endpoint += `&filters[${searchType}][$containsi]=${searchTerm}`;
+        } else {
+          endpoint += `&filters[title][$containsi]=${searchTerm}`;
+        }
+      }
+
+      if (category && category !== 'All') {
+        endpoint += `&filters[bill_type][$containsi]=${category}`;
+      }
+
       const storeBills = await $fetch(endpoint,
         {
           method: 'get',
           headers: baseHeader,
         },
       );
+      console.log('data: ', storeBills.data);
+      console.log('storeBills: ', storeBills);
+      console.log('pagination : ', storeBills.meta.pagination);
       return storeBills;
     },
     async getBill(id) {
@@ -27,22 +42,35 @@ export const useMyBillsStore = defineStore({
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      // const endpoint = `${envVars.strapiURL}/bills/${id}`
       const endpoint = `${envVars.strapiURL}/bills/${id}?populate[get_bill_details][populate]=*`
       const bill = await $fetch(endpoint, {
         method: 'get',
         headers: baseHeader,
       });
-      console.log('bill: ', bill);
       return bill;
     },
 
-    async getMotions() {
+    async getMotions(page = 1, pageSize = 8, searchType = '', searchTerm = '', category = '') {
       const envVars = useRuntimeConfig().public;
       const baseHeader = {
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
-      const motions = await $fetch(`${envVars.strapiURL}/motions?sort[0]=id:desc`, {
+
+      let endpoint = `${envVars.strapiURL}/motions?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`;
+
+      if (searchTerm) {
+        if (searchType) {
+          endpoint += `&filters[${searchType}][$containsi]=${searchTerm}`;
+        } else {
+          endpoint += `&filters[title][$containsi]=${searchTerm}`;
+        }
+      }
+
+      if (category && category !== 'All') {
+        endpoint += `&filters[bill_type][$containsi]=${category}`;
+      }
+
+      const motions = await $fetch(endpoint, {
         method: 'get',
         headers: baseHeader,
       });

@@ -1,6 +1,7 @@
 <template>
-  <main class="flex flex-col bg-[#FAFFFA w-full">
-    <section class="py-12 md:py-16 lg:py-20 mx-auto w-[92.5%] md:w-[90%] lg:w-[85%]">
+  <main class="flex flex-col bg-[#FAFFFA] w-full">
+    <template v-if="bill">
+      <section class="py-12 md:py-16 lg:py-20 mx-auto w-[92.5%] md:w-[90%] lg:w-[85%]">
         <div class="content flex flex-col gap-8 ">
             <button
                 @click="$router.push('/bills')"
@@ -14,8 +15,8 @@
             <div class="w-full sm:w-8/12 flex flex-col gap-4">
                 <!-- <h3 class="title">{{ bill.title }}</h3> -->
                 <h3 class="title font-adamina text-2xl md:text-[2rem] md:leading-10">
-                    {{ bill.attributes.title ?? 'Acts Authentication Act (Amendment) Bill, 2023' }},
-                    <br /> {{ bill.attributes.hb_number ?? 'HB.06' }}
+                    {{ bill?.attributes?.title ?? 'Acts Authentication Act (Amendment) Bill, 2023' }},
+                    <br /> {{ bill?.attributes?.hb_number ?? 'HB.06' }}
                 </h3>
                 <div class="sponsors w-full rounded-xl border border-borderMuted flex flex-col
                     bg-white p-4 lg:p-5 gap-4"
@@ -25,7 +26,7 @@
                     </h6>
                     <div>
                         <p class="text-sm md:text-base font-medium font-montserrat">
-                            {{ bill.attributes.bill_sponsor ?? 'Hon. Benjamin Okezie Kalu' }}
+                            {{ bill?.attributes?.bill_sponsor ?? 'Hon. Benjamin Okezie Kalu' }}
                         </p>
                         <ul class="flex mt-2 flex-col gap-2">
                             <!-- <li v-for="(items, index) in bill.attributes.get_bill_details['sponsors']" :key="index">
@@ -60,7 +61,7 @@
                         Description
                     </p>
                     <p class="text-sm md:text-base font-medium font-montserrat">
-                        {{ bill.attributes.get_bill_details.description ?? `A Bill for an Act to Amend the Acts Authentication Act, Cap. A2,
+                        {{ bill?.attributes?.get_bill_details?.description ?? `A Bill for an Act to Amend the Acts Authentication Act, Cap. A2,
                             Laws of the Federation of Nigeria, 2004 To Provide the
                             Time Frame for the Performance of Functions of the Clerk of the
                             National Assembly; and for Related Matters`}}
@@ -71,7 +72,7 @@
                         About the Bill (Explanatory Memorandum)
                     </p>
                     <p class="text-sm md:text-base font-medium font-montserrat">
-                        {{ bill.attributes.get_bill_details.about ?? `This Bill seeks to amend the Acts Authentication Act, Cap A2 Laws
+                        {{ bill?.attributes?.get_bill_details?.about ?? `This Bill seeks to amend the Acts Authentication Act, Cap A2 Laws
                         of the Federation of Nigeria, 2004  to, among other things, provide the 
                         time frame for the  performance of functions of the Clerk of the National 
                         Assembly under the Act.`}}
@@ -82,7 +83,7 @@
                 >
                     <NuxtImg alt="" src="/images/bills/bill_screenshot.png" 
                         class="h-full w-full object-cover"
-                        :src="bill.attributes.get_bill_details.bill_image ?? '/images/bills/bill_screenshot.png'"
+                        :src="bill?.attributes?.get_bill_details?.bill_image ?? '/images/bills/bill_screenshot.png'"
                     />
                 </div>
                 <button class="rounded-full my-6 w-48 md:w-56 bg-[#146634] h-12 p-6 justify-center 
@@ -180,8 +181,9 @@
                 </a>
             </div>
         </div>
-    </section>
-    <div class="flex flex-col items-center justify-center mb-12">
+      </section>
+    </template>
+    <div v-else class="flex flex-col items-center justify-center mb-12 py-12">
         <iframe
             src="https://lottie.host/embed/6ebb5dec-8bd7-4193-b110-906eb5a41b05/Bv9PZBlVeE.json"
             height="200px"

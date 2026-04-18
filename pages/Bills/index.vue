@@ -18,7 +18,7 @@
             placeholder="Enter Keyword here"
           />
           <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
-            <select name="" id="" class="p-0 w-full m-0 outline-none">
+            <select name="" id="" class="p-0 w-full m-0 outline-none" v-model="searchType">
               <option value="" selected disabled>Filter by Status</option>
               <!-- <option value="first_time_read">First Time Read, Awaiting Second Reading</option>
               <option value="second_time_read">Second Time Read, Referred to Committees</option>
@@ -77,7 +77,7 @@
               'bg-black': activeFilter === index,
               'bg-[#DFDFDF]': activeFilter !== index
             }"
-            @click="activeFilter = index"
+            @click="activeFilter = index; loadData(1);"
           >
             <p class=" text-xs md:text-sm font-medium font-montserrat  
               lg:text-base" :class="{
@@ -99,26 +99,25 @@
             <p class="w-fit">Loading...</p>
           </div>
           <div class="w-full flex flex-col gap-4 md:gap-6 my-6" v-show="!loading">
-            <div class="w-full cursor-pointer hidden border border-solid border-[#CECFCF] 
+            <div class="w-full cursor-pointer hidden border border-solid 
+              border-[#CECFCF] md:min-h-40 lg:min-h-[4.75rem]
               md:grid md:grid-cols-[0.05fr_0.5fr_2.5fr_1fr_1fr]
-              md:h-40 lg:h-[6.75rem] overflow-x-scroll transition
-              duration-300 hover:shadow-xl"
-              v-for="(bill, index) in bills" :key="index"
+              overflow-x-scroll transition duration-300 hover:shadow-xl"
+              v-for="(bill, index) in bills.slice(0, 10)" :key="index"
               v-if="bills.length > 0"
               @click="$router.push(`/bills/${bill.id}`)"
             >
-              <!-- @click="$router.push(`/bills/details`)" -->
               <div class="py-2.5 flex h-full flex-col">
-                  <p class="hidden">{{ bill.attributes.status }}</p>
-                  <div class="h-full w-2"
-                    :class="{
-                      'bg-[#50B432]': bill.attributes.status.toLowerCase() === 'second reading',
-                      'bg-[#022923]': bill.attributes.status.toLowerCase() === 'committee stage',
-                      'bg-[#007867]': bill.attributes.status.toLowerCase() === 'assented',
-                      'bg-[#B3B3B3]': bill.attributes.status.toLowerCase() === 'transmitted to senate',
-                    }"
-                  >
-                  </div>
+                <p class="hidden">{{ bill.attributes.status }}</p>
+                <div class="h-full w-2"
+                  :class="{
+                    'bg-[#50B432]': bill.attributes.status.toLowerCase() === 'second reading',
+                    'bg-[#007867]': bill.attributes.status.toLowerCase() === 'committee stage',
+                    'bg-[#6AF9C4]': bill.attributes.status.toLowerCase() === 'assented',
+                    'bg-[#B3B3B3]': bill.attributes.status.toLowerCase() === 'transmitted to senate',
+                  }"
+                >
+                </div>
               </div>
               <div class="py-2.5 flex flex-col gap-2.5 px-5">
                 <p class="text-sm w-max font-montserrat font-normal text-[#808080]">
@@ -147,13 +146,11 @@
                 </h3>
               </div>
             </div>
-            <div class="w-full flex flex-col gap-4 md:gap-6" 
-              v-if="bills"
-            >
+            <div class="w-full flex flex-col gap-4 md:gap-6" v-if="bills">
               <div class="w-full cursor-pointer hidden border border-solid border-[#CECFCF] md:flex 
                 md:h-40 lg:h-[6.75rem] items-start justify-start overflow-x-scroll transition
                 duration-300 hover:shadow-xl"
-                v-for="(bill, index) in bills.r" :key="index"
+                v-for="(bill, index) in bills.slice(0, 10)" :key="index"
                 v-if="bills.length > 0"
                 @click="$router.push(`/bills/${bill.id}`)"
               >
@@ -301,9 +298,9 @@
       class="partners w-[92.5%] md:w-[90%] mx-auto py-8 md:py-12 lg:py-16 bg-[#FAFFFA]"
     >
       <div class="w-full flex flex-col gap-4 md:gap-6" v-if="listOfMotions">
-        <div class="w-full cursor-pointer border border-solid border-[#CECFCF] md:flex 
-          md:h-40 lg:h-[6.75rem] items-start justify-start hidden transition duration-300 
-          hover:shadow-xl"
+        <div class="w-full cursor-pointer border border-solid border-[#CECFCF] 
+          md:flex items-start justify-start overflow-x-scroll
+          md:min-h-40 lg:min-h-[4.75rem] hidden transition duration-300 hover:shadow-xl"
           v-for="(motion, index) in listOfMotions" :key="index"
           @click="$router.push(`/bills/motions/details`)"
         >
@@ -412,44 +409,37 @@ const TotalBills = ref(0);
 const displayedBills = ref([]);
 const displayedMotions = ref([]);
 const searchTerm = ref('');
+const searchType = ref('');
 const loading = ref(false);
 const motions = ref([]);
 const activeFilter = ref(0)
 
-const filteredBills = computed(() => {
-  return bills.filter((item) => item.title.toLowerCase().includes(searchTerm.value));
-});
-console.log('bills: ', bills.value);
-
-const filteredMotions = computed(() => {
-  return motions.value.filter((item) => item.title.toLowerCase().includes(searchTerm.value.toLowerCase()));
-});
-
 function searchTable() {
-  if (isBills.value) {
-    displayedBills.value = filteredBills.value;
-  } else {
-    displayedMotions.value = filteredMotions.value;
-  }
+  loadData(1);
 }
+
 async function loadData(newPage = 1) {
   loading.value = true;
   try {
-    const { meta, data } = await useMyBillsStore().getAllBills(newPage);
-    pageBills.value = meta.pagination.page;
-    pageCountBills.value = meta.pagination.pageCount;
-    pageSizeBills.value = meta.pagination.pageSize;
-    TotalBills.value = meta.pagination.total;
-    bills.value = data;
+    const currentCategory = filters[activeFilter.value];
+    const { meta, data } = await useMyBillsStore().getAllBills(newPage, 10, searchType.value, searchTerm.value, currentCategory);
+    pageBills.value = meta?.pagination?.page || 1;
+    pageCountBills.value = meta?.pagination?.pageCount || 1;
+    pageSizeBills.value = 10;
+    TotalBills.value = meta?.pagination?.total || 0;
+    bills.value = data || [];
+    displayedBills.value = bills.value;
 
-    const { meta: motionsMeta, data: motionsData } = await useMyBillsStore().getMotions();
-    motions.value = motionsData;
+    const { meta: motionsMeta, data: motionsData } = await useMyBillsStore().getMotions(newPage, 8, searchType.value, searchTerm.value, currentCategory);
+    motions.value = motionsData || [];
+    displayedMotions.value = motions.value;
   } catch (error) {
     console.log(error);
   } finally {
     loading.value = false;
   }
 }
+
 
 onMounted(async () => {
   await loadData();
@@ -483,54 +473,7 @@ const filters = [
 //     id: 'tthyuiejgnbuyldlkretiuiykgnb',
 //     status: `Committee of the Whole (Order Twelve Rule 16)`,
 //   },
-//   {
-//     type: 'pending',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//   {
-//     type: 'in_session',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//   {
-//     type: 'rejected',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//   {
-//     type: 'passed',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//   {
-//     type: 'passed',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
-//   {
-//     type: 'passed',
-//     bill_number: "HB.698",
-//     title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-//     name: "Hon. Benjamin Okezie Kalu",
-//     id: 'tthyuiejgnbuyldlkretiuiykgnb',
-//     status: `Committee of the Whole (Order Twelve Rule 16)`,
-//   },
+//
 // ]
 const listOfMotions = [
   {
