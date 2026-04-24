@@ -22,8 +22,8 @@
               <option value="" selected disabled>Filter by Status</option>
               <option value="hb_number">HB Number</option>
               <option value="title">Title</option>
-              <option value="status">Status</option>
-              <option value="status_desc"></option>
+              <option value="status_desc">Status</option>
+              <option value="status" class="hidden"></option>
             </select>
           </div>
           <button
@@ -137,7 +137,7 @@
               <div class="py-2.5 flex flex-col gap-2.5 px-5">
                 <p class="text-sm font-montserrat font-normal text-[#808080]">Status</p>
                 <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
-                  {{ bill.attributes.status }}
+                  {{ bill.attributes.status_desc }}
                 </h3>
               </div>
             </div>
@@ -182,7 +182,7 @@
                     <h3 class="text-sm text-black font-montserrat font-semibold">
                       <span class="text-sm text-[#808080] font-montserrat font-normal">
                         Status:
-                      </span> {{ bill.attributes.status }}
+                      </span> {{ bill.attributes.status_desc }}
                     </h3>
                   </div>
                 </div>
@@ -303,10 +303,11 @@
     </section>
     <section v-if="isBills" class="py-16 w-full border-t border-borderMuted">
       <div class="content w-[92.5%] md:w-[90%] mx-auto">
-        <h3 class="font-semibold">Bills Chart</h3>
+        <h3 class="font-semibold mb-10 md:mb-12 lg:mb-16">Bills Chart</h3>
         <div class="w-full flex flex-col items-center h-auto">
           <!-- <PieChart /> -->
-          <Barchart />
+          <!-- <Barchart /> -->
+          <CustomBarchart />
         </div>
       </div>
     </section>
@@ -349,6 +350,8 @@
 </template>
 
 <script setup>
+import CustomBarchart from '~/components/global/CustomBarchart.vue';
+
 const isBills = ref(true);
 const bills = ref([]);
 const pageBills = ref(0);
