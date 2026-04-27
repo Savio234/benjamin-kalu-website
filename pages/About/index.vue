@@ -1,34 +1,5 @@
 <template>
   <main class="flex flex-col w-full bg-light">
-    <!-- <section class="w-full h-[70vh] bg-primaryGreen flex flex-col sm:flex-row items-center">
-      <div class="w-full relative">
-        <Swiper
-          class="w-full"
-          :modules="[SwiperAutoplay, SwiperEffectFade, SwiperPagination]"
-          :slides-per-view="1"
-          :loop="true"
-          :effect="'fade'"
-          :fade-effect="{
-            crossFade: true,
-          }"
-          :autoplay="{
-            delay: 4000,
-            disableOnInteraction: true,
-          }"
-          :pagination="false"
-        >
-          <div class="absolute z-10 left-8 sm:left-24 top-1/2 -translate-y-1/2 text-white">
-            <h1 class="text-3xl md:text-6xl font-semibold drop-shadow-md font-montserrat">
-              About Benjamin Kalu
-            </h1>
-          </div>
-          <SwiperSlide v-for="image in images" :key="image.id">
-            <div class="absolute inset-0 bg-black opacity-10"></div>
-            <NuxtImg :src="image.url" class="w-full h-[70vh] object-cover" format="webp" />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </section> -->
     <section class="about_hero w-full h-[75dvh] sm:h-[85dvh] flex justify-center">
       <div class="content mx-auto py-16 sm:py-0 w-[90%] flex h-full items-center">
         <div class="text-box relative top-[30%] sm:top-[20%] lg:top-[15%] w-full lg:w-10/12 
@@ -179,7 +150,7 @@
             </div>
           </div>
         </div>
-        <SectionsPublications :publications="publications" />
+        <SectionsPublications :publications="listOfPublications.slice(0, 3)" />
       </div>
     </section>
     <section class="w-full pb-14 md:pb-20 lg:pb-28 bg-white">
@@ -206,38 +177,22 @@
 </template>
 
 <script lang="ts" setup>
-// import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/effect-fade';
-// import 'swiper/css/pagination';
+import { onMounted, ref } from 'vue';
+import { usePublicationsStore } from '~/stores/publications';
 import ManualSlider from '~/components/sections/ManualSlider.vue';
 
-const publications = [
-  {
-    id: 1,
-    image: '/images/about/publication_1.png'
-  },
-  {
-    id: 2,
-    image: '/images/about/publication_2.png'
-  },
-  {
-    id: 3,
-    image: '/images/about/publication_3.png'
-  },
-  // {
-  //   id: 4,
-  //   image: '/images/about/publication_1.png'
-  // },
-  // {
-  //   id: 5,
-  //   image: '/images/about/publication_2.png'
-  // },
-  // {
-  //   id: 6,
-  //   image: '/images/about/publication_2.png'
-  // },
-]
+const publicationsStore = usePublicationsStore();
+const listOfPublications = ref<any[]>([]);
+
+onMounted(async () => {
+  try {
+    const fetchedPublications = await publicationsStore.getAllPublications() as any;
+    listOfPublications.value = fetchedPublications?.data || [];
+    console.log('Fetched publications:', fetchedPublications);
+  } catch (error) {
+    console.error('Error fetching publications:', error);
+  }
+});
 
 const media = [
   {
@@ -398,52 +353,6 @@ const roadmap = ref([
   ],
 ])
 
-const csr = `
- <p class="text-lg">
-  Rt. Hon. Kalu's commitment to society extends beyond politics. For the past 20 years, he has been actively empowering his constituents through various initiatives. He founded the Benjamin Kalu Foundation, focusing on empowering youth, women, and people with disabilities.
-  </p>
-  <p class="text-lg">
-  His role in the Sudan Darfur Project with the UNHCR and the Peace in the South East Project showcases his dedication to humanitarian and peace initiatives.
-  </p>
-`;
-
-const constituencyEngagements = `
-  <p class="text-lg">
-    Communication has proven to be an effective way to sustain accountability in leadership. To achieve this, Kalu launched a weekly TV and Radio program tagged <b>‘BEN KALU’S MANDATE’</b>. 
-  </p>
-  <p class="text-lg">
-  The program affords the people of Bende and Abia State the opportunity to follow the notable and impactful activities of Hon. Kalu that happened in the preceding week. Valuable information around his legislative activities, oversight functions and constituency projects are shared and discussed at length in line with his commitment to carrying his constituents along every step of the way. 
-  </p>
-  <p class="text-lg">
-  <b>BEN KALU’S MANDATE</b> has served and continues to serve as a feedback tool, providing the opportunity to feel the pulse of Bende people through calls and text messages on issues concerning the Constituency.
-  </p>
-  <p class="text-lg">
-  The programme is held every Monday on Flo FM, Real FM, Vision Africa and ABN TV from 11:00am to 12:00pm, and has in the last one year garnered over 1 million listeners from Abia State and beyond, with over 20 calls and 24 text messages coming in on the show every single week.
-  </p>
-`;
-
-const images = ref([
-  {
-    id: 0,
-    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444071/benjaminkalu/km5ubmxqna8sxz0sheme.png',
-  },
-  {
-    id: 1,
-    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444188/benjaminkalu/vnwf9rdndxsrel6rfpwr.png',
-  },
-  // {
-  //   id: 2,
-  //   url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444053/benjaminkalu/qdprrztr0ptvdgjjdrw7.png',
-  // },
-  {
-    id: 3,
-    url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444092/benjaminkalu/ywwwtly9476xbhdhkawd.png',
-  },
-  // {
-  //   id: 4,
-  //   url: 'https://res.cloudinary.com/dokuicrun/image/upload/v1730444186/benjaminkalu/zrdehjtzgk2se2dohdoa.png',
-  // },
-]);
 </script>
 
 <style lang="scss" scoped>

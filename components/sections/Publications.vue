@@ -1,37 +1,36 @@
 <template>
-    <!-- <Slider :items="latest" speed="normal" direction="right" -->
-        <!-- class="overflow-x-scroll mt-8 flex w-full items-start gap-4 md:gap-6" -->
-    <!-- <ManualSlider v-if="latest" :step="8"> -->
     <div v-if="latest"
-        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-4 md:gap-6 lg:gap-8"
+        class="mt-8 grid grid-cols-1 md:grid-cols-3 w-full items-start gap-4 
+            md:gap-6 lg:gap-8"
     >
-    <!-- w-4/5 md:w-[23rem] lg:w-[26rem]  -->
         <div v-for="(item, index) in latest" :key="index"
             class="publications-card shrink-0 overflow-hidden w-full
             cursor-pointer h-[34rem] md:h-[38rem] lg:h-[41rem]"
         >
-            <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
-                :src="item.image"
+            <NuxtImg class="rounded-xl h-full w-full object-cover"
+                alt="publication_image"
+                :src="item?.attributes?.publication_image?.data?.attributes?.url"
             />
-            <div class="dark_overlay rounded-xl w-full h-full absolute top-0 bottom-0 left-0 flex 
-                items-center justify-center"
+            <div class="dark_overlay rounded-xl w-full h-full absolute top-0 
+                bottom-0 left-0 flex items-center justify-center"
             >
-                <button class="mx-auto h-12 md:h-14 rounded-[3.75rem] bg-white w-[90%]">
-                    <p class="text-sm md:text-base lg:text-lg text-black font-medium">
+                <button @click="handleDownload(item)"
+                    class="mx-auto h-12 md:h-14 rounded-[3.75rem] bg-white w-[90%]"
+                >
+                    <p class="text-sm md:text-base lg:text-lg text-black
+                        font-medium"
+                    >
                         Download latest Issue
                     </p>
                 </button>
             </div>
         </div>
     </div>
-    <!-- </ManualSlider> -->
 </template>
 
 <script setup>
 import { computed } from 'vue';
 import { defineProps } from 'vue';
-// import Slider from './Slider.vue';
-import ManualSlider from './ManualSlider.vue';
 
 const props = defineProps({
     publications: {
@@ -39,6 +38,26 @@ const props = defineProps({
     },
 });
 const latest = computed(() => props.publications);
+
+const handleDownload = (item) => {
+    const fileUrl = item?.attributes?.publication_link;
+    if (fileUrl) {
+        window.open(fileUrl, '_blank');
+    } else {
+        console.warn('No file available for download for this publication: ', item);
+    }
+};
+
+// const downloadPdf = (item) => {
+//     const fileUrl = item?.attributes?.publication_link;
+//     const link = document.createElement('a');
+//     link.href = fileUrl;
+//     link.download = item?.attributes?.title;
+//     link.target = '_blank'
+//     document.body.appendChild(link)
+//     link.click()
+//     document.body.removeChild(link)
+// }
 
 </script>
 

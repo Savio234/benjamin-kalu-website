@@ -8,12 +8,13 @@
                 cursor-pointer h-[31rem] md:h-[35rem] lg:h-[43rem]"
             >
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
-                    :src="item.image"
+                    :src="item?.attributes?.publication_image?.data?.attributes?.url"
                 />
                 <div class="dark_overlay rounded-xl w-full h-full absolute top-0 bottom-0 left-0 flex 
                     items-center justify-center"
                 >
-                    <button class="mx-auto h-12 md:h-14 rounded-[3.75rem] bg-white w-[90%]">
+                    <button @click="handleDownload(item)"
+                        class="mx-auto h-12 md:h-14 rounded-[3.75rem] bg-white w-[90%]">
                         <p class="text-sm md:text-base lg:text-lg text-black font-medium">
                             Download latest Issue
                         </p>
@@ -33,8 +34,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { defineProps } from 'vue';
+import { ref, computed, defineProps } from 'vue';
 
 const props = defineProps({
     publications: {
@@ -64,6 +64,15 @@ const loadMore = () => {
         isLoadingMore.value = false
     }, 100)
 }
+
+const handleDownload = (item) => {
+    const fileUrl = item?.attributes?.publication_link;
+    if (fileUrl) {
+        window.open(fileUrl, '_blank');
+    } else {
+        console.warn('No file available for download for this publication:', item);
+    }
+};
 
 </script>
 

@@ -31,9 +31,6 @@ export const useMyBillsStore = defineStore({
           headers: baseHeader,
         },
       );
-      console.log('data: ', storeBills.data);
-      console.log('storeBills: ', storeBills);
-      console.log('pagination : ', storeBills.meta.pagination);
       return storeBills;
     },
     async getBill(id) {

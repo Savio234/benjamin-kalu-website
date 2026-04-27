@@ -80,6 +80,19 @@
 
 <script lang="ts" setup>
 import ManualSlider from '~/components/sections/ManualSlider.vue';
+import { onMounted, ref } from 'vue';
+import { usePublicationsStore } from '~/stores/publications';
+const publicationsStore = usePublicationsStore();
+const publications = ref<any[]>([]);
+
+onMounted(async () => {
+  try {
+    const fetchedPublications = await publicationsStore.getAllPublications() as any;
+    publications.value = fetchedPublications?.data || [];
+  } catch (error) {
+    console.error('Error fetching publications:', error);
+  }
+});
 
 const newsItems = [
   {
@@ -349,44 +362,7 @@ const newsData = [
     },
   },
 ];
-const publications = [
-  {
-    id: 1,
-    image: '/images/about/publication_1.png'
-  },
-  {
-    id: 2,
-    image: '/images/about/publication_2.png'
-  },
-  {
-    id: 3,
-    image: '/images/about/publication_3.png'
-  },
-  {
-    id: 4,
-    image: '/images/about/publication_1.png'
-  },
-  {
-    id: 5,
-    image: '/images/about/publication_2.png'
-  },
-  {
-    id: 6,
-    image: '/images/about/publication_3.png'
-  },
-  {
-    id: 7,
-    image: '/images/about/publication_1.png'
-  },
-  {
-    id: 8,
-    image: '/images/about/publication_2.png'
-  },
-  {
-    id: 9,
-    image: '/images/about/publication_3.png'
-  },
-]
+
 const weeklyUpdates = [
   '/images/weekly_review/weekly_review_23_march.webp',
   '/images/weekly_review/updates_1.png',
