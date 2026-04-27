@@ -188,7 +188,6 @@ onMounted(async () => {
   try {
     const fetchedPublications = await publicationsStore.getAllPublications() as any;
     listOfPublications.value = fetchedPublications?.data || [];
-    console.log('Fetched publications:', fetchedPublications);
   } catch (error) {
     console.error('Error fetching publications:', error);
   }
