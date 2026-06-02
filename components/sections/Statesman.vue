@@ -37,7 +37,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
 const images = [
-  "/images/home/slider_1.jpeg",
+  "/images/home/slider_1.png",
   "/images/home/slider_2.jpeg",
   "/images/home/slider_3.jpeg",
   "/images/home/slider_4.jpeg",
@@ -47,9 +47,6 @@ const images = [
   "/images/home/slider_8.jpeg",
   "/images/home/slider_9.jpeg",
   "/images/home/slider_10.jpeg",
-  // "/images/home/slider_11.jpeg",
-  // "/images/home/slider_12.jpeg",
-  // "/images/home/slider_13.jpeg",
 ]
 </script>
 

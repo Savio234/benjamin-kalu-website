@@ -5,20 +5,24 @@
         <div class="text-box relative top-[30%] sm:top-[20%] lg:top-[15%] w-full lg:w-10/12 
           flex flex-col text-white gap-2"
         >
-          <p class="text-white font-adamina text-2xl sm:text-3xl sm:leading-10 font-normal 
-            md:text-4xl md:leading-[2.875rem] lg:text-5xl lg:leading-[4rem]"
+          <p class="text-white font-adamina text-2xl sm:text-3xl 
+            sm:leading-10 font-normal lg:text-5xl lg:leading-[4rem]
+            md:text-4xl md:leading-[2.875rem]"
           >
             Rt. Hon. Benjamin <br />
             Okezie Kalu <br />
             Ph.D., LLD., CFR, <br />
           </p>
-          <h1 class="font-bold font-montserrat leading-normal text-sm md:text-base">
+          <h1 class="font-bold font-montserrat leading-normal text-sm 
+            md:text-base"
+          >
             A NIGERIAN STATESMAN
           </h1>
-          <p class="text-white font-montserrat leading-normal text-sm md:text-base 
-            font-medium"
+          <p class="text-white font-montserrat leading-normal text-sm 
+            md:text-base font-medium"
           >
-            Bridging National Progress with Integrity and <br /> National Leadership
+            Bridging National Progress with Integrity and <br />
+            National Leadership
           </p>
         </div>
       </div>
@@ -30,7 +34,7 @@
       >
         <div class="relative h-24 w-24 mx-auto md:h-28 md:w-28 lg:w-[8.25rem] lg:h-[8.25rem]">
           <NuxtImg alt="image" class="w-full object-cover rounded-full h-full" 
-            src="/images/about/bk_dp.png"
+            src="/images/about/bk.png"
           />
         </div>
         <div class="mx-auto mt-5 md:mt-7 lg:mt-9">

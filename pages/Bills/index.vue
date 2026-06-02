@@ -1,24 +1,31 @@
 <template>
   <main class="flex flex-col w-full">
-    <section class="hero_bill w-full flex items-center text-center py-16 h-fit sm:h-[85vh]">
-      <div class="content py-16 mx-auto w-[92.5%] md:w-[90%]">
+    <section class="hero_bill w-full flex items-center text-center py-16
+      h-[80vh] sm:h-[85vh]"
+    >
+      <div class="content pb-24 md:pb-32 mx-auto w-[92.5%] lg:w-[90%]">
         <h2 class="font-semibold text-xl md:text-2xl lg:text-5xl lg:leading-[3.75rem] 
-          font-adamina text-white mb-2 md:mb-4"
+          font-adamina text-white mb-1.5 sm:mb-2 lg:mb-4"
         >
           Bills & Motions
         </h2>
-        <h4 class="text-sm md:text-base text-white font-montserrat font-semibold">
+        <h4 class="text-sm lg:text-base text-white font-montserrat 
+          font-semibold"
+        >
           Bills and Motions sponsored by Hon. Kalu
         </h4>
-        <div class="form-holder w-full flex items-center my-8">
-          <input
-            type="text"
-            v-model="searchTerm"
-            class="bg-white p-4 w-full rounded-l-lg outline-none"
+        <div class="form-holder w-full flex items-center my-2 md:my-4 lg:my-8">
+          <input type="text" v-model="searchTerm"
+            class="bg-white text-xs md:text-sm p-2 lg:p-4 w-full rounded-l-lg outline-none"
             placeholder="Enter Keyword here"
           />
-          <div class="hidden sm:block py-[0.95rem] px-4 w-fit h-fit bg-white border-l border-borderMuted">
-            <select name="" id="" class="p-0 w-full m-0 outline-none" v-model="searchType">
+          <div class="hidden sm:block py-2 lg:py-[0.95rem] px-1 lg:px-4 
+            w-fit h-fit bg-white border-l border-borderMuted"
+          >
+            <select name="" id="" class="p-0 text-xs lg:text-sm w-full
+              m-0 outline-none"
+              v-model="searchType"
+            >
               <option value="" selected disabled>Filter by Status</option>
               <option value="hb_number">HB Number</option>
               <option value="title">Title</option>
@@ -27,11 +34,11 @@
             </select>
           </div>
           <button
-            class="bg-[#146634] py-[1.25rem] sm:py-4 px-6 rounded-r-lg flex items-center 
+            class="bg-[#146634] py-2 lg:py-4 px-2 lg:px-6 rounded-r-lg flex items-center 
             text-white gap-2 transition duration-300 hover:bg-[#105129]"
             @click="searchTable"
           >
-            <span class="hidden sm:block">Find</span>
+            <span class="hidden sm:block text-xs lg:text-sm">Find</span>
             <svg-icon name="search" width="1rem" height="1rem" />
           </button>
         </div>
@@ -41,7 +48,7 @@
       <div class="content mx-auto w-[92.5%] md:w-[90%]">
         <div class="toggler w-full flex items-center rounded-full h-fit p-1 border border-borderMuted">
           <button
-            class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
+            class="w-1/2 h-fit py-2 md:py-3 lg:py-4 rounded-full flex items-center gap-1 justify-center text-center"
             :class="isBills ? 'bg-[#146634] text-white' : ''"
             @click="
               isBills = true;
@@ -51,7 +58,7 @@
             <span class="hidden sm:block w-fit">Benjamin Kalu's </span>Bills
           </button>
           <button
-            class="w-1/2 h-fit py-4 rounded-full flex items-center gap-1 justify-center text-center"
+            class="w-1/2 h-fit py-2 md:py-3 lg:py-4 rounded-full flex items-center gap-1 justify-center text-center"
             :class="!isBills ? 'bg-[#146634] text-white' : ''"
             @click="
               isBills = false;
@@ -65,8 +72,9 @@
           md:flex-wrap gap-2.5"
           v-if="filters"
         >
-          <div class="px-8 md:px-6 lg:px-9 h-fit md:min-h-auto  
-            rounded-[2.5rem] py-1 md:py-1.5 lg:py-2.5 cursor-pointer"
+          <div class="px-4 min-w-24 md:min-w-max md:px-6 lg:px-9 h-fit
+            md:min-h-auto rounded-[2.5rem] py-2 md:py-1.5 lg:py-2.5
+            cursor-pointer"
             v-for="(filter, index) in filters" :key="index"
             :class="{
               'bg-black': activeFilter === index,
@@ -74,7 +82,8 @@
             }"
             @click="activeFilter = index; loadData(1);"
           >
-            <p class=" text-xs md:text-sm font-medium font-montserrat  
+            <p class="text-[0.5rem] text-center md:text-xs xl:text-sm
+              font-medium font-montserrat
               lg:text-base" :class="{
                 'text-white': activeFilter === index,
                 'text-[#8A8A8A]': activeFilter !== index,
@@ -202,7 +211,6 @@
           </div>
         </template>
         <template v-else>
-          <!-- grid table -->
           <div class="w-full flex flex-col gap-4 my-8">
             <div class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x 
                 divide-borderMuted w-full border border-borderMuted cursor-pointer"
@@ -457,8 +465,9 @@ const listOfMotions = [
 
 <style lang="scss" scoped>
 .hero_bill {
-  background-image: url('/assets/images/bill_hero.png');
+  background-image: url('/assets/images/bill_hero_dp.png');
   // background-color: #007e9ae5;
+  background-color: rgba(20, 102, 52, 0.4);
   background-position: right center;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -471,5 +480,11 @@ const listOfMotions = [
 small {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+}
+
+@media screen and (max-width: 485px) {
+  .hero_bill {
+    background-position: 65% center;
+  }
 }
 </style>

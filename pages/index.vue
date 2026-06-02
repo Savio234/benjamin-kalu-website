@@ -246,14 +246,14 @@ const images = ref([
   url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png'); -->
 <style lang="scss" scoped>
 .hero {
-  // background-image: url('../public/images/home/home_hero.jpeg');
-  background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png), url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png);
+  background-image: url('../public/images/home/hero.png');
+  // background-image: url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png), url(https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png);
   background-color: #00000069;
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
-  // background-position: bottom center;
-  background-position: bottom;
+  background-position: bottom center;
+  // background-position: bottom;
 }
 .update {
   background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/v1717434396/benjamin_kalu/weekly_updates_background_q95czt.png'),

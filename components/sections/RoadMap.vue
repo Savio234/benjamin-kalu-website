@@ -5,8 +5,8 @@
                 Road Map and Educational Background
             </h1>
             <div class="my-6 md:my-8 relative w-full h-64 md:h-[35rem] lg:h-[39.5rem]">
-                <NuxtImg alt="bg" class="object-cover object-top w-full h-full rounded-2xl"
-                    src="/images/about/background.png"
+                <NuxtImg alt="bg" src="/images/about/about_background.jpg"
+                    class="object-cover object-top w-full h-full rounded-2xl"
                 />
             </div>
             <div class="hidden mb-12 lg:mb-20 md:grid grid-cols-4 gap-8 lg:gap-20"
