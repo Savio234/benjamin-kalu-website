@@ -242,8 +242,6 @@ const images = ref([
 ]);
 </script>
 
-<!-- background-image: url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1718522641/benjamin_kalu/new_hero_fpgznb.png'),
-  url('https://res.cloudinary.com/damkhdi7d/image/upload/f_auto/v1717431103/benjamin_kalu/noise_c6ebjt.png'); -->
 <style lang="scss" scoped>
 .hero {
   background-image: url('../public/images/home/hero.png');

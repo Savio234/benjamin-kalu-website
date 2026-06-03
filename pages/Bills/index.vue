@@ -19,7 +19,7 @@
             class="bg-white text-xs md:text-sm p-2 lg:p-4 w-full rounded-l-lg outline-none"
             placeholder="Enter Keyword here"
           />
-          <div class="hidden sm:block py-2 lg:py-[0.95rem] px-1 lg:px-4 
+          <div class="py-[0.4rem] md:py-2 lg:py-[0.95rem] px-1 lg:px-4 
             w-fit h-fit bg-white border-l border-borderMuted"
           >
             <select name="" id="" class="p-0 text-xs lg:text-sm w-full

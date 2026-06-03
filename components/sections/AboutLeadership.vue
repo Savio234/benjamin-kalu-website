@@ -29,12 +29,12 @@
                 <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 md:h-[24rem] 
                     lg:h-[28rem]"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
                         src="/images/about/anchored.png"
                     />
                 </div>
                 <div class="block shrink-0 md:hidden w-full h-64">
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
                         src="/images/about/leadership_1.png"
                     />
                 </div>
@@ -45,14 +45,14 @@
                 <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1 h-64 
                     md:h-[30rem] shrink-0 lg:h-[35rem]"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
                         src="/images/about/architect.png"
                     />
                 </div>
                 <div class="block md:hidden relative order-2 md:order-1 w-full h-64 
                     shrink-0"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/leadership_2.png"
                     />
                 </div>
@@ -128,12 +128,12 @@
                 <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 
                     md:h-[22rem] lg:h-[27.5rem]"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/constituency.png"
                     />
                 </div>
                 <div class="block shrink-0 md:hidden relative w-full h-64">
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/leadership_3.png"
                     />
                 </div>
@@ -144,14 +144,14 @@
                 <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1
                     md:h-[23rem] lg:h-[28rem] shrink-0"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/strategic.png"
                     />
                 </div>
                 <div class="block md:hidden relative order-2 md:order-1 w-full h-64 
                     shrink-0"
                 >
-                    <NuxtImg alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
                         src="/images/about/leadership_4.png"
                     />
                 </div>

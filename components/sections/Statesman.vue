@@ -22,7 +22,7 @@
         >
           <!-- <div class="absolute inset-0 bg-black opacity-10"></div> -->
           <NuxtImg :src="image" class="w-full h-full object-cover" 
-            format="webp"
+            format="webp" loading="lazy"
           />
         </SwiperSlide>
       </Swiper>
@@ -38,15 +38,15 @@ import 'swiper/css/pagination';
 
 const images = [
   "/images/home/slider_1.png",
-  "/images/home/slider_2.jpeg",
-  "/images/home/slider_3.jpeg",
-  "/images/home/slider_4.jpeg",
-  "/images/home/slider_5.jpeg",
-  "/images/home/slider_6.jpeg",
-  "/images/home/slider_7.jpeg",
-  "/images/home/slider_8.jpeg",
-  "/images/home/slider_9.jpeg",
-  "/images/home/slider_10.jpeg",
+  "/images/home/slider_2.png",
+  "/images/home/slider_3.png",
+  "/images/home/slider_4.png",
+  "/images/home/slider_5.png",
+  "/images/home/slider_6.png",
+  "/images/home/slider_7.png",
+  "/images/home/slider_8.png",
+  "/images/home/slider_9.png",
+  "/images/home/slider_10.png",
 ]
 </script>
 
