@@ -115,10 +115,12 @@
                 <p class="hidden">{{ bill.attributes.status }}</p>
                 <div class="h-full w-2"
                   :class="{
-                    'bg-[#50B432]': bill.attributes.status.toLowerCase() === 'second reading',
-                    'bg-[#007867]': bill.attributes.status.toLowerCase() === 'committee stage',
-                    'bg-[#6AF9C4]': bill.attributes.status.toLowerCase() === 'assented',
-                    'bg-[#B3B3B3]': bill.attributes.status.toLowerCase() === 'transmitted to senate',
+                    'bg-[#50B432]': bill.attributes.status.toLowerCase().includes('second reading'),
+                    'bg-[#007867]': bill.attributes.status.toLowerCase().includes('third reading'),
+                    'bg-[#009141]': bill.attributes.status.toLowerCase().includes('committee stage'),
+                    'bg-[#B3B3B3]': bill.attributes.status.toLowerCase().includes('assent'),
+                    'bg-[#022923]': bill.attributes.status.toLowerCase().includes('passed by senate'),
+                    'bg-[#022923]': bill.attributes.status.toLowerCase().includes('transmitted to senate'),
                   }"
                 >
                 </div>
@@ -161,10 +163,12 @@
                   <p class="hidden">{{ bill.attributes.status }}</p>
                   <div class="h-60 w-2"
                     :class="{
-                      'bg-[#50B432]': bill.attributes.status.toLowerCase() === 'second reading',
-                      'bg-[#022923]': bill.attributes.status.toLowerCase() === 'committee stage',
-                      'bg-[#007867]': bill.attributes.status.toLowerCase() === 'assented',
-                      'bg-[#B3B3B3]': bill.attributes.status.toLowerCase() === 'transmitted to senate',
+                      'bg-[#50B432]': bill.attributes.status.toLowerCase().includes('second reading'),
+                      'bg-[#007867]': bill.attributes.status.toLowerCase().includes('third reading'),
+                      'bg-[#009141]': bill.attributes.status.toLowerCase().includes('committee stage'),
+                      'bg-[#B3B3B3]': bill.attributes.status.toLowerCase().includes('assent'),
+                      'bg-[#022923]': bill.attributes.status.toLowerCase().includes('passed by senate'),
+                      'bg-[#022923]': bill.attributes.status.toLowerCase().includes('transmitted to senate'),
                     }"
                   ></div>
                 </div>

@@ -24,7 +24,7 @@
             lg:px-10"
           >
             <div v-for="(item, i) in seriesData" :key="'bar-'+i"
-              class="relative w-16 md:w-24 h-full flex justify-center group"
+              class="relative w-8 sm:w-12 md:w-16 h-full flex justify-center group"
             >
               <div class="absolute top-24 md:top-28 lg:top-0 opacity-0 
                 group-hover:opacity-100 
@@ -44,7 +44,7 @@
                 style="height: 115%;"
               >
                 <div v-if="item.count > 0" class="absolute top-4 w-full text-center 
-                  font-extrabold text-[#B3B3B3] text-xl md:text-3xl tracking-wide select-none"
+                  font-extrabold text-[#B3B3B3] text-xs sm:text-sm md:text-lg lg:text-xl tracking-wide select-none"
                 >
                   {{ item.count }}
                 </div>
@@ -64,7 +64,7 @@
           <div 
             v-for="(item, i) in seriesData" 
             :key="'dot-'+i" 
-            class="w-16 md:w-24 flex justify-center"
+            class="w-8 sm:w-12 md:w-16 flex justify-center"
           >
             <div 
               class="w-3 h-3 md:w-4 md:h-4 rounded-full" 
@@ -105,38 +105,40 @@ onMounted(async () => {
 })
 
 const seriesData = computed(() => {
-  const counts = [0, 0, 0, 0, 0];
+  const counts = [0, 0, 0, 0, 0, 0, 0];
   chartBills.value.forEach((b) => {
     const s = (b.attributes.status || "").toLowerCase();
-    if (s.includes("first time") || s.includes("awaiting second") || s.includes("first reading")) {
+    if (s.includes("first time") || s.includes("awaiting second") || s.includes("first reading") || s.includes("second reading")) {
       counts[0]++;
     } else if (s.includes("committee of the whole") || s.includes("committee stage")) {
       counts[1]++;
-    } else if (s.includes("passed by the house") && !s.includes("senate")) {
+    } else if (s.includes("awaiting committee report") || s.includes("committee report")) {
       counts[2]++;
-    } else if (s.includes("senate") || s.includes("transmitted to senate")) {
+    } else if (s.includes("third reading") || s.includes("awaiting third")) {
       counts[3]++;
-    } else if (s.includes("assent")) {
+    } else if (s.includes("transmitted to senate") || (s.includes("passed by the house") && !s.includes("senate"))) {
       counts[4]++;
+    } else if (s.includes("passed senate") || s.includes("passed by senate") || (s.includes("senate") && !s.includes("transmitted"))) {
+      counts[5]++;
+    } else if (s.includes("assented") || s.includes("awaiting assent") || s.includes("assent")) {
+      counts[6]++;
     } else {
       counts[0]++;
     }
   });
 
   const categories = [
-    'Bills Read First Time and Awaiting Second Reading',
-    'Bills Referred to Committee of the Whole',
+    'Bills Read First Time and Awaiting or In Second Reading',
+    'Bills in committee stages',
+    'Bills committee report',
+    'Bills Third Reading',
     'Bills Passed by the House',
-    'Bills Passed by House & Senate',
-    'Bills Assented by President'
+    'Bills Passed by Senate',
+    'Bills Assented'
   ];
   
-  // Adjusted the color array to exactly match the aesthetic sequence 
-  // from left to right as requested in the reference image using
-  // the exact hex codes from the original Barchart.vue
-  const colors = ['#50B432', '#022923', '#007867', '#009141', '#B3B3B3'];
+  const colors = ['#50B432', '#009141', '#00A88F', '#007867', '#024B40', '#022923', '#B3B3B3'];
 
-  // Base fallback max to handle dynamic growth correctly up to multiples of 10/50
   const maxData = Math.max(...counts, 5);
   let stepSize = Math.ceil(maxData / 5);
   if (stepSize < 10) stepSize = 10;
@@ -149,8 +151,6 @@ const seriesData = computed(() => {
      count,
      label: categories[i],
      color: colors[i],
-     // If value is 0, give it a tiny 2% height so the grey "bump" is visible,
-     // matching the 5th item in the exact reference image.
      heightPercentage: count === 0 ? 2 : (count / maxRange) * 100 
   }));
 })
@@ -166,27 +166,11 @@ const yTicks = computed(() => {
   return [5, 4, 3, 2, 1, 0].map(multiplier => multiplier * stepSize);
 })
 
-const chartData = [
-  {
-    color: '#50B432',
-    label: 'Bills Read First Time and Awaiting Second Reading'
-  },
-  {
-    color: '#009141',
-    label: 'Bills Referred to Committee of the Whole'
-  },
-  {
-    color: '#007867',
-    label: 'Bills Passed by the House'
-  },
-  {
-    color: '#022923',
-    label: 'Bills Passed by House & Senate'
-  },
-  {
-    color: '#B3B3B3',
-    label: 'Bills Assented by President'
-  },
-]
+const chartData = computed(() => {
+  return seriesData.value.map(item => ({
+    color: item.color,
+    label: item.label
+  }))
+})
 
 </script>
