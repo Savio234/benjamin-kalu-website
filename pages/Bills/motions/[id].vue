@@ -52,7 +52,7 @@
                     >
                         Resolution
                     </h2>
-                    <ul class="list-disc">
+                    <ul class="list-disc pl-4">
                         <li class="mb-3 md:mb-4"
                             v-for="(item, index) in motion.attributes.get_resolutions" :key="index">
                             <p class="text-sm md:text-base font-medium font-montserrat">
