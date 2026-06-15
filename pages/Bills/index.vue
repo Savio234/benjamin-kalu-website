@@ -47,25 +47,31 @@
     <section class="py-8 bg-[#FAFFFA] w-full">
       <div class="content mx-auto w-[92.5%] md:w-[90%]">
         <div class="toggler w-full flex items-center rounded-full h-fit p-1 border border-borderMuted">
-          <button
-            class="w-1/2 h-fit py-2 md:py-3 lg:py-4 rounded-full flex items-center gap-1 justify-center text-center"
+          <button class="w-1/2 h-fit py-2 md:py-3 lg:py-4 
+            rounded-full flex items-center gap-1 justify-center 
+            text-center text-sm md:text-base"
             :class="isBills ? 'bg-[#146634] text-white' : ''"
             @click="
               isBills = true;
               searchTable();
             "
           >
-            <span class="hidden sm:block w-fit">Benjamin Kalu's </span>Bills
+            <span class="hidden text-sm md:text-base sm:block w-fit">
+              Benjamin Kalu's
+            </span> Bills
           </button>
-          <button
-            class="w-1/2 h-fit py-2 md:py-3 lg:py-4 rounded-full flex items-center gap-1 justify-center text-center"
+          <button class="w-1/2 h-fit py-2 md:py-3 lg:py-4
+            rounded-full flex items-center gap-1 justify-center
+            text-center text-sm md:text-base"
             :class="!isBills ? 'bg-[#146634] text-white' : ''"
             @click="
               isBills = false;
               searchTable();
             "
           >
-            <span class="hidden sm:block w-fit"> Benjamin Kalu's </span> Motions
+            <span class="hidden text-sm md:text-base sm:block w-fit">
+              Benjamin Kalu's
+            </span> Motions
           </button>
         </div>
         <div class="flex my-8 md:my-12 lg:my-16 overflow-x-scroll md:overflow-x-hidden 
@@ -106,7 +112,8 @@
             <div class="w-full cursor-pointer hidden border border-solid 
               border-[#CECFCF] md:min-h-40 lg:min-h-[4.75rem]
               md:grid md:grid-cols-[0.05fr_0.5fr_2.5fr_1fr_1fr]
-              overflow-x-scroll transition duration-300 hover:shadow-xl"
+              overflow-x-scroll transition duration-300
+              hover:shadow-xl"
               v-for="(bill, index) in bills" :key="index"
               v-if="bills.length > 0"
               @click="$router.push(`/bills/${bill.id}`)"
@@ -216,46 +223,97 @@
         </template>
         <template v-else>
           <div class="w-full flex flex-col gap-4 my-8">
-            <div class="grid sm:grid-cols-[5%_40%_1fr_1fr] max-sm:divide-y sm:divide-x 
-                divide-borderMuted w-full border border-borderMuted cursor-pointer"
-              v-for="(items, index) in motions"
-              :key="index"
-              v-if="displayedMotions.length > 0"
-              @click="$router.push(`/bills/motions/${items.title}`)"
+            <div class="w-full relative"
+              v-if="motions.length > 0"
             >
-              <div class="flex flex-col gap-2 p-4">
-                <small>S/N</small>
-                <small class="">{{ items.id }}</small>
+              <div class="w-full cursor-pointer hidden border border-solid 
+                border-[#CECFCF] md:min-h-40 lg:min-h-[4.75rem]
+                md:grid md:grid-cols-[2.5fr_1.5fr_0.75fr_1fr]
+                overflow-x-scroll transition duration-300
+                hover:shadow-xl"
+                v-for="(motion, index) in motions"
+                :key="index"
+                @click="$router.push(`/bills/motions/${motion?.id}`)"
+              >
+                <div class="py-2.5 flex flex-col gap-2.5 px-5">
+                  <p class="text-sm w-max font-montserrat font-normal text-[#808080]">
+                    Title
+                  </p>
+                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
+                    {{ motion.attributes.title }}
+                  </h3>
+                </div>
+                <div class="py-2.5 h-full border-r border-l border-[#CECFCF] flex flex-col gap-2.5 px-5">
+                  <p class="text-sm font-montserrat font-normal text-[#808080]">
+                    Motion Sponsor
+                  </p>
+                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
+                    {{ motion.attributes.motion_sponsor }}
+                  </h3>
+                </div>
+                <div class="py-2.5 h-full border-r border-[#CECFCF] flex flex-col gap-2.5 px-5">
+                  <p class="text-sm font-montserrat font-normal text-[#808080]">
+                    Date
+                  </p>
+                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
+                    {{ motion.attributes.motion_date }}
+                  </h3>
+                </div>
+                <div class="py-2.5 flex flex-col gap-2.5 px-5">
+                  <p class="text-sm font-montserrat font-normal text-[#808080]">
+                    Status
+                  </p>
+                  <h3 class="md:text-sm lg:text-base font-medium font-montserrat text-[#2B2B2B]">
+                    {{ motion.attributes.status }}
+                  </h3>
               </div>
-              <div class="flex flex-col gap-2 p-4">
-                <small>Title</small>
-                <small class="">{{ items.attributes.title }}</small>
               </div>
-              <div class="flex flex-col gap-2 p-4">
-                <small>Bill Sponsor</small>
-                <small class="">{{ items.attributes.motion_sponsor }}</small>
-              </div>
-              <div class="flex flex-col gap-2 p-4">
-                <small>Date</small>
-                <small class="">{{
-                  new Date(items.attributes.motion_date).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })
-                }}</small>
+              <div class="w-full cursor-pointer md:hidden min-h-52
+                rounded-lg border border-solid transition
+                border-[#CECFCF] flex gap-4 bg-white
+                duration-300 hover:shadow-xl"
+                v-for="(motion, index) in motions" :key="index"
+                @click="$router.push(`/bills/motions/${motion?.id}`)"
+              >
+                <div class="py-6 px-3 sm:px-4 flex flex-col gap-3">
+                  <div class="w-full gap-1 flex">
+                    <h3 class="text-sm text-black font-montserrat font-semibold">
+                      <span class="text-sm text-[#808080] font-montserrat font-normal">
+                        Title: </span> {{ motion.attributes.title }}
+                    </h3>
+                  </div>
+                  <div class="w-full gap-1 flex">
+                    <h3 class="text-sm text-black font-montserrat font-semibold">
+                      <span class="text-sm text-[#808080] font-montserrat font-normal">
+                        Motion Sponsor: </span> {{ motion.attributes.motion_sponsor }}
+                    </h3>
+                  </div>
+                  <div class="w-full gap-1 flex">
+                    <h3 class="text-sm text-black font-montserrat font-semibold">
+                      <span class="text-sm text-[#808080] font-montserrat font-normal">
+                        Date:
+                      </span> {{ motion.attributes.motion_date }}
+                    </h3>
+                  </div>
+                  <div class="w-full gap-1 flex">
+                    <h3 class="text-sm text-black font-montserrat font-semibold">
+                      <span class="text-sm text-[#808080] font-montserrat font-normal">
+                        Status:
+                      </span> {{ motion.attributes.status }}
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
             <div v-else class="self-center">No Results for search</div>
           </div>
-          <!-- pagination -->
           <div class="w-full flex items-center justify-center">
             <Pagination :total="motions.length" :items-per-page="8" :max-pages="2" prev-text="Previous" />
           </div>
         </template>
       </div>
     </section>
-    <section v-if="!isBills"
+    <!-- <section v-if="!isBills"
       class="partners w-[92.5%] md:w-[90%] mx-auto py-8 md:py-12 lg:py-16 bg-[#FAFFFA]"
     >
       <div class="w-full flex flex-col gap-4 md:gap-6" v-if="listOfMotions">
@@ -312,7 +370,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section v-if="isBills" class="py-16 w-full border-t border-borderMuted">
       <div class="content w-[92.5%] md:w-[90%] mx-auto">
         <h3 class="font-semibold mb-10 md:mb-12 lg:mb-16">Bills Chart</h3>
@@ -404,11 +462,11 @@ async function loadData(newPage = 1) {
   }
 }
 
-
 onMounted(async () => {
   await loadData();
   displayedBills.value = bills.value;
   displayedMotions.value = motions.value;
+  console.log("motions: ", motions.value);
 });
 
 const filters = [

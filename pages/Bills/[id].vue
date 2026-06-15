@@ -30,7 +30,9 @@
                         </p>
                         <ul class="flex mt-2 flex-col gap-2">
                             <!-- <li v-for="(items, index) in bill.attributes.get_bill_details['sponsors']" :key="index">
-                                {{ items }}
+                                <p class="text-sm md:text-base font-medium font-montserrat">
+                                    {{ items?.sponsors }}
+                                </p>
                             </li> -->
 
                             <li class="text-sm md:text-base font-medium font-montserrat">
@@ -60,6 +62,8 @@
                     <p class="text-[#808080] font-montserrat font-normal text-xs md:text-sm">
                         Description
                     </p>
+                    <!-- <div v-html="bill?.attributes?.get_bill_details?.description" class="text-sm md:text-base font-medium font-montserrat">
+                    </div> -->
                     <p class="text-sm md:text-base font-medium font-montserrat">
                         {{ bill?.attributes?.get_bill_details?.description ?? `A Bill for an Act to Amend the Acts Authentication Act, Cap. A2,
                             Laws of the Federation of Nigeria, 2004 To Provide the
@@ -214,12 +218,7 @@ onMounted(async () => {
     } else {
         bill.value = response;
     }
-    console.log("Final bill data:", bill.value);
-    console.log("response:", response);
 });
-console.log("bill: ", bill);
-console.log("id: ", route.params.id);
-console.log('blogId: ', String(route.params.id));
 </script>
 
 <style></style>

@@ -63,7 +63,7 @@ export const useMyBillsStore = defineStore({
       }
 
       if (category && category !== 'All') {
-        endpoint += `&filters[bill_type][$containsi]=${category}`;
+        endpoint += `&filters[motion_type][$containsi]=${category}`;
       }
 
       const motions = await $fetch(endpoint, {
@@ -79,10 +79,11 @@ export const useMyBillsStore = defineStore({
         Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
       };
 
-      const motion = await $fetch(`${envVars.strapiURL}/motions/${id}`, {
+      const motion = await $fetch(`${envVars.strapiURL}/motions/${id}?[populate]=*`, {
         method: 'get',
         headers: baseHeader,
       });
+      console.log('motion: ', motion);
       return motion;
     },
   },
