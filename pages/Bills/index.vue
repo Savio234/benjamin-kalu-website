@@ -313,64 +313,6 @@
         </template>
       </div>
     </section>
-    <!-- <section v-if="!isBills"
-      class="partners w-[92.5%] md:w-[90%] mx-auto py-8 md:py-12 lg:py-16 bg-[#FAFFFA]"
-    >
-      <div class="w-full flex flex-col gap-4 md:gap-6" v-if="listOfMotions">
-        <div class="w-full cursor-pointer border border-solid border-[#CECFCF] 
-          md:flex items-start justify-start overflow-x-scroll
-          md:min-h-40 lg:min-h-[4.75rem] hidden transition duration-300 hover:shadow-xl"
-          v-for="(motion, index) in listOfMotions" :key="index"
-          @click="$router.push(`/bills/motions/details`)"
-        >
-          <div class="py-2.5 w-[45%] flex flex-col gap-2.5 px-5">
-            <p class="text-sm font-montserrat font-normal text-[#808080]">Title</p>
-            <h3 class="text-base font-medium font-montserrat text-[#2B2B2B]">
-              {{ motion.title }}
-            </h3>
-          </div>
-          <div class="py-2.5 h-full border-r border-l border-[#CECFCF] w-[30%] flex flex-col gap-2.5 px-5">
-            <p class="text-sm font-montserrat font-normal text-[#808080]">Motion Sponsor</p>
-            <h3 class="text-base font-medium font-montserrat text-[#2B2B2B]">
-              {{ motion.sponsor }}
-            </h3>
-          </div>
-          <div class="py-2.5 w-[25%] flex flex-col gap-2.5 px-5">
-            <p class="text-sm font-montserrat font-normal text-[#808080]">Date</p>
-            <h3 class="text-base font-medium font-montserrat text-[#2B2B2B]">
-              {{ motion.date }}
-            </h3>
-          </div>
-        </div>
-        <div class="w-full cursor-pointer md:hidden min-h-60 rounded-lg border border-solid 
-          border-[#CECFCF] flex gap-4 bg-white transition duration-300 hover:shadow-xl"
-          v-for="(motion, index) in listOfMotions" :key="index"
-          @click="$router.push(`/bills/motions/details`)"
-        >
-          <div class="py-6 pr-3 flex flex-col gap-4">
-            <div class="w-full gap-1 flex">
-              <h3 class="text-sm text-black font-montserrat font-semibold">
-                <span class="text-sm text-[#808080] font-montserrat font-normal">
-                  Title: </span> {{ motion.title }}
-              </h3>
-            </div>
-            <div class="w-full gap-1 flex">
-              <h3 class="text-sm text-black font-montserrat font-semibold">
-                <span class="text-sm text-[#808080] font-montserrat font-normal">
-                  Bill Sponsor: </span> {{ motion.sponsor }}
-              </h3>
-            </div>
-            <div class="w-full gap-1 flex">
-              <h3 class="text-sm text-black font-montserrat font-semibold">
-                <span class="text-sm text-[#808080] font-montserrat font-normal">
-                  Date:
-                </span> {{ motion.date }}
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section v-if="isBills" class="py-16 w-full border-t border-borderMuted">
       <div class="content w-[92.5%] md:w-[90%] mx-auto">
         <h3 class="font-semibold mb-10 md:mb-12 lg:mb-16">Bills Chart</h3>
@@ -485,43 +427,6 @@ const filters = [
   'Regional Development',
   'Treaties & convention',
   'Infrastructure',
-]
-const listOfMotions = [
-  {
-    title: `Need for the Rehabilitation of Orlu - Ihiala Road`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
-  {
-    title: `Office of Budget Management of the Federation (Establishment) Bill, 2023`,
-    sponsor: "Hon. Benjamin Okezie Kalu",
-    date: ` Oct 21, 2022`,
-  },
 ]
 </script>
 
