@@ -11,11 +11,12 @@ export const useMediaStore = defineStore({
             const baseHeader = {
                 Authorization: 'Bearer ' + `${envVars.strapiAPI}`,
             };
-            const endpoint = `${envVars.strapiURL}/media?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*`;
+            const endpoint = `${envVars.strapiURL}/medias?sort[0]=id:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*`;
             const storeMedia = await $fetch(endpoint, {
                 method: 'get',
                 headers: baseHeader,
             });
+            // console.log("media: ", storeMedia)
             return storeMedia;
         },
     },

@@ -82,8 +82,12 @@
 import ManualSlider from '~/components/sections/ManualSlider.vue';
 import { onMounted, ref } from 'vue';
 import { usePublicationsStore } from '~/stores/publications';
+import { useMediaStore } from '~/stores/media';
+
 const publicationsStore = usePublicationsStore();
+const mediaStore = useMediaStore();
 const publications = ref<any[]>([]);
+const media = ref<any[]>([]);
 
 onMounted(async () => {
   try {
@@ -373,81 +377,14 @@ const weeklyUpdates = [
   '/images/weekly_review/weekly_review_23_march.webp',
   // '/images/weekly_review/updates_1.png',
 ]
-
-const media = [
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-]
+onMounted(async () => {
+  try {
+    const fetchedMedia = await mediaStore.getAllMedia() as any;
+    media.value = fetchedMedia?.data || [];
+  } catch (error) {
+    console.error('Error fetching media:', error);
+  }
+});
 </script>
 
 <style lang="scss" scoped>

@@ -83,7 +83,6 @@ export const useMyBillsStore = defineStore({
         method: 'get',
         headers: baseHeader,
       });
-      console.log('motion: ', motion);
       return motion;
     },
   },

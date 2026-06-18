@@ -174,7 +174,7 @@
             </div>
           </div>
         </div>
-        <SectionsAboutMedia :media="media" />
+        <SectionsAboutMedia :media="mediaList.slice(0, 4)" />
       </div>
     </section>
   </main>
@@ -183,10 +183,13 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
 import { usePublicationsStore } from '~/stores/publications';
+import { useMediaStore } from '~/stores/media';
 import ManualSlider from '~/components/sections/ManualSlider.vue';
 
 const publicationsStore = usePublicationsStore();
 const listOfPublications = ref<any[]>([]);
+const mediaStore = useMediaStore();
+const mediaList = ref<any[]>([]);
 
 onMounted(async () => {
   try {
@@ -197,36 +200,16 @@ onMounted(async () => {
   }
 });
 
-const media = [
-  {
-    id: 1,
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    id: 2,
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    id: 3,
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-  {
-    id: 4,
-    video: '/',
-    video_thumbail: '/images/about/thumbnail.png',
-    title: '25 years of Sustained Democracy: Nigeria on Path of greatness',
-    media_type: 'speech',
-  },
-]
+onMounted(async () => {
+  try {
+    const fetchedMedia = await mediaStore.getAllMedia() as any;
+    mediaList.value = fetchedMedia?.data || [];
+    console.log('mediaList: ', mediaList.value);
+    console.log('fetchedMedia: ', fetchedMedia);
+  } catch (error) {
+    console.error('Error fetching media:', error);
+  }
+});
 
 const quotes = [
   `Everything changes the moment you stop asking how to feel motivated and start asking what 

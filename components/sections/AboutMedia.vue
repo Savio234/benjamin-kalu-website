@@ -1,7 +1,7 @@
 <template>
     <div
-        class="mt-8 grid grid-cols-1 md:grid-cols-4 w-full items-start gap-6 md:gap-8 lg:gap-10"
-        v-if="latest"
+        class="mt-8 grid grid-cols-1 md:grid-cols-4 w-full
+        items-start gap-6 md:gap-8 lg:gap-10" v-if="latest"
     >
         <div v-for="(item, index) in latest" :key="index"
             class="media-card shrink-0 overflow-hidden w-full
@@ -9,38 +9,38 @@
         >
             <div class="z-[2] hidden md:block absolute right-0 bottom-0 top-0 left-0">
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
-                    :src="item.video_thumbail"
+                    :src="item?.attributes?.media_image?.data?.attributes?.url"
                 />
             </div>
             <div class="relative md:hidden h-32 w-full">
                 <NuxtImg class="rounded-xl h-full w-full object-cover" alt="publication_image"
-                    :src="item.video_thumbail"
+                    :src="item?.attributes?.media_image?.data?.attributes?.url"
                 />
             </div>
             <div class="dark_bg z-[2] rounded-xl w-full h-full absolute top-0 bottom-0 left-0 flex 
                 items-center justify-center"
             >
-                <div class="mx-auto h-8 w-8 md:hidden rounded-[3.75rem] md:w-12 md:h-12">
+                <NuxtLink target="_blank" :to="`${item?.attributes?.media_link}`"
+                    class="mx-auto h-8 w-8 md:hidden rounded-[3.75rem] md:w-12 md:h-12">
                     <NuxtImg alt="play-video" class="h-full rounded-2xl w-full"
                         src="/svgs/about/video_icon.svg"
                     />
-                </div>
+                </NuxtLink>
             </div>
             <div class="dark_overlay hidden z-[4] rounded-xl w-full h-full absolute top-0 bottom-0 
                 left-0 md:flex items-center justify-center"
             >
-                <div class="mx-auto h-8 w-8 rounded-[3.75rem] md:w-12 md:h-12">
+                <NuxtLink target="_blank" :to="`${item?.attributes?.media_link}`" class="mx-auto h-8 w-8 rounded-[3.75rem] md:w-12 md:h-12">
                     <NuxtImg alt="play-video" class="h-full rounded-2xl w-full"
                         src="/svgs/about/video_icon.svg"
                     />
-                </div>
+                </NuxtLink>
             </div>
             <div class="card_content hidden px-6 py-8 z-[2] top-1/4 lg:top-[32%] relative md:flex
                 flex-col gap-2"
             >
-
                 <h3 class="font-normal hidden md:block card-title text-sm md:text-base text-white font-adamina">
-                    {{ item.title }}
+                    {{ item?.attributes?.title }}
                 </h3>
                 <div class="bg-[#FFFFFF99] w-[5.35rem] py-1 flex items-center justify-center px-4 
                     rounded-[3.5rem]"
@@ -48,18 +48,17 @@
                     <p class="text-[#022924] capitalize card-desc font-medium font-montserrat text-xs 
                         md:text-sm"
                     >
-                        {{ item.media_type }}
+                        {{ item?.attributes?.media_type === "audio" ? "speech" : "video" }}
                     </p>
                 </div>
             </div>
             <div class="card_content_sm bg-white flex py-2 z-[2] relative md:hidden
                 flex-col gap-2"
             >
-
                 <h3 class="font-normal card-title text-xs text-[#1D1D1D] 
                     font-adamina"
                 >
-                    {{ item.title }}
+                    {{ item?.attributes?.title }}
                 </h3>
                 <div class="bg-[#00000080] w-16 py-1 flex items-center justify-center 
                     px-4 rounded-[3.5rem]"
@@ -67,7 +66,7 @@
                     <p class="text-white capitalize font-medium 
                         font-montserrat text-[0.5rem]"
                     >
-                        {{ item.media_type }}
+                        {{ item?.attributes?.media_type === "audio" ? "speech" : "video" }}
                     </p>
                 </div>
             </div>
