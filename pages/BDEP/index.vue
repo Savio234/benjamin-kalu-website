@@ -36,7 +36,7 @@
             </div>
         </header>
 
-        <main class="bdep-form-wrap">
+        <section class="bdep-form-wrap">
             <form class="bdep-form" @submit.prevent="handleSubmit" novalidate>
                 <div v-if="submitState === 'success'" class="bdep-banner bdep-banner--ok" role="status">
                     <strong>Registration received.</strong> Thank you — the BDEP team will be in touch with next steps.
@@ -199,12 +199,12 @@
                     </button>
                 </template>
             </form>
-        </main>
+        </section>
     </main>
 </template>
 
 <script setup>
-import { reactive, ref, computed } from 'vue'
+import { reactive, ref, computed } from "vue";
 
 const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbyv7T_m3ZiQ-uMWsz96U_W6ZscYnCG93ajINBeOOchvnAubjD19tAx78OaVzr4GDAGl/exec`
 
