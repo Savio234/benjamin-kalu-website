@@ -1,0 +1,31 @@
+<template>
+  <button class="w-fit btn h-fit rounded-full">
+    <div class="content bg-[#146634] max-h-14 rounded-full py-2 px-3 md:px-6 lg:py-4 
+      lg:px-8 text-white text-base flex items-center gap-2"
+    >
+      <svg-icon :name="$props.preIcon" width="1.25rem" height="1.25rem" v-if="$props.preIcon" />
+      <slot />
+      <svg-icon :name="$props.appendIcon" width="1.25rem" height="1.25rem" v-if="$props.appendIcon" />
+    </div>
+  </button>
+</template>
+
+<script setup>
+defineProps({
+  preIcon: {
+    type: String,
+    required: false,
+  },
+  appendIcon: {
+    type: String,
+    required: false,
+  },
+});
+</script>
+
+<style lang="scss" scoped>
+.content:hover {
+  background: #105129;
+  transition: all 300ms ease-in-out;
+}
+</style>

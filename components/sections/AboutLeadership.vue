@@ -1,0 +1,180 @@
+<template>
+    <section class="py-16 md:py-24 lg:py-32 bg-white">
+        <div class="w-[92.5%] gap-14 md:gap-20 lg:gap-28 flex flex-col sm:w-[85%] 
+            lg:w-4/5 xl:w-3/4 mx-auto"
+        >
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
+                <div class="w-full md:w-1/2 lg:w-2/5">
+                    <h3 class="text-[#146634] mb-4 md:mb-6 lg:mb-8 font-adamina font-normal 
+                        text-xl leading-9 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem]"
+                    >
+                        Leadership Anchored in Service and Vision
+                    </h3>
+                    <p class="text-justify font-montserrat font-medium text-sm leading-6 
+                        md:text-base
+                        text-[#585C5B]"
+                    >
+                        A public servant forged in purpose and precision, Rt. Hon. Kalu’s trajectory is defined 
+                        by thoughtful stewardship and consistent delivery. At the heart of his work lies a deep 
+                        commitment to meaningful representation, ensuring that the voices of citizens, 
+                        especially in his home constituency of Bende and across Nigeria, are amplified in the 
+                        nation’s policy architecture.<br />
+                        <br />
+                        His leadership is strategic, not symbolic; rooted in measurable impact and sustained by 
+                        collaboration with communities, lawmakers, civil society, and international partners
+                    </p>
+                </div>
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 md:h-[24rem] 
+                    lg:h-[28rem]"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                        src="/images/about/anchored.png"
+                    />
+                </div>
+                <div class="block shrink-0 md:hidden w-full h-64">
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                        src="/images/about/leadership_1.png"
+                    />
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
+                <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1 h-64 
+                    md:h-[30rem] shrink-0 lg:h-[35rem]"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top" 
+                        src="/images/about/architect.png"
+                    />
+                </div>
+                <div class="block md:hidden relative order-2 md:order-1 w-full h-64 
+                    shrink-0"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                        src="/images/about/leadership_2.png"
+                    />
+                </div>
+                <div class="order-1 md:order-2 w-full md:w-1/2 lg:w-2/5">
+                    <h3 class="text-[#146634] font-adamina font-normal w-full text-xl 
+                        mb-4 md:mb-3 lg:mb-4 leading-8 md:text-2xl lg:text-[2rem] 
+                        lg:leading-[3.2rem] hidden md:block md:w-3/4"
+                    >
+                        Architect of Policy <br /> Advocate for Progress
+                    </h3>
+                    <h3 class="text-[#146634] block md:hidden font-adamina font-normal 
+                        w-full text-xl mb-4 md:mb-6 lg:mb-8 
+                        leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:w-3/4"
+                    >
+                        Architect of Policy Advocate for Progress
+                    </h3>
+                    <p class="text-justify leading-6 font-montserrat font-medium text-sm 
+                        md:text-base text-[#585C5B]"
+                    >
+                        As Deputy Speaker, Rt. Hon. Kalu plays a pivotal role in steering legislative 
+                        priorities that align with national development imperatives. His work spans:<br />
+                        <ul class="pl-5 my-3 md:my-4 lg:my-6 list-disc md:pl-6">
+                            <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
+                             text-justify"
+                            >
+                                Constitutional review and reform, focusing on governance structures that 
+                                enhance accountability and federalism;
+                            </li>
+                            <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
+                             text-justify"
+                            >
+                                Legislative advocacy, advancing bills and motions that reflect the changing 
+                                needs of Nigeria’s socio-economic landscape;
+                            </li>
+                            <li class="font-semibold mb-2 text-sm leading-6 md:text-base 
+                             text-justify"
+                            >
+                                Policy integration, ensuring that legislative outputs respond to both national 
+                                imperatives and global standards.
+                            </li>
+                        </ul>
+                    </p>
+                    <p class="text-justify leading-6 font-montserrat font-medium text-sm 
+                        md:text-base text-[#585C5B]"
+                    >
+                        He is recognized for prioritizing data driven policy design, transparent legislative 
+                        processes, and constituent-centered outcomes.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
+                <div class="w-full md:w-1/2 lg:w-2/5">
+                    <h3 class="text-[#146634] font-adamina font-normal mb-3 text-xl 
+                        leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-4 
+                        w-full md:w-3/4 lg:mb-8"
+                    >
+                        Constituency and Community Impact
+                    </h3>
+                    <p class="text-justify leading-6 font-montserrat font-medium text-sm 
+                        md:text-base text-[#585C5B]"
+                    >
+                        Rt. Hon. Kalu’s approach transcends the chamber walls. He has anchored and supported 
+                        initiatives that deliver tangible benefits at the grassroots, including community 
+                        infrastructure, youth empowerment programs, educational interventions, and peace 
+                        building efforts, especially in areas affected by instability.<br />
+                        <br />
+                        He leads with the conviction that public office is a platform for tangible 
+                        transformation, not mere title or rhetoric.
+                    </p>
+                </div>
+                <div class="hidden shrink-0 md:block relative md:w-2/5 lg:w-2/5 h-64 
+                    md:h-[22rem] lg:h-[27.5rem]"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                        src="/images/about/constituency.png"
+                    />
+                </div>
+                <div class="block shrink-0 md:hidden relative w-full h-64">
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                        src="/images/about/leadership_3.png"
+                    />
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between 
+                lg:gap-10 lg:justify-evenly w-full"
+            >
+                <div class="hidden md:block relative md:w-2/5 lg:w-2/5 order-2 md:order-1
+                    md:h-[23rem] lg:h-[28rem] shrink-0"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                        src="/images/about/strategic.png"
+                    />
+                </div>
+                <div class="block md:hidden relative order-2 md:order-1 w-full h-64 
+                    shrink-0"
+                >
+                    <NuxtImg loading="lazy" alt="" class="w-full h-full rounded-2xl object-cover object-top"
+                        src="/images/about/leadership_4.png"
+                    />
+                </div>
+                <div class="order-1 w-full md:w-1/2 lg:w-2/5 md:order-2">
+                    <h3 class="text-[#146634] font-adamina mb-4 font-normal text-xl 
+                        leading-8 md:text-2xl lg:text-[2rem] lg:leading-[3.2rem] md:mb-6 
+                        lg:mb-8"
+                    >
+                        Strategic Partnerships <br /> and Thought Leadership
+                    </h3>
+                    <p class="text-justify leading-6 font-montserrat font-medium text-sm 
+                        md:text-base lg:leading-8 text-[#585C5B]"
+                    >
+                        Rt. Hon. Kalu believes that Nigeria’s growth is interconnected with global 
+                        collaboration and intellectual exchange. He actively engages with regional and 
+                        international stakeholders, leveraging partnerships that enhance legislative capacity, 
+                        promote investment, and expand opportunities for Nigerian talent.<br />
+                        <br />
+                        His insights are sought in policy forums, strategic dialogues, and leadership platforms
+                        across Africa and beyond.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
