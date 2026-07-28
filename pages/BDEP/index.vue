@@ -219,26 +219,26 @@ const focusAreas = [
 ]
 
 const skillOptions = [
-  'Digital Literacy',
-  'Graphics Design',
-  'Social Media Management',
-  'Digital Marketing',
-  'Content Creation',
-  'AI Tools',
-  'Web Design',
-  'Freelancing',
-  'Entrepreneurship',
-  'Other',
+    'Digital Literacy',
+    'Graphics Design',
+    'Social Media Management',
+    'Digital Marketing',
+    'Content Creation',
+    'AI Tools',
+    'Web Design',
+    'Freelancing',
+    'Entrepreneurship',
+    'Other',
 ]
 
 const educationOptions = [
-  'No formal education',
-  'Primary school',
-  'Secondary school / WAEC',
-  'OND / NCE',
-  'HND / Bachelor\u2019s degree',
-  'Postgraduate',
-  'Other',
+    'No formal education',
+    'Primary school',
+    'Secondary school / WAEC',
+    'OND / NCE',
+    'HND / Bachelor\u2019s degree',
+    'Postgraduate',
+    'Other',
 ]
 
 const nigerianStates = [
