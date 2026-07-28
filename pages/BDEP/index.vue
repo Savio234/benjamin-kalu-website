@@ -252,21 +252,21 @@ const nigerianStates = [
 const todayISO = new Date().toISOString().split('T')[0]
 
 const form = reactive({
-  fullName: '',
-  dob: '',
-  email: '',
-  phone: '',
-  state: 'Abia',
-  lga: '',
-  ward: '',
-  community: '',
-  education: '',
-  priorTraining: '',
-  priorTrainingDetail: '',
-  interests: [],
-  interestsOther: '',
-  motivation: '',
-  declaration: false,
+    fullName: '',
+    dob: '',
+    email: '',
+    phone: '',
+    state: 'Abia',
+    lga: '',
+    ward: '',
+    community: '',
+    education: '',
+    priorTraining: '',
+    priorTrainingDetail: '',
+    interests: [],
+    interestsOther: '',
+    motivation: '',
+    declaration: false,
 })
 
 const errors = reactive({})
