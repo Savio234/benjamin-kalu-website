@@ -209,13 +209,13 @@ import { reactive, ref, computed } from 'vue'
 const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbyv7T_m3ZiQ-uMWsz96U_W6ZscYnCG93ajINBeOOchvnAubjD19tAx78OaVzr4GDAGl/exec`
 
 const focusAreas = [
-  'Digital Literacy',
-  'Graphics Design',
-  'Social Media & Content Creation',
-  'Web Development',
-  'Digital Marketing',
-  'Entrepreneurship & Business Tools',
-  'Freelancing & Remote Work',
+    'Digital Literacy',
+    'Graphics Design',
+    'Social Media & Content Creation',
+    'Web Development',
+    'Digital Marketing',
+    'Entrepreneurship & Business Tools',
+    'Freelancing & Remote Work',
 ]
 
 const skillOptions = [
